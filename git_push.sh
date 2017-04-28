@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="pipe: test propel and skd generation"
+    release_note="pipe: workspace"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
