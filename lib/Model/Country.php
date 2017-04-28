@@ -56,7 +56,8 @@ class Country implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'text' => 'string'
+        'text' => 'string',
+        'states' => '\Swagger\Client\Model\State[]'
     ];
 
     public static function swaggerTypes()
@@ -70,7 +71,8 @@ class Country implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'text' => 'text'
+        'text' => 'text',
+        'states' => 'states'
     ];
 
 
@@ -80,7 +82,8 @@ class Country implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'text' => 'setText'
+        'text' => 'setText',
+        'states' => 'setStates'
     ];
 
 
@@ -90,7 +93,8 @@ class Country implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'text' => 'getText'
+        'text' => 'getText',
+        'states' => 'getStates'
     ];
 
     public static function attributeMap()
@@ -126,6 +130,7 @@ class Country implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['states'] = isset($data['states']) ? $data['states'] : null;
     }
 
     /**
@@ -191,6 +196,27 @@ class Country implements ArrayAccess
     public function setText($text)
     {
         $this->container['text'] = $text;
+
+        return $this;
+    }
+
+    /**
+     * Gets states
+     * @return \Swagger\Client\Model\State[]
+     */
+    public function getStates()
+    {
+        return $this->container['states'];
+    }
+
+    /**
+     * Sets states
+     * @param \Swagger\Client\Model\State[] $states
+     * @return $this
+     */
+    public function setStates($states)
+    {
+        $this->container['states'] = $states;
 
         return $this;
     }

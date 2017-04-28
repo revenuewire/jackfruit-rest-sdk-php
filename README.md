@@ -96,8 +96,6 @@ Class | Method | HTTP request | Description
 *DomainsApi* | [**domainsIdPut**](docs/Api/DomainsApi.md#domainsidput) | **PUT** /domains/{id} | 
 *DomainsApi* | [**domainsIdUploadCertPost**](docs/Api/DomainsApi.md#domainsiduploadcertpost) | **POST** /domains/{id}/upload-cert | 
 *DomainsApi* | [**domainsPost**](docs/Api/DomainsApi.md#domainspost) | **POST** /domains | 
-*GEOApi* | [**geoGetAllStates**](docs/Api/GEOApi.md#geogetallstates) | **GET** /geo-info/countries/states | 
-*GEOApi* | [**geoGetAllStatesByCountry**](docs/Api/GEOApi.md#geogetallstatesbycountry) | **GET** /geo-info/countries/{countryCode}/states | 
 *GEOApi* | [**geoGetCountryList**](docs/Api/GEOApi.md#geogetcountrylist) | **GET** /geo-info/countries | 
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
 *OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
@@ -137,12 +135,10 @@ Class | Method | HTTP request | Description
  - [IdentityData](docs/Model/IdentityData.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [Offer](docs/Model/Offer.md)
- - [Order](docs/Model/Order.md)
  - [Profile](docs/Model/Profile.md)
  - [RecurringItem](docs/Model/RecurringItem.md)
  - [Response](docs/Model/Response.md)
  - [State](docs/Model/State.md)
- - [States](docs/Model/States.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)
  - [SupportedLanguages](docs/Model/SupportedLanguages.md)
  - [Token](docs/Model/Token.md)
