@@ -56,7 +56,7 @@ class States implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\State[]'
+        'data' => '\Swagger\Client\Model\State'
     ];
 
     public static function swaggerTypes()
@@ -176,7 +176,7 @@ class States implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\State[]
+     * @return \Swagger\Client\Model\State
      */
     public function getData()
     {
@@ -185,7 +185,7 @@ class States implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\State[] $data
+     * @param \Swagger\Client\Model\State $data
      * @return $this
      */
     public function setData($data)
