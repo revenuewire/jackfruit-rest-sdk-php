@@ -88,456 +88,42 @@ class UsersApi
     }
 
     /**
-     * Operation usersForgetPasswordPost
-     *
-     * 
-     *
-     * @param string $email Your email address (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Response[]
-     */
-    public function usersForgetPasswordPost($email = null)
-    {
-        list($response) = $this->usersForgetPasswordPostWithHttpInfo($email);
-        return $response;
-    }
-
-    /**
-     * Operation usersForgetPasswordPostWithHttpInfo
-     *
-     * 
-     *
-     * @param string $email Your email address (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function usersForgetPasswordPostWithHttpInfo($email = null)
-    {
-        // parse inputs
-        $resourcePath = "/users/forget-password";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // form params
-        if ($email !== null) {
-            $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Response[]',
-                '/users/forget-password'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation usersIdGet
-     *
-     * 
-     *
-     * @param string $id Users Id (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile[]
-     */
-    public function usersIdGet($id)
-    {
-        list($response) = $this->usersIdGetWithHttpInfo($id);
-        return $response;
-    }
-
-    /**
-     * Operation usersIdGetWithHttpInfo
-     *
-     * 
-     *
-     * @param string $id Users Id (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function usersIdGetWithHttpInfo($id)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling usersIdGet');
-        }
-        // parse inputs
-        $resourcePath = "/users/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Profile[]',
-                '/users/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation usersIdPut
-     *
-     * 
-     *
-     * @param int $id  (required)
-     * @param string $first_name Customer&#39;s new first name (required)
-     * @param string $last_name Customer&#39;s new last name (required)
-     * @param string $language Preferred Language code for the user (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile[]
-     */
-    public function usersIdPut($id, $first_name, $last_name, $language = null)
-    {
-        list($response) = $this->usersIdPutWithHttpInfo($id, $first_name, $last_name, $language);
-        return $response;
-    }
-
-    /**
-     * Operation usersIdPutWithHttpInfo
-     *
-     * 
-     *
-     * @param int $id  (required)
-     * @param string $first_name Customer&#39;s new first name (required)
-     * @param string $last_name Customer&#39;s new last name (required)
-     * @param string $language Preferred Language code for the user (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function usersIdPutWithHttpInfo($id, $first_name, $last_name, $language = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling usersIdPut');
-        }
-        // verify the required parameter 'first_name' is set
-        if ($first_name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $first_name when calling usersIdPut');
-        }
-        // verify the required parameter 'last_name' is set
-        if ($last_name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $last_name when calling usersIdPut');
-        }
-        // parse inputs
-        $resourcePath = "/users/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // form params
-        if ($first_name !== null) {
-            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($first_name);
-        }
-        // form params
-        if ($last_name !== null) {
-            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($last_name);
-        }
-        // form params
-        if ($language !== null) {
-            $formParams['language'] = $this->apiClient->getSerializer()->toFormValue($language);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Profile[]',
-                '/users/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation usersIdUpdatePasswordPut
-     *
-     * 
-     *
-     * @param int $id User id (required)
-     * @param string $old_password Your current password (required)
-     * @param string $new_password your new password (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile[]
-     */
-    public function usersIdUpdatePasswordPut($id, $old_password, $new_password)
-    {
-        list($response) = $this->usersIdUpdatePasswordPutWithHttpInfo($id, $old_password, $new_password);
-        return $response;
-    }
-
-    /**
-     * Operation usersIdUpdatePasswordPutWithHttpInfo
-     *
-     * 
-     *
-     * @param int $id User id (required)
-     * @param string $old_password Your current password (required)
-     * @param string $new_password your new password (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function usersIdUpdatePasswordPutWithHttpInfo($id, $old_password, $new_password)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling usersIdUpdatePasswordPut');
-        }
-        // verify the required parameter 'old_password' is set
-        if ($old_password === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $old_password when calling usersIdUpdatePasswordPut');
-        }
-        // verify the required parameter 'new_password' is set
-        if ($new_password === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $new_password when calling usersIdUpdatePasswordPut');
-        }
-        // parse inputs
-        $resourcePath = "/users/{id}/update-password";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // form params
-        if ($old_password !== null) {
-            $formParams['oldPassword'] = $this->apiClient->getSerializer()->toFormValue($old_password);
-        }
-        // form params
-        if ($new_password !== null) {
-            $formParams['newPassword'] = $this->apiClient->getSerializer()->toFormValue($new_password);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Profile[]',
-                '/users/{id}/update-password'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation usersLoginPost
+     * Operation customerLogin
      *
      * 
      *
      * @param string $username User name (required)
      * @param string $password User password (required)
-     * @param string $account_id User Account Id (optional)
+     * @param string $accountId User Account Id (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Identity
      */
-    public function usersLoginPost($username, $password, $account_id = null)
+    public function customerLogin($username, $password, $accountId = null)
     {
-        list($response) = $this->usersLoginPostWithHttpInfo($username, $password, $account_id);
+        list($response) = $this->customerLoginWithHttpInfo($username, $password, $accountId);
         return $response;
     }
 
     /**
-     * Operation usersLoginPostWithHttpInfo
+     * Operation customerLoginWithHttpInfo
      *
      * 
      *
      * @param string $username User name (required)
      * @param string $password User password (required)
-     * @param string $account_id User Account Id (optional)
+     * @param string $accountId User Account Id (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Identity, HTTP status code, HTTP response headers (array of strings)
      */
-    public function usersLoginPostWithHttpInfo($username, $password, $account_id = null)
+    public function customerLoginWithHttpInfo($username, $password, $accountId = null)
     {
         // verify the required parameter 'username' is set
         if ($username === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $username when calling usersLoginPost');
+            throw new \InvalidArgumentException('Missing the required parameter $username when calling customerLogin');
         }
         // verify the required parameter 'password' is set
         if ($password === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $password when calling usersLoginPost');
+            throw new \InvalidArgumentException('Missing the required parameter $password when calling customerLogin');
         }
         // parse inputs
         $resourcePath = "/users/login";
@@ -563,8 +149,8 @@ class UsersApi
             $formParams['password'] = $this->apiClient->getSerializer()->toFormValue($password);
         }
         // form params
-        if ($account_id !== null) {
-            $formParams['accountId'] = $this->apiClient->getSerializer()->toFormValue($account_id);
+        if ($accountId !== null) {
+            $formParams['accountId'] = $this->apiClient->getSerializer()->toFormValue($accountId);
         }
         
         // for model (json/xml)
@@ -572,11 +158,6 @@ class UsersApi
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
         }
         // make the API Call
         try {
@@ -608,46 +189,46 @@ class UsersApi
     }
 
     /**
-     * Operation usersOrderLoginPost
+     * Operation customerOrderLogin
      *
      * 
      *
-     * @param string $order_reference Order reference (required)
-     * @param string $first_six_cc First six digits of card number (required)
+     * @param string $orderReference Order reference (required)
+     * @param string $firstSixCC First six digits of card number (required)
      * @param string $postcode Postcode/Zip (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Identity
      */
-    public function usersOrderLoginPost($order_reference, $first_six_cc, $postcode)
+    public function customerOrderLogin($orderReference, $firstSixCC, $postcode)
     {
-        list($response) = $this->usersOrderLoginPostWithHttpInfo($order_reference, $first_six_cc, $postcode);
+        list($response) = $this->customerOrderLoginWithHttpInfo($orderReference, $firstSixCC, $postcode);
         return $response;
     }
 
     /**
-     * Operation usersOrderLoginPostWithHttpInfo
+     * Operation customerOrderLoginWithHttpInfo
      *
      * 
      *
-     * @param string $order_reference Order reference (required)
-     * @param string $first_six_cc First six digits of card number (required)
+     * @param string $orderReference Order reference (required)
+     * @param string $firstSixCC First six digits of card number (required)
      * @param string $postcode Postcode/Zip (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Identity, HTTP status code, HTTP response headers (array of strings)
      */
-    public function usersOrderLoginPostWithHttpInfo($order_reference, $first_six_cc, $postcode)
+    public function customerOrderLoginWithHttpInfo($orderReference, $firstSixCC, $postcode)
     {
-        // verify the required parameter 'order_reference' is set
-        if ($order_reference === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $order_reference when calling usersOrderLoginPost');
+        // verify the required parameter 'orderReference' is set
+        if ($orderReference === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $orderReference when calling customerOrderLogin');
         }
-        // verify the required parameter 'first_six_cc' is set
-        if ($first_six_cc === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $first_six_cc when calling usersOrderLoginPost');
+        // verify the required parameter 'firstSixCC' is set
+        if ($firstSixCC === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $firstSixCC when calling customerOrderLogin');
         }
         // verify the required parameter 'postcode' is set
         if ($postcode === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $postcode when calling usersOrderLoginPost');
+            throw new \InvalidArgumentException('Missing the required parameter $postcode when calling customerOrderLogin');
         }
         // parse inputs
         $resourcePath = "/users/order-login";
@@ -665,12 +246,12 @@ class UsersApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         // form params
-        if ($order_reference !== null) {
-            $formParams['orderReference'] = $this->apiClient->getSerializer()->toFormValue($order_reference);
+        if ($orderReference !== null) {
+            $formParams['orderReference'] = $this->apiClient->getSerializer()->toFormValue($orderReference);
         }
         // form params
-        if ($first_six_cc !== null) {
-            $formParams['firstSixCC'] = $this->apiClient->getSerializer()->toFormValue($first_six_cc);
+        if ($firstSixCC !== null) {
+            $formParams['firstSixCC'] = $this->apiClient->getSerializer()->toFormValue($firstSixCC);
         }
         // form params
         if ($postcode !== null) {
@@ -682,11 +263,6 @@ class UsersApi
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
         }
         // make the API Call
         try {
@@ -718,7 +294,290 @@ class UsersApi
     }
 
     /**
-     * Operation usersResetPasswordPost
+     * Operation customerSignup
+     *
+     * 
+     *
+     * @param string $email User&#39;s email (required)
+     * @param string $password User&#39;s password (required)
+     * @param string $firstName First Name (optional)
+     * @param string $lastName First Name (optional)
+     * @param string $language Preferred Language code for the user (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Profile[]
+     */
+    public function customerSignup($email, $password, $firstName = null, $lastName = null, $language = null)
+    {
+        list($response) = $this->customerSignupWithHttpInfo($email, $password, $firstName, $lastName, $language);
+        return $response;
+    }
+
+    /**
+     * Operation customerSignupWithHttpInfo
+     *
+     * 
+     *
+     * @param string $email User&#39;s email (required)
+     * @param string $password User&#39;s password (required)
+     * @param string $firstName First Name (optional)
+     * @param string $lastName First Name (optional)
+     * @param string $language Preferred Language code for the user (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function customerSignupWithHttpInfo($email, $password, $firstName = null, $lastName = null, $language = null)
+    {
+        // verify the required parameter 'email' is set
+        if ($email === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling customerSignup');
+        }
+        // verify the required parameter 'password' is set
+        if ($password === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $password when calling customerSignup');
+        }
+        // parse inputs
+        $resourcePath = "/users/sign-up";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($email !== null) {
+            $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
+        }
+        // form params
+        if ($password !== null) {
+            $formParams['password'] = $this->apiClient->getSerializer()->toFormValue($password);
+        }
+        // form params
+        if ($firstName !== null) {
+            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($firstName);
+        }
+        // form params
+        if ($lastName !== null) {
+            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($lastName);
+        }
+        // form params
+        if ($language !== null) {
+            $formParams['language'] = $this->apiClient->getSerializer()->toFormValue($language);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Profile[]',
+                '/users/sign-up'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userForgotPassword
+     *
+     * 
+     *
+     * @param string $email Your email address (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Response[]
+     */
+    public function userForgotPassword($email = null)
+    {
+        list($response) = $this->userForgotPasswordWithHttpInfo($email);
+        return $response;
+    }
+
+    /**
+     * Operation userForgotPasswordWithHttpInfo
+     *
+     * 
+     *
+     * @param string $email Your email address (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userForgotPasswordWithHttpInfo($email = null)
+    {
+        // parse inputs
+        $resourcePath = "/users/forget-password";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($email !== null) {
+            $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Response[]',
+                '/users/forget-password'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userGet
+     *
+     * 
+     *
+     * @param string $id Users Id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Profile[]
+     */
+    public function userGet($id)
+    {
+        list($response) = $this->userGetWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation userGetWithHttpInfo
+     *
+     * 
+     *
+     * @param string $id Users Id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userGetWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userGet');
+        }
+        // parse inputs
+        $resourcePath = "/users/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Profile[]',
+                '/users/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userResetPassword
      *
      * 
      *
@@ -728,14 +587,14 @@ class UsersApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Profile
      */
-    public function usersResetPasswordPost($email = null, $token = null, $password = null)
+    public function userResetPassword($email = null, $token = null, $password = null)
     {
-        list($response) = $this->usersResetPasswordPostWithHttpInfo($email, $token, $password);
+        list($response) = $this->userResetPasswordWithHttpInfo($email, $token, $password);
         return $response;
     }
 
     /**
-     * Operation usersResetPasswordPostWithHttpInfo
+     * Operation userResetPasswordWithHttpInfo
      *
      * 
      *
@@ -745,7 +604,7 @@ class UsersApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Profile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function usersResetPasswordPostWithHttpInfo($email = null, $token = null, $password = null)
+    public function userResetPasswordWithHttpInfo($email = null, $token = null, $password = null)
     {
         // parse inputs
         $resourcePath = "/users/reset-password";
@@ -781,11 +640,6 @@ class UsersApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -816,49 +670,51 @@ class UsersApi
     }
 
     /**
-     * Operation usersSignUpPost
+     * Operation userUpdate
      *
      * 
      *
-     * @param string $email User&#39;s email (required)
-     * @param string $password User&#39;s password (required)
-     * @param string $first_name First Name (optional)
-     * @param string $last_name First Name (optional)
+     * @param int $id  (required)
+     * @param string $firstName Customer&#39;s new first name (required)
+     * @param string $lastName Customer&#39;s new last name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Profile[]
      */
-    public function usersSignUpPost($email, $password, $first_name = null, $last_name = null, $language = null)
+    public function userUpdate($id, $firstName, $lastName, $language = null)
     {
-        list($response) = $this->usersSignUpPostWithHttpInfo($email, $password, $first_name, $last_name, $language);
+        list($response) = $this->userUpdateWithHttpInfo($id, $firstName, $lastName, $language);
         return $response;
     }
 
     /**
-     * Operation usersSignUpPostWithHttpInfo
+     * Operation userUpdateWithHttpInfo
      *
      * 
      *
-     * @param string $email User&#39;s email (required)
-     * @param string $password User&#39;s password (required)
-     * @param string $first_name First Name (optional)
-     * @param string $last_name First Name (optional)
+     * @param int $id  (required)
+     * @param string $firstName Customer&#39;s new first name (required)
+     * @param string $lastName Customer&#39;s new last name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function usersSignUpPostWithHttpInfo($email, $password, $first_name = null, $last_name = null, $language = null)
+    public function userUpdateWithHttpInfo($id, $firstName, $lastName, $language = null)
     {
-        // verify the required parameter 'email' is set
-        if ($email === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email when calling usersSignUpPost');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdate');
         }
-        // verify the required parameter 'password' is set
-        if ($password === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $password when calling usersSignUpPost');
+        // verify the required parameter 'firstName' is set
+        if ($firstName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $firstName when calling userUpdate');
+        }
+        // verify the required parameter 'lastName' is set
+        if ($lastName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lastName when calling userUpdate');
         }
         // parse inputs
-        $resourcePath = "/users/sign-up";
+        $resourcePath = "/users/{id}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -869,24 +725,24 @@ class UsersApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
 
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         // form params
-        if ($email !== null) {
-            $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
+        if ($firstName !== null) {
+            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($firstName);
         }
         // form params
-        if ($password !== null) {
-            $formParams['password'] = $this->apiClient->getSerializer()->toFormValue($password);
-        }
-        // form params
-        if ($first_name !== null) {
-            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($first_name);
-        }
-        // form params
-        if ($last_name !== null) {
-            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($last_name);
+        if ($lastName !== null) {
+            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($lastName);
         }
         // form params
         if ($language !== null) {
@@ -899,21 +755,16 @@ class UsersApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\Profile[]',
-                '/users/sign-up'
+                '/users/{id}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
@@ -934,7 +785,116 @@ class UsersApi
     }
 
     /**
-     * Operation usersVerifyPut
+     * Operation userUpdatePassword
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $oldPassword Your current password (required)
+     * @param string $newPassword your new password (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Profile[]
+     */
+    public function userUpdatePassword($id, $oldPassword, $newPassword)
+    {
+        list($response) = $this->userUpdatePasswordWithHttpInfo($id, $oldPassword, $newPassword);
+        return $response;
+    }
+
+    /**
+     * Operation userUpdatePasswordWithHttpInfo
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $oldPassword Your current password (required)
+     * @param string $newPassword your new password (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Profile[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userUpdatePasswordWithHttpInfo($id, $oldPassword, $newPassword)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdatePassword');
+        }
+        // verify the required parameter 'oldPassword' is set
+        if ($oldPassword === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $oldPassword when calling userUpdatePassword');
+        }
+        // verify the required parameter 'newPassword' is set
+        if ($newPassword === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $newPassword when calling userUpdatePassword');
+        }
+        // parse inputs
+        $resourcePath = "/users/{id}/update-password";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($oldPassword !== null) {
+            $formParams['oldPassword'] = $this->apiClient->getSerializer()->toFormValue($oldPassword);
+        }
+        // form params
+        if ($newPassword !== null) {
+            $formParams['newPassword'] = $this->apiClient->getSerializer()->toFormValue($newPassword);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Profile[]',
+                '/users/{id}/update-password'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userVerify
      *
      * 
      *
@@ -943,14 +903,14 @@ class UsersApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Profile
      */
-    public function usersVerifyPut($email, $token)
+    public function userVerify($email, $token)
     {
-        list($response) = $this->usersVerifyPutWithHttpInfo($email, $token);
+        list($response) = $this->userVerifyWithHttpInfo($email, $token);
         return $response;
     }
 
     /**
-     * Operation usersVerifyPutWithHttpInfo
+     * Operation userVerifyWithHttpInfo
      *
      * 
      *
@@ -959,15 +919,15 @@ class UsersApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Profile, HTTP status code, HTTP response headers (array of strings)
      */
-    public function usersVerifyPutWithHttpInfo($email, $token)
+    public function userVerifyWithHttpInfo($email, $token)
     {
         // verify the required parameter 'email' is set
         if ($email === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email when calling usersVerifyPut');
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling userVerify');
         }
         // verify the required parameter 'token' is set
         if ($token === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $token when calling usersVerifyPut');
+            throw new \InvalidArgumentException('Missing the required parameter $token when calling userVerify');
         }
         // parse inputs
         $resourcePath = "/users/verify";
@@ -998,11 +958,6 @@ class UsersApi
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
         }
         // make the API Call
         try {

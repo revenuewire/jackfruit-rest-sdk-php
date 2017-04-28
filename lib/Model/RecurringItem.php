@@ -56,14 +56,14 @@ class RecurringItem implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'offer_id' => 'int',
-        'initial_sale_date' => '\DateTime',
-        'next_billing_date' => '\DateTime',
+        'offerId' => 'int',
+        'initialSaleDate' => '\DateTime',
+        'nextBillingDate' => '\DateTime',
         'interval' => 'int',
-        'rebill_frequency_type' => 'string',
-        'rebill_frequency_value' => 'int',
-        'deactivated_date' => '\DateTime',
-        'deactivated_type' => 'string',
+        'rebillFrequencyType' => 'string',
+        'rebillFrequencyValue' => 'int',
+        'deactivatedDate' => '\DateTime',
+        'deactivatedType' => 'string',
         'status' => 'string'
     ];
 
@@ -78,14 +78,14 @@ class RecurringItem implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'offer_id' => 'offerId',
-        'initial_sale_date' => 'initialSaleDate',
-        'next_billing_date' => 'nextBillingDate',
+        'offerId' => 'offerId',
+        'initialSaleDate' => 'initialSaleDate',
+        'nextBillingDate' => 'nextBillingDate',
         'interval' => 'interval',
-        'rebill_frequency_type' => 'rebillFrequencyType',
-        'rebill_frequency_value' => 'rebillFrequencyValue',
-        'deactivated_date' => 'deactivatedDate',
-        'deactivated_type' => 'deactivatedType',
+        'rebillFrequencyType' => 'rebillFrequencyType',
+        'rebillFrequencyValue' => 'rebillFrequencyValue',
+        'deactivatedDate' => 'deactivatedDate',
+        'deactivatedType' => 'deactivatedType',
         'status' => 'status'
     ];
 
@@ -96,14 +96,14 @@ class RecurringItem implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'offer_id' => 'setOfferId',
-        'initial_sale_date' => 'setInitialSaleDate',
-        'next_billing_date' => 'setNextBillingDate',
+        'offerId' => 'setOfferId',
+        'initialSaleDate' => 'setInitialSaleDate',
+        'nextBillingDate' => 'setNextBillingDate',
         'interval' => 'setInterval',
-        'rebill_frequency_type' => 'setRebillFrequencyType',
-        'rebill_frequency_value' => 'setRebillFrequencyValue',
-        'deactivated_date' => 'setDeactivatedDate',
-        'deactivated_type' => 'setDeactivatedType',
+        'rebillFrequencyType' => 'setRebillFrequencyType',
+        'rebillFrequencyValue' => 'setRebillFrequencyValue',
+        'deactivatedDate' => 'setDeactivatedDate',
+        'deactivatedType' => 'setDeactivatedType',
         'status' => 'setStatus'
     ];
 
@@ -114,14 +114,14 @@ class RecurringItem implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'offer_id' => 'getOfferId',
-        'initial_sale_date' => 'getInitialSaleDate',
-        'next_billing_date' => 'getNextBillingDate',
+        'offerId' => 'getOfferId',
+        'initialSaleDate' => 'getInitialSaleDate',
+        'nextBillingDate' => 'getNextBillingDate',
         'interval' => 'getInterval',
-        'rebill_frequency_type' => 'getRebillFrequencyType',
-        'rebill_frequency_value' => 'getRebillFrequencyValue',
-        'deactivated_date' => 'getDeactivatedDate',
-        'deactivated_type' => 'getDeactivatedType',
+        'rebillFrequencyType' => 'getRebillFrequencyType',
+        'rebillFrequencyValue' => 'getRebillFrequencyValue',
+        'deactivatedDate' => 'getDeactivatedDate',
+        'deactivatedType' => 'getDeactivatedType',
         'status' => 'getStatus'
     ];
 
@@ -157,14 +157,14 @@ class RecurringItem implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['offer_id'] = isset($data['offer_id']) ? $data['offer_id'] : null;
-        $this->container['initial_sale_date'] = isset($data['initial_sale_date']) ? $data['initial_sale_date'] : null;
-        $this->container['next_billing_date'] = isset($data['next_billing_date']) ? $data['next_billing_date'] : null;
+        $this->container['offerId'] = isset($data['offerId']) ? $data['offerId'] : null;
+        $this->container['initialSaleDate'] = isset($data['initialSaleDate']) ? $data['initialSaleDate'] : null;
+        $this->container['nextBillingDate'] = isset($data['nextBillingDate']) ? $data['nextBillingDate'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
-        $this->container['rebill_frequency_type'] = isset($data['rebill_frequency_type']) ? $data['rebill_frequency_type'] : null;
-        $this->container['rebill_frequency_value'] = isset($data['rebill_frequency_value']) ? $data['rebill_frequency_value'] : null;
-        $this->container['deactivated_date'] = isset($data['deactivated_date']) ? $data['deactivated_date'] : null;
-        $this->container['deactivated_type'] = isset($data['deactivated_type']) ? $data['deactivated_type'] : null;
+        $this->container['rebillFrequencyType'] = isset($data['rebillFrequencyType']) ? $data['rebillFrequencyType'] : null;
+        $this->container['rebillFrequencyValue'] = isset($data['rebillFrequencyValue']) ? $data['rebillFrequencyValue'] : null;
+        $this->container['deactivatedDate'] = isset($data['deactivatedDate']) ? $data['deactivatedDate'] : null;
+        $this->container['deactivatedType'] = isset($data['deactivatedType']) ? $data['deactivatedType'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
     }
 
@@ -215,64 +215,64 @@ class RecurringItem implements ArrayAccess
     }
 
     /**
-     * Gets offer_id
+     * Gets offerId
      * @return int
      */
     public function getOfferId()
     {
-        return $this->container['offer_id'];
+        return $this->container['offerId'];
     }
 
     /**
-     * Sets offer_id
-     * @param int $offer_id
+     * Sets offerId
+     * @param int $offerId
      * @return $this
      */
-    public function setOfferId($offer_id)
+    public function setOfferId($offerId)
     {
-        $this->container['offer_id'] = $offer_id;
+        $this->container['offerId'] = $offerId;
 
         return $this;
     }
 
     /**
-     * Gets initial_sale_date
+     * Gets initialSaleDate
      * @return \DateTime
      */
     public function getInitialSaleDate()
     {
-        return $this->container['initial_sale_date'];
+        return $this->container['initialSaleDate'];
     }
 
     /**
-     * Sets initial_sale_date
-     * @param \DateTime $initial_sale_date
+     * Sets initialSaleDate
+     * @param \DateTime $initialSaleDate
      * @return $this
      */
-    public function setInitialSaleDate($initial_sale_date)
+    public function setInitialSaleDate($initialSaleDate)
     {
-        $this->container['initial_sale_date'] = $initial_sale_date;
+        $this->container['initialSaleDate'] = $initialSaleDate;
 
         return $this;
     }
 
     /**
-     * Gets next_billing_date
+     * Gets nextBillingDate
      * @return \DateTime
      */
     public function getNextBillingDate()
     {
-        return $this->container['next_billing_date'];
+        return $this->container['nextBillingDate'];
     }
 
     /**
-     * Sets next_billing_date
-     * @param \DateTime $next_billing_date
+     * Sets nextBillingDate
+     * @param \DateTime $nextBillingDate
      * @return $this
      */
-    public function setNextBillingDate($next_billing_date)
+    public function setNextBillingDate($nextBillingDate)
     {
-        $this->container['next_billing_date'] = $next_billing_date;
+        $this->container['nextBillingDate'] = $nextBillingDate;
 
         return $this;
     }
@@ -299,85 +299,85 @@ class RecurringItem implements ArrayAccess
     }
 
     /**
-     * Gets rebill_frequency_type
+     * Gets rebillFrequencyType
      * @return string
      */
     public function getRebillFrequencyType()
     {
-        return $this->container['rebill_frequency_type'];
+        return $this->container['rebillFrequencyType'];
     }
 
     /**
-     * Sets rebill_frequency_type
-     * @param string $rebill_frequency_type
+     * Sets rebillFrequencyType
+     * @param string $rebillFrequencyType
      * @return $this
      */
-    public function setRebillFrequencyType($rebill_frequency_type)
+    public function setRebillFrequencyType($rebillFrequencyType)
     {
-        $this->container['rebill_frequency_type'] = $rebill_frequency_type;
+        $this->container['rebillFrequencyType'] = $rebillFrequencyType;
 
         return $this;
     }
 
     /**
-     * Gets rebill_frequency_value
+     * Gets rebillFrequencyValue
      * @return int
      */
     public function getRebillFrequencyValue()
     {
-        return $this->container['rebill_frequency_value'];
+        return $this->container['rebillFrequencyValue'];
     }
 
     /**
-     * Sets rebill_frequency_value
-     * @param int $rebill_frequency_value
+     * Sets rebillFrequencyValue
+     * @param int $rebillFrequencyValue
      * @return $this
      */
-    public function setRebillFrequencyValue($rebill_frequency_value)
+    public function setRebillFrequencyValue($rebillFrequencyValue)
     {
-        $this->container['rebill_frequency_value'] = $rebill_frequency_value;
+        $this->container['rebillFrequencyValue'] = $rebillFrequencyValue;
 
         return $this;
     }
 
     /**
-     * Gets deactivated_date
+     * Gets deactivatedDate
      * @return \DateTime
      */
     public function getDeactivatedDate()
     {
-        return $this->container['deactivated_date'];
+        return $this->container['deactivatedDate'];
     }
 
     /**
-     * Sets deactivated_date
-     * @param \DateTime $deactivated_date
+     * Sets deactivatedDate
+     * @param \DateTime $deactivatedDate
      * @return $this
      */
-    public function setDeactivatedDate($deactivated_date)
+    public function setDeactivatedDate($deactivatedDate)
     {
-        $this->container['deactivated_date'] = $deactivated_date;
+        $this->container['deactivatedDate'] = $deactivatedDate;
 
         return $this;
     }
 
     /**
-     * Gets deactivated_type
+     * Gets deactivatedType
      * @return string
      */
     public function getDeactivatedType()
     {
-        return $this->container['deactivated_type'];
+        return $this->container['deactivatedType'];
     }
 
     /**
-     * Sets deactivated_type
-     * @param string $deactivated_type
+     * Sets deactivatedType
+     * @param string $deactivatedType
      * @return $this
      */
-    public function setDeactivatedType($deactivated_type)
+    public function setDeactivatedType($deactivatedType)
     {
-        $this->container['deactivated_type'] = $deactivated_type;
+        $this->container['deactivatedType'] = $deactivatedType;
 
         return $this;
     }

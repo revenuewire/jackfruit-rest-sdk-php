@@ -58,15 +58,15 @@ class Profile implements ArrayAccess
         'id' => 'int',
         'username' => 'string',
         'email' => 'string',
-        'first_name' => 'string',
-        'last_name' => 'string',
+        'firstName' => 'string',
+        'lastName' => 'string',
         'timezone' => 'string',
-        'account_id' => 'int',
-        'password_expiry_dates' => 'int',
-        'default_dashboard' => 'string',
-        'default_product_view' => 'string',
-        'last_login_date' => 'string',
-        'last_login_ip' => 'string'
+        'accountId' => 'int',
+        'passwordExpiryDates' => 'int',
+        'defaultDashboard' => 'string',
+        'defaultProductView' => 'string',
+        'lastLoginDate' => 'string',
+        'lastLoginIp' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -82,15 +82,15 @@ class Profile implements ArrayAccess
         'id' => 'id',
         'username' => 'username',
         'email' => 'email',
-        'first_name' => 'firstName',
-        'last_name' => 'lastName',
+        'firstName' => 'firstName',
+        'lastName' => 'lastName',
         'timezone' => 'timezone',
-        'account_id' => 'accountId',
-        'password_expiry_dates' => 'passwordExpiryDates',
-        'default_dashboard' => 'defaultDashboard',
-        'default_product_view' => 'defaultProductView',
-        'last_login_date' => 'lastLoginDate',
-        'last_login_ip' => 'lastLoginIp'
+        'accountId' => 'accountId',
+        'passwordExpiryDates' => 'passwordExpiryDates',
+        'defaultDashboard' => 'defaultDashboard',
+        'defaultProductView' => 'defaultProductView',
+        'lastLoginDate' => 'lastLoginDate',
+        'lastLoginIp' => 'lastLoginIp'
     ];
 
 
@@ -102,15 +102,15 @@ class Profile implements ArrayAccess
         'id' => 'setId',
         'username' => 'setUsername',
         'email' => 'setEmail',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
+        'firstName' => 'setFirstName',
+        'lastName' => 'setLastName',
         'timezone' => 'setTimezone',
-        'account_id' => 'setAccountId',
-        'password_expiry_dates' => 'setPasswordExpiryDates',
-        'default_dashboard' => 'setDefaultDashboard',
-        'default_product_view' => 'setDefaultProductView',
-        'last_login_date' => 'setLastLoginDate',
-        'last_login_ip' => 'setLastLoginIp'
+        'accountId' => 'setAccountId',
+        'passwordExpiryDates' => 'setPasswordExpiryDates',
+        'defaultDashboard' => 'setDefaultDashboard',
+        'defaultProductView' => 'setDefaultProductView',
+        'lastLoginDate' => 'setLastLoginDate',
+        'lastLoginIp' => 'setLastLoginIp'
     ];
 
 
@@ -122,15 +122,15 @@ class Profile implements ArrayAccess
         'id' => 'getId',
         'username' => 'getUsername',
         'email' => 'getEmail',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
+        'firstName' => 'getFirstName',
+        'lastName' => 'getLastName',
         'timezone' => 'getTimezone',
-        'account_id' => 'getAccountId',
-        'password_expiry_dates' => 'getPasswordExpiryDates',
-        'default_dashboard' => 'getDefaultDashboard',
-        'default_product_view' => 'getDefaultProductView',
-        'last_login_date' => 'getLastLoginDate',
-        'last_login_ip' => 'getLastLoginIp'
+        'accountId' => 'getAccountId',
+        'passwordExpiryDates' => 'getPasswordExpiryDates',
+        'defaultDashboard' => 'getDefaultDashboard',
+        'defaultProductView' => 'getDefaultProductView',
+        'lastLoginDate' => 'getLastLoginDate',
+        'lastLoginIp' => 'getLastLoginIp'
     ];
 
     public static function attributeMap()
@@ -167,15 +167,15 @@ class Profile implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['first_name'] = isset($data['first_name']) ? $data['first_name'] : null;
-        $this->container['last_name'] = isset($data['last_name']) ? $data['last_name'] : null;
+        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
+        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
-        $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
-        $this->container['password_expiry_dates'] = isset($data['password_expiry_dates']) ? $data['password_expiry_dates'] : null;
-        $this->container['default_dashboard'] = isset($data['default_dashboard']) ? $data['default_dashboard'] : null;
-        $this->container['default_product_view'] = isset($data['default_product_view']) ? $data['default_product_view'] : null;
-        $this->container['last_login_date'] = isset($data['last_login_date']) ? $data['last_login_date'] : null;
-        $this->container['last_login_ip'] = isset($data['last_login_ip']) ? $data['last_login_ip'] : null;
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['passwordExpiryDates'] = isset($data['passwordExpiryDates']) ? $data['passwordExpiryDates'] : null;
+        $this->container['defaultDashboard'] = isset($data['defaultDashboard']) ? $data['defaultDashboard'] : null;
+        $this->container['defaultProductView'] = isset($data['defaultProductView']) ? $data['defaultProductView'] : null;
+        $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
+        $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
     }
 
     /**
@@ -267,43 +267,43 @@ class Profile implements ArrayAccess
     }
 
     /**
-     * Gets first_name
+     * Gets firstName
      * @return string
      */
     public function getFirstName()
     {
-        return $this->container['first_name'];
+        return $this->container['firstName'];
     }
 
     /**
-     * Sets first_name
-     * @param string $first_name
+     * Sets firstName
+     * @param string $firstName
      * @return $this
      */
-    public function setFirstName($first_name)
+    public function setFirstName($firstName)
     {
-        $this->container['first_name'] = $first_name;
+        $this->container['firstName'] = $firstName;
 
         return $this;
     }
 
     /**
-     * Gets last_name
+     * Gets lastName
      * @return string
      */
     public function getLastName()
     {
-        return $this->container['last_name'];
+        return $this->container['lastName'];
     }
 
     /**
-     * Sets last_name
-     * @param string $last_name
+     * Sets lastName
+     * @param string $lastName
      * @return $this
      */
-    public function setLastName($last_name)
+    public function setLastName($lastName)
     {
-        $this->container['last_name'] = $last_name;
+        $this->container['lastName'] = $lastName;
 
         return $this;
     }
@@ -330,127 +330,127 @@ class Profile implements ArrayAccess
     }
 
     /**
-     * Gets account_id
+     * Gets accountId
      * @return int
      */
     public function getAccountId()
     {
-        return $this->container['account_id'];
+        return $this->container['accountId'];
     }
 
     /**
-     * Sets account_id
-     * @param int $account_id
+     * Sets accountId
+     * @param int $accountId
      * @return $this
      */
-    public function setAccountId($account_id)
+    public function setAccountId($accountId)
     {
-        $this->container['account_id'] = $account_id;
+        $this->container['accountId'] = $accountId;
 
         return $this;
     }
 
     /**
-     * Gets password_expiry_dates
+     * Gets passwordExpiryDates
      * @return int
      */
     public function getPasswordExpiryDates()
     {
-        return $this->container['password_expiry_dates'];
+        return $this->container['passwordExpiryDates'];
     }
 
     /**
-     * Sets password_expiry_dates
-     * @param int $password_expiry_dates
+     * Sets passwordExpiryDates
+     * @param int $passwordExpiryDates
      * @return $this
      */
-    public function setPasswordExpiryDates($password_expiry_dates)
+    public function setPasswordExpiryDates($passwordExpiryDates)
     {
-        $this->container['password_expiry_dates'] = $password_expiry_dates;
+        $this->container['passwordExpiryDates'] = $passwordExpiryDates;
 
         return $this;
     }
 
     /**
-     * Gets default_dashboard
+     * Gets defaultDashboard
      * @return string
      */
     public function getDefaultDashboard()
     {
-        return $this->container['default_dashboard'];
+        return $this->container['defaultDashboard'];
     }
 
     /**
-     * Sets default_dashboard
-     * @param string $default_dashboard
+     * Sets defaultDashboard
+     * @param string $defaultDashboard
      * @return $this
      */
-    public function setDefaultDashboard($default_dashboard)
+    public function setDefaultDashboard($defaultDashboard)
     {
-        $this->container['default_dashboard'] = $default_dashboard;
+        $this->container['defaultDashboard'] = $defaultDashboard;
 
         return $this;
     }
 
     /**
-     * Gets default_product_view
+     * Gets defaultProductView
      * @return string
      */
     public function getDefaultProductView()
     {
-        return $this->container['default_product_view'];
+        return $this->container['defaultProductView'];
     }
 
     /**
-     * Sets default_product_view
-     * @param string $default_product_view
+     * Sets defaultProductView
+     * @param string $defaultProductView
      * @return $this
      */
-    public function setDefaultProductView($default_product_view)
+    public function setDefaultProductView($defaultProductView)
     {
-        $this->container['default_product_view'] = $default_product_view;
+        $this->container['defaultProductView'] = $defaultProductView;
 
         return $this;
     }
 
     /**
-     * Gets last_login_date
+     * Gets lastLoginDate
      * @return string
      */
     public function getLastLoginDate()
     {
-        return $this->container['last_login_date'];
+        return $this->container['lastLoginDate'];
     }
 
     /**
-     * Sets last_login_date
-     * @param string $last_login_date
+     * Sets lastLoginDate
+     * @param string $lastLoginDate
      * @return $this
      */
-    public function setLastLoginDate($last_login_date)
+    public function setLastLoginDate($lastLoginDate)
     {
-        $this->container['last_login_date'] = $last_login_date;
+        $this->container['lastLoginDate'] = $lastLoginDate;
 
         return $this;
     }
 
     /**
-     * Gets last_login_ip
+     * Gets lastLoginIp
      * @return string
      */
     public function getLastLoginIp()
     {
-        return $this->container['last_login_ip'];
+        return $this->container['lastLoginIp'];
     }
 
     /**
-     * Sets last_login_ip
-     * @param string $last_login_ip
+     * Sets lastLoginIp
+     * @param string $lastLoginIp
      * @return $this
      */
-    public function setLastLoginIp($last_login_ip)
+    public function setLastLoginIp($lastLoginIp)
     {
-        $this->container['last_login_ip'] = $last_login_ip;
+        $this->container['lastLoginIp'] = $lastLoginIp;
 
         return $this;
     }

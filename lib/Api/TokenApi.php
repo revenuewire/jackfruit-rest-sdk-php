@@ -1,6 +1,6 @@
 <?php
 /**
- * SubscriptionsApi
+ * TokenApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Swagger\Client\Configuration;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * SubscriptionsApi Class Doc Comment
+ * TokenApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class SubscriptionsApi
+class TokenApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class SubscriptionsApi
      *
      * @param \Swagger\Client\ApiClient $apiClient set the API client
      *
-     * @return SubscriptionsApi
+     * @return TokenApi
      */
     public function setApiClient(\Swagger\Client\ApiClient $apiClient)
     {
@@ -88,37 +88,35 @@ class SubscriptionsApi
     }
 
     /**
-     * Operation subscriptionsRecurringTransactionItemIdCancelPut
+     * Operation tokenGenerate
      *
      * 
      *
-     * @param int $recurringTransactionItemId Recurring transaction item id (required)
+     * @param string $username User&#39;s username (optional)
+     * @param string $password User&#39;s password (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Response[]
+     * @return \Swagger\Client\Model\Token
      */
-    public function subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId)
+    public function tokenGenerate($username = null, $password = null)
     {
-        list($response) = $this->subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo($recurringTransactionItemId);
+        list($response) = $this->tokenGenerateWithHttpInfo($username, $password);
         return $response;
     }
 
     /**
-     * Operation subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo
+     * Operation tokenGenerateWithHttpInfo
      *
      * 
      *
-     * @param int $recurringTransactionItemId Recurring transaction item id (required)
+     * @param string $username User&#39;s username (optional)
+     * @param string $password User&#39;s password (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Token, HTTP status code, HTTP response headers (array of strings)
      */
-    public function subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo($recurringTransactionItemId)
+    public function tokenGenerateWithHttpInfo($username = null, $password = null)
     {
-        // verify the required parameter 'recurringTransactionItemId' is set
-        if ($recurringTransactionItemId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recurringTransactionItemId when calling subscriptionsRecurringTransactionItemIdCancelPut');
-        }
         // parse inputs
-        $resourcePath = "/subscriptions/{recurringTransactionItemId}/cancel";
+        $resourcePath = "/token";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -129,13 +127,13 @@ class SubscriptionsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
-        // path params
-        if ($recurringTransactionItemId !== null) {
-            $resourcePath = str_replace(
-                "{" . "recurringTransactionItemId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($recurringTransactionItemId),
-                $resourcePath
-            );
+        // header params
+        if ($username !== null) {
+            $headerParams['username'] = $this->apiClient->getSerializer()->toHeaderValue($username);
+        }
+        // header params
+        if ($password !== null) {
+            $headerParams['password'] = $this->apiClient->getSerializer()->toHeaderValue($password);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -151,19 +149,19 @@ class SubscriptionsApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'POST',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Response[]',
-                '/subscriptions/{recurringTransactionItemId}/cancel'
+                '\Swagger\Client\Model\Token',
+                '/token'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Token', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Token', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

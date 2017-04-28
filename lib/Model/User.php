@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * User
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * User Class Doc Comment
  *
  * @category    Class
- * @description Customer object
+ * @description User object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class User implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'User';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,15 +56,15 @@ class Customer implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'merchantFid' => 'string',
+        'username' => 'string',
         'email' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
         'timezone' => 'string',
-        'language' => 'string',
-        'created' => '\DateTime',
-        'addresses' => '\Swagger\Client\Model\CustomerAddress[]',
-        'phones' => '\Swagger\Client\Model\CustomerPhone[]'
+        'accountId' => 'int',
+        'passwordExpiryDates' => 'int',
+        'lastLoginDate' => 'string',
+        'lastLoginIp' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -78,15 +78,15 @@ class Customer implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'merchantFid' => 'merchantFid',
+        'username' => 'username',
         'email' => 'email',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
         'timezone' => 'timezone',
-        'language' => 'language',
-        'created' => 'created',
-        'addresses' => 'addresses',
-        'phones' => 'phones'
+        'accountId' => 'accountId',
+        'passwordExpiryDates' => 'passwordExpiryDates',
+        'lastLoginDate' => 'lastLoginDate',
+        'lastLoginIp' => 'lastLoginIp'
     ];
 
 
@@ -96,15 +96,15 @@ class Customer implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'merchantFid' => 'setMerchantFid',
+        'username' => 'setUsername',
         'email' => 'setEmail',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
         'timezone' => 'setTimezone',
-        'language' => 'setLanguage',
-        'created' => 'setCreated',
-        'addresses' => 'setAddresses',
-        'phones' => 'setPhones'
+        'accountId' => 'setAccountId',
+        'passwordExpiryDates' => 'setPasswordExpiryDates',
+        'lastLoginDate' => 'setLastLoginDate',
+        'lastLoginIp' => 'setLastLoginIp'
     ];
 
 
@@ -114,15 +114,15 @@ class Customer implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'merchantFid' => 'getMerchantFid',
+        'username' => 'getUsername',
         'email' => 'getEmail',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
         'timezone' => 'getTimezone',
-        'language' => 'getLanguage',
-        'created' => 'getCreated',
-        'addresses' => 'getAddresses',
-        'phones' => 'getPhones'
+        'accountId' => 'getAccountId',
+        'passwordExpiryDates' => 'getPasswordExpiryDates',
+        'lastLoginDate' => 'getLastLoginDate',
+        'lastLoginIp' => 'getLastLoginIp'
     ];
 
     public static function attributeMap()
@@ -157,15 +157,15 @@ class Customer implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['merchantFid'] = isset($data['merchantFid']) ? $data['merchantFid'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
-        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
-        $this->container['addresses'] = isset($data['addresses']) ? $data['addresses'] : null;
-        $this->container['phones'] = isset($data['phones']) ? $data['phones'] : null;
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['passwordExpiryDates'] = isset($data['passwordExpiryDates']) ? $data['passwordExpiryDates'] : null;
+        $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
+        $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
     }
 
     /**
@@ -215,22 +215,22 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets merchantFid
+     * Gets username
      * @return string
      */
-    public function getMerchantFid()
+    public function getUsername()
     {
-        return $this->container['merchantFid'];
+        return $this->container['username'];
     }
 
     /**
-     * Sets merchantFid
-     * @param string $merchantFid
+     * Sets username
+     * @param string $username
      * @return $this
      */
-    public function setMerchantFid($merchantFid)
+    public function setUsername($username)
     {
-        $this->container['merchantFid'] = $merchantFid;
+        $this->container['username'] = $username;
 
         return $this;
     }
@@ -320,85 +320,85 @@ class Customer implements ArrayAccess
     }
 
     /**
-     * Gets language
+     * Gets accountId
+     * @return int
+     */
+    public function getAccountId()
+    {
+        return $this->container['accountId'];
+    }
+
+    /**
+     * Sets accountId
+     * @param int $accountId
+     * @return $this
+     */
+    public function setAccountId($accountId)
+    {
+        $this->container['accountId'] = $accountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets passwordExpiryDates
+     * @return int
+     */
+    public function getPasswordExpiryDates()
+    {
+        return $this->container['passwordExpiryDates'];
+    }
+
+    /**
+     * Sets passwordExpiryDates
+     * @param int $passwordExpiryDates
+     * @return $this
+     */
+    public function setPasswordExpiryDates($passwordExpiryDates)
+    {
+        $this->container['passwordExpiryDates'] = $passwordExpiryDates;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastLoginDate
      * @return string
      */
-    public function getLanguage()
+    public function getLastLoginDate()
     {
-        return $this->container['language'];
+        return $this->container['lastLoginDate'];
     }
 
     /**
-     * Sets language
-     * @param string $language
+     * Sets lastLoginDate
+     * @param string $lastLoginDate
      * @return $this
      */
-    public function setLanguage($language)
+    public function setLastLoginDate($lastLoginDate)
     {
-        $this->container['language'] = $language;
+        $this->container['lastLoginDate'] = $lastLoginDate;
 
         return $this;
     }
 
     /**
-     * Gets created
-     * @return \DateTime
+     * Gets lastLoginIp
+     * @return string
      */
-    public function getCreated()
+    public function getLastLoginIp()
     {
-        return $this->container['created'];
+        return $this->container['lastLoginIp'];
     }
 
     /**
-     * Sets created
-     * @param \DateTime $created
+     * Sets lastLoginIp
+     * @param string $lastLoginIp
      * @return $this
      */
-    public function setCreated($created)
+    public function setLastLoginIp($lastLoginIp)
     {
-        $this->container['created'] = $created;
-
-        return $this;
-    }
-
-    /**
-     * Gets addresses
-     * @return \Swagger\Client\Model\CustomerAddress[]
-     */
-    public function getAddresses()
-    {
-        return $this->container['addresses'];
-    }
-
-    /**
-     * Sets addresses
-     * @param \Swagger\Client\Model\CustomerAddress[] $addresses
-     * @return $this
-     */
-    public function setAddresses($addresses)
-    {
-        $this->container['addresses'] = $addresses;
-
-        return $this;
-    }
-
-    /**
-     * Gets phones
-     * @return \Swagger\Client\Model\CustomerPhone[]
-     */
-    public function getPhones()
-    {
-        return $this->container['phones'];
-    }
-
-    /**
-     * Sets phones
-     * @param \Swagger\Client\Model\CustomerPhone[] $phones
-     * @return $this
-     */
-    public function setPhones($phones)
-    {
-        $this->container['phones'] = $phones;
+        $this->container['lastLoginIp'] = $lastLoginIp;
 
         return $this;
     }

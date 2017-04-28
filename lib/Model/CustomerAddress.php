@@ -56,15 +56,15 @@ class CustomerAddress implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'customer_account_id' => 'int',
-        'transaction_id' => 'int',
+        'customerAccountId' => 'int',
+        'transactionId' => 'int',
         'name' => 'string',
         'address' => 'string',
         'address2' => 'string',
-        'country_code' => 'string',
-        'region_code' => 'string',
+        'countryCode' => 'string',
+        'regionCode' => 'string',
         'city' => 'string',
-        'postal_code' => 'string',
+        'postalCode' => 'string',
         'type' => 'string'
     ];
 
@@ -79,15 +79,15 @@ class CustomerAddress implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'customer_account_id' => 'customerAccountId',
-        'transaction_id' => 'transactionId',
+        'customerAccountId' => 'customerAccountId',
+        'transactionId' => 'transactionId',
         'name' => 'name',
         'address' => 'address',
         'address2' => 'address2',
-        'country_code' => 'countryCode',
-        'region_code' => 'regionCode',
+        'countryCode' => 'countryCode',
+        'regionCode' => 'regionCode',
         'city' => 'city',
-        'postal_code' => 'postalCode',
+        'postalCode' => 'postalCode',
         'type' => 'type'
     ];
 
@@ -98,15 +98,15 @@ class CustomerAddress implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'customer_account_id' => 'setCustomerAccountId',
-        'transaction_id' => 'setTransactionId',
+        'customerAccountId' => 'setCustomerAccountId',
+        'transactionId' => 'setTransactionId',
         'name' => 'setName',
         'address' => 'setAddress',
         'address2' => 'setAddress2',
-        'country_code' => 'setCountryCode',
-        'region_code' => 'setRegionCode',
+        'countryCode' => 'setCountryCode',
+        'regionCode' => 'setRegionCode',
         'city' => 'setCity',
-        'postal_code' => 'setPostalCode',
+        'postalCode' => 'setPostalCode',
         'type' => 'setType'
     ];
 
@@ -117,15 +117,15 @@ class CustomerAddress implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'customer_account_id' => 'getCustomerAccountId',
-        'transaction_id' => 'getTransactionId',
+        'customerAccountId' => 'getCustomerAccountId',
+        'transactionId' => 'getTransactionId',
         'name' => 'getName',
         'address' => 'getAddress',
         'address2' => 'getAddress2',
-        'country_code' => 'getCountryCode',
-        'region_code' => 'getRegionCode',
+        'countryCode' => 'getCountryCode',
+        'regionCode' => 'getRegionCode',
         'city' => 'getCity',
-        'postal_code' => 'getPostalCode',
+        'postalCode' => 'getPostalCode',
         'type' => 'getType'
     ];
 
@@ -161,15 +161,15 @@ class CustomerAddress implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['customer_account_id'] = isset($data['customer_account_id']) ? $data['customer_account_id'] : null;
-        $this->container['transaction_id'] = isset($data['transaction_id']) ? $data['transaction_id'] : null;
+        $this->container['customerAccountId'] = isset($data['customerAccountId']) ? $data['customerAccountId'] : null;
+        $this->container['transactionId'] = isset($data['transactionId']) ? $data['transactionId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['address'] = isset($data['address']) ? $data['address'] : null;
         $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
-        $this->container['region_code'] = isset($data['region_code']) ? $data['region_code'] : null;
+        $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
+        $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['postal_code'] = isset($data['postal_code']) ? $data['postal_code'] : null;
+        $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
@@ -220,43 +220,43 @@ class CustomerAddress implements ArrayAccess
     }
 
     /**
-     * Gets customer_account_id
+     * Gets customerAccountId
      * @return int
      */
     public function getCustomerAccountId()
     {
-        return $this->container['customer_account_id'];
+        return $this->container['customerAccountId'];
     }
 
     /**
-     * Sets customer_account_id
-     * @param int $customer_account_id
+     * Sets customerAccountId
+     * @param int $customerAccountId
      * @return $this
      */
-    public function setCustomerAccountId($customer_account_id)
+    public function setCustomerAccountId($customerAccountId)
     {
-        $this->container['customer_account_id'] = $customer_account_id;
+        $this->container['customerAccountId'] = $customerAccountId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_id
+     * Gets transactionId
      * @return int
      */
     public function getTransactionId()
     {
-        return $this->container['transaction_id'];
+        return $this->container['transactionId'];
     }
 
     /**
-     * Sets transaction_id
-     * @param int $transaction_id
+     * Sets transactionId
+     * @param int $transactionId
      * @return $this
      */
-    public function setTransactionId($transaction_id)
+    public function setTransactionId($transactionId)
     {
-        $this->container['transaction_id'] = $transaction_id;
+        $this->container['transactionId'] = $transactionId;
 
         return $this;
     }
@@ -325,43 +325,43 @@ class CustomerAddress implements ArrayAccess
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      * @return string
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
-     * @param string $country_code
+     * Sets countryCode
+     * @param string $countryCode
      * @return $this
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }
 
     /**
-     * Gets region_code
+     * Gets regionCode
      * @return string
      */
     public function getRegionCode()
     {
-        return $this->container['region_code'];
+        return $this->container['regionCode'];
     }
 
     /**
-     * Sets region_code
-     * @param string $region_code
+     * Sets regionCode
+     * @param string $regionCode
      * @return $this
      */
-    public function setRegionCode($region_code)
+    public function setRegionCode($regionCode)
     {
-        $this->container['region_code'] = $region_code;
+        $this->container['regionCode'] = $regionCode;
 
         return $this;
     }
@@ -388,22 +388,22 @@ class CustomerAddress implements ArrayAccess
     }
 
     /**
-     * Gets postal_code
+     * Gets postalCode
      * @return string
      */
     public function getPostalCode()
     {
-        return $this->container['postal_code'];
+        return $this->container['postalCode'];
     }
 
     /**
-     * Sets postal_code
-     * @param string $postal_code
+     * Sets postalCode
+     * @param string $postalCode
      * @return $this
      */
-    public function setPostalCode($postal_code)
+    public function setPostalCode($postalCode)
     {
-        $this->container['postal_code'] = $postal_code;
+        $this->container['postalCode'] = $postalCode;
 
         return $this;
     }

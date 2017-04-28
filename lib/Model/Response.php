@@ -55,7 +55,7 @@ class Response implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'csrf' => 'string'
+        
     ];
 
     public static function swaggerTypes()
@@ -68,7 +68,7 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'csrf' => 'csrf'
+        
     ];
 
 
@@ -77,7 +77,7 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'csrf' => 'setCsrf'
+        
     ];
 
 
@@ -86,7 +86,7 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'csrf' => 'getCsrf'
+        
     ];
 
     public static function attributeMap()
@@ -120,7 +120,6 @@ class Response implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['csrf'] = isset($data['csrf']) ? $data['csrf'] : null;
     }
 
     /**
@@ -130,7 +129,7 @@ class Response implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = [];
+        $invalid_properties = parent::listInvalidProperties();
 
         return $invalid_properties;
     }
@@ -143,31 +142,13 @@ class Response implements ArrayAccess
      */
     public function valid()
     {
+        if (!parent::valid()) {
+            return false;
+        }
 
         return true;
     }
 
-
-    /**
-     * Gets csrf
-     * @return string
-     */
-    public function getCsrf()
-    {
-        return $this->container['csrf'];
-    }
-
-    /**
-     * Sets csrf
-     * @param string $csrf
-     * @return $this
-     */
-    public function setCsrf($csrf)
-    {
-        $this->container['csrf'] = $csrf;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

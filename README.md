@@ -56,22 +56,17 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_id = "customer_id_example"; // string | Customer id
-$transaction_id = 56; // int | transaction id
+$customerId = "customerId_example"; // string | Customer id
+$transactionId = 56; // int | transaction id
 $name = "name_example"; // string | Customer's name
 $address = "address_example"; // string | Customer's address
-$country_code = "country_code_example"; // string | Country code
+$countryCode = "countryCode_example"; // string | Country code
 $city = "city_example"; // string | City
-$postal_code = "postal_code_example"; // string | Postal code
+$postalCode = "postalCode_example"; // string | Postal code
 
 try {
-    $result = $api_instance->customersCustomerIdAddressTransactionIdPut($customer_id, $transaction_id, $name, $address, $country_code, $city, $postal_code);
+    $result = $api_instance->customersCustomerIdAddressTransactionIdPut($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdAddressTransactionIdPut: ', $e->getMessage(), PHP_EOL;
@@ -93,10 +88,6 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**customersCustomerUserIdTransactionsGet**](docs/Api/CustomersApi.md#customerscustomeruseridtransactionsget) | **GET** /customers/{customerUserId}/transactions | 
 *CustomersApi* | [**customersGet**](docs/Api/CustomersApi.md#customersget) | **GET** /customers | 
 *CustomersApi* | [**customersPost**](docs/Api/CustomersApi.md#customerspost) | **POST** /customers/ | 
-*DefaultApi* | [**geoInfoCountriesCountryCodeStatesGet**](docs/Api/DefaultApi.md#geoinfocountriescountrycodestatesget) | **GET** /geo-info/countries/{countryCode}/states | 
-*DefaultApi* | [**geoInfoCountriesGet**](docs/Api/DefaultApi.md#geoinfocountriesget) | **GET** /geo-info/countries | 
-*DefaultApi* | [**geoInfoCountriesStatesGet**](docs/Api/DefaultApi.md#geoinfocountriesstatesget) | **GET** /geo-info/countries/states | 
-*DefaultApi* | [**geoInfoSupportedLanguagesGet**](docs/Api/DefaultApi.md#geoinfosupportedlanguagesget) | **GET** /geo-info/supported-languages | 
 *DomainsApi* | [**domainsEmailIdDelete**](docs/Api/DomainsApi.md#domainsemailiddelete) | **DELETE** /domains/email/{id} | 
 *DomainsApi* | [**domainsEmailPost**](docs/Api/DomainsApi.md#domainsemailpost) | **POST** /domains/email | 
 *DomainsApi* | [**domainsGet**](docs/Api/DomainsApi.md#domainsget) | **GET** /domains | 
@@ -105,21 +96,26 @@ Class | Method | HTTP request | Description
 *DomainsApi* | [**domainsIdPut**](docs/Api/DomainsApi.md#domainsidput) | **PUT** /domains/{id} | 
 *DomainsApi* | [**domainsIdUploadCertPost**](docs/Api/DomainsApi.md#domainsiduploadcertpost) | **POST** /domains/{id}/upload-cert | 
 *DomainsApi* | [**domainsPost**](docs/Api/DomainsApi.md#domainspost) | **POST** /domains | 
+*GEOApi* | [**geoInfoCountriesCountryCodeStatesGet**](docs/Api/GEOApi.md#geoinfocountriescountrycodestatesget) | **GET** /geo-info/countries/{countryCode}/states | 
+*GEOApi* | [**geoInfoCountriesGet**](docs/Api/GEOApi.md#geoinfocountriesget) | **GET** /geo-info/countries | 
+*GEOApi* | [**geoInfoCountriesStatesGet**](docs/Api/GEOApi.md#geoinfocountriesstatesget) | **GET** /geo-info/countries/states | 
+*GEOApi* | [**geoInfoSupportedLanguagesGet**](docs/Api/GEOApi.md#geoinfosupportedlanguagesget) | **GET** /geo-info/supported-languages | 
 *OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**ordersOrderIdGet**](docs/Api/OrdersApi.md#ordersorderidget) | **GET** /orders/{orderId} | 
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
 *SubscriptionsApi* | [**subscriptionsRecurringTransactionItemIdCancelPut**](docs/Api/SubscriptionsApi.md#subscriptionsrecurringtransactionitemidcancelput) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
-*UsersApi* | [**usersForgetPasswordPost**](docs/Api/UsersApi.md#usersforgetpasswordpost) | **POST** /users/forget-password | 
-*UsersApi* | [**usersIdGet**](docs/Api/UsersApi.md#usersidget) | **GET** /users/{id} | 
-*UsersApi* | [**usersIdPut**](docs/Api/UsersApi.md#usersidput) | **PUT** /users/{id} | 
-*UsersApi* | [**usersIdUpdatePasswordPut**](docs/Api/UsersApi.md#usersidupdatepasswordput) | **PUT** /users/{id}/update-password | 
-*UsersApi* | [**usersLoginPost**](docs/Api/UsersApi.md#usersloginpost) | **POST** /users/login | 
-*UsersApi* | [**usersOrderLoginPost**](docs/Api/UsersApi.md#usersorderloginpost) | **POST** /users/order-login | 
-*UsersApi* | [**usersResetPasswordPost**](docs/Api/UsersApi.md#usersresetpasswordpost) | **POST** /users/reset-password | 
-*UsersApi* | [**usersSignUpPost**](docs/Api/UsersApi.md#userssignuppost) | **POST** /users/sign-up | 
-*UsersApi* | [**usersVerifyPut**](docs/Api/UsersApi.md#usersverifyput) | **PUT** /users/verify | 
+*TokenApi* | [**tokenGenerate**](docs/Api/TokenApi.md#tokengenerate) | **POST** /token | 
+*UsersApi* | [**customerLogin**](docs/Api/UsersApi.md#customerlogin) | **POST** /users/login | 
+*UsersApi* | [**customerOrderLogin**](docs/Api/UsersApi.md#customerorderlogin) | **POST** /users/order-login | 
+*UsersApi* | [**customerSignup**](docs/Api/UsersApi.md#customersignup) | **POST** /users/sign-up | 
+*UsersApi* | [**userForgotPassword**](docs/Api/UsersApi.md#userforgotpassword) | **POST** /users/forget-password | 
+*UsersApi* | [**userGet**](docs/Api/UsersApi.md#userget) | **GET** /users/{id} | 
+*UsersApi* | [**userResetPassword**](docs/Api/UsersApi.md#userresetpassword) | **POST** /users/reset-password | 
+*UsersApi* | [**userUpdate**](docs/Api/UsersApi.md#userupdate) | **PUT** /users/{id} | 
+*UsersApi* | [**userUpdatePassword**](docs/Api/UsersApi.md#userupdatepassword) | **PUT** /users/{id}/update-password | 
+*UsersApi* | [**userVerify**](docs/Api/UsersApi.md#userverify) | **PUT** /users/verify | 
 
 
 ## Documentation For Models
@@ -148,14 +144,22 @@ Class | Method | HTTP request | Description
  - [States](docs/Model/States.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)
  - [Token](docs/Model/Token.md)
+ - [TokenData](docs/Model/TokenData.md)
  - [Transaction](docs/Model/Transaction.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
+ - [User](docs/Model/User.md)
 
 
 ## Documentation For Authorization
 
 
-## APIKeyHeader
+## API-KEY
+
+- **Type**: API key
+- **API key parameter name**: X-API-KEY
+- **Location**: HTTP header
+
+## JWT
 
 - **Type**: API key
 - **API key parameter name**: X-Authorization-JWT

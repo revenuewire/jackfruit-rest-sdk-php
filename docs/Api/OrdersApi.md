@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **ordersCustomerEmailEmailGet**
-> \Swagger\Client\Model\CustomerOrders[] ordersCustomerEmailEmailGet($email, $merchant_fid)
+> \Swagger\Client\Model\CustomerOrders[] ordersCustomerEmailEmailGet($email, $merchantFid)
 
 
 
@@ -20,17 +20,12 @@ Get a list of orders
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\OrdersApi();
 $email = "email_example"; // string | Customer email
-$merchant_fid = "merchant_fid_example"; // string | Merchant fid (optional)
+$merchantFid = "merchantFid_example"; // string | Merchant fid (optional)
 
 try {
-    $result = $api_instance->ordersCustomerEmailEmailGet($email, $merchant_fid);
+    $result = $api_instance->ordersCustomerEmailEmailGet($email, $merchantFid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->ordersCustomerEmailEmailGet: ', $e->getMessage(), PHP_EOL;
@@ -43,7 +38,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**| Customer email |
- **merchant_fid** | **string**| Merchant fid (optional) | [optional]
+ **merchantFid** | **string**| Merchant fid (optional) | [optional]
 
 ### Return type
 
@@ -51,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -61,7 +56,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **ordersOrderIdGet**
-> \Swagger\Client\Model\Transaction[] ordersOrderIdGet($order_id)
+> \Swagger\Client\Model\Transaction[] ordersOrderIdGet($orderId)
 
 
 
@@ -72,16 +67,11 @@ Get a list of transactions a order has
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\OrdersApi();
-$order_id = 56; // int | Order id
+$orderId = 56; // int | Order id
 
 try {
-    $result = $api_instance->ordersOrderIdGet($order_id);
+    $result = $api_instance->ordersOrderIdGet($orderId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrdersApi->ordersOrderIdGet: ', $e->getMessage(), PHP_EOL;
@@ -93,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **order_id** | **int**| Order id |
+ **orderId** | **int**| Order id |
 
 ### Return type
 
@@ -101,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 

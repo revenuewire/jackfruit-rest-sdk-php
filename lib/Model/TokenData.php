@@ -1,6 +1,6 @@
 <?php
 /**
- * States
+ * TokenData
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * States Class Doc Comment
+ * TokenData Class Doc Comment
  *
  * @category    Class
- * @description State Object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class States implements ArrayAccess
+class TokenData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,14 +47,17 @@ class States implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'States';
+    protected static $swaggerModelName = 'Token_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'id' => 'int',
+        'userId' => 'int',
+        'token' => 'string',
+        'expired' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +70,10 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'id' => 'id',
+        'userId' => 'userId',
+        'token' => 'token',
+        'expired' => 'expired'
     ];
 
 
@@ -77,7 +82,10 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'id' => 'setId',
+        'userId' => 'setUserId',
+        'token' => 'setToken',
+        'expired' => 'setExpired'
     ];
 
 
@@ -86,7 +94,10 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'id' => 'getId',
+        'userId' => 'getUserId',
+        'token' => 'getToken',
+        'expired' => 'getExpired'
     ];
 
     public static function attributeMap()
@@ -120,6 +131,10 @@ class States implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
+        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
+        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
     }
 
     /**
@@ -129,7 +144,7 @@ class States implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = parent::listInvalidProperties();
+        $invalid_properties = [];
 
         return $invalid_properties;
     }
@@ -142,13 +157,94 @@ class States implements ArrayAccess
      */
     public function valid()
     {
-        if (!parent::valid()) {
-            return false;
-        }
 
         return true;
     }
 
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets userId
+     * @return int
+     */
+    public function getUserId()
+    {
+        return $this->container['userId'];
+    }
+
+    /**
+     * Sets userId
+     * @param int $userId
+     * @return $this
+     */
+    public function setUserId($userId)
+    {
+        $this->container['userId'] = $userId;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     * @param string $token
+     * @return $this
+     */
+    public function setToken($token)
+    {
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets expired
+     * @return string
+     */
+    public function getExpired()
+    {
+        return $this->container['expired'];
+    }
+
+    /**
+     * Sets expired
+     * @param string $expired
+     * @return $this
+     */
+    public function setExpired($expired)
+    {
+        $this->container['expired'] = $expired;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

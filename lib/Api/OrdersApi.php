@@ -93,13 +93,13 @@ class OrdersApi
      * 
      *
      * @param string $email Customer email (required)
-     * @param string $merchant_fid Merchant fid (optional) (optional)
+     * @param string $merchantFid Merchant fid (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\CustomerOrders[]
      */
-    public function ordersCustomerEmailEmailGet($email, $merchant_fid = null)
+    public function ordersCustomerEmailEmailGet($email, $merchantFid = null)
     {
-        list($response) = $this->ordersCustomerEmailEmailGetWithHttpInfo($email, $merchant_fid);
+        list($response) = $this->ordersCustomerEmailEmailGetWithHttpInfo($email, $merchantFid);
         return $response;
     }
 
@@ -109,11 +109,11 @@ class OrdersApi
      * 
      *
      * @param string $email Customer email (required)
-     * @param string $merchant_fid Merchant fid (optional) (optional)
+     * @param string $merchantFid Merchant fid (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\CustomerOrders[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function ordersCustomerEmailEmailGetWithHttpInfo($email, $merchant_fid = null)
+    public function ordersCustomerEmailEmailGetWithHttpInfo($email, $merchantFid = null)
     {
         // verify the required parameter 'email' is set
         if ($email === null) {
@@ -132,8 +132,8 @@ class OrdersApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // query params
-        if ($merchant_fid !== null) {
-            $queryParams['merchantFid'] = $this->apiClient->getSerializer()->toQueryValue($merchant_fid);
+        if ($merchantFid !== null) {
+            $queryParams['merchantFid'] = $this->apiClient->getSerializer()->toQueryValue($merchantFid);
         }
         // path params
         if ($email !== null) {
@@ -152,11 +152,6 @@ class OrdersApi
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
         }
         // make the API Call
         try {
@@ -192,13 +187,13 @@ class OrdersApi
      *
      * 
      *
-     * @param int $order_id Order id (required)
+     * @param int $orderId Order id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Transaction[]
      */
-    public function ordersOrderIdGet($order_id)
+    public function ordersOrderIdGet($orderId)
     {
-        list($response) = $this->ordersOrderIdGetWithHttpInfo($order_id);
+        list($response) = $this->ordersOrderIdGetWithHttpInfo($orderId);
         return $response;
     }
 
@@ -207,15 +202,15 @@ class OrdersApi
      *
      * 
      *
-     * @param int $order_id Order id (required)
+     * @param int $orderId Order id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Transaction[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function ordersOrderIdGetWithHttpInfo($order_id)
+    public function ordersOrderIdGetWithHttpInfo($orderId)
     {
-        // verify the required parameter 'order_id' is set
-        if ($order_id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $order_id when calling ordersOrderIdGet');
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $orderId when calling ordersOrderIdGet');
         }
         // parse inputs
         $resourcePath = "/orders/{orderId}";
@@ -230,10 +225,10 @@ class OrdersApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // path params
-        if ($order_id !== null) {
+        if ($orderId !== null) {
             $resourcePath = str_replace(
                 "{" . "orderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($order_id),
+                $this->apiClient->getSerializer()->toPathValue($orderId),
                 $resourcePath
             );
         }
@@ -246,11 +241,6 @@ class OrdersApi
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
         }
         // make the API Call
         try {

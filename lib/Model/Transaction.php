@@ -59,22 +59,22 @@ class Transaction implements ArrayAccess
         'type' => 'string',
         'date' => '\DateTime',
         'reference' => 'string',
-        'full_reference' => 'string',
-        'merchant_namr' => 'string',
-        'support_email' => 'string',
-        'total_price' => 'float',
-        'sub_total_price' => 'float',
-        'total_price_tax' => 'float',
-        'total_usd_price' => 'float',
-        'total_usd_price_tax' => 'float',
+        'fullReference' => 'string',
+        'merchantNamr' => 'string',
+        'supportEmail' => 'string',
+        'totalPrice' => 'float',
+        'subTotalPrice' => 'float',
+        'totalPriceTax' => 'float',
+        'totalUsdPrice' => 'float',
+        'totalUsdPriceTax' => 'float',
         'gateway' => 'string',
-        'gateway_reference' => 'string',
-        'extra_parameters' => 'string',
-        'transaction_items' => '\Swagger\Client\Model\TransactionItem[]',
+        'gatewayReference' => 'string',
+        'extraParameters' => 'string',
+        'transactionItems' => '\Swagger\Client\Model\TransactionItem[]',
         'order' => 'int',
-        'parent_transaction_id' => 'int',
-        'shipping_address' => '\Swagger\Client\Model\CustomerAddress',
-        'bill_info' => '\Swagger\Client\Model\BillInfo'
+        'parentTransactionId' => 'int',
+        'shippingAddress' => '\Swagger\Client\Model\CustomerAddress',
+        'billInfo' => '\Swagger\Client\Model\BillInfo'
     ];
 
     public static function swaggerTypes()
@@ -91,22 +91,22 @@ class Transaction implements ArrayAccess
         'type' => 'type',
         'date' => 'date',
         'reference' => 'reference',
-        'full_reference' => 'fullReference',
-        'merchant_namr' => 'merchantNamr',
-        'support_email' => 'supportEmail',
-        'total_price' => 'totalPrice',
-        'sub_total_price' => 'subTotalPrice',
-        'total_price_tax' => 'totalPriceTax',
-        'total_usd_price' => 'totalUsdPrice',
-        'total_usd_price_tax' => 'totalUsdPriceTax',
+        'fullReference' => 'fullReference',
+        'merchantNamr' => 'merchantNamr',
+        'supportEmail' => 'supportEmail',
+        'totalPrice' => 'totalPrice',
+        'subTotalPrice' => 'subTotalPrice',
+        'totalPriceTax' => 'totalPriceTax',
+        'totalUsdPrice' => 'totalUsdPrice',
+        'totalUsdPriceTax' => 'totalUsdPriceTax',
         'gateway' => 'gateway',
-        'gateway_reference' => 'gatewayReference',
-        'extra_parameters' => 'extraParameters',
-        'transaction_items' => 'transactionItems',
+        'gatewayReference' => 'gatewayReference',
+        'extraParameters' => 'extraParameters',
+        'transactionItems' => 'transactionItems',
         'order' => 'order',
-        'parent_transaction_id' => 'parentTransactionId',
-        'shipping_address' => 'shippingAddress',
-        'bill_info' => 'billInfo'
+        'parentTransactionId' => 'parentTransactionId',
+        'shippingAddress' => 'shippingAddress',
+        'billInfo' => 'billInfo'
     ];
 
 
@@ -119,22 +119,22 @@ class Transaction implements ArrayAccess
         'type' => 'setType',
         'date' => 'setDate',
         'reference' => 'setReference',
-        'full_reference' => 'setFullReference',
-        'merchant_namr' => 'setMerchantNamr',
-        'support_email' => 'setSupportEmail',
-        'total_price' => 'setTotalPrice',
-        'sub_total_price' => 'setSubTotalPrice',
-        'total_price_tax' => 'setTotalPriceTax',
-        'total_usd_price' => 'setTotalUsdPrice',
-        'total_usd_price_tax' => 'setTotalUsdPriceTax',
+        'fullReference' => 'setFullReference',
+        'merchantNamr' => 'setMerchantNamr',
+        'supportEmail' => 'setSupportEmail',
+        'totalPrice' => 'setTotalPrice',
+        'subTotalPrice' => 'setSubTotalPrice',
+        'totalPriceTax' => 'setTotalPriceTax',
+        'totalUsdPrice' => 'setTotalUsdPrice',
+        'totalUsdPriceTax' => 'setTotalUsdPriceTax',
         'gateway' => 'setGateway',
-        'gateway_reference' => 'setGatewayReference',
-        'extra_parameters' => 'setExtraParameters',
-        'transaction_items' => 'setTransactionItems',
+        'gatewayReference' => 'setGatewayReference',
+        'extraParameters' => 'setExtraParameters',
+        'transactionItems' => 'setTransactionItems',
         'order' => 'setOrder',
-        'parent_transaction_id' => 'setParentTransactionId',
-        'shipping_address' => 'setShippingAddress',
-        'bill_info' => 'setBillInfo'
+        'parentTransactionId' => 'setParentTransactionId',
+        'shippingAddress' => 'setShippingAddress',
+        'billInfo' => 'setBillInfo'
     ];
 
 
@@ -147,22 +147,22 @@ class Transaction implements ArrayAccess
         'type' => 'getType',
         'date' => 'getDate',
         'reference' => 'getReference',
-        'full_reference' => 'getFullReference',
-        'merchant_namr' => 'getMerchantNamr',
-        'support_email' => 'getSupportEmail',
-        'total_price' => 'getTotalPrice',
-        'sub_total_price' => 'getSubTotalPrice',
-        'total_price_tax' => 'getTotalPriceTax',
-        'total_usd_price' => 'getTotalUsdPrice',
-        'total_usd_price_tax' => 'getTotalUsdPriceTax',
+        'fullReference' => 'getFullReference',
+        'merchantNamr' => 'getMerchantNamr',
+        'supportEmail' => 'getSupportEmail',
+        'totalPrice' => 'getTotalPrice',
+        'subTotalPrice' => 'getSubTotalPrice',
+        'totalPriceTax' => 'getTotalPriceTax',
+        'totalUsdPrice' => 'getTotalUsdPrice',
+        'totalUsdPriceTax' => 'getTotalUsdPriceTax',
         'gateway' => 'getGateway',
-        'gateway_reference' => 'getGatewayReference',
-        'extra_parameters' => 'getExtraParameters',
-        'transaction_items' => 'getTransactionItems',
+        'gatewayReference' => 'getGatewayReference',
+        'extraParameters' => 'getExtraParameters',
+        'transactionItems' => 'getTransactionItems',
         'order' => 'getOrder',
-        'parent_transaction_id' => 'getParentTransactionId',
-        'shipping_address' => 'getShippingAddress',
-        'bill_info' => 'getBillInfo'
+        'parentTransactionId' => 'getParentTransactionId',
+        'shippingAddress' => 'getShippingAddress',
+        'billInfo' => 'getBillInfo'
     ];
 
     public static function attributeMap()
@@ -200,22 +200,22 @@ class Transaction implements ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
-        $this->container['full_reference'] = isset($data['full_reference']) ? $data['full_reference'] : null;
-        $this->container['merchant_namr'] = isset($data['merchant_namr']) ? $data['merchant_namr'] : null;
-        $this->container['support_email'] = isset($data['support_email']) ? $data['support_email'] : null;
-        $this->container['total_price'] = isset($data['total_price']) ? $data['total_price'] : null;
-        $this->container['sub_total_price'] = isset($data['sub_total_price']) ? $data['sub_total_price'] : null;
-        $this->container['total_price_tax'] = isset($data['total_price_tax']) ? $data['total_price_tax'] : null;
-        $this->container['total_usd_price'] = isset($data['total_usd_price']) ? $data['total_usd_price'] : null;
-        $this->container['total_usd_price_tax'] = isset($data['total_usd_price_tax']) ? $data['total_usd_price_tax'] : null;
+        $this->container['fullReference'] = isset($data['fullReference']) ? $data['fullReference'] : null;
+        $this->container['merchantNamr'] = isset($data['merchantNamr']) ? $data['merchantNamr'] : null;
+        $this->container['supportEmail'] = isset($data['supportEmail']) ? $data['supportEmail'] : null;
+        $this->container['totalPrice'] = isset($data['totalPrice']) ? $data['totalPrice'] : null;
+        $this->container['subTotalPrice'] = isset($data['subTotalPrice']) ? $data['subTotalPrice'] : null;
+        $this->container['totalPriceTax'] = isset($data['totalPriceTax']) ? $data['totalPriceTax'] : null;
+        $this->container['totalUsdPrice'] = isset($data['totalUsdPrice']) ? $data['totalUsdPrice'] : null;
+        $this->container['totalUsdPriceTax'] = isset($data['totalUsdPriceTax']) ? $data['totalUsdPriceTax'] : null;
         $this->container['gateway'] = isset($data['gateway']) ? $data['gateway'] : null;
-        $this->container['gateway_reference'] = isset($data['gateway_reference']) ? $data['gateway_reference'] : null;
-        $this->container['extra_parameters'] = isset($data['extra_parameters']) ? $data['extra_parameters'] : null;
-        $this->container['transaction_items'] = isset($data['transaction_items']) ? $data['transaction_items'] : null;
+        $this->container['gatewayReference'] = isset($data['gatewayReference']) ? $data['gatewayReference'] : null;
+        $this->container['extraParameters'] = isset($data['extraParameters']) ? $data['extraParameters'] : null;
+        $this->container['transactionItems'] = isset($data['transactionItems']) ? $data['transactionItems'] : null;
         $this->container['order'] = isset($data['order']) ? $data['order'] : null;
-        $this->container['parent_transaction_id'] = isset($data['parent_transaction_id']) ? $data['parent_transaction_id'] : null;
-        $this->container['shipping_address'] = isset($data['shipping_address']) ? $data['shipping_address'] : null;
-        $this->container['bill_info'] = isset($data['bill_info']) ? $data['bill_info'] : null;
+        $this->container['parentTransactionId'] = isset($data['parentTransactionId']) ? $data['parentTransactionId'] : null;
+        $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
+        $this->container['billInfo'] = isset($data['billInfo']) ? $data['billInfo'] : null;
     }
 
     /**
@@ -328,169 +328,169 @@ class Transaction implements ArrayAccess
     }
 
     /**
-     * Gets full_reference
+     * Gets fullReference
      * @return string
      */
     public function getFullReference()
     {
-        return $this->container['full_reference'];
+        return $this->container['fullReference'];
     }
 
     /**
-     * Sets full_reference
-     * @param string $full_reference
+     * Sets fullReference
+     * @param string $fullReference
      * @return $this
      */
-    public function setFullReference($full_reference)
+    public function setFullReference($fullReference)
     {
-        $this->container['full_reference'] = $full_reference;
+        $this->container['fullReference'] = $fullReference;
 
         return $this;
     }
 
     /**
-     * Gets merchant_namr
+     * Gets merchantNamr
      * @return string
      */
     public function getMerchantNamr()
     {
-        return $this->container['merchant_namr'];
+        return $this->container['merchantNamr'];
     }
 
     /**
-     * Sets merchant_namr
-     * @param string $merchant_namr
+     * Sets merchantNamr
+     * @param string $merchantNamr
      * @return $this
      */
-    public function setMerchantNamr($merchant_namr)
+    public function setMerchantNamr($merchantNamr)
     {
-        $this->container['merchant_namr'] = $merchant_namr;
+        $this->container['merchantNamr'] = $merchantNamr;
 
         return $this;
     }
 
     /**
-     * Gets support_email
+     * Gets supportEmail
      * @return string
      */
     public function getSupportEmail()
     {
-        return $this->container['support_email'];
+        return $this->container['supportEmail'];
     }
 
     /**
-     * Sets support_email
-     * @param string $support_email
+     * Sets supportEmail
+     * @param string $supportEmail
      * @return $this
      */
-    public function setSupportEmail($support_email)
+    public function setSupportEmail($supportEmail)
     {
-        $this->container['support_email'] = $support_email;
+        $this->container['supportEmail'] = $supportEmail;
 
         return $this;
     }
 
     /**
-     * Gets total_price
+     * Gets totalPrice
      * @return float
      */
     public function getTotalPrice()
     {
-        return $this->container['total_price'];
+        return $this->container['totalPrice'];
     }
 
     /**
-     * Sets total_price
-     * @param float $total_price
+     * Sets totalPrice
+     * @param float $totalPrice
      * @return $this
      */
-    public function setTotalPrice($total_price)
+    public function setTotalPrice($totalPrice)
     {
-        $this->container['total_price'] = $total_price;
+        $this->container['totalPrice'] = $totalPrice;
 
         return $this;
     }
 
     /**
-     * Gets sub_total_price
+     * Gets subTotalPrice
      * @return float
      */
     public function getSubTotalPrice()
     {
-        return $this->container['sub_total_price'];
+        return $this->container['subTotalPrice'];
     }
 
     /**
-     * Sets sub_total_price
-     * @param float $sub_total_price
+     * Sets subTotalPrice
+     * @param float $subTotalPrice
      * @return $this
      */
-    public function setSubTotalPrice($sub_total_price)
+    public function setSubTotalPrice($subTotalPrice)
     {
-        $this->container['sub_total_price'] = $sub_total_price;
+        $this->container['subTotalPrice'] = $subTotalPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_price_tax
+     * Gets totalPriceTax
      * @return float
      */
     public function getTotalPriceTax()
     {
-        return $this->container['total_price_tax'];
+        return $this->container['totalPriceTax'];
     }
 
     /**
-     * Sets total_price_tax
-     * @param float $total_price_tax
+     * Sets totalPriceTax
+     * @param float $totalPriceTax
      * @return $this
      */
-    public function setTotalPriceTax($total_price_tax)
+    public function setTotalPriceTax($totalPriceTax)
     {
-        $this->container['total_price_tax'] = $total_price_tax;
+        $this->container['totalPriceTax'] = $totalPriceTax;
 
         return $this;
     }
 
     /**
-     * Gets total_usd_price
+     * Gets totalUsdPrice
      * @return float
      */
     public function getTotalUsdPrice()
     {
-        return $this->container['total_usd_price'];
+        return $this->container['totalUsdPrice'];
     }
 
     /**
-     * Sets total_usd_price
-     * @param float $total_usd_price
+     * Sets totalUsdPrice
+     * @param float $totalUsdPrice
      * @return $this
      */
-    public function setTotalUsdPrice($total_usd_price)
+    public function setTotalUsdPrice($totalUsdPrice)
     {
-        $this->container['total_usd_price'] = $total_usd_price;
+        $this->container['totalUsdPrice'] = $totalUsdPrice;
 
         return $this;
     }
 
     /**
-     * Gets total_usd_price_tax
+     * Gets totalUsdPriceTax
      * @return float
      */
     public function getTotalUsdPriceTax()
     {
-        return $this->container['total_usd_price_tax'];
+        return $this->container['totalUsdPriceTax'];
     }
 
     /**
-     * Sets total_usd_price_tax
-     * @param float $total_usd_price_tax
+     * Sets totalUsdPriceTax
+     * @param float $totalUsdPriceTax
      * @return $this
      */
-    public function setTotalUsdPriceTax($total_usd_price_tax)
+    public function setTotalUsdPriceTax($totalUsdPriceTax)
     {
-        $this->container['total_usd_price_tax'] = $total_usd_price_tax;
+        $this->container['totalUsdPriceTax'] = $totalUsdPriceTax;
 
         return $this;
     }
@@ -517,64 +517,64 @@ class Transaction implements ArrayAccess
     }
 
     /**
-     * Gets gateway_reference
+     * Gets gatewayReference
      * @return string
      */
     public function getGatewayReference()
     {
-        return $this->container['gateway_reference'];
+        return $this->container['gatewayReference'];
     }
 
     /**
-     * Sets gateway_reference
-     * @param string $gateway_reference
+     * Sets gatewayReference
+     * @param string $gatewayReference
      * @return $this
      */
-    public function setGatewayReference($gateway_reference)
+    public function setGatewayReference($gatewayReference)
     {
-        $this->container['gateway_reference'] = $gateway_reference;
+        $this->container['gatewayReference'] = $gatewayReference;
 
         return $this;
     }
 
     /**
-     * Gets extra_parameters
+     * Gets extraParameters
      * @return string
      */
     public function getExtraParameters()
     {
-        return $this->container['extra_parameters'];
+        return $this->container['extraParameters'];
     }
 
     /**
-     * Sets extra_parameters
-     * @param string $extra_parameters
+     * Sets extraParameters
+     * @param string $extraParameters
      * @return $this
      */
-    public function setExtraParameters($extra_parameters)
+    public function setExtraParameters($extraParameters)
     {
-        $this->container['extra_parameters'] = $extra_parameters;
+        $this->container['extraParameters'] = $extraParameters;
 
         return $this;
     }
 
     /**
-     * Gets transaction_items
+     * Gets transactionItems
      * @return \Swagger\Client\Model\TransactionItem[]
      */
     public function getTransactionItems()
     {
-        return $this->container['transaction_items'];
+        return $this->container['transactionItems'];
     }
 
     /**
-     * Sets transaction_items
-     * @param \Swagger\Client\Model\TransactionItem[] $transaction_items
+     * Sets transactionItems
+     * @param \Swagger\Client\Model\TransactionItem[] $transactionItems
      * @return $this
      */
-    public function setTransactionItems($transaction_items)
+    public function setTransactionItems($transactionItems)
     {
-        $this->container['transaction_items'] = $transaction_items;
+        $this->container['transactionItems'] = $transactionItems;
 
         return $this;
     }
@@ -601,64 +601,64 @@ class Transaction implements ArrayAccess
     }
 
     /**
-     * Gets parent_transaction_id
+     * Gets parentTransactionId
      * @return int
      */
     public function getParentTransactionId()
     {
-        return $this->container['parent_transaction_id'];
+        return $this->container['parentTransactionId'];
     }
 
     /**
-     * Sets parent_transaction_id
-     * @param int $parent_transaction_id
+     * Sets parentTransactionId
+     * @param int $parentTransactionId
      * @return $this
      */
-    public function setParentTransactionId($parent_transaction_id)
+    public function setParentTransactionId($parentTransactionId)
     {
-        $this->container['parent_transaction_id'] = $parent_transaction_id;
+        $this->container['parentTransactionId'] = $parentTransactionId;
 
         return $this;
     }
 
     /**
-     * Gets shipping_address
+     * Gets shippingAddress
      * @return \Swagger\Client\Model\CustomerAddress
      */
     public function getShippingAddress()
     {
-        return $this->container['shipping_address'];
+        return $this->container['shippingAddress'];
     }
 
     /**
-     * Sets shipping_address
-     * @param \Swagger\Client\Model\CustomerAddress $shipping_address
+     * Sets shippingAddress
+     * @param \Swagger\Client\Model\CustomerAddress $shippingAddress
      * @return $this
      */
-    public function setShippingAddress($shipping_address)
+    public function setShippingAddress($shippingAddress)
     {
-        $this->container['shipping_address'] = $shipping_address;
+        $this->container['shippingAddress'] = $shippingAddress;
 
         return $this;
     }
 
     /**
-     * Gets bill_info
+     * Gets billInfo
      * @return \Swagger\Client\Model\BillInfo
      */
     public function getBillInfo()
     {
-        return $this->container['bill_info'];
+        return $this->container['billInfo'];
     }
 
     /**
-     * Sets bill_info
-     * @param \Swagger\Client\Model\BillInfo $bill_info
+     * Sets billInfo
+     * @param \Swagger\Client\Model\BillInfo $billInfo
      * @return $this
      */
-    public function setBillInfo($bill_info)
+    public function setBillInfo($billInfo)
     {
-        $this->container['bill_info'] = $bill_info;
+        $this->container['billInfo'] = $billInfo;
 
         return $this;
     }

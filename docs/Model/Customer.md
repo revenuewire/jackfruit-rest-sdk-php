@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**merchant_fid** | **string** |  | [optional] 
+**merchantFid** | **string** |  | [optional] 
 **email** | **string** |  | [optional] 
-**first_name** | **string** |  | [optional] 
-**last_name** | **string** |  | [optional] 
+**firstName** | **string** |  | [optional] 
+**lastName** | **string** |  | [optional] 
 **timezone** | **string** |  | [optional] 
 **language** | **string** |  | [optional] 
 **created** | [**\DateTime**](Date.md) |  | [optional] 

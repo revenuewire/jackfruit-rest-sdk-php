@@ -1,6 +1,6 @@
 <?php
 /**
- * ProfilesApi
+ * GEOApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Swagger\Client\Configuration;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * ProfilesApi Class Doc Comment
+ * GEOApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProfilesApi
+class GEOApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class ProfilesApi
      *
      * @param \Swagger\Client\ApiClient $apiClient set the API client
      *
-     * @return ProfilesApi
+     * @return GEOApi
      */
     public function setApiClient(\Swagger\Client\ApiClient $apiClient)
     {
@@ -88,49 +88,37 @@ class ProfilesApi
     }
 
     /**
-     * Operation profilesChangePasswordPut
+     * Operation geoInfoCountriesCountryCodeStatesGet
      *
      * 
      *
-     * @param string $currentPassword User&#39;s current password (required)
-     * @param string $newPassword User&#39;s new password (required)
-     * @param string $confirmPassword User&#39;s confirm password (required)
+     * @param string $countryCode  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile
+     * @return \Swagger\Client\Model\State[]
      */
-    public function profilesChangePasswordPut($currentPassword, $newPassword, $confirmPassword)
+    public function geoInfoCountriesCountryCodeStatesGet($countryCode)
     {
-        list($response) = $this->profilesChangePasswordPutWithHttpInfo($currentPassword, $newPassword, $confirmPassword);
+        list($response) = $this->geoInfoCountriesCountryCodeStatesGetWithHttpInfo($countryCode);
         return $response;
     }
 
     /**
-     * Operation profilesChangePasswordPutWithHttpInfo
+     * Operation geoInfoCountriesCountryCodeStatesGetWithHttpInfo
      *
      * 
      *
-     * @param string $currentPassword User&#39;s current password (required)
-     * @param string $newPassword User&#39;s new password (required)
-     * @param string $confirmPassword User&#39;s confirm password (required)
+     * @param string $countryCode  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\State[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function profilesChangePasswordPutWithHttpInfo($currentPassword, $newPassword, $confirmPassword)
+    public function geoInfoCountriesCountryCodeStatesGetWithHttpInfo($countryCode)
     {
-        // verify the required parameter 'currentPassword' is set
-        if ($currentPassword === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $currentPassword when calling profilesChangePasswordPut');
-        }
-        // verify the required parameter 'newPassword' is set
-        if ($newPassword === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $newPassword when calling profilesChangePasswordPut');
-        }
-        // verify the required parameter 'confirmPassword' is set
-        if ($confirmPassword === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $confirmPassword when calling profilesChangePasswordPut');
+        // verify the required parameter 'countryCode' is set
+        if ($countryCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryCode when calling geoInfoCountriesCountryCodeStatesGet');
         }
         // parse inputs
-        $resourcePath = "/profiles/change-password";
+        $resourcePath = "/geo-info/countries/{countryCode}/states";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -141,17 +129,13 @@ class ProfilesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
-        // query params
-        if ($currentPassword !== null) {
-            $queryParams['current_password'] = $this->apiClient->getSerializer()->toQueryValue($currentPassword);
-        }
-        // query params
-        if ($newPassword !== null) {
-            $queryParams['new_password'] = $this->apiClient->getSerializer()->toQueryValue($newPassword);
-        }
-        // query params
-        if ($confirmPassword !== null) {
-            $queryParams['confirm_password'] = $this->apiClient->getSerializer()->toQueryValue($confirmPassword);
+        // path params
+        if ($countryCode !== null) {
+            $resourcePath = str_replace(
+                "{" . "countryCode" . "}",
+                $this->apiClient->getSerializer()->toPathValue($countryCode),
+                $resourcePath
+            );
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -167,19 +151,19 @@ class ProfilesApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Profile',
-                '/profiles/change-password'
+                '\Swagger\Client\Model\State[]',
+                '/geo-info/countries/{countryCode}/states'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\State[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\State[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -193,31 +177,31 @@ class ProfilesApi
     }
 
     /**
-     * Operation profilesGet
+     * Operation geoInfoCountriesGet
      *
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile
+     * @return \Swagger\Client\Model\Country[]
      */
-    public function profilesGet()
+    public function geoInfoCountriesGet()
     {
-        list($response) = $this->profilesGetWithHttpInfo();
+        list($response) = $this->geoInfoCountriesGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation profilesGetWithHttpInfo
+     * Operation geoInfoCountriesGetWithHttpInfo
      *
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Country[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function profilesGetWithHttpInfo()
+    public function geoInfoCountriesGetWithHttpInfo()
     {
         // parse inputs
-        $resourcePath = "/profiles";
+        $resourcePath = "/geo-info/countries";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -246,15 +230,15 @@ class ProfilesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Profile',
-                '/profiles'
+                '\Swagger\Client\Model\Country[]',
+                '/geo-info/countries'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Country[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Country[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -268,55 +252,31 @@ class ProfilesApi
     }
 
     /**
-     * Operation profilesPut
+     * Operation geoInfoCountriesStatesGet
      *
      * 
      *
-     * @param string $firstName User&#39;s first name (required)
-     * @param string $lastName User&#39;s lastname (required)
-     * @param string $email User&#39;s email (required)
-     * @param string $timezone Setup your timezone. (optional)
-     * @param string $defaultDashboard User&#39;s default dashboard (optional)
-     * @param string $defaultProductView User&#39;s default product view. (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Profile
+     * @return \Swagger\Client\Model\States
      */
-    public function profilesPut($firstName, $lastName, $email, $timezone = null, $defaultDashboard = null, $defaultProductView = null)
+    public function geoInfoCountriesStatesGet()
     {
-        list($response) = $this->profilesPutWithHttpInfo($firstName, $lastName, $email, $timezone, $defaultDashboard, $defaultProductView);
+        list($response) = $this->geoInfoCountriesStatesGetWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation profilesPutWithHttpInfo
+     * Operation geoInfoCountriesStatesGetWithHttpInfo
      *
      * 
      *
-     * @param string $firstName User&#39;s first name (required)
-     * @param string $lastName User&#39;s lastname (required)
-     * @param string $email User&#39;s email (required)
-     * @param string $timezone Setup your timezone. (optional)
-     * @param string $defaultDashboard User&#39;s default dashboard (optional)
-     * @param string $defaultProductView User&#39;s default product view. (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Profile, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\States, HTTP status code, HTTP response headers (array of strings)
      */
-    public function profilesPutWithHttpInfo($firstName, $lastName, $email, $timezone = null, $defaultDashboard = null, $defaultProductView = null)
+    public function geoInfoCountriesStatesGetWithHttpInfo()
     {
-        // verify the required parameter 'firstName' is set
-        if ($firstName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $firstName when calling profilesPut');
-        }
-        // verify the required parameter 'lastName' is set
-        if ($lastName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lastName when calling profilesPut');
-        }
-        // verify the required parameter 'email' is set
-        if ($email === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email when calling profilesPut');
-        }
         // parse inputs
-        $resourcePath = "/profiles";
+        $resourcePath = "/geo-info/countries/states";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -327,30 +287,6 @@ class ProfilesApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
-        // query params
-        if ($firstName !== null) {
-            $queryParams['first_name'] = $this->apiClient->getSerializer()->toQueryValue($firstName);
-        }
-        // query params
-        if ($lastName !== null) {
-            $queryParams['last_name'] = $this->apiClient->getSerializer()->toQueryValue($lastName);
-        }
-        // query params
-        if ($email !== null) {
-            $queryParams['email'] = $this->apiClient->getSerializer()->toQueryValue($email);
-        }
-        // query params
-        if ($timezone !== null) {
-            $queryParams['timezone'] = $this->apiClient->getSerializer()->toQueryValue($timezone);
-        }
-        // query params
-        if ($defaultDashboard !== null) {
-            $queryParams['default_dashboard'] = $this->apiClient->getSerializer()->toQueryValue($defaultDashboard);
-        }
-        // query params
-        if ($defaultProductView !== null) {
-            $queryParams['default_product_view'] = $this->apiClient->getSerializer()->toQueryValue($defaultProductView);
-        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
@@ -365,19 +301,94 @@ class ProfilesApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'PUT',
+                'GET',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Profile',
-                '/profiles'
+                '\Swagger\Client\Model\States',
+                '/geo-info/countries/states'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Profile', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\States', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Profile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\States', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation geoInfoSupportedLanguagesGet
+     *
+     * 
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\SupportedLanguage[]
+     */
+    public function geoInfoSupportedLanguagesGet()
+    {
+        list($response) = $this->geoInfoSupportedLanguagesGetWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation geoInfoSupportedLanguagesGetWithHttpInfo
+     *
+     * 
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\SupportedLanguage[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function geoInfoSupportedLanguagesGetWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/geo-info/supported-languages";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\SupportedLanguage[]',
+                '/geo-info/supported-languages'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SupportedLanguage[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SupportedLanguage[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

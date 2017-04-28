@@ -55,10 +55,8 @@ class Token implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'user_id' => 'int',
-        'token' => 'string',
-        'expired' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\TokenData'
     ];
 
     public static function swaggerTypes()
@@ -71,10 +69,8 @@ class Token implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'user_id' => 'userId',
-        'token' => 'token',
-        'expired' => 'expired'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -83,10 +79,8 @@ class Token implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'user_id' => 'setUserId',
-        'token' => 'setToken',
-        'expired' => 'setExpired'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -95,10 +89,8 @@ class Token implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'user_id' => 'getUserId',
-        'token' => 'getToken',
-        'expired' => 'getExpired'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -132,10 +124,8 @@ class Token implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -164,85 +154,43 @@ class Token implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getId()
+    public function getResponse()
     {
-        return $this->container['id'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setId($id)
+    public function setResponse($response)
     {
-        $this->container['id'] = $id;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets user_id
-     * @return int
+     * Gets data
+     * @return \Swagger\Client\Model\TokenData
      */
-    public function getUserId()
+    public function getData()
     {
-        return $this->container['user_id'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets user_id
-     * @param int $user_id
+     * Sets data
+     * @param \Swagger\Client\Model\TokenData $data
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setData($data)
     {
-        $this->container['user_id'] = $user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets token
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     * @param string $token
-     * @return $this
-     */
-    public function setToken($token)
-    {
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * Gets expired
-     * @return string
-     */
-    public function getExpired()
-    {
-        return $this->container['expired'];
-    }
-
-    /**
-     * Sets expired
-     * @param string $expired
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        $this->container['expired'] = $expired;
+        $this->container['data'] = $data;
 
         return $this;
     }

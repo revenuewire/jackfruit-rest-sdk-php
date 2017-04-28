@@ -56,9 +56,9 @@ class CustomerPhone implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'customer_account_id' => 'int',
-        'phone_number' => 'string',
-        'country_code' => 'string',
+        'customerAccountId' => 'int',
+        'phoneNumber' => 'string',
+        'countryCode' => 'string',
         'type' => 'string'
     ];
 
@@ -73,9 +73,9 @@ class CustomerPhone implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'customer_account_id' => 'customerAccountId',
-        'phone_number' => 'phoneNumber',
-        'country_code' => 'countryCode',
+        'customerAccountId' => 'customerAccountId',
+        'phoneNumber' => 'phoneNumber',
+        'countryCode' => 'countryCode',
         'type' => 'type'
     ];
 
@@ -86,9 +86,9 @@ class CustomerPhone implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'customer_account_id' => 'setCustomerAccountId',
-        'phone_number' => 'setPhoneNumber',
-        'country_code' => 'setCountryCode',
+        'customerAccountId' => 'setCustomerAccountId',
+        'phoneNumber' => 'setPhoneNumber',
+        'countryCode' => 'setCountryCode',
         'type' => 'setType'
     ];
 
@@ -99,9 +99,9 @@ class CustomerPhone implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'customer_account_id' => 'getCustomerAccountId',
-        'phone_number' => 'getPhoneNumber',
-        'country_code' => 'getCountryCode',
+        'customerAccountId' => 'getCustomerAccountId',
+        'phoneNumber' => 'getPhoneNumber',
+        'countryCode' => 'getCountryCode',
         'type' => 'getType'
     ];
 
@@ -137,9 +137,9 @@ class CustomerPhone implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['customer_account_id'] = isset($data['customer_account_id']) ? $data['customer_account_id'] : null;
-        $this->container['phone_number'] = isset($data['phone_number']) ? $data['phone_number'] : null;
-        $this->container['country_code'] = isset($data['country_code']) ? $data['country_code'] : null;
+        $this->container['customerAccountId'] = isset($data['customerAccountId']) ? $data['customerAccountId'] : null;
+        $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
+        $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
@@ -190,64 +190,64 @@ class CustomerPhone implements ArrayAccess
     }
 
     /**
-     * Gets customer_account_id
+     * Gets customerAccountId
      * @return int
      */
     public function getCustomerAccountId()
     {
-        return $this->container['customer_account_id'];
+        return $this->container['customerAccountId'];
     }
 
     /**
-     * Sets customer_account_id
-     * @param int $customer_account_id
+     * Sets customerAccountId
+     * @param int $customerAccountId
      * @return $this
      */
-    public function setCustomerAccountId($customer_account_id)
+    public function setCustomerAccountId($customerAccountId)
     {
-        $this->container['customer_account_id'] = $customer_account_id;
+        $this->container['customerAccountId'] = $customerAccountId;
 
         return $this;
     }
 
     /**
-     * Gets phone_number
+     * Gets phoneNumber
      * @return string
      */
     public function getPhoneNumber()
     {
-        return $this->container['phone_number'];
+        return $this->container['phoneNumber'];
     }
 
     /**
-     * Sets phone_number
-     * @param string $phone_number
+     * Sets phoneNumber
+     * @param string $phoneNumber
      * @return $this
      */
-    public function setPhoneNumber($phone_number)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->container['phone_number'] = $phone_number;
+        $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Gets country_code
+     * Gets countryCode
      * @return string
      */
     public function getCountryCode()
     {
-        return $this->container['country_code'];
+        return $this->container['countryCode'];
     }
 
     /**
-     * Sets country_code
-     * @param string $country_code
+     * Sets countryCode
+     * @param string $countryCode
      * @return $this
      */
-    public function setCountryCode($country_code)
+    public function setCountryCode($countryCode)
     {
-        $this->container['country_code'] = $country_code;
+        $this->container['countryCode'] = $countryCode;
 
         return $this;
     }

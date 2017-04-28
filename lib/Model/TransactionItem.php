@@ -59,9 +59,9 @@ class TransactionItem implements ArrayAccess
         'sku' => 'string',
         'quantity' => 'int',
         'price' => 'float',
-        'price_tax' => 'float',
-        'usd_price' => 'float',
-        'usd_price_tax' => 'float',
+        'priceTax' => 'float',
+        'usdPrice' => 'float',
+        'usdPriceTax' => 'float',
         'image' => 'string'
     ];
 
@@ -79,9 +79,9 @@ class TransactionItem implements ArrayAccess
         'sku' => 'sku',
         'quantity' => 'quantity',
         'price' => 'price',
-        'price_tax' => 'priceTax',
-        'usd_price' => 'usdPrice',
-        'usd_price_tax' => 'usdPriceTax',
+        'priceTax' => 'priceTax',
+        'usdPrice' => 'usdPrice',
+        'usdPriceTax' => 'usdPriceTax',
         'image' => 'image'
     ];
 
@@ -95,9 +95,9 @@ class TransactionItem implements ArrayAccess
         'sku' => 'setSku',
         'quantity' => 'setQuantity',
         'price' => 'setPrice',
-        'price_tax' => 'setPriceTax',
-        'usd_price' => 'setUsdPrice',
-        'usd_price_tax' => 'setUsdPriceTax',
+        'priceTax' => 'setPriceTax',
+        'usdPrice' => 'setUsdPrice',
+        'usdPriceTax' => 'setUsdPriceTax',
         'image' => 'setImage'
     ];
 
@@ -111,9 +111,9 @@ class TransactionItem implements ArrayAccess
         'sku' => 'getSku',
         'quantity' => 'getQuantity',
         'price' => 'getPrice',
-        'price_tax' => 'getPriceTax',
-        'usd_price' => 'getUsdPrice',
-        'usd_price_tax' => 'getUsdPriceTax',
+        'priceTax' => 'getPriceTax',
+        'usdPrice' => 'getUsdPrice',
+        'usdPriceTax' => 'getUsdPriceTax',
         'image' => 'getImage'
     ];
 
@@ -152,9 +152,9 @@ class TransactionItem implements ArrayAccess
         $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
         $this->container['price'] = isset($data['price']) ? $data['price'] : null;
-        $this->container['price_tax'] = isset($data['price_tax']) ? $data['price_tax'] : null;
-        $this->container['usd_price'] = isset($data['usd_price']) ? $data['usd_price'] : null;
-        $this->container['usd_price_tax'] = isset($data['usd_price_tax']) ? $data['usd_price_tax'] : null;
+        $this->container['priceTax'] = isset($data['priceTax']) ? $data['priceTax'] : null;
+        $this->container['usdPrice'] = isset($data['usdPrice']) ? $data['usdPrice'] : null;
+        $this->container['usdPriceTax'] = isset($data['usdPriceTax']) ? $data['usdPriceTax'] : null;
         $this->container['image'] = isset($data['image']) ? $data['image'] : null;
     }
 
@@ -268,64 +268,64 @@ class TransactionItem implements ArrayAccess
     }
 
     /**
-     * Gets price_tax
+     * Gets priceTax
      * @return float
      */
     public function getPriceTax()
     {
-        return $this->container['price_tax'];
+        return $this->container['priceTax'];
     }
 
     /**
-     * Sets price_tax
-     * @param float $price_tax
+     * Sets priceTax
+     * @param float $priceTax
      * @return $this
      */
-    public function setPriceTax($price_tax)
+    public function setPriceTax($priceTax)
     {
-        $this->container['price_tax'] = $price_tax;
+        $this->container['priceTax'] = $priceTax;
 
         return $this;
     }
 
     /**
-     * Gets usd_price
+     * Gets usdPrice
      * @return float
      */
     public function getUsdPrice()
     {
-        return $this->container['usd_price'];
+        return $this->container['usdPrice'];
     }
 
     /**
-     * Sets usd_price
-     * @param float $usd_price
+     * Sets usdPrice
+     * @param float $usdPrice
      * @return $this
      */
-    public function setUsdPrice($usd_price)
+    public function setUsdPrice($usdPrice)
     {
-        $this->container['usd_price'] = $usd_price;
+        $this->container['usdPrice'] = $usdPrice;
 
         return $this;
     }
 
     /**
-     * Gets usd_price_tax
+     * Gets usdPriceTax
      * @return float
      */
     public function getUsdPriceTax()
     {
-        return $this->container['usd_price_tax'];
+        return $this->container['usdPriceTax'];
     }
 
     /**
-     * Sets usd_price_tax
-     * @param float $usd_price_tax
+     * Sets usdPriceTax
+     * @param float $usdPriceTax
      * @return $this
      */
-    public function setUsdPriceTax($usd_price_tax)
+    public function setUsdPriceTax($usdPriceTax)
     {
-        $this->container['usd_price_tax'] = $usd_price_tax;
+        $this->container['usdPriceTax'] = $usdPriceTax;
 
         return $this;
     }

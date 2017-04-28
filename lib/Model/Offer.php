@@ -55,17 +55,17 @@ class Offer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'offer_id' => 'int',
-        'transaction_item_id' => 'int',
-        'transaction_id' => 'int',
+        'offerId' => 'int',
+        'transactionItemId' => 'int',
+        'transactionId' => 'int',
         'name' => 'string',
-        'translated_name' => 'string',
-        'product_name' => 'string',
-        'translated_product_name' => 'string',
-        'is_recurring' => 'bool',
-        'is_trial' => 'bool',
-        'transaction_item' => '\Swagger\Client\Model\TransactionItem',
-        'recurring_item' => '\Swagger\Client\Model\RecurringItem'
+        'translatedName' => 'string',
+        'productName' => 'string',
+        'translatedProductName' => 'string',
+        'isRecurring' => 'bool',
+        'isTrial' => 'bool',
+        'transactionItem' => '\Swagger\Client\Model\TransactionItem',
+        'recurringItem' => '\Swagger\Client\Model\RecurringItem'
     ];
 
     public static function swaggerTypes()
@@ -78,17 +78,17 @@ class Offer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'offer_id' => 'offerId',
-        'transaction_item_id' => 'transactionItemId',
-        'transaction_id' => 'transactionId',
+        'offerId' => 'offerId',
+        'transactionItemId' => 'transactionItemId',
+        'transactionId' => 'transactionId',
         'name' => 'name',
-        'translated_name' => 'translatedName',
-        'product_name' => 'productName',
-        'translated_product_name' => 'translatedProductName',
-        'is_recurring' => 'isRecurring',
-        'is_trial' => 'isTrial',
-        'transaction_item' => 'TransactionItem',
-        'recurring_item' => 'RecurringItem'
+        'translatedName' => 'translatedName',
+        'productName' => 'productName',
+        'translatedProductName' => 'translatedProductName',
+        'isRecurring' => 'isRecurring',
+        'isTrial' => 'isTrial',
+        'transactionItem' => 'TransactionItem',
+        'recurringItem' => 'RecurringItem'
     ];
 
 
@@ -97,17 +97,17 @@ class Offer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'offer_id' => 'setOfferId',
-        'transaction_item_id' => 'setTransactionItemId',
-        'transaction_id' => 'setTransactionId',
+        'offerId' => 'setOfferId',
+        'transactionItemId' => 'setTransactionItemId',
+        'transactionId' => 'setTransactionId',
         'name' => 'setName',
-        'translated_name' => 'setTranslatedName',
-        'product_name' => 'setProductName',
-        'translated_product_name' => 'setTranslatedProductName',
-        'is_recurring' => 'setIsRecurring',
-        'is_trial' => 'setIsTrial',
-        'transaction_item' => 'setTransactionItem',
-        'recurring_item' => 'setRecurringItem'
+        'translatedName' => 'setTranslatedName',
+        'productName' => 'setProductName',
+        'translatedProductName' => 'setTranslatedProductName',
+        'isRecurring' => 'setIsRecurring',
+        'isTrial' => 'setIsTrial',
+        'transactionItem' => 'setTransactionItem',
+        'recurringItem' => 'setRecurringItem'
     ];
 
 
@@ -116,17 +116,17 @@ class Offer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'offer_id' => 'getOfferId',
-        'transaction_item_id' => 'getTransactionItemId',
-        'transaction_id' => 'getTransactionId',
+        'offerId' => 'getOfferId',
+        'transactionItemId' => 'getTransactionItemId',
+        'transactionId' => 'getTransactionId',
         'name' => 'getName',
-        'translated_name' => 'getTranslatedName',
-        'product_name' => 'getProductName',
-        'translated_product_name' => 'getTranslatedProductName',
-        'is_recurring' => 'getIsRecurring',
-        'is_trial' => 'getIsTrial',
-        'transaction_item' => 'getTransactionItem',
-        'recurring_item' => 'getRecurringItem'
+        'translatedName' => 'getTranslatedName',
+        'productName' => 'getProductName',
+        'translatedProductName' => 'getTranslatedProductName',
+        'isRecurring' => 'getIsRecurring',
+        'isTrial' => 'getIsTrial',
+        'transactionItem' => 'getTransactionItem',
+        'recurringItem' => 'getRecurringItem'
     ];
 
     public static function attributeMap()
@@ -160,17 +160,17 @@ class Offer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['offer_id'] = isset($data['offer_id']) ? $data['offer_id'] : null;
-        $this->container['transaction_item_id'] = isset($data['transaction_item_id']) ? $data['transaction_item_id'] : null;
-        $this->container['transaction_id'] = isset($data['transaction_id']) ? $data['transaction_id'] : null;
+        $this->container['offerId'] = isset($data['offerId']) ? $data['offerId'] : null;
+        $this->container['transactionItemId'] = isset($data['transactionItemId']) ? $data['transactionItemId'] : null;
+        $this->container['transactionId'] = isset($data['transactionId']) ? $data['transactionId'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['translated_name'] = isset($data['translated_name']) ? $data['translated_name'] : null;
-        $this->container['product_name'] = isset($data['product_name']) ? $data['product_name'] : null;
-        $this->container['translated_product_name'] = isset($data['translated_product_name']) ? $data['translated_product_name'] : null;
-        $this->container['is_recurring'] = isset($data['is_recurring']) ? $data['is_recurring'] : null;
-        $this->container['is_trial'] = isset($data['is_trial']) ? $data['is_trial'] : null;
-        $this->container['transaction_item'] = isset($data['transaction_item']) ? $data['transaction_item'] : null;
-        $this->container['recurring_item'] = isset($data['recurring_item']) ? $data['recurring_item'] : null;
+        $this->container['translatedName'] = isset($data['translatedName']) ? $data['translatedName'] : null;
+        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
+        $this->container['translatedProductName'] = isset($data['translatedProductName']) ? $data['translatedProductName'] : null;
+        $this->container['isRecurring'] = isset($data['isRecurring']) ? $data['isRecurring'] : null;
+        $this->container['isTrial'] = isset($data['isTrial']) ? $data['isTrial'] : null;
+        $this->container['transactionItem'] = isset($data['transactionItem']) ? $data['transactionItem'] : null;
+        $this->container['recurringItem'] = isset($data['recurringItem']) ? $data['recurringItem'] : null;
     }
 
     /**
@@ -199,64 +199,64 @@ class Offer implements ArrayAccess
 
 
     /**
-     * Gets offer_id
+     * Gets offerId
      * @return int
      */
     public function getOfferId()
     {
-        return $this->container['offer_id'];
+        return $this->container['offerId'];
     }
 
     /**
-     * Sets offer_id
-     * @param int $offer_id Offer Id
+     * Sets offerId
+     * @param int $offerId Offer Id
      * @return $this
      */
-    public function setOfferId($offer_id)
+    public function setOfferId($offerId)
     {
-        $this->container['offer_id'] = $offer_id;
+        $this->container['offerId'] = $offerId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_item_id
+     * Gets transactionItemId
      * @return int
      */
     public function getTransactionItemId()
     {
-        return $this->container['transaction_item_id'];
+        return $this->container['transactionItemId'];
     }
 
     /**
-     * Sets transaction_item_id
-     * @param int $transaction_item_id Transaction Item Id
+     * Sets transactionItemId
+     * @param int $transactionItemId Transaction Item Id
      * @return $this
      */
-    public function setTransactionItemId($transaction_item_id)
+    public function setTransactionItemId($transactionItemId)
     {
-        $this->container['transaction_item_id'] = $transaction_item_id;
+        $this->container['transactionItemId'] = $transactionItemId;
 
         return $this;
     }
 
     /**
-     * Gets transaction_id
+     * Gets transactionId
      * @return int
      */
     public function getTransactionId()
     {
-        return $this->container['transaction_id'];
+        return $this->container['transactionId'];
     }
 
     /**
-     * Sets transaction_id
-     * @param int $transaction_id Transaction Id
+     * Sets transactionId
+     * @param int $transactionId Transaction Id
      * @return $this
      */
-    public function setTransactionId($transaction_id)
+    public function setTransactionId($transactionId)
     {
-        $this->container['transaction_id'] = $transaction_id;
+        $this->container['transactionId'] = $transactionId;
 
         return $this;
     }
@@ -283,148 +283,148 @@ class Offer implements ArrayAccess
     }
 
     /**
-     * Gets translated_name
+     * Gets translatedName
      * @return string
      */
     public function getTranslatedName()
     {
-        return $this->container['translated_name'];
+        return $this->container['translatedName'];
     }
 
     /**
-     * Sets translated_name
-     * @param string $translated_name Translated Offer Name
+     * Sets translatedName
+     * @param string $translatedName Translated Offer Name
      * @return $this
      */
-    public function setTranslatedName($translated_name)
+    public function setTranslatedName($translatedName)
     {
-        $this->container['translated_name'] = $translated_name;
+        $this->container['translatedName'] = $translatedName;
 
         return $this;
     }
 
     /**
-     * Gets product_name
+     * Gets productName
      * @return string
      */
     public function getProductName()
     {
-        return $this->container['product_name'];
+        return $this->container['productName'];
     }
 
     /**
-     * Sets product_name
-     * @param string $product_name Product Name
+     * Sets productName
+     * @param string $productName Product Name
      * @return $this
      */
-    public function setProductName($product_name)
+    public function setProductName($productName)
     {
-        $this->container['product_name'] = $product_name;
+        $this->container['productName'] = $productName;
 
         return $this;
     }
 
     /**
-     * Gets translated_product_name
+     * Gets translatedProductName
      * @return string
      */
     public function getTranslatedProductName()
     {
-        return $this->container['translated_product_name'];
+        return $this->container['translatedProductName'];
     }
 
     /**
-     * Sets translated_product_name
-     * @param string $translated_product_name Translated Product Name
+     * Sets translatedProductName
+     * @param string $translatedProductName Translated Product Name
      * @return $this
      */
-    public function setTranslatedProductName($translated_product_name)
+    public function setTranslatedProductName($translatedProductName)
     {
-        $this->container['translated_product_name'] = $translated_product_name;
+        $this->container['translatedProductName'] = $translatedProductName;
 
         return $this;
     }
 
     /**
-     * Gets is_recurring
+     * Gets isRecurring
      * @return bool
      */
     public function getIsRecurring()
     {
-        return $this->container['is_recurring'];
+        return $this->container['isRecurring'];
     }
 
     /**
-     * Sets is_recurring
-     * @param bool $is_recurring
+     * Sets isRecurring
+     * @param bool $isRecurring
      * @return $this
      */
-    public function setIsRecurring($is_recurring)
+    public function setIsRecurring($isRecurring)
     {
-        $this->container['is_recurring'] = $is_recurring;
+        $this->container['isRecurring'] = $isRecurring;
 
         return $this;
     }
 
     /**
-     * Gets is_trial
+     * Gets isTrial
      * @return bool
      */
     public function getIsTrial()
     {
-        return $this->container['is_trial'];
+        return $this->container['isTrial'];
     }
 
     /**
-     * Sets is_trial
-     * @param bool $is_trial
+     * Sets isTrial
+     * @param bool $isTrial
      * @return $this
      */
-    public function setIsTrial($is_trial)
+    public function setIsTrial($isTrial)
     {
-        $this->container['is_trial'] = $is_trial;
+        $this->container['isTrial'] = $isTrial;
 
         return $this;
     }
 
     /**
-     * Gets transaction_item
+     * Gets transactionItem
      * @return \Swagger\Client\Model\TransactionItem
      */
     public function getTransactionItem()
     {
-        return $this->container['transaction_item'];
+        return $this->container['transactionItem'];
     }
 
     /**
-     * Sets transaction_item
-     * @param \Swagger\Client\Model\TransactionItem $transaction_item
+     * Sets transactionItem
+     * @param \Swagger\Client\Model\TransactionItem $transactionItem
      * @return $this
      */
-    public function setTransactionItem($transaction_item)
+    public function setTransactionItem($transactionItem)
     {
-        $this->container['transaction_item'] = $transaction_item;
+        $this->container['transactionItem'] = $transactionItem;
 
         return $this;
     }
 
     /**
-     * Gets recurring_item
+     * Gets recurringItem
      * @return \Swagger\Client\Model\RecurringItem
      */
     public function getRecurringItem()
     {
-        return $this->container['recurring_item'];
+        return $this->container['recurringItem'];
     }
 
     /**
-     * Sets recurring_item
-     * @param \Swagger\Client\Model\RecurringItem $recurring_item
+     * Sets recurringItem
+     * @param \Swagger\Client\Model\RecurringItem $recurringItem
      * @return $this
      */
-    public function setRecurringItem($recurring_item)
+    public function setRecurringItem($recurringItem)
     {
-        $this->container['recurring_item'] = $recurring_item;
+        $this->container['recurringItem'] = $recurringItem;
 
         return $this;
     }

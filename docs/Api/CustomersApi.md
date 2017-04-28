@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **customersCustomerIdAddressTransactionIdPut**
-> \Swagger\Client\Model\Customer[] customersCustomerIdAddressTransactionIdPut($customer_id, $transaction_id, $name, $address, $country_code, $city, $postal_code)
+> \Swagger\Client\Model\Customer[] customersCustomerIdAddressTransactionIdPut($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode)
 
 
 
@@ -25,22 +25,17 @@ Update customer group account address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_id = "customer_id_example"; // string | Customer id
-$transaction_id = 56; // int | transaction id
+$customerId = "customerId_example"; // string | Customer id
+$transactionId = 56; // int | transaction id
 $name = "name_example"; // string | Customer's name
 $address = "address_example"; // string | Customer's address
-$country_code = "country_code_example"; // string | Country code
+$countryCode = "countryCode_example"; // string | Country code
 $city = "city_example"; // string | City
-$postal_code = "postal_code_example"; // string | Postal code
+$postalCode = "postalCode_example"; // string | Postal code
 
 try {
-    $result = $api_instance->customersCustomerIdAddressTransactionIdPut($customer_id, $transaction_id, $name, $address, $country_code, $city, $postal_code);
+    $result = $api_instance->customersCustomerIdAddressTransactionIdPut($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdAddressTransactionIdPut: ', $e->getMessage(), PHP_EOL;
@@ -52,13 +47,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| Customer id |
- **transaction_id** | **int**| transaction id |
+ **customerId** | **string**| Customer id |
+ **transactionId** | **int**| transaction id |
  **name** | **string**| Customer&#39;s name | [optional]
  **address** | **string**| Customer&#39;s address | [optional]
- **country_code** | **string**| Country code | [optional]
+ **countryCode** | **string**| Country code | [optional]
  **city** | **string**| City | [optional]
- **postal_code** | **string**| Postal code | [optional]
+ **postalCode** | **string**| Postal code | [optional]
 
 ### Return type
 
@@ -66,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -76,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerIdBillingInfoBillingInfoIdPut**
-> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customer_id, $billing_info_id, $first_name, $last_name, $card_number, $card_expiry, $card_ccv, $selected_gateway, $postal_code)
+> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
 
 
 
@@ -87,24 +82,19 @@ Update customer billing info for a recurring profile
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_id = "customer_id_example"; // string | Customer id
-$billing_info_id = 56; // int | bill info id for the recurring transaction item
-$first_name = "first_name_example"; // string | Customer's new first name
-$last_name = "last_name_example"; // string | Customer's new last name
-$card_number = "card_number_example"; // string | Credit Card number
-$card_expiry = "card_expiry_example"; // string | Credit Card expiry
-$card_ccv = "card_ccv_example"; // string | Credit CCV (optional)
-$selected_gateway = "selected_gateway_example"; // string | gateway prefered used to update billinfo (optional)
-$postal_code = "postal_code_example"; // string | Postal code (optional)
+$customerId = "customerId_example"; // string | Customer id
+$billingInfoId = 56; // int | bill info id for the recurring transaction item
+$firstName = "firstName_example"; // string | Customer's new first name
+$lastName = "lastName_example"; // string | Customer's new last name
+$cardNumber = "cardNumber_example"; // string | Credit Card number
+$cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
+$cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
+$selectedGateway = "selectedGateway_example"; // string | gateway prefered used to update billinfo (optional)
+$postalCode = "postalCode_example"; // string | Postal code (optional)
 
 try {
-    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customer_id, $billing_info_id, $first_name, $last_name, $card_number, $card_expiry, $card_ccv, $selected_gateway, $postal_code);
+    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdBillingInfoBillingInfoIdPut: ', $e->getMessage(), PHP_EOL;
@@ -116,15 +106,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| Customer id |
- **billing_info_id** | **int**| bill info id for the recurring transaction item |
- **first_name** | **string**| Customer&#39;s new first name | [optional]
- **last_name** | **string**| Customer&#39;s new last name | [optional]
- **card_number** | **string**| Credit Card number | [optional]
- **card_expiry** | **string**| Credit Card expiry | [optional]
- **card_ccv** | **string**| Credit CCV (optional) | [optional]
- **selected_gateway** | **string**| gateway prefered used to update billinfo (optional) | [optional]
- **postal_code** | **string**| Postal code (optional) | [optional]
+ **customerId** | **string**| Customer id |
+ **billingInfoId** | **int**| bill info id for the recurring transaction item |
+ **firstName** | **string**| Customer&#39;s new first name | [optional]
+ **lastName** | **string**| Customer&#39;s new last name | [optional]
+ **cardNumber** | **string**| Credit Card number | [optional]
+ **cardExpiry** | **string**| Credit Card expiry | [optional]
+ **cardCCV** | **string**| Credit CCV (optional) | [optional]
+ **selectedGateway** | **string**| gateway prefered used to update billinfo (optional) | [optional]
+ **postalCode** | **string**| Postal code (optional) | [optional]
 
 ### Return type
 
@@ -132,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -142,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerIdGet**
-> \Swagger\Client\Model\Customer customersCustomerIdGet($customer_id)
+> \Swagger\Client\Model\Customer customersCustomerIdGet($customerId)
 
 
 
@@ -153,16 +143,11 @@ Get a `Customer` object.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_id = "customer_id_example"; // string | Customer id
+$customerId = "customerId_example"; // string | Customer id
 
 try {
-    $result = $api_instance->customersCustomerIdGet($customer_id);
+    $result = $api_instance->customersCustomerIdGet($customerId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdGet: ', $e->getMessage(), PHP_EOL;
@@ -174,7 +159,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_id** | **string**| Customer id |
+ **customerId** | **string**| Customer id |
 
 ### Return type
 
@@ -182,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -192,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerUserIdOffersGet**
-> \Swagger\Client\Model\CustomerOffer[] customersCustomerUserIdOffersGet($customer_user_id)
+> \Swagger\Client\Model\CustomerOffer[] customersCustomerUserIdOffersGet($customerUserId)
 
 
 
@@ -203,16 +188,11 @@ Get a list of `Offers` purchased by the customer.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_user_id = "customer_user_id_example"; // string | Customer user id
+$customerUserId = "customerUserId_example"; // string | Customer user id
 
 try {
-    $result = $api_instance->customersCustomerUserIdOffersGet($customer_user_id);
+    $result = $api_instance->customersCustomerUserIdOffersGet($customerUserId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerUserIdOffersGet: ', $e->getMessage(), PHP_EOL;
@@ -224,7 +204,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_user_id** | **string**| Customer user id |
+ **customerUserId** | **string**| Customer user id |
 
 ### Return type
 
@@ -232,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -242,7 +222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerUserIdTransactionsGet**
-> \Swagger\Client\Model\Transaction[] customersCustomerUserIdTransactionsGet($customer_user_id, $account_id)
+> \Swagger\Client\Model\Transaction[] customersCustomerUserIdTransactionsGet($customerUserId, $accountId)
 
 
 
@@ -253,17 +233,12 @@ Get a list of `Transactions` purchased by the customer.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
-$customer_user_id = "customer_user_id_example"; // string | Customer user id
-$account_id = 3.4; // float | Merchant account id
+$customerUserId = "customerUserId_example"; // string | Customer user id
+$accountId = 3.4; // float | Merchant account id
 
 try {
-    $result = $api_instance->customersCustomerUserIdTransactionsGet($customer_user_id, $account_id);
+    $result = $api_instance->customersCustomerUserIdTransactionsGet($customerUserId, $accountId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerUserIdTransactionsGet: ', $e->getMessage(), PHP_EOL;
@@ -275,8 +250,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customer_user_id** | **string**| Customer user id |
- **account_id** | **float**| Merchant account id | [optional]
+ **customerUserId** | **string**| Customer user id |
+ **accountId** | **float**| Merchant account id | [optional]
 
 ### Return type
 
@@ -284,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -294,7 +269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersGet**
-> \Swagger\Client\Model\Customer[] customersGet($email, $name, $post_code, $phone, $page, $sort)
+> \Swagger\Client\Model\Customer[] customersGet($email, $name, $postCode, $phone, $page, $sort)
 
 
 
@@ -305,21 +280,16 @@ Get list of `Customers` objects.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $email = "email_example"; // string | Customer's Email
 $name = "name_example"; // string | Customer's Name
-$post_code = "post_code_example"; // string | Customer's Post code
+$postCode = "postCode_example"; // string | Customer's Post code
 $phone = "phone_example"; // string | Customer's phone
 $page = 1; // int | Page number
 $sort = "-created,email"; // string | Multiple sorting indicators separated by comma
 
 try {
-    $result = $api_instance->customersGet($email, $name, $post_code, $phone, $page, $sort);
+    $result = $api_instance->customersGet($email, $name, $postCode, $phone, $page, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersGet: ', $e->getMessage(), PHP_EOL;
@@ -333,7 +303,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**| Customer&#39;s Email | [optional]
  **name** | **string**| Customer&#39;s Name | [optional]
- **post_code** | **string**| Customer&#39;s Post code | [optional]
+ **postCode** | **string**| Customer&#39;s Post code | [optional]
  **phone** | **string**| Customer&#39;s phone | [optional]
  **page** | **int**| Page number | [optional] [default to 1]
  **sort** | **string**| Multiple sorting indicators separated by comma | [optional] [default to -created,email]
@@ -344,7 +314,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 
@@ -354,7 +324,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersPost**
-> \Swagger\Client\Model\Customer[] customersPost($email, $password, $first_name, $last_name)
+> \Swagger\Client\Model\Customer[] customersPost($email, $password, $firstName, $lastName)
 
 
 
@@ -365,19 +335,14 @@ Create a user for customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $email = "email_example"; // string | Customer's email
 $password = "password_example"; // string | Customer password
-$first_name = "first_name_example"; // string | Customer's first name
-$last_name = "last_name_example"; // string | Customer's last name
+$firstName = "firstName_example"; // string | Customer's first name
+$lastName = "lastName_example"; // string | Customer's last name
 
 try {
-    $result = $api_instance->customersPost($email, $password, $first_name, $last_name);
+    $result = $api_instance->customersPost($email, $password, $firstName, $lastName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersPost: ', $e->getMessage(), PHP_EOL;
@@ -391,8 +356,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**| Customer&#39;s email | [optional]
  **password** | **string**| Customer password | [optional]
- **first_name** | **string**| Customer&#39;s first name | [optional]
- **last_name** | **string**| Customer&#39;s last name | [optional]
+ **firstName** | **string**| Customer&#39;s first name | [optional]
+ **lastName** | **string**| Customer&#39;s last name | [optional]
 
 ### Return type
 
@@ -400,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 

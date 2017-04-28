@@ -3,10 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**user_id** | **int** |  | [optional] 
-**token** | **string** |  | [optional] 
-**expired** | **string** |  | [optional] 
+**response** | [**\Swagger\Client\Model\Response**](Response.md) |  | [optional] 
+**data** | [**\Swagger\Client\Model\TokenData**](TokenData.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

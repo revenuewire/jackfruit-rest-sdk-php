@@ -55,12 +55,12 @@ class IdentityData implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'account_id' => 'int',
+        'accountId' => 'int',
         'username' => 'string',
-        'is_merchant' => 'bool',
-        'is_staff' => 'bool',
-        'is_affiliate' => 'bool',
-        'is_customer' => 'bool',
+        'isMerchant' => 'bool',
+        'isStaff' => 'bool',
+        'isAffiliate' => 'bool',
+        'isCustomer' => 'bool',
         'email' => 'string'
     ];
 
@@ -75,12 +75,12 @@ class IdentityData implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'account_id' => 'accountId',
+        'accountId' => 'accountId',
         'username' => 'username',
-        'is_merchant' => 'isMerchant',
-        'is_staff' => 'isStaff',
-        'is_affiliate' => 'isAffiliate',
-        'is_customer' => 'isCustomer',
+        'isMerchant' => 'isMerchant',
+        'isStaff' => 'isStaff',
+        'isAffiliate' => 'isAffiliate',
+        'isCustomer' => 'isCustomer',
         'email' => 'email'
     ];
 
@@ -91,12 +91,12 @@ class IdentityData implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'account_id' => 'setAccountId',
+        'accountId' => 'setAccountId',
         'username' => 'setUsername',
-        'is_merchant' => 'setIsMerchant',
-        'is_staff' => 'setIsStaff',
-        'is_affiliate' => 'setIsAffiliate',
-        'is_customer' => 'setIsCustomer',
+        'isMerchant' => 'setIsMerchant',
+        'isStaff' => 'setIsStaff',
+        'isAffiliate' => 'setIsAffiliate',
+        'isCustomer' => 'setIsCustomer',
         'email' => 'setEmail'
     ];
 
@@ -107,12 +107,12 @@ class IdentityData implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'account_id' => 'getAccountId',
+        'accountId' => 'getAccountId',
         'username' => 'getUsername',
-        'is_merchant' => 'getIsMerchant',
-        'is_staff' => 'getIsStaff',
-        'is_affiliate' => 'getIsAffiliate',
-        'is_customer' => 'getIsCustomer',
+        'isMerchant' => 'getIsMerchant',
+        'isStaff' => 'getIsStaff',
+        'isAffiliate' => 'getIsAffiliate',
+        'isCustomer' => 'getIsCustomer',
         'email' => 'getEmail'
     ];
 
@@ -148,12 +148,12 @@ class IdentityData implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
+        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['is_merchant'] = isset($data['is_merchant']) ? $data['is_merchant'] : null;
-        $this->container['is_staff'] = isset($data['is_staff']) ? $data['is_staff'] : null;
-        $this->container['is_affiliate'] = isset($data['is_affiliate']) ? $data['is_affiliate'] : null;
-        $this->container['is_customer'] = isset($data['is_customer']) ? $data['is_customer'] : null;
+        $this->container['isMerchant'] = isset($data['isMerchant']) ? $data['isMerchant'] : null;
+        $this->container['isStaff'] = isset($data['isStaff']) ? $data['isStaff'] : null;
+        $this->container['isAffiliate'] = isset($data['isAffiliate']) ? $data['isAffiliate'] : null;
+        $this->container['isCustomer'] = isset($data['isCustomer']) ? $data['isCustomer'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
     }
 
@@ -204,22 +204,22 @@ class IdentityData implements ArrayAccess
     }
 
     /**
-     * Gets account_id
+     * Gets accountId
      * @return int
      */
     public function getAccountId()
     {
-        return $this->container['account_id'];
+        return $this->container['accountId'];
     }
 
     /**
-     * Sets account_id
-     * @param int $account_id
+     * Sets accountId
+     * @param int $accountId
      * @return $this
      */
-    public function setAccountId($account_id)
+    public function setAccountId($accountId)
     {
-        $this->container['account_id'] = $account_id;
+        $this->container['accountId'] = $accountId;
 
         return $this;
     }
@@ -246,85 +246,85 @@ class IdentityData implements ArrayAccess
     }
 
     /**
-     * Gets is_merchant
+     * Gets isMerchant
      * @return bool
      */
     public function getIsMerchant()
     {
-        return $this->container['is_merchant'];
+        return $this->container['isMerchant'];
     }
 
     /**
-     * Sets is_merchant
-     * @param bool $is_merchant
+     * Sets isMerchant
+     * @param bool $isMerchant
      * @return $this
      */
-    public function setIsMerchant($is_merchant)
+    public function setIsMerchant($isMerchant)
     {
-        $this->container['is_merchant'] = $is_merchant;
+        $this->container['isMerchant'] = $isMerchant;
 
         return $this;
     }
 
     /**
-     * Gets is_staff
+     * Gets isStaff
      * @return bool
      */
     public function getIsStaff()
     {
-        return $this->container['is_staff'];
+        return $this->container['isStaff'];
     }
 
     /**
-     * Sets is_staff
-     * @param bool $is_staff
+     * Sets isStaff
+     * @param bool $isStaff
      * @return $this
      */
-    public function setIsStaff($is_staff)
+    public function setIsStaff($isStaff)
     {
-        $this->container['is_staff'] = $is_staff;
+        $this->container['isStaff'] = $isStaff;
 
         return $this;
     }
 
     /**
-     * Gets is_affiliate
+     * Gets isAffiliate
      * @return bool
      */
     public function getIsAffiliate()
     {
-        return $this->container['is_affiliate'];
+        return $this->container['isAffiliate'];
     }
 
     /**
-     * Sets is_affiliate
-     * @param bool $is_affiliate
+     * Sets isAffiliate
+     * @param bool $isAffiliate
      * @return $this
      */
-    public function setIsAffiliate($is_affiliate)
+    public function setIsAffiliate($isAffiliate)
     {
-        $this->container['is_affiliate'] = $is_affiliate;
+        $this->container['isAffiliate'] = $isAffiliate;
 
         return $this;
     }
 
     /**
-     * Gets is_customer
+     * Gets isCustomer
      * @return bool
      */
     public function getIsCustomer()
     {
-        return $this->container['is_customer'];
+        return $this->container['isCustomer'];
     }
 
     /**
-     * Sets is_customer
-     * @param bool $is_customer
+     * Sets isCustomer
+     * @param bool $isCustomer
      * @return $this
      */
-    public function setIsCustomer($is_customer)
+    public function setIsCustomer($isCustomer)
     {
-        $this->container['is_customer'] = $is_customer;
+        $this->container['isCustomer'] = $isCustomer;
 
         return $this;
     }

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **subscriptionsRecurringTransactionItemIdCancelPut**
-> \Swagger\Client\Model\Response[] subscriptionsRecurringTransactionItemIdCancelPut($recurring_transaction_item_id)
+> \Swagger\Client\Model\Response[] subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId)
 
 
 
@@ -19,16 +19,11 @@ Cancal customer recurring profile
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-// Configure API key authorization: APIKeyHeader
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-
 $api_instance = new Swagger\Client\Api\SubscriptionsApi();
-$recurring_transaction_item_id = 56; // int | Recurring transaction item id
+$recurringTransactionItemId = 56; // int | Recurring transaction item id
 
 try {
-    $result = $api_instance->subscriptionsRecurringTransactionItemIdCancelPut($recurring_transaction_item_id);
+    $result = $api_instance->subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SubscriptionsApi->subscriptionsRecurringTransactionItemIdCancelPut: ', $e->getMessage(), PHP_EOL;
@@ -40,7 +35,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **recurring_transaction_item_id** | **int**| Recurring transaction item id |
+ **recurringTransactionItemId** | **int**| Recurring transaction item id |
 
 ### Return type
 
@@ -48,7 +43,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKeyHeader](../../README.md#APIKeyHeader)
+No authorization required
 
 ### HTTP request headers
 

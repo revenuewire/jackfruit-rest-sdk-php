@@ -56,17 +56,17 @@ class BillInfo implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'gateway_processor' => 'string',
-        'currency_code' => 'string',
-        'card_number' => 'string',
-        'card_type' => 'string',
+        'gatewayProcessor' => 'string',
+        'currencyCode' => 'string',
+        'cardNumber' => 'string',
+        'cardType' => 'string',
         'expiry' => 'string',
-        'payer_id' => 'string',
-        'gateway_reference' => 'string',
-        'billing_address_name' => 'string',
-        'billing_address_postal_code' => 'string',
-        'billing_address_region_code' => 'string',
-        'billing_address_country_code' => 'string'
+        'payerId' => 'string',
+        'gatewayReference' => 'string',
+        'billingAddressName' => 'string',
+        'billingAddressPostalCode' => 'string',
+        'billingAddressRegionCode' => 'string',
+        'billingAddressCountryCode' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -80,17 +80,17 @@ class BillInfo implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'gateway_processor' => 'gatewayProcessor',
-        'currency_code' => 'currencyCode',
-        'card_number' => 'cardNumber',
-        'card_type' => 'cardType',
+        'gatewayProcessor' => 'gatewayProcessor',
+        'currencyCode' => 'currencyCode',
+        'cardNumber' => 'cardNumber',
+        'cardType' => 'cardType',
         'expiry' => 'expiry',
-        'payer_id' => 'payerId',
-        'gateway_reference' => 'gatewayReference',
-        'billing_address_name' => 'billingAddressName',
-        'billing_address_postal_code' => 'billingAddressPostalCode',
-        'billing_address_region_code' => 'billingAddressRegionCode',
-        'billing_address_country_code' => 'billingAddressCountryCode'
+        'payerId' => 'payerId',
+        'gatewayReference' => 'gatewayReference',
+        'billingAddressName' => 'billingAddressName',
+        'billingAddressPostalCode' => 'billingAddressPostalCode',
+        'billingAddressRegionCode' => 'billingAddressRegionCode',
+        'billingAddressCountryCode' => 'billingAddressCountryCode'
     ];
 
 
@@ -100,17 +100,17 @@ class BillInfo implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'gateway_processor' => 'setGatewayProcessor',
-        'currency_code' => 'setCurrencyCode',
-        'card_number' => 'setCardNumber',
-        'card_type' => 'setCardType',
+        'gatewayProcessor' => 'setGatewayProcessor',
+        'currencyCode' => 'setCurrencyCode',
+        'cardNumber' => 'setCardNumber',
+        'cardType' => 'setCardType',
         'expiry' => 'setExpiry',
-        'payer_id' => 'setPayerId',
-        'gateway_reference' => 'setGatewayReference',
-        'billing_address_name' => 'setBillingAddressName',
-        'billing_address_postal_code' => 'setBillingAddressPostalCode',
-        'billing_address_region_code' => 'setBillingAddressRegionCode',
-        'billing_address_country_code' => 'setBillingAddressCountryCode'
+        'payerId' => 'setPayerId',
+        'gatewayReference' => 'setGatewayReference',
+        'billingAddressName' => 'setBillingAddressName',
+        'billingAddressPostalCode' => 'setBillingAddressPostalCode',
+        'billingAddressRegionCode' => 'setBillingAddressRegionCode',
+        'billingAddressCountryCode' => 'setBillingAddressCountryCode'
     ];
 
 
@@ -120,17 +120,17 @@ class BillInfo implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'gateway_processor' => 'getGatewayProcessor',
-        'currency_code' => 'getCurrencyCode',
-        'card_number' => 'getCardNumber',
-        'card_type' => 'getCardType',
+        'gatewayProcessor' => 'getGatewayProcessor',
+        'currencyCode' => 'getCurrencyCode',
+        'cardNumber' => 'getCardNumber',
+        'cardType' => 'getCardType',
         'expiry' => 'getExpiry',
-        'payer_id' => 'getPayerId',
-        'gateway_reference' => 'getGatewayReference',
-        'billing_address_name' => 'getBillingAddressName',
-        'billing_address_postal_code' => 'getBillingAddressPostalCode',
-        'billing_address_region_code' => 'getBillingAddressRegionCode',
-        'billing_address_country_code' => 'getBillingAddressCountryCode'
+        'payerId' => 'getPayerId',
+        'gatewayReference' => 'getGatewayReference',
+        'billingAddressName' => 'getBillingAddressName',
+        'billingAddressPostalCode' => 'getBillingAddressPostalCode',
+        'billingAddressRegionCode' => 'getBillingAddressRegionCode',
+        'billingAddressCountryCode' => 'getBillingAddressCountryCode'
     ];
 
     public static function attributeMap()
@@ -165,17 +165,17 @@ class BillInfo implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['gateway_processor'] = isset($data['gateway_processor']) ? $data['gateway_processor'] : null;
-        $this->container['currency_code'] = isset($data['currency_code']) ? $data['currency_code'] : null;
-        $this->container['card_number'] = isset($data['card_number']) ? $data['card_number'] : null;
-        $this->container['card_type'] = isset($data['card_type']) ? $data['card_type'] : null;
+        $this->container['gatewayProcessor'] = isset($data['gatewayProcessor']) ? $data['gatewayProcessor'] : null;
+        $this->container['currencyCode'] = isset($data['currencyCode']) ? $data['currencyCode'] : null;
+        $this->container['cardNumber'] = isset($data['cardNumber']) ? $data['cardNumber'] : null;
+        $this->container['cardType'] = isset($data['cardType']) ? $data['cardType'] : null;
         $this->container['expiry'] = isset($data['expiry']) ? $data['expiry'] : null;
-        $this->container['payer_id'] = isset($data['payer_id']) ? $data['payer_id'] : null;
-        $this->container['gateway_reference'] = isset($data['gateway_reference']) ? $data['gateway_reference'] : null;
-        $this->container['billing_address_name'] = isset($data['billing_address_name']) ? $data['billing_address_name'] : null;
-        $this->container['billing_address_postal_code'] = isset($data['billing_address_postal_code']) ? $data['billing_address_postal_code'] : null;
-        $this->container['billing_address_region_code'] = isset($data['billing_address_region_code']) ? $data['billing_address_region_code'] : null;
-        $this->container['billing_address_country_code'] = isset($data['billing_address_country_code']) ? $data['billing_address_country_code'] : null;
+        $this->container['payerId'] = isset($data['payerId']) ? $data['payerId'] : null;
+        $this->container['gatewayReference'] = isset($data['gatewayReference']) ? $data['gatewayReference'] : null;
+        $this->container['billingAddressName'] = isset($data['billingAddressName']) ? $data['billingAddressName'] : null;
+        $this->container['billingAddressPostalCode'] = isset($data['billingAddressPostalCode']) ? $data['billingAddressPostalCode'] : null;
+        $this->container['billingAddressRegionCode'] = isset($data['billingAddressRegionCode']) ? $data['billingAddressRegionCode'] : null;
+        $this->container['billingAddressCountryCode'] = isset($data['billingAddressCountryCode']) ? $data['billingAddressCountryCode'] : null;
     }
 
     /**
@@ -225,85 +225,85 @@ class BillInfo implements ArrayAccess
     }
 
     /**
-     * Gets gateway_processor
+     * Gets gatewayProcessor
      * @return string
      */
     public function getGatewayProcessor()
     {
-        return $this->container['gateway_processor'];
+        return $this->container['gatewayProcessor'];
     }
 
     /**
-     * Sets gateway_processor
-     * @param string $gateway_processor
+     * Sets gatewayProcessor
+     * @param string $gatewayProcessor
      * @return $this
      */
-    public function setGatewayProcessor($gateway_processor)
+    public function setGatewayProcessor($gatewayProcessor)
     {
-        $this->container['gateway_processor'] = $gateway_processor;
+        $this->container['gatewayProcessor'] = $gatewayProcessor;
 
         return $this;
     }
 
     /**
-     * Gets currency_code
+     * Gets currencyCode
      * @return string
      */
     public function getCurrencyCode()
     {
-        return $this->container['currency_code'];
+        return $this->container['currencyCode'];
     }
 
     /**
-     * Sets currency_code
-     * @param string $currency_code
+     * Sets currencyCode
+     * @param string $currencyCode
      * @return $this
      */
-    public function setCurrencyCode($currency_code)
+    public function setCurrencyCode($currencyCode)
     {
-        $this->container['currency_code'] = $currency_code;
+        $this->container['currencyCode'] = $currencyCode;
 
         return $this;
     }
 
     /**
-     * Gets card_number
+     * Gets cardNumber
      * @return string
      */
     public function getCardNumber()
     {
-        return $this->container['card_number'];
+        return $this->container['cardNumber'];
     }
 
     /**
-     * Sets card_number
-     * @param string $card_number
+     * Sets cardNumber
+     * @param string $cardNumber
      * @return $this
      */
-    public function setCardNumber($card_number)
+    public function setCardNumber($cardNumber)
     {
-        $this->container['card_number'] = $card_number;
+        $this->container['cardNumber'] = $cardNumber;
 
         return $this;
     }
 
     /**
-     * Gets card_type
+     * Gets cardType
      * @return string
      */
     public function getCardType()
     {
-        return $this->container['card_type'];
+        return $this->container['cardType'];
     }
 
     /**
-     * Sets card_type
-     * @param string $card_type
+     * Sets cardType
+     * @param string $cardType
      * @return $this
      */
-    public function setCardType($card_type)
+    public function setCardType($cardType)
     {
-        $this->container['card_type'] = $card_type;
+        $this->container['cardType'] = $cardType;
 
         return $this;
     }
@@ -330,127 +330,127 @@ class BillInfo implements ArrayAccess
     }
 
     /**
-     * Gets payer_id
+     * Gets payerId
      * @return string
      */
     public function getPayerId()
     {
-        return $this->container['payer_id'];
+        return $this->container['payerId'];
     }
 
     /**
-     * Sets payer_id
-     * @param string $payer_id
+     * Sets payerId
+     * @param string $payerId
      * @return $this
      */
-    public function setPayerId($payer_id)
+    public function setPayerId($payerId)
     {
-        $this->container['payer_id'] = $payer_id;
+        $this->container['payerId'] = $payerId;
 
         return $this;
     }
 
     /**
-     * Gets gateway_reference
+     * Gets gatewayReference
      * @return string
      */
     public function getGatewayReference()
     {
-        return $this->container['gateway_reference'];
+        return $this->container['gatewayReference'];
     }
 
     /**
-     * Sets gateway_reference
-     * @param string $gateway_reference
+     * Sets gatewayReference
+     * @param string $gatewayReference
      * @return $this
      */
-    public function setGatewayReference($gateway_reference)
+    public function setGatewayReference($gatewayReference)
     {
-        $this->container['gateway_reference'] = $gateway_reference;
+        $this->container['gatewayReference'] = $gatewayReference;
 
         return $this;
     }
 
     /**
-     * Gets billing_address_name
+     * Gets billingAddressName
      * @return string
      */
     public function getBillingAddressName()
     {
-        return $this->container['billing_address_name'];
+        return $this->container['billingAddressName'];
     }
 
     /**
-     * Sets billing_address_name
-     * @param string $billing_address_name
+     * Sets billingAddressName
+     * @param string $billingAddressName
      * @return $this
      */
-    public function setBillingAddressName($billing_address_name)
+    public function setBillingAddressName($billingAddressName)
     {
-        $this->container['billing_address_name'] = $billing_address_name;
+        $this->container['billingAddressName'] = $billingAddressName;
 
         return $this;
     }
 
     /**
-     * Gets billing_address_postal_code
+     * Gets billingAddressPostalCode
      * @return string
      */
     public function getBillingAddressPostalCode()
     {
-        return $this->container['billing_address_postal_code'];
+        return $this->container['billingAddressPostalCode'];
     }
 
     /**
-     * Sets billing_address_postal_code
-     * @param string $billing_address_postal_code
+     * Sets billingAddressPostalCode
+     * @param string $billingAddressPostalCode
      * @return $this
      */
-    public function setBillingAddressPostalCode($billing_address_postal_code)
+    public function setBillingAddressPostalCode($billingAddressPostalCode)
     {
-        $this->container['billing_address_postal_code'] = $billing_address_postal_code;
+        $this->container['billingAddressPostalCode'] = $billingAddressPostalCode;
 
         return $this;
     }
 
     /**
-     * Gets billing_address_region_code
+     * Gets billingAddressRegionCode
      * @return string
      */
     public function getBillingAddressRegionCode()
     {
-        return $this->container['billing_address_region_code'];
+        return $this->container['billingAddressRegionCode'];
     }
 
     /**
-     * Sets billing_address_region_code
-     * @param string $billing_address_region_code
+     * Sets billingAddressRegionCode
+     * @param string $billingAddressRegionCode
      * @return $this
      */
-    public function setBillingAddressRegionCode($billing_address_region_code)
+    public function setBillingAddressRegionCode($billingAddressRegionCode)
     {
-        $this->container['billing_address_region_code'] = $billing_address_region_code;
+        $this->container['billingAddressRegionCode'] = $billingAddressRegionCode;
 
         return $this;
     }
 
     /**
-     * Gets billing_address_country_code
+     * Gets billingAddressCountryCode
      * @return string
      */
     public function getBillingAddressCountryCode()
     {
-        return $this->container['billing_address_country_code'];
+        return $this->container['billingAddressCountryCode'];
     }
 
     /**
-     * Sets billing_address_country_code
-     * @param string $billing_address_country_code
+     * Sets billingAddressCountryCode
+     * @param string $billingAddressCountryCode
      * @return $this
      */
-    public function setBillingAddressCountryCode($billing_address_country_code)
+    public function setBillingAddressCountryCode($billingAddressCountryCode)
     {
-        $this->container['billing_address_country_code'] = $billing_address_country_code;
+        $this->container['billingAddressCountryCode'] = $billingAddressCountryCode;
 
         return $this;
     }
