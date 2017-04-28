@@ -93,7 +93,7 @@ class GEOApi
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\States
+     * @return map[string,object]
      */
     public function geoGetAllStates()
     {
@@ -107,7 +107,7 @@ class GEOApi
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\States, HTTP status code, HTTP response headers (array of strings)
+     * @return array of map[string,object], HTTP status code, HTTP response headers (array of strings)
      */
     public function geoGetAllStatesWithHttpInfo()
     {
@@ -141,15 +141,15 @@ class GEOApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\States',
+                'map[string,object]',
                 '/geo-info/countries/states'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\States', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, 'map[string,object]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\States', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'map[string,object]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

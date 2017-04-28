@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **geoGetAllStates**
-> \Swagger\Client\Model\States geoGetAllStates()
+> map[string,object] geoGetAllStates()
 
 
 
@@ -38,7 +38,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\States**](../Model/States.md)
+[**map[string,object]**](../Model/map.md)
 
 ### Authorization
 
