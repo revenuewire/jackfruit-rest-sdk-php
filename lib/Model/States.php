@@ -55,7 +55,8 @@ class States implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\State[]'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +69,8 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -77,7 +79,8 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -86,7 +89,8 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -121,6 +125,7 @@ class States implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -165,6 +170,27 @@ class States implements ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Swagger\Client\Model\State[]
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Swagger\Client\Model\State[] $data
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }

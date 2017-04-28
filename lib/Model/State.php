@@ -55,8 +55,7 @@ class State implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'text' => 'string'
+        
     ];
 
     public static function swaggerTypes()
@@ -69,8 +68,7 @@ class State implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'text' => 'text'
+        
     ];
 
 
@@ -79,8 +77,7 @@ class State implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'text' => 'setText'
+        
     ];
 
 
@@ -89,8 +86,7 @@ class State implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'text' => 'getText'
+        
     ];
 
     public static function attributeMap()
@@ -124,8 +120,6 @@ class State implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
     }
 
     /**
@@ -135,7 +129,7 @@ class State implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = [];
+        $invalid_properties = parent::listInvalidProperties();
 
         return $invalid_properties;
     }
@@ -148,52 +142,13 @@ class State implements ArrayAccess
      */
     public function valid()
     {
+        if (!parent::valid()) {
+            return false;
+        }
 
         return true;
     }
 
-
-    /**
-     * Gets id
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param string $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets text
-     * @return string
-     */
-    public function getText()
-    {
-        return $this->container['text'];
-    }
-
-    /**
-     * Sets text
-     * @param string $text
-     * @return $this
-     */
-    public function setText($text)
-    {
-        $this->container['text'] = $text;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
