@@ -18,7 +18,12 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="test again"
+    release_note="Merge remote-tracking branch 'origin/development' into feature/pipelinetest
+
+* origin/development:
+  Merge pull request #610 in SMP/jackfruit from feature/SMP-8356-gst-cherry-pick to release/1-staging
+  Merge pull request #609 in SMP/jackfruit from feature/SMP-8735-q4 to release/1-staging
+  Merge pull request #603 in SMP/jackfruit from feature/SMP-8715 to development"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
