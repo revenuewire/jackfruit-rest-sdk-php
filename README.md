@@ -96,10 +96,10 @@ Class | Method | HTTP request | Description
 *DomainsApi* | [**domainsIdPut**](docs/Api/DomainsApi.md#domainsidput) | **PUT** /domains/{id} | 
 *DomainsApi* | [**domainsIdUploadCertPost**](docs/Api/DomainsApi.md#domainsiduploadcertpost) | **POST** /domains/{id}/upload-cert | 
 *DomainsApi* | [**domainsPost**](docs/Api/DomainsApi.md#domainspost) | **POST** /domains | 
-*GEOApi* | [**geoInfoCountriesCountryCodeStatesGet**](docs/Api/GEOApi.md#geoinfocountriescountrycodestatesget) | **GET** /geo-info/countries/{countryCode}/states | 
-*GEOApi* | [**geoInfoCountriesGet**](docs/Api/GEOApi.md#geoinfocountriesget) | **GET** /geo-info/countries | 
-*GEOApi* | [**geoInfoCountriesStatesGet**](docs/Api/GEOApi.md#geoinfocountriesstatesget) | **GET** /geo-info/countries/states | 
-*GEOApi* | [**geoInfoSupportedLanguagesGet**](docs/Api/GEOApi.md#geoinfosupportedlanguagesget) | **GET** /geo-info/supported-languages | 
+*GEOApi* | [**geoGetAllStates**](docs/Api/GEOApi.md#geogetallstates) | **GET** /geo-info/countries/states | 
+*GEOApi* | [**geoGetAllStatesByCountry**](docs/Api/GEOApi.md#geogetallstatesbycountry) | **GET** /geo-info/countries/{countryCode}/states | 
+*GEOApi* | [**geoGetCountryList**](docs/Api/GEOApi.md#geogetcountrylist) | **GET** /geo-info/countries | 
+*GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
 *OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**ordersOrderIdGet**](docs/Api/OrdersApi.md#ordersorderidget) | **GET** /orders/{orderId} | 
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
@@ -122,6 +122,7 @@ Class | Method | HTTP request | Description
 
  - [BillInfo](docs/Model/BillInfo.md)
  - [Country](docs/Model/Country.md)
+ - [CountryList](docs/Model/CountryList.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
  - [CustomerOffer](docs/Model/CustomerOffer.md)
@@ -143,6 +144,7 @@ Class | Method | HTTP request | Description
  - [State](docs/Model/State.md)
  - [States](docs/Model/States.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)
+ - [SupportedLanguages](docs/Model/SupportedLanguages.md)
  - [Token](docs/Model/Token.md)
  - [TokenData](docs/Model/TokenData.md)
  - [Transaction](docs/Model/Transaction.md)

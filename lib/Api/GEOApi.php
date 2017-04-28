@@ -88,192 +88,28 @@ class GEOApi
     }
 
     /**
-     * Operation geoInfoCountriesCountryCodeStatesGet
-     *
-     * 
-     *
-     * @param string $countryCode  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\State[]
-     */
-    public function geoInfoCountriesCountryCodeStatesGet($countryCode)
-    {
-        list($response) = $this->geoInfoCountriesCountryCodeStatesGetWithHttpInfo($countryCode);
-        return $response;
-    }
-
-    /**
-     * Operation geoInfoCountriesCountryCodeStatesGetWithHttpInfo
-     *
-     * 
-     *
-     * @param string $countryCode  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\State[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function geoInfoCountriesCountryCodeStatesGetWithHttpInfo($countryCode)
-    {
-        // verify the required parameter 'countryCode' is set
-        if ($countryCode === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $countryCode when calling geoInfoCountriesCountryCodeStatesGet');
-        }
-        // parse inputs
-        $resourcePath = "/geo-info/countries/{countryCode}/states";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($countryCode !== null) {
-            $resourcePath = str_replace(
-                "{" . "countryCode" . "}",
-                $this->apiClient->getSerializer()->toPathValue($countryCode),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\State[]',
-                '/geo-info/countries/{countryCode}/states'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\State[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\State[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation geoInfoCountriesGet
-     *
-     * 
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Country[]
-     */
-    public function geoInfoCountriesGet()
-    {
-        list($response) = $this->geoInfoCountriesGetWithHttpInfo();
-        return $response;
-    }
-
-    /**
-     * Operation geoInfoCountriesGetWithHttpInfo
-     *
-     * 
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Country[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function geoInfoCountriesGetWithHttpInfo()
-    {
-        // parse inputs
-        $resourcePath = "/geo-info/countries";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Country[]',
-                '/geo-info/countries'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Country[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Country[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation geoInfoCountriesStatesGet
+     * Operation geoGetAllStates
      *
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\States
      */
-    public function geoInfoCountriesStatesGet()
+    public function geoGetAllStates()
     {
-        list($response) = $this->geoInfoCountriesStatesGetWithHttpInfo();
+        list($response) = $this->geoGetAllStatesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation geoInfoCountriesStatesGetWithHttpInfo
+     * Operation geoGetAllStatesWithHttpInfo
      *
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\States, HTTP status code, HTTP response headers (array of strings)
      */
-    public function geoInfoCountriesStatesGetWithHttpInfo()
+    public function geoGetAllStatesWithHttpInfo()
     {
         // parse inputs
         $resourcePath = "/geo-info/countries/states";
@@ -327,28 +163,192 @@ class GEOApi
     }
 
     /**
-     * Operation geoInfoSupportedLanguagesGet
+     * Operation geoGetAllStatesByCountry
      *
      * 
      *
+     * @param string $countryCode  (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\SupportedLanguage[]
+     * @return \Swagger\Client\Model\States
      */
-    public function geoInfoSupportedLanguagesGet()
+    public function geoGetAllStatesByCountry($countryCode)
     {
-        list($response) = $this->geoInfoSupportedLanguagesGetWithHttpInfo();
+        list($response) = $this->geoGetAllStatesByCountryWithHttpInfo($countryCode);
         return $response;
     }
 
     /**
-     * Operation geoInfoSupportedLanguagesGetWithHttpInfo
+     * Operation geoGetAllStatesByCountryWithHttpInfo
+     *
+     * 
+     *
+     * @param string $countryCode  (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\States, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function geoGetAllStatesByCountryWithHttpInfo($countryCode)
+    {
+        // verify the required parameter 'countryCode' is set
+        if ($countryCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $countryCode when calling geoGetAllStatesByCountry');
+        }
+        // parse inputs
+        $resourcePath = "/geo-info/countries/{countryCode}/states";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($countryCode !== null) {
+            $resourcePath = str_replace(
+                "{" . "countryCode" . "}",
+                $this->apiClient->getSerializer()->toPathValue($countryCode),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\States',
+                '/geo-info/countries/{countryCode}/states'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\States', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\States', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation geoGetCountryList
      *
      * 
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\SupportedLanguage[], HTTP status code, HTTP response headers (array of strings)
+     * @return \Swagger\Client\Model\CountryList
      */
-    public function geoInfoSupportedLanguagesGetWithHttpInfo()
+    public function geoGetCountryList()
+    {
+        list($response) = $this->geoGetCountryListWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation geoGetCountryListWithHttpInfo
+     *
+     * 
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\CountryList, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function geoGetCountryListWithHttpInfo()
+    {
+        // parse inputs
+        $resourcePath = "/geo-info/countries";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\CountryList',
+                '/geo-info/countries'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CountryList', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CountryList', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation geoGetSupportedLanguages
+     *
+     * 
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\SupportedLanguages
+     */
+    public function geoGetSupportedLanguages()
+    {
+        list($response) = $this->geoGetSupportedLanguagesWithHttpInfo();
+        return $response;
+    }
+
+    /**
+     * Operation geoGetSupportedLanguagesWithHttpInfo
+     *
+     * 
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\SupportedLanguages, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function geoGetSupportedLanguagesWithHttpInfo()
     {
         // parse inputs
         $resourcePath = "/geo-info/supported-languages";
@@ -380,15 +380,15 @@ class GEOApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\SupportedLanguage[]',
+                '\Swagger\Client\Model\SupportedLanguages',
                 '/geo-info/supported-languages'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SupportedLanguage[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\SupportedLanguages', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SupportedLanguage[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\SupportedLanguages', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

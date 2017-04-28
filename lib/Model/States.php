@@ -35,7 +35,7 @@ use \ArrayAccess;
  * States Class Doc Comment
  *
  * @category    Class
- * @description State Object
+ * @description A list of states
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,7 +55,7 @@ class States implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'response' => '\Swagger\Client\Model\Response'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +68,7 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'response' => 'response'
     ];
 
 
@@ -77,7 +77,7 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'response' => 'setResponse'
     ];
 
 
@@ -86,7 +86,7 @@ class States implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'response' => 'getResponse'
     ];
 
     public static function attributeMap()
@@ -120,6 +120,7 @@ class States implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
     }
 
     /**
@@ -129,7 +130,7 @@ class States implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = parent::listInvalidProperties();
+        $invalid_properties = [];
 
         return $invalid_properties;
     }
@@ -142,13 +143,31 @@ class States implements ArrayAccess
      */
     public function valid()
     {
-        if (!parent::valid()) {
-            return false;
-        }
 
         return true;
     }
 
+
+    /**
+     * Gets response
+     * @return \Swagger\Client\Model\Response
+     */
+    public function getResponse()
+    {
+        return $this->container['response'];
+    }
+
+    /**
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
+     * @return $this
+     */
+    public function setResponse($response)
+    {
+        $this->container['response'] = $response;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

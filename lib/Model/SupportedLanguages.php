@@ -1,6 +1,6 @@
 <?php
 /**
- * SupportedLanguage
+ * SupportedLanguages
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * SupportedLanguage Class Doc Comment
+ * SupportedLanguages Class Doc Comment
  *
  * @category    Class
- * @description Language Object
+ * @description Supported Languages
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SupportedLanguage implements ArrayAccess
+class SupportedLanguages implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +48,15 @@ class SupportedLanguage implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SupportedLanguage';
+    protected static $swaggerModelName = 'SupportedLanguages';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'text' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\SupportedLanguage[]'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +69,8 @@ class SupportedLanguage implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'text' => 'text'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -79,8 +79,8 @@ class SupportedLanguage implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'text' => 'setText'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -89,8 +89,8 @@ class SupportedLanguage implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'text' => 'getText'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -124,8 +124,8 @@ class SupportedLanguage implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -154,43 +154,43 @@ class SupportedLanguage implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return string
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getId()
+    public function getResponse()
     {
-        return $this->container['id'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets id
-     * @param string $id
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setId($id)
+    public function setResponse($response)
     {
-        $this->container['id'] = $id;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets text
-     * @return string
+     * Gets data
+     * @return \Swagger\Client\Model\SupportedLanguage[]
      */
-    public function getText()
+    public function getData()
     {
-        return $this->container['text'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets text
-     * @param string $text
+     * Sets data
+     * @param \Swagger\Client\Model\SupportedLanguage[] $data
      * @return $this
      */
-    public function setText($text)
+    public function setData($data)
     {
-        $this->container['text'] = $text;
+        $this->container['data'] = $data;
 
         return $this;
     }
