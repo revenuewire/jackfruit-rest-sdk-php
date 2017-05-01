@@ -199,14 +199,14 @@ class UsersApi
      * 
      *
      * @param string $orderReference Order reference (required)
-     * @param string $firstSixCC First six digits of card number (required)
-     * @param string $postcode Postcode/Zip (required)
+     * @param string $lastFourCC Last four CC digets (required)
+     * @param string $postCode Postcode/Zip (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Identity
      */
-    public function customerOrderLogin($orderReference, $firstSixCC, $postcode)
+    public function customerOrderLogin($orderReference, $lastFourCC, $postCode)
     {
-        list($response) = $this->customerOrderLoginWithHttpInfo($orderReference, $firstSixCC, $postcode);
+        list($response) = $this->customerOrderLoginWithHttpInfo($orderReference, $lastFourCC, $postCode);
         return $response;
     }
 
@@ -216,24 +216,24 @@ class UsersApi
      * 
      *
      * @param string $orderReference Order reference (required)
-     * @param string $firstSixCC First six digits of card number (required)
-     * @param string $postcode Postcode/Zip (required)
+     * @param string $lastFourCC Last four CC digets (required)
+     * @param string $postCode Postcode/Zip (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Identity, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customerOrderLoginWithHttpInfo($orderReference, $firstSixCC, $postcode)
+    public function customerOrderLoginWithHttpInfo($orderReference, $lastFourCC, $postCode)
     {
         // verify the required parameter 'orderReference' is set
         if ($orderReference === null) {
             throw new \InvalidArgumentException('Missing the required parameter $orderReference when calling customerOrderLogin');
         }
-        // verify the required parameter 'firstSixCC' is set
-        if ($firstSixCC === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $firstSixCC when calling customerOrderLogin');
+        // verify the required parameter 'lastFourCC' is set
+        if ($lastFourCC === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lastFourCC when calling customerOrderLogin');
         }
-        // verify the required parameter 'postcode' is set
-        if ($postcode === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $postcode when calling customerOrderLogin');
+        // verify the required parameter 'postCode' is set
+        if ($postCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $postCode when calling customerOrderLogin');
         }
         // parse inputs
         $resourcePath = "/users/order-login";
@@ -255,12 +255,12 @@ class UsersApi
             $formParams['orderReference'] = $this->apiClient->getSerializer()->toFormValue($orderReference);
         }
         // form params
-        if ($firstSixCC !== null) {
-            $formParams['firstSixCC'] = $this->apiClient->getSerializer()->toFormValue($firstSixCC);
+        if ($lastFourCC !== null) {
+            $formParams['lastFourCC'] = $this->apiClient->getSerializer()->toFormValue($lastFourCC);
         }
         // form params
-        if ($postcode !== null) {
-            $formParams['postcode'] = $this->apiClient->getSerializer()->toFormValue($postcode);
+        if ($postCode !== null) {
+            $formParams['postCode'] = $this->apiClient->getSerializer()->toFormValue($postCode);
         }
         
         // for model (json/xml)

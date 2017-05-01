@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customerOrderLogin**
-> \Swagger\Client\Model\Identity customerOrderLogin($orderReference, $firstSixCC, $postcode)
+> \Swagger\Client\Model\Identity customerOrderLogin($orderReference, $lastFourCC, $postCode)
 
 
 
@@ -88,11 +88,11 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorizat
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $orderReference = "orderReference_example"; // string | Order reference
-$firstSixCC = "firstSixCC_example"; // string | First six digits of card number
-$postcode = "postcode_example"; // string | Postcode/Zip
+$lastFourCC = "lastFourCC_example"; // string | Last four CC digets
+$postCode = "postCode_example"; // string | Postcode/Zip
 
 try {
-    $result = $api_instance->customerOrderLogin($orderReference, $firstSixCC, $postcode);
+    $result = $api_instance->customerOrderLogin($orderReference, $lastFourCC, $postCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->customerOrderLogin: ', $e->getMessage(), PHP_EOL;
@@ -105,8 +105,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderReference** | **string**| Order reference |
- **firstSixCC** | **string**| First six digits of card number |
- **postcode** | **string**| Postcode/Zip |
+ **lastFourCC** | **string**| Last four CC digets |
+ **postCode** | **string**| Postcode/Zip |
 
 ### Return type
 
