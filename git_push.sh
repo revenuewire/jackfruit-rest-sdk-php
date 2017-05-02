@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #618 in SMP/jackfruit from feature/SMP-8759 to development
 
-* commit '9128eeac283456719c06662fdf6a599dbd591df2':
-  Merge pull request #626 in SMP/jackfruit from feature/SMP-8557-email-service to release/1-staging"
+Squashed commit of the following:
+
+commit c4b6a08ab12f8cd0a762d78e6c21a56bc46f9028
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Apr 28 15:55:04 2017 -0700
+
+    SMP-8759 iDeal transactions resulting in error when URL params are too long"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
