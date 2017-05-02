@@ -18,15 +18,39 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #618 in SMP/jackfruit from feature/SMP-8759 to development
+    release_note="Merge pull request #630 in SMP/jackfruit from feature/SMP-8552-dev to development
 
 Squashed commit of the following:
 
-commit c4b6a08ab12f8cd0a762d78e6c21a56bc46f9028
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Fri Apr 28 15:55:04 2017 -0700
+commit 502006b3c8c03038c344396a241087662548911d
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:35:18 2017 -0700
 
-    SMP-8759 iDeal transactions resulting in error when URL params are too long"
+    SMP-8552 last bill date
+
+commit d0505b372ad71baaa2eb3091b3c57e4c08e6bcf7
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:19:55 2017 -0700
+
+    SMP-8552 clean up
+
+commit 17b60da730df088cc39d0f0b9b3d42ab2d1804e0
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:18:09 2017 -0700
+
+    SMP-8552 last billing date
+
+commit 507be7fbb8434a29341abe32aa1bf767491441ed
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Apr 28 10:03:24 2017 -0700
+
+    SMP-8552 clean up
+
+commit be517cc6cf2881ba787dfbd6130016a244a77c46
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Apr 21 16:24:33 2017 -0700
+
+    phones fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

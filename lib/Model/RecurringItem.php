@@ -59,6 +59,7 @@ class RecurringItem implements ArrayAccess
         'offerId' => 'int',
         'initialSaleDate' => '\DateTime',
         'nextBillingDate' => '\DateTime',
+        'lastBillingDate' => '\DateTime',
         'interval' => 'int',
         'rebillFrequencyType' => 'string',
         'rebillFrequencyValue' => 'int',
@@ -81,6 +82,7 @@ class RecurringItem implements ArrayAccess
         'offerId' => 'offerId',
         'initialSaleDate' => 'initialSaleDate',
         'nextBillingDate' => 'nextBillingDate',
+        'lastBillingDate' => 'lastBillingDate',
         'interval' => 'interval',
         'rebillFrequencyType' => 'rebillFrequencyType',
         'rebillFrequencyValue' => 'rebillFrequencyValue',
@@ -99,6 +101,7 @@ class RecurringItem implements ArrayAccess
         'offerId' => 'setOfferId',
         'initialSaleDate' => 'setInitialSaleDate',
         'nextBillingDate' => 'setNextBillingDate',
+        'lastBillingDate' => 'setLastBillingDate',
         'interval' => 'setInterval',
         'rebillFrequencyType' => 'setRebillFrequencyType',
         'rebillFrequencyValue' => 'setRebillFrequencyValue',
@@ -117,6 +120,7 @@ class RecurringItem implements ArrayAccess
         'offerId' => 'getOfferId',
         'initialSaleDate' => 'getInitialSaleDate',
         'nextBillingDate' => 'getNextBillingDate',
+        'lastBillingDate' => 'getLastBillingDate',
         'interval' => 'getInterval',
         'rebillFrequencyType' => 'getRebillFrequencyType',
         'rebillFrequencyValue' => 'getRebillFrequencyValue',
@@ -160,6 +164,7 @@ class RecurringItem implements ArrayAccess
         $this->container['offerId'] = isset($data['offerId']) ? $data['offerId'] : null;
         $this->container['initialSaleDate'] = isset($data['initialSaleDate']) ? $data['initialSaleDate'] : null;
         $this->container['nextBillingDate'] = isset($data['nextBillingDate']) ? $data['nextBillingDate'] : null;
+        $this->container['lastBillingDate'] = isset($data['lastBillingDate']) ? $data['lastBillingDate'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['rebillFrequencyType'] = isset($data['rebillFrequencyType']) ? $data['rebillFrequencyType'] : null;
         $this->container['rebillFrequencyValue'] = isset($data['rebillFrequencyValue']) ? $data['rebillFrequencyValue'] : null;
@@ -273,6 +278,27 @@ class RecurringItem implements ArrayAccess
     public function setNextBillingDate($nextBillingDate)
     {
         $this->container['nextBillingDate'] = $nextBillingDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets lastBillingDate
+     * @return \DateTime
+     */
+    public function getLastBillingDate()
+    {
+        return $this->container['lastBillingDate'];
+    }
+
+    /**
+     * Sets lastBillingDate
+     * @param \DateTime $lastBillingDate
+     * @return $this
+     */
+    public function setLastBillingDate($lastBillingDate)
+    {
+        $this->container['lastBillingDate'] = $lastBillingDate;
 
         return $this;
     }
