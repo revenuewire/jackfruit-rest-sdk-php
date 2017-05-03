@@ -18,57 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #632 in SMP/jackfruit from feature/SMP-8552-dev to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 3f75b0901b118044aa17d786d586cea0f568a232
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 15:17:07 2017 -0700
-
-    SMP-8552
-
-commit b0ec5591a7262796b95285e0a8a3e53e5b9906f7
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 15:15:04 2017 -0700
-
-    SMP-8552 final date fix
-
-commit 8ce00736d973067929b1aa10e7bf8f0b5f4a0b26
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 15:06:39 2017 -0700
-
-    SMP-8552 last date fix
-
-commit 50b834e5728e23f6225238fa678694613a7071f2
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:35:18 2017 -0700
-
-    SMP-8552 last bill date
-
-commit 43f6e460a9ab36749718c9c5d54ff04bef6e5f80
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:19:55 2017 -0700
-
-    SMP-8552 clean up
-
-commit ef8200afbaf8cd186fbe0388892e03136aa57a7a
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:18:09 2017 -0700
-
-    SMP-8552 last billing date
-
-commit 183496a6aa7d7590811b14006080f4e128822210
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Apr 28 10:03:24 2017 -0700
-
-    SMP-8552 clean up
-
-commit 77cdfbc4aae248fd3353772c1d699bf459ec1a59
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Apr 21 16:24:33 2017 -0700
-
-    phones fix"
+* commit 'c1eb61884567ced5473700406c25262b8da5ecc9':
+  Merge pull request #634 in SMP/jackfruit from feature/SMP-8788 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
