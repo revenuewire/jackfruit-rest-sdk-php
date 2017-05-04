@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #631 in SMP/jackfruit from feature/smp-8720-add-website-source-field to development
 
-* commit '6e5c749094b66fd04a038710072522aee3c8eb26':
-  Merge pull request #635 in SMP/jackfruit from feature/SMP-8787 to release/1-staging"
+Squashed commit of the following:
+
+commit 2b4c82602f1ab2beeac6c10069be31697a492b1a
+Author: stanley <sli@revenuewire.com>
+Date:   Tue May 2 15:13:55 2017 -0700
+
+    SMP-8720 add website source field"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
