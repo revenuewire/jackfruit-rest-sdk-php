@@ -18,15 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #631 in SMP/jackfruit from feature/smp-8720-add-website-source-field to development
+    release_note="Merge pull request #636 in SMP/jackfruit from feature/SMP-8708 to development
 
 Squashed commit of the following:
 
-commit 2b4c82602f1ab2beeac6c10069be31697a492b1a
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 2 15:13:55 2017 -0700
+commit 2cac3d7a389814d87eae8d6025377498f550c004
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Thu May 4 12:06:28 2017 -0700
 
-    SMP-8720 add website source field"
+    SMP-8708 adjust query to remove cancelled_date criteria as per review.
+
+commit 4cee8d95dbd3481ccce4e123e057a37432686fc7
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Wed May 3 12:40:09 2017 -0700
+
+    SMP-8708 fix bill infos where bill info gateway references with new gateway references from non-recurring sales"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
