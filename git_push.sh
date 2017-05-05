@@ -18,21 +18,28 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #636 in SMP/jackfruit from feature/SMP-8708 to development
+    release_note="Merge pull request #627 in SMP/jackfruit from feature/smp-8688-subscription-only-product to development
 
 Squashed commit of the following:
 
-commit 2cac3d7a389814d87eae8d6025377498f550c004
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Thu May 4 12:06:28 2017 -0700
+commit 95c3e7abcb6e476b3fcb201fdf760234590081cc
+Author: stanley <sli@revenuewire.com>
+Date:   Thu May 4 15:04:40 2017 -0700
 
-    SMP-8708 adjust query to remove cancelled_date criteria as per review.
+    SMP-8688 subscription only product
 
-commit 4cee8d95dbd3481ccce4e123e057a37432686fc7
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Wed May 3 12:40:09 2017 -0700
+commit 6fe8e1cafa865520504dca6927e98532cfe95533
+Merge: 91d44e0 9989d14
+Author: stanley <sli@revenuewire.com>
+Date:   Thu May 4 15:01:46 2017 -0700
 
-    SMP-8708 fix bill infos where bill info gateway references with new gateway references from non-recurring sales"
+    Merge branch 'development' into feature/smp-8688-subscription-only-product
+
+commit 91d44e070dbcbf79893eda4ce2f89173795a76d2
+Author: stanley <sli@revenuewire.com>
+Date:   Tue May 2 12:11:23 2017 -0700
+
+    SMP-8688 Subscription Only Product"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
