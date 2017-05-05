@@ -18,28 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #627 in SMP/jackfruit from feature/smp-8688-subscription-only-product to development
+    release_note="Merge pull request #638 in SMP/jackfruit from feature/SMP-8769 to development
 
 Squashed commit of the following:
 
-commit 95c3e7abcb6e476b3fcb201fdf760234590081cc
-Author: stanley <sli@revenuewire.com>
-Date:   Thu May 4 15:04:40 2017 -0700
+commit 6f7707cba2ca18c5c1a8a7708fdfc1532d115ac3
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed May 3 15:11:03 2017 -0700
 
-    SMP-8688 subscription only product
-
-commit 6fe8e1cafa865520504dca6927e98532cfe95533
-Merge: 91d44e0 9989d14
-Author: stanley <sli@revenuewire.com>
-Date:   Thu May 4 15:01:46 2017 -0700
-
-    Merge branch 'development' into feature/smp-8688-subscription-only-product
-
-commit 91d44e070dbcbf79893eda4ce2f89173795a76d2
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 2 12:11:23 2017 -0700
-
-    SMP-8688 Subscription Only Product"
+    SMP-8769 Create an API for a receipt url"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

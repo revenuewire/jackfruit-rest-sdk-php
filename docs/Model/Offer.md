@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **translatedName** | **string** | Translated Offer Name | [optional] 
 **productName** | **string** | Product Name | [optional] 
 **translatedProductName** | **string** | Translated Product Name | [optional] 
+**receiptUrl** | **string** | Receipt Url for this transaction | [optional] 
 **isRecurring** | **bool** |  | [optional] 
 **isTrial** | **bool** |  | [optional] 
 **transactionItem** | [**\Swagger\Client\Model\TransactionItem**](TransactionItem.md) |  | [optional] 

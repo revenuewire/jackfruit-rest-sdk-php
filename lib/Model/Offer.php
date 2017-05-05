@@ -62,6 +62,7 @@ class Offer implements ArrayAccess
         'translatedName' => 'string',
         'productName' => 'string',
         'translatedProductName' => 'string',
+        'receiptUrl' => 'string',
         'isRecurring' => 'bool',
         'isTrial' => 'bool',
         'transactionItem' => '\Swagger\Client\Model\TransactionItem',
@@ -85,6 +86,7 @@ class Offer implements ArrayAccess
         'translatedName' => 'translatedName',
         'productName' => 'productName',
         'translatedProductName' => 'translatedProductName',
+        'receiptUrl' => 'receiptUrl',
         'isRecurring' => 'isRecurring',
         'isTrial' => 'isTrial',
         'transactionItem' => 'TransactionItem',
@@ -104,6 +106,7 @@ class Offer implements ArrayAccess
         'translatedName' => 'setTranslatedName',
         'productName' => 'setProductName',
         'translatedProductName' => 'setTranslatedProductName',
+        'receiptUrl' => 'setReceiptUrl',
         'isRecurring' => 'setIsRecurring',
         'isTrial' => 'setIsTrial',
         'transactionItem' => 'setTransactionItem',
@@ -123,6 +126,7 @@ class Offer implements ArrayAccess
         'translatedName' => 'getTranslatedName',
         'productName' => 'getProductName',
         'translatedProductName' => 'getTranslatedProductName',
+        'receiptUrl' => 'getReceiptUrl',
         'isRecurring' => 'getIsRecurring',
         'isTrial' => 'getIsTrial',
         'transactionItem' => 'getTransactionItem',
@@ -167,6 +171,7 @@ class Offer implements ArrayAccess
         $this->container['translatedName'] = isset($data['translatedName']) ? $data['translatedName'] : null;
         $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
         $this->container['translatedProductName'] = isset($data['translatedProductName']) ? $data['translatedProductName'] : null;
+        $this->container['receiptUrl'] = isset($data['receiptUrl']) ? $data['receiptUrl'] : null;
         $this->container['isRecurring'] = isset($data['isRecurring']) ? $data['isRecurring'] : null;
         $this->container['isTrial'] = isset($data['isTrial']) ? $data['isTrial'] : null;
         $this->container['transactionItem'] = isset($data['transactionItem']) ? $data['transactionItem'] : null;
@@ -341,6 +346,27 @@ class Offer implements ArrayAccess
     public function setTranslatedProductName($translatedProductName)
     {
         $this->container['translatedProductName'] = $translatedProductName;
+
+        return $this;
+    }
+
+    /**
+     * Gets receiptUrl
+     * @return string
+     */
+    public function getReceiptUrl()
+    {
+        return $this->container['receiptUrl'];
+    }
+
+    /**
+     * Sets receiptUrl
+     * @param string $receiptUrl Receipt Url for this transaction
+     * @return $this
+     */
+    public function setReceiptUrl($receiptUrl)
+    {
+        $this->container['receiptUrl'] = $receiptUrl;
 
         return $this;
     }
