@@ -18,81 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #641 in SMP/jackfruit from feature/SMP-8552-dev to development
+    release_note="Merge pull request #645 in SMP/jackfruit from feature/SMP-8557-qa to development
 
 Squashed commit of the following:
 
-commit 2454fac35702be399ac796822a910eace5120cef
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 5 11:39:21 2017 -0700
+commit 7a61a3b1fe9fc9cdca812c107372cced1b0696d1
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 4 12:15:44 2017 -0700
 
-    SMP-8552
-
-commit 184cb2cf5145a080ae4804c6e4fe4dca73f7f704
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 5 11:27:24 2017 -0700
-
-    SMP-8552
-
-commit f2d52e0079096c3b6172a8c571b070c798a9e05b
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 5 09:20:11 2017 -0700
-
-    SMP-8552 add account phone on creation
-
-commit ae30b25632e0907d98a20f1b7019107021f1612f
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Thu May 4 14:03:14 2017 -0700
-
-    SMP-8552 clean up
-
-commit 25201c00697ed8cd33e949c51971af1ec84be2e1
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Thu May 4 14:00:09 2017 -0700
-
-    SMP-8552 adding account phone to users api
-
-commit cd440a3c61aa4b79b91e77c8b62e97e9ae7888fe
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 15:15:04 2017 -0700
-
-    SMP-8552 final date fix
-
-commit bbdfd23341d9087867b35a5557446e7c80919808
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 15:06:39 2017 -0700
-
-    SMP-8552 last date fix
-
-commit 843170ca802437367e5d54c15a493c607c49fb7a
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:35:18 2017 -0700
-
-    SMP-8552 last bill date
-
-commit 5d8254c174b69ed09d0c63ced48c834fee14e1d7
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:19:55 2017 -0700
-
-    SMP-8552 clean up
-
-commit 6f48d67959c7ada67d11d38bc9daffc876e355a8
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 2 14:18:09 2017 -0700
-
-    SMP-8552 last billing date
-
-commit 628a7413d3e27cfb707668eb1326348f861e08d0
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Apr 28 10:03:24 2017 -0700
-
-    SMP-8552 clean up
-
-commit 37a7db944dea5011beac3dc7a590e39d070d5f87
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Apr 21 16:24:33 2017 -0700
-
-    phones fix"
+    SMP-8557 SPO: API, QA fix."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

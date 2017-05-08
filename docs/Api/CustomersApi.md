@@ -10,7 +10,6 @@ Method | HTTP request | Description
 [**customersCustomerUserIdOffersGet**](CustomersApi.md#customersCustomerUserIdOffersGet) | **GET** /customers/{customerUserId}/offers | 
 [**customersCustomerUserIdTransactionsGet**](CustomersApi.md#customersCustomerUserIdTransactionsGet) | **GET** /customers/{customerUserId}/transactions | 
 [**customersGet**](CustomersApi.md#customersGet) | **GET** /customers | 
-[**customersPost**](CustomersApi.md#customersPost) | **POST** /customers/ | 
 
 
 # **customersCustomerIdAddressTransactionIdPut**
@@ -319,57 +318,6 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **customersPost**
-> \Swagger\Client\Model\Customer[] customersPost($email, $password, $firstName, $lastName)
-
-
-
-Create a user for customer
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\Api\CustomersApi();
-$email = "email_example"; // string | Customer's email
-$password = "password_example"; // string | Customer password
-$firstName = "firstName_example"; // string | Customer's first name
-$lastName = "lastName_example"; // string | Customer's last name
-
-try {
-    $result = $api_instance->customersPost($email, $password, $firstName, $lastName);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->customersPost: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **email** | **string**| Customer&#39;s email | [optional]
- **password** | **string**| Customer password | [optional]
- **firstName** | **string**| Customer&#39;s first name | [optional]
- **lastName** | **string**| Customer&#39;s last name | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\Customer[]**](../Model/Customer.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

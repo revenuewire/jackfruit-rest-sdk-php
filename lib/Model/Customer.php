@@ -56,7 +56,6 @@ class Customer implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'merchantFid' => 'string',
         'email' => 'string',
         'firstName' => 'string',
         'lastName' => 'string',
@@ -78,7 +77,6 @@ class Customer implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'merchantFid' => 'merchantFid',
         'email' => 'email',
         'firstName' => 'firstName',
         'lastName' => 'lastName',
@@ -96,7 +94,6 @@ class Customer implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'merchantFid' => 'setMerchantFid',
         'email' => 'setEmail',
         'firstName' => 'setFirstName',
         'lastName' => 'setLastName',
@@ -114,7 +111,6 @@ class Customer implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'merchantFid' => 'getMerchantFid',
         'email' => 'getEmail',
         'firstName' => 'getFirstName',
         'lastName' => 'getLastName',
@@ -157,7 +153,6 @@ class Customer implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['merchantFid'] = isset($data['merchantFid']) ? $data['merchantFid'] : null;
         $this->container['email'] = isset($data['email']) ? $data['email'] : null;
         $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
@@ -210,27 +205,6 @@ class Customer implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets merchantFid
-     * @return string
-     */
-    public function getMerchantFid()
-    {
-        return $this->container['merchantFid'];
-    }
-
-    /**
-     * Sets merchantFid
-     * @param string $merchantFid
-     * @return $this
-     */
-    public function setMerchantFid($merchantFid)
-    {
-        $this->container['merchantFid'] = $merchantFid;
 
         return $this;
     }
