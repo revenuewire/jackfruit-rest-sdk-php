@@ -55,8 +55,10 @@ class Error implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'result' => 'bool',
-        'message' => 'string'
+        'code' => 'bool',
+        'message' => 'string',
+        'key' => 'string',
+        'context' => 'map[string,string]'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +71,10 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'result' => 'result',
-        'message' => 'message'
+        'code' => 'code',
+        'message' => 'message',
+        'key' => 'key',
+        'context' => 'context'
     ];
 
 
@@ -79,8 +83,10 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'result' => 'setResult',
-        'message' => 'setMessage'
+        'code' => 'setCode',
+        'message' => 'setMessage',
+        'key' => 'setKey',
+        'context' => 'setContext'
     ];
 
 
@@ -89,8 +95,10 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'result' => 'getResult',
-        'message' => 'getMessage'
+        'code' => 'getCode',
+        'message' => 'getMessage',
+        'key' => 'getKey',
+        'context' => 'getContext'
     ];
 
     public static function attributeMap()
@@ -124,8 +132,10 @@ class Error implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['key'] = isset($data['key']) ? $data['key'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
     }
 
     /**
@@ -154,22 +164,22 @@ class Error implements ArrayAccess
 
 
     /**
-     * Gets result
+     * Gets code
      * @return bool
      */
-    public function getResult()
+    public function getCode()
     {
-        return $this->container['result'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets result
-     * @param bool $result
+     * Sets code
+     * @param bool $code HTTP STATUS CODE
      * @return $this
      */
-    public function setResult($result)
+    public function setCode($code)
     {
-        $this->container['result'] = $result;
+        $this->container['code'] = $code;
 
         return $this;
     }
@@ -191,6 +201,48 @@ class Error implements ArrayAccess
     public function setMessage($message)
     {
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets key
+     * @return string
+     */
+    public function getKey()
+    {
+        return $this->container['key'];
+    }
+
+    /**
+     * Sets key
+     * @param string $key error message key
+     * @return $this
+     */
+    public function setKey($key)
+    {
+        $this->container['key'] = $key;
+
+        return $this;
+    }
+
+    /**
+     * Gets context
+     * @return map[string,string]
+     */
+    public function getContext()
+    {
+        return $this->container['context'];
+    }
+
+    /**
+     * Sets context
+     * @param map[string,string] $context
+     * @return $this
+     */
+    public function setContext($context)
+    {
+        $this->container['context'] = $context;
 
         return $this;
     }
