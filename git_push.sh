@@ -18,15 +18,69 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #639 in SMP/jackfruit from feature/SMP-8765-qa to development
+    release_note="Merge pull request #650 in SMP/jackfruit from feature/SMP-8552-dev to development
 
 Squashed commit of the following:
 
-commit cf9e33b47fff53b210062a25dea44347f7a56baf
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu May 4 09:23:42 2017 -0700
+commit 86470407a48e13d21472ca84dd3b147b6826a8f3
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Mon May 8 10:31:05 2017 -0700
 
-    SMP-8765 Update offer API to enable fix term recurring. QA fix."
+    SMP-8552 document lookup API
+
+commit 7cacd725253da42255220bd4d821f093964fc92f
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu May 4 14:03:14 2017 -0700
+
+    SMP-8552 clean up
+
+commit b61ad9779f602534a1673015327ed9567dcaeabf
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu May 4 14:00:09 2017 -0700
+
+    SMP-8552 adding account phone to users api
+
+commit 850c906e85838a73e79ab67cd775d0cb0a3f539e
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 15:15:04 2017 -0700
+
+    SMP-8552 final date fix
+
+commit 74b9ff55e8990e9178cfbcfa58e9e61f2f0b9f23
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 15:06:39 2017 -0700
+
+    SMP-8552 last date fix
+
+commit 7895f39f93846eda1fc1fa6a31adb31faafb2a97
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:35:18 2017 -0700
+
+    SMP-8552 last bill date
+
+commit 949c9ea6a4427eab94c45cf99e8748f0309bf828
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:19:55 2017 -0700
+
+    SMP-8552 clean up
+
+commit 26974f8f25c9b2b908c8418f463637df47d090fd
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Tue May 2 14:18:09 2017 -0700
+
+    SMP-8552 last billing date
+
+commit 596d8829ea82c34e49482d5682b3f24c8d661ad7
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Apr 28 10:03:24 2017 -0700
+
+    SMP-8552 clean up
+
+commit a5d3dfa5a7d3fff943242d4defe7cc11d0bb76d2
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Apr 21 16:24:33 2017 -0700
+
+    phones fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
