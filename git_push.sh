@@ -18,34 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #652 in SMP/jackfruit from feature/smp-8803-pwd-enhancement to development
+    release_note="Merge pull request #655 in SMP/jackfruit from feature/SMP-8781-identity to development
 
 Squashed commit of the following:
 
-commit c34cb4ffe48f28d45852cd128e25a7a7ce5c8d46
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 9 10:25:22 2017 -0700
+commit b6cb398a15f17f56283d8c7110678a3d2842e4bb
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Tue May 9 15:01:22 2017 -0700
 
-    SMP-8803 pwd enhancement
-
-commit ec9661fc00086dc6443a3cf6bc0b24ca9d4f2b33
-Merge: d737083 fded461
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 9 10:24:08 2017 -0700
-
-    Merge branch 'development' into feature/smp-8803-pwd-enhancement
-
-commit d737083f9abf0f5db0e26f6707d56434bdff4133
-Author: stanley <sli@revenuewire.com>
-Date:   Mon May 8 14:39:51 2017 -0700
-
-    SMP-8803 add validation
-
-commit 1677e677ec43ae5bd5f4a3114cd05fbaca8c3b9a
-Author: stanley <sli@revenuewire.com>
-Date:   Mon May 8 13:32:15 2017 -0700
-
-    SMP-8803 temporary password"
+    SMP-8781: Expose Slim identity outside controllers"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
