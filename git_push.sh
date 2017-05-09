@@ -18,80 +18,34 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #581 in SMP/jackfruit from feature/smp-8677-click-id-fix to development
+    release_note="Merge pull request #652 in SMP/jackfruit from feature/smp-8803-pwd-enhancement to development
 
 Squashed commit of the following:
 
-commit 86e53fd205aba0b157bd132cbac4bbac228aaa88
+commit c34cb4ffe48f28d45852cd128e25a7a7ce5c8d46
 Author: stanley <sli@revenuewire.com>
-Date:   Tue May 2 15:04:25 2017 -0700
+Date:   Tue May 9 10:25:22 2017 -0700
 
-    SMP-8677 Click ID Fix
+    SMP-8803 pwd enhancement
 
-commit ac9d82c8cc32e1d6d3fee2e0aab02ce80529c037
-Merge: c778e57 9f9a8a0
+commit ec9661fc00086dc6443a3cf6bc0b24ca9d4f2b33
+Merge: d737083 fded461
 Author: stanley <sli@revenuewire.com>
-Date:   Tue May 2 13:24:35 2017 -0700
+Date:   Tue May 9 10:24:08 2017 -0700
 
-    Merge branch 'development' into feature/smp-8677-click-id-fix
+    Merge branch 'development' into feature/smp-8803-pwd-enhancement
 
-commit c778e577984cba4f8a9f1c57c68cc9d53c894742
+commit d737083f9abf0f5db0e26f6707d56434bdff4133
 Author: stanley <sli@revenuewire.com>
-Date:   Thu Apr 27 16:04:08 2017 -0700
+Date:   Mon May 8 14:39:51 2017 -0700
 
-    SMP-8677 Click Id Fix
+    SMP-8803 add validation
 
-commit 83b8801768b5f8815fae73be4221a58481d9fe4a
-Merge: 4232ae3 644b027
+commit 1677e677ec43ae5bd5f4a3114cd05fbaca8c3b9a
 Author: stanley <sli@revenuewire.com>
-Date:   Thu Apr 27 15:28:10 2017 -0700
+Date:   Mon May 8 13:32:15 2017 -0700
 
-    Merge branch 'development' into feature/smp-8677-click-id-fix
-
-commit 4232ae322ccc7e8b0bca05b83d80fbdea9c42730
-Author: stanley <sli@revenuewire.com>
-Date:   Wed Apr 26 15:58:36 2017 -0700
-
-    SMP-8677 Click Id Fix
-
-commit 6d18b181c68f7d8cfb619f61560be4e92df78d5d
-Merge: 40beb45 f837821
-Author: stanley <sli@revenuewire.com>
-Date:   Wed Apr 26 13:27:10 2017 -0700
-
-    Merge branch 'development' into feature/smp-8677-click-id-fix
-
-commit 40beb452729556f3d561b4944236292f54384da1
-Author: stanley <sli@revenuewire.com>
-Date:   Mon Apr 24 13:25:09 2017 -0700
-
-    SMP-8677 Click Id
-
-commit cc5014a98d983efac9789d2b569f1e4c8904ec0f
-Merge: dd968c7 3629824
-Author: stanley <sli@revenuewire.com>
-Date:   Mon Apr 24 13:24:47 2017 -0700
-
-    Merge branch 'development' into feature/smp-8677-click-id-fix
-
-commit dd968c7b7232681c358c7546baf88522376ed831
-Merge: e79af50 3fb3290
-Author: stanley <sli@revenuewire.com>
-Date:   Sun Apr 23 11:04:07 2017 -0700
-
-    Merge branch 'development' into feature/smp-8677-click-id-fix
-
-commit e79af505e50ba96735cfebc1694aa10ac12b2d9d
-Author: stanley <sli@revenuewire.com>
-Date:   Thu Apr 13 15:27:59 2017 -0700
-
-    SMP-8677 event notification added
-
-commit 7a127f3421dfc78ee31262877f076e8ac29b84a2
-Author: stanley <sli@revenuewire.com>
-Date:   Thu Apr 13 11:04:20 2017 -0700
-
-    SMP-8677 Click Id Fix"
+    SMP-8803 temporary password"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
