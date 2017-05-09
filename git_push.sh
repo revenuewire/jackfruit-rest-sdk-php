@@ -18,15 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #653 in SMP/jackfruit from feature/smp-8722-sync-more-fields-to-sf to development
+    release_note="Merge pull request #654 in SMP/jackfruit from feature/smp-8763-renewal-confirmation-email to development
 
 Squashed commit of the following:
 
-commit d0e282ccd46c5da21722336336b9d61fc9776d4b
+commit cd2ff389dda9d34b867f76d6680f4ed10a3be0ee
 Author: stanley <sli@revenuewire.com>
-Date:   Tue May 9 09:49:54 2017 -0700
+Date:   Tue May 9 15:43:23 2017 -0700
 
-    SMP-8722 Sync more fields to Salesforce"
+    SMP-8763 renewal confirmation email
+
+commit 61cb716790ab63af7db9e26f8df923de1304140a
+Author: stanley <sli@revenuewire.com>
+Date:   Tue May 9 14:48:50 2017 -0700
+
+    SMP-8763 Renewal Confirmation Email"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
