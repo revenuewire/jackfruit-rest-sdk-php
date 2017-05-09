@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #655 in SMP/jackfruit from feature/SMP-8781-identity to development
+    release_note="Merge pull request #653 in SMP/jackfruit from feature/smp-8722-sync-more-fields-to-sf to development
 
 Squashed commit of the following:
 
-commit b6cb398a15f17f56283d8c7110678a3d2842e4bb
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Tue May 9 15:01:22 2017 -0700
+commit d0e282ccd46c5da21722336336b9d61fc9776d4b
+Author: stanley <sli@revenuewire.com>
+Date:   Tue May 9 09:49:54 2017 -0700
 
-    SMP-8781: Expose Slim identity outside controllers"
+    SMP-8722 Sync more fields to Salesforce"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
