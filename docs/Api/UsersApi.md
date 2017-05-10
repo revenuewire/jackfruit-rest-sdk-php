@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customerSignup**
-> \Swagger\Client\Model\User[] customerSignup($email, $password, $firstName, $lastName, $language)
+> \Swagger\Client\Model\User customerSignup($email, $password, $firstName, $lastName, $language)
 
 
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User[]**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userForgotPassword**
-> \Swagger\Client\Model\Response[] userForgotPassword($email)
+> \Swagger\Client\Model\Response userForgotPassword($email)
 
 
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Response[]**](../Model/Response.md)
+[**\Swagger\Client\Model\Response**](../Model/Response.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userGet**
-> \Swagger\Client\Model\User[] userGet($id)
+> \Swagger\Client\Model\User userGet($id)
 
 
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User[]**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdate**
-> \Swagger\Client\Model\User[] userUpdate($id, $firstName, $language)
+> \Swagger\Client\Model\User userUpdate($id, $firstName, $language)
 
 
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User[]**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
@@ -390,7 +390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdatePassword**
-> \Swagger\Client\Model\User[] userUpdatePassword($id, $oldPassword, $newPassword)
+> \Swagger\Client\Model\User userUpdatePassword($id, $oldPassword, $newPassword)
 
 
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\User[]**](../Model/User.md)
+[**\Swagger\Client\Model\User**](../Model/User.md)
 
 ### Authorization
 
