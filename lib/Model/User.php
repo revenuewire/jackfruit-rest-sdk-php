@@ -55,17 +55,8 @@ class User implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'username' => 'string',
-        'email' => 'string',
-        'firstName' => 'string',
-        'lastName' => 'string',
-        'timezone' => 'string',
-        'accountId' => 'int',
-        'passwordExpiryDates' => 'int',
-        'lastLoginDate' => 'string',
-        'lastLoginIp' => 'string',
-        'language' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\UserData'
     ];
 
     public static function swaggerTypes()
@@ -78,17 +69,8 @@ class User implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'username' => 'username',
-        'email' => 'email',
-        'firstName' => 'firstName',
-        'lastName' => 'lastName',
-        'timezone' => 'timezone',
-        'accountId' => 'accountId',
-        'passwordExpiryDates' => 'passwordExpiryDates',
-        'lastLoginDate' => 'lastLoginDate',
-        'lastLoginIp' => 'lastLoginIp',
-        'language' => 'language'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -97,17 +79,8 @@ class User implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'username' => 'setUsername',
-        'email' => 'setEmail',
-        'firstName' => 'setFirstName',
-        'lastName' => 'setLastName',
-        'timezone' => 'setTimezone',
-        'accountId' => 'setAccountId',
-        'passwordExpiryDates' => 'setPasswordExpiryDates',
-        'lastLoginDate' => 'setLastLoginDate',
-        'lastLoginIp' => 'setLastLoginIp',
-        'language' => 'setLanguage'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -116,17 +89,8 @@ class User implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'username' => 'getUsername',
-        'email' => 'getEmail',
-        'firstName' => 'getFirstName',
-        'lastName' => 'getLastName',
-        'timezone' => 'getTimezone',
-        'accountId' => 'getAccountId',
-        'passwordExpiryDates' => 'getPasswordExpiryDates',
-        'lastLoginDate' => 'getLastLoginDate',
-        'lastLoginIp' => 'getLastLoginIp',
-        'language' => 'getLanguage'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -160,17 +124,8 @@ class User implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
-        $this->container['firstName'] = isset($data['firstName']) ? $data['firstName'] : null;
-        $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
-        $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
-        $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
-        $this->container['passwordExpiryDates'] = isset($data['passwordExpiryDates']) ? $data['passwordExpiryDates'] : null;
-        $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
-        $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
-        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -199,232 +154,43 @@ class User implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getId()
+    public function getResponse()
     {
-        return $this->container['id'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setId($id)
+    public function setResponse($response)
     {
-        $this->container['id'] = $id;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets username
-     * @return string
+     * Gets data
+     * @return \Swagger\Client\Model\UserData
      */
-    public function getUsername()
+    public function getData()
     {
-        return $this->container['username'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets username
-     * @param string $username
+     * Sets data
+     * @param \Swagger\Client\Model\UserData $data
      * @return $this
      */
-    public function setUsername($username)
+    public function setData($data)
     {
-        $this->container['username'] = $username;
-
-        return $this;
-    }
-
-    /**
-     * Gets email
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->container['email'];
-    }
-
-    /**
-     * Sets email
-     * @param string $email
-     * @return $this
-     */
-    public function setEmail($email)
-    {
-        $this->container['email'] = $email;
-
-        return $this;
-    }
-
-    /**
-     * Gets firstName
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->container['firstName'];
-    }
-
-    /**
-     * Sets firstName
-     * @param string $firstName
-     * @return $this
-     */
-    public function setFirstName($firstName)
-    {
-        $this->container['firstName'] = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastName
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->container['lastName'];
-    }
-
-    /**
-     * Sets lastName
-     * @param string $lastName
-     * @return $this
-     */
-    public function setLastName($lastName)
-    {
-        $this->container['lastName'] = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Gets timezone
-     * @return string
-     */
-    public function getTimezone()
-    {
-        return $this->container['timezone'];
-    }
-
-    /**
-     * Sets timezone
-     * @param string $timezone
-     * @return $this
-     */
-    public function setTimezone($timezone)
-    {
-        $this->container['timezone'] = $timezone;
-
-        return $this;
-    }
-
-    /**
-     * Gets accountId
-     * @return int
-     */
-    public function getAccountId()
-    {
-        return $this->container['accountId'];
-    }
-
-    /**
-     * Sets accountId
-     * @param int $accountId
-     * @return $this
-     */
-    public function setAccountId($accountId)
-    {
-        $this->container['accountId'] = $accountId;
-
-        return $this;
-    }
-
-    /**
-     * Gets passwordExpiryDates
-     * @return int
-     */
-    public function getPasswordExpiryDates()
-    {
-        return $this->container['passwordExpiryDates'];
-    }
-
-    /**
-     * Sets passwordExpiryDates
-     * @param int $passwordExpiryDates
-     * @return $this
-     */
-    public function setPasswordExpiryDates($passwordExpiryDates)
-    {
-        $this->container['passwordExpiryDates'] = $passwordExpiryDates;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastLoginDate
-     * @return string
-     */
-    public function getLastLoginDate()
-    {
-        return $this->container['lastLoginDate'];
-    }
-
-    /**
-     * Sets lastLoginDate
-     * @param string $lastLoginDate
-     * @return $this
-     */
-    public function setLastLoginDate($lastLoginDate)
-    {
-        $this->container['lastLoginDate'] = $lastLoginDate;
-
-        return $this;
-    }
-
-    /**
-     * Gets lastLoginIp
-     * @return string
-     */
-    public function getLastLoginIp()
-    {
-        return $this->container['lastLoginIp'];
-    }
-
-    /**
-     * Sets lastLoginIp
-     * @param string $lastLoginIp
-     * @return $this
-     */
-    public function setLastLoginIp($lastLoginIp)
-    {
-        $this->container['lastLoginIp'] = $lastLoginIp;
-
-        return $this;
-    }
-
-    /**
-     * Gets language
-     * @return string
-     */
-    public function getLanguage()
-    {
-        return $this->container['language'];
-    }
-
-    /**
-     * Sets language
-     * @param string $language
-     * @return $this
-     */
-    public function setLanguage($language)
-    {
-        $this->container['language'] = $language;
+        $this->container['data'] = $data;
 
         return $this;
     }

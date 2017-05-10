@@ -146,6 +146,7 @@ Class | Method | HTTP request | Description
  - [Transaction](docs/Model/Transaction.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
  - [User](docs/Model/User.md)
+ - [UserData](docs/Model/UserData.md)
 
 
 ## Documentation For Authorization
