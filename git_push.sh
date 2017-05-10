@@ -18,21 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #658 in SMP/jackfruit from feature/SMP-8557-api to development
+    release_note="Merge pull request #657 in SMP/jackfruit from feature/SMP-8653 to development
 
 Squashed commit of the following:
 
-commit bfe51e919fda4b3484136552f5de517c488a293a
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Wed May 10 11:07:32 2017 -0700
+commit edc7598d235a149a50f728bb56a3c6f54a0947c5
+Author: Nick Arnoldi <narnoldi@revenuewire.com>
+Date:   Wed May 10 22:47:29 2017 +0700
 
-    SMP-8557: fix doc
-
-commit aee5ef3f46f4d415745090a9e06a79423be8f528
-Author: Scott Wang <swang@Scotts-MacBook-Pro-2.local>
-Date:   Wed May 10 10:41:41 2017 -0700
-
-    SMP-8557: fix apis"
+    SMP-8653 Implement Brazil payment gateway"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
