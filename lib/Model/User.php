@@ -64,7 +64,8 @@ class User implements ArrayAccess
         'accountId' => 'int',
         'passwordExpiryDates' => 'int',
         'lastLoginDate' => 'string',
-        'lastLoginIp' => 'string'
+        'lastLoginIp' => 'string',
+        'language' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -86,7 +87,8 @@ class User implements ArrayAccess
         'accountId' => 'accountId',
         'passwordExpiryDates' => 'passwordExpiryDates',
         'lastLoginDate' => 'lastLoginDate',
-        'lastLoginIp' => 'lastLoginIp'
+        'lastLoginIp' => 'lastLoginIp',
+        'language' => 'language'
     ];
 
 
@@ -104,7 +106,8 @@ class User implements ArrayAccess
         'accountId' => 'setAccountId',
         'passwordExpiryDates' => 'setPasswordExpiryDates',
         'lastLoginDate' => 'setLastLoginDate',
-        'lastLoginIp' => 'setLastLoginIp'
+        'lastLoginIp' => 'setLastLoginIp',
+        'language' => 'setLanguage'
     ];
 
 
@@ -122,7 +125,8 @@ class User implements ArrayAccess
         'accountId' => 'getAccountId',
         'passwordExpiryDates' => 'getPasswordExpiryDates',
         'lastLoginDate' => 'getLastLoginDate',
-        'lastLoginIp' => 'getLastLoginIp'
+        'lastLoginIp' => 'getLastLoginIp',
+        'language' => 'getLanguage'
     ];
 
     public static function attributeMap()
@@ -166,6 +170,7 @@ class User implements ArrayAccess
         $this->container['passwordExpiryDates'] = isset($data['passwordExpiryDates']) ? $data['passwordExpiryDates'] : null;
         $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
         $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -399,6 +404,27 @@ class User implements ArrayAccess
     public function setLastLoginIp($lastLoginIp)
     {
         $this->container['lastLoginIp'] = $lastLoginIp;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     * @param string $language
+     * @return $this
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
 
         return $this;
     }

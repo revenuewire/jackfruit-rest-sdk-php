@@ -18,21 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #654 in SMP/jackfruit from feature/smp-8763-renewal-confirmation-email to development
+    release_note="Merge pull request #658 in SMP/jackfruit from feature/SMP-8557-api to development
 
 Squashed commit of the following:
 
-commit cd2ff389dda9d34b867f76d6680f4ed10a3be0ee
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 9 15:43:23 2017 -0700
+commit bfe51e919fda4b3484136552f5de517c488a293a
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Wed May 10 11:07:32 2017 -0700
 
-    SMP-8763 renewal confirmation email
+    SMP-8557: fix doc
 
-commit 61cb716790ab63af7db9e26f8df923de1304140a
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 9 14:48:50 2017 -0700
+commit aee5ef3f46f4d415745090a9e06a79423be8f528
+Author: Scott Wang <swang@Scotts-MacBook-Pro-2.local>
+Date:   Wed May 10 10:41:41 2017 -0700
 
-    SMP-8763 Renewal Confirmation Email"
+    SMP-8557: fix apis"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

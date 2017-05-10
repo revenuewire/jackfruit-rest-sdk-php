@@ -705,15 +705,14 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $firstName Customer&#39;s new first name (required)
-     * @param string $lastName Customer&#39;s new last name (required)
+     * @param string $firstName Customer&#39;s name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\User[]
      */
-    public function userUpdate($id, $firstName, $lastName, $language = null)
+    public function userUpdate($id, $firstName, $language = null)
     {
-        list($response) = $this->userUpdateWithHttpInfo($id, $firstName, $lastName, $language);
+        list($response) = $this->userUpdateWithHttpInfo($id, $firstName, $language);
         return $response;
     }
 
@@ -723,13 +722,12 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $firstName Customer&#39;s new first name (required)
-     * @param string $lastName Customer&#39;s new last name (required)
+     * @param string $firstName Customer&#39;s name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\User[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function userUpdateWithHttpInfo($id, $firstName, $lastName, $language = null)
+    public function userUpdateWithHttpInfo($id, $firstName, $language = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -738,10 +736,6 @@ class UsersApi
         // verify the required parameter 'firstName' is set
         if ($firstName === null) {
             throw new \InvalidArgumentException('Missing the required parameter $firstName when calling userUpdate');
-        }
-        // verify the required parameter 'lastName' is set
-        if ($lastName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $lastName when calling userUpdate');
         }
         // parse inputs
         $resourcePath = "/users/{id}";
@@ -769,10 +763,6 @@ class UsersApi
         // form params
         if ($firstName !== null) {
             $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($firstName);
-        }
-        // form params
-        if ($lastName !== null) {
-            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($lastName);
         }
         // form params
         if ($language !== null) {

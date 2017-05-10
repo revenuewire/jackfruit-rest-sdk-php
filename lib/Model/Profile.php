@@ -66,7 +66,8 @@ class Profile implements ArrayAccess
         'defaultDashboard' => 'string',
         'defaultProductView' => 'string',
         'lastLoginDate' => 'string',
-        'lastLoginIp' => 'string'
+        'lastLoginIp' => 'string',
+        'language' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -90,7 +91,8 @@ class Profile implements ArrayAccess
         'defaultDashboard' => 'defaultDashboard',
         'defaultProductView' => 'defaultProductView',
         'lastLoginDate' => 'lastLoginDate',
-        'lastLoginIp' => 'lastLoginIp'
+        'lastLoginIp' => 'lastLoginIp',
+        'language' => 'language'
     ];
 
 
@@ -110,7 +112,8 @@ class Profile implements ArrayAccess
         'defaultDashboard' => 'setDefaultDashboard',
         'defaultProductView' => 'setDefaultProductView',
         'lastLoginDate' => 'setLastLoginDate',
-        'lastLoginIp' => 'setLastLoginIp'
+        'lastLoginIp' => 'setLastLoginIp',
+        'language' => 'setLanguage'
     ];
 
 
@@ -130,7 +133,8 @@ class Profile implements ArrayAccess
         'defaultDashboard' => 'getDefaultDashboard',
         'defaultProductView' => 'getDefaultProductView',
         'lastLoginDate' => 'getLastLoginDate',
-        'lastLoginIp' => 'getLastLoginIp'
+        'lastLoginIp' => 'getLastLoginIp',
+        'language' => 'getLanguage'
     ];
 
     public static function attributeMap()
@@ -176,6 +180,7 @@ class Profile implements ArrayAccess
         $this->container['defaultProductView'] = isset($data['defaultProductView']) ? $data['defaultProductView'] : null;
         $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
         $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
+        $this->container['language'] = isset($data['language']) ? $data['language'] : null;
     }
 
     /**
@@ -451,6 +456,27 @@ class Profile implements ArrayAccess
     public function setLastLoginIp($lastLoginIp)
     {
         $this->container['lastLoginIp'] = $lastLoginIp;
+
+        return $this;
+    }
+
+    /**
+     * Gets language
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->container['language'];
+    }
+
+    /**
+     * Sets language
+     * @param string $language
+     * @return $this
+     */
+    public function setLanguage($language)
+    {
+        $this->container['language'] = $language;
 
         return $this;
     }
