@@ -55,6 +55,7 @@ class IdentityData implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
+        'customerId' => 'int',
         'accountId' => 'int',
         'username' => 'string',
         'isMerchant' => 'bool',
@@ -75,6 +76,7 @@ class IdentityData implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
+        'customerId' => 'customerId',
         'accountId' => 'accountId',
         'username' => 'username',
         'isMerchant' => 'isMerchant',
@@ -91,6 +93,7 @@ class IdentityData implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
+        'customerId' => 'setCustomerId',
         'accountId' => 'setAccountId',
         'username' => 'setUsername',
         'isMerchant' => 'setIsMerchant',
@@ -107,6 +110,7 @@ class IdentityData implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
+        'customerId' => 'getCustomerId',
         'accountId' => 'getAccountId',
         'username' => 'getUsername',
         'isMerchant' => 'getIsMerchant',
@@ -148,6 +152,7 @@ class IdentityData implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['customerId'] = isset($data['customerId']) ? $data['customerId'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
         $this->container['username'] = isset($data['username']) ? $data['username'] : null;
         $this->container['isMerchant'] = isset($data['isMerchant']) ? $data['isMerchant'] : null;
@@ -199,6 +204,27 @@ class IdentityData implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets customerId
+     * @return int
+     */
+    public function getCustomerId()
+    {
+        return $this->container['customerId'];
+    }
+
+    /**
+     * Sets customerId
+     * @param int $customerId
+     * @return $this
+     */
+    public function setCustomerId($customerId)
+    {
+        $this->container['customerId'] = $customerId;
 
         return $this;
     }

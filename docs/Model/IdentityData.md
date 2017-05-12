@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**customerId** | **int** |  | [optional] 
 **accountId** | **int** |  | [optional] 
 **username** | **string** |  | [optional] 
 **isMerchant** | **bool** |  | [optional] 
