@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #642 in SMP/jackfruit from feature/smp-8663-constant-sync-for-account-manager to development
 
-* commit '52f148cc1678493b4b643928e58ce9204f624589':
-  Merge pull request #668 in SMP/jackfruit from feature/SMP-8728-fix to release/1-staging"
+Squashed commit of the following:
+
+commit c7974063d72629ac4b1863924d5d84a152a07a4a
+Author: stanley <sli@revenuewire.com>
+Date:   Thu May 4 14:54:09 2017 -0700
+
+    SMP-8663 constant sync for account manager"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
