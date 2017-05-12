@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #665 in SMP/jackfruit from feature/SMP-8806 to development
 
-* commit '289f4ddc8f1c50fafa8418f88d816fce9b6ffa33':
-  Merge pull request #666 in SMP/jackfruit from feature/smp-8677-click-id-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 929a6dc15e4ca280304d7ce81afd9ecb23327adc
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Thu May 11 14:55:57 2017 -0700
+
+    SMP-8806 Change adidas-branded support site to include form as well as outer content"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
