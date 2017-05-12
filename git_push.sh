@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #673 in SMP/jackfruit from feature/SMP-8796 to development
 
-* commit '11e7b36bb06e76da5c733ef5dd03f8da051f36c4':
-  Merge pull request #671 in SMP/jackfruit from feature/SMP-8804-new to release/1-staging"
+Squashed commit of the following:
+
+commit f75563b28a3dd476788564bec57d4066189f645b
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Fri May 12 12:29:08 2017 -0700
+
+    SMP-8796 Standard commision field won't save decimal values in AffiliateWire catalog setup"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
