@@ -18,15 +18,27 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #674 in SMP/jackfruit from feature/SMP-8552-dev3 to development
+    release_note="Merge pull request #676 in SMP/jackfruit from feature/SMP-8557-fix-log to development
 
 Squashed commit of the following:
 
-commit 2a1491d795fbc872eea256bac495a6898b5264b8
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 12 14:27:33 2017 -0700
+commit ddeefdb54948c63819970a106a381d81fa14381f
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Mon May 15 08:47:25 2017 -0700
 
-    SMP-8552 update billing info minor fix"
+    SMP-8557: log fix
+
+commit 8a97fae1c374d2664686b508ff45b848632e5f07
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Fri May 12 16:43:18 2017 -0700
+
+    SMP-8557: remove log with s3 and dynamo, using filesystem instead
+
+commit 08dfc14f54dcdfbdef07978f99950d7a19c80bf5
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Fri May 12 16:16:58 2017 -0700
+
+    SMP-8557: fix log issue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
