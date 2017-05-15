@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #674 in SMP/jackfruit from feature/SMP-8552-dev3 to development
 
-* commit '0814ad8941c58bd3e7b206752a33a29d1738f6aa':
-  Merge pull request #664 in SMP/jackfruit from feature/smp-8688-qa-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 2a1491d795fbc872eea256bac495a6898b5264b8
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 12 14:27:33 2017 -0700
+
+    SMP-8552 update billing info minor fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
