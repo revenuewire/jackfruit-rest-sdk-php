@@ -4,15 +4,60 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**domainsDelete**](DomainsApi.md#domainsDelete) | **DELETE** /domains/{id} | 
 [**domainsEmailIdDelete**](DomainsApi.md#domainsEmailIdDelete) | **DELETE** /domains/email/{id} | 
 [**domainsEmailPost**](DomainsApi.md#domainsEmailPost) | **POST** /domains/email | 
 [**domainsGet**](DomainsApi.md#domainsGet) | **GET** /domains | 
-[**domainsIdDelete**](DomainsApi.md#domainsIdDelete) | **DELETE** /domains/{id} | 
-[**domainsIdGet**](DomainsApi.md#domainsIdGet) | **GET** /domains/{id} | 
-[**domainsIdPut**](DomainsApi.md#domainsIdPut) | **PUT** /domains/{id} | 
+[**domainsGet_0**](DomainsApi.md#domainsGet_0) | **GET** /domains/{id} | 
 [**domainsIdUploadCertPost**](DomainsApi.md#domainsIdUploadCertPost) | **POST** /domains/{id}/upload-cert | 
 [**domainsPost**](DomainsApi.md#domainsPost) | **POST** /domains | 
+[**domainsUpdate**](DomainsApi.md#domainsUpdate) | **PUT** /domains/{id} | 
 
+
+# **domainsDelete**
+> \Swagger\Client\Model\Domain[] domainsDelete($id)
+
+
+
+Get a `Domain`.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\Api\DomainsApi();
+$id = "id_example"; // string | 
+
+try {
+    $result = $api_instance->domainsDelete($id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DomainsApi->domainsDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\Domain[]**](../Model/Domain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **domainsEmailIdDelete**
 > \Swagger\Client\Model\Domain domainsEmailIdDelete($id)
@@ -116,6 +161,11 @@ Get `Domain` objects.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\DomainsApi();
 
 try {
@@ -136,7 +186,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -145,53 +195,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **domainsIdDelete**
-> \Swagger\Client\Model\Domain[] domainsIdDelete($id)
-
-
-
-Get a `Domain`.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\Api\DomainsApi();
-$id = "id_example"; // string | 
-
-try {
-    $result = $api_instance->domainsIdDelete($id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DomainsApi->domainsIdDelete: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
-
-### Return type
-
-[**\Swagger\Client\Model\Domain[]**](../Model/Domain.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **domainsIdGet**
-> \Swagger\Client\Model\Domain[] domainsIdGet($id)
+# **domainsGet_0**
+> \Swagger\Client\Model\Domain[] domainsGet_0($id)
 
 
 
@@ -206,10 +211,10 @@ $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | 
 
 try {
-    $result = $api_instance->domainsIdGet($id);
+    $result = $api_instance->domainsGet_0($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DomainsApi->domainsIdGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DomainsApi->domainsGet_0: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -223,55 +228,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\Domain[]**](../Model/Domain.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **domainsIdPut**
-> \Swagger\Client\Model\Domain domainsIdPut($id, $status, $hop)
-
-
-
-Update `Domain` status.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\Api\DomainsApi();
-$id = "id_example"; // string | 
-$status = "status_example"; // string | Status of the domain
-$hop = on; // bool | Whether to turn of hop for linker, by default, it should be on unless you know what you are doing.
-
-try {
-    $result = $api_instance->domainsIdPut($id, $status, $hop);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DomainsApi->domainsIdPut: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
- **status** | **string**| Status of the domain | [optional]
- **hop** | **bool**| Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. | [optional] [default to on]
-
-### Return type
-
-[**\Swagger\Client\Model\Domain**](../Model/Domain.md)
 
 ### Authorization
 
@@ -380,6 +336,55 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **domainsUpdate**
+> \Swagger\Client\Model\Domain domainsUpdate($id, $status, $hop)
+
+
+
+Update `Domain` status.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\Api\DomainsApi();
+$id = "id_example"; // string | 
+$status = "status_example"; // string | Status of the domain
+$hop = "on"; // string | Whether to turn of hop for linker, by default, it should be on unless you know what you are doing.
+
+try {
+    $result = $api_instance->domainsUpdate($id, $status, $hop);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DomainsApi->domainsUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+ **status** | **string**| Status of the domain | [optional]
+ **hop** | **string**| Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. | [optional] [default to on]
+
+### Return type
+
+[**\Swagger\Client\Model\Domain**](../Model/Domain.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

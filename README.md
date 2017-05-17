@@ -87,14 +87,14 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**customersCustomerUserIdOffersGet**](docs/Api/CustomersApi.md#customerscustomeruseridoffersget) | **GET** /customers/{customerUserId}/offers | 
 *CustomersApi* | [**customersCustomerUserIdTransactionsGet**](docs/Api/CustomersApi.md#customerscustomeruseridtransactionsget) | **GET** /customers/{customerUserId}/transactions | 
 *CustomersApi* | [**customersGet**](docs/Api/CustomersApi.md#customersget) | **GET** /customers | 
+*DomainsApi* | [**domainsDelete**](docs/Api/DomainsApi.md#domainsdelete) | **DELETE** /domains/{id} | 
 *DomainsApi* | [**domainsEmailIdDelete**](docs/Api/DomainsApi.md#domainsemailiddelete) | **DELETE** /domains/email/{id} | 
 *DomainsApi* | [**domainsEmailPost**](docs/Api/DomainsApi.md#domainsemailpost) | **POST** /domains/email | 
 *DomainsApi* | [**domainsGet**](docs/Api/DomainsApi.md#domainsget) | **GET** /domains | 
-*DomainsApi* | [**domainsIdDelete**](docs/Api/DomainsApi.md#domainsiddelete) | **DELETE** /domains/{id} | 
-*DomainsApi* | [**domainsIdGet**](docs/Api/DomainsApi.md#domainsidget) | **GET** /domains/{id} | 
-*DomainsApi* | [**domainsIdPut**](docs/Api/DomainsApi.md#domainsidput) | **PUT** /domains/{id} | 
+*DomainsApi* | [**domainsGet_0**](docs/Api/DomainsApi.md#domainsget_0) | **GET** /domains/{id} | 
 *DomainsApi* | [**domainsIdUploadCertPost**](docs/Api/DomainsApi.md#domainsiduploadcertpost) | **POST** /domains/{id}/upload-cert | 
 *DomainsApi* | [**domainsPost**](docs/Api/DomainsApi.md#domainspost) | **POST** /domains | 
+*DomainsApi* | [**domainsUpdate**](docs/Api/DomainsApi.md#domainsupdate) | **PUT** /domains/{id} | 
 *GEOApi* | [**geoGetCountryList**](docs/Api/GEOApi.md#geogetcountrylist) | **GET** /geo-info/countries | 
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
 *OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
@@ -119,6 +119,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BillInfo](docs/Model/BillInfo.md)
+ - [Context](docs/Model/Context.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)
  - [Customer](docs/Model/Customer.md)

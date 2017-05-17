@@ -55,7 +55,9 @@ class Response implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        
+        'status' => 'bool',
+        'message' => 'string',
+        'context' => '\Swagger\Client\Model\Context[]'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +70,9 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        
+        'status' => 'status',
+        'message' => 'message',
+        'context' => 'context'
     ];
 
 
@@ -77,7 +81,9 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        
+        'status' => 'setStatus',
+        'message' => 'setMessage',
+        'context' => 'setContext'
     ];
 
 
@@ -86,7 +92,9 @@ class Response implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        
+        'status' => 'getStatus',
+        'message' => 'getMessage',
+        'context' => 'getContext'
     ];
 
     public static function attributeMap()
@@ -120,6 +128,9 @@ class Response implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
     }
 
     /**
@@ -129,7 +140,7 @@ class Response implements ArrayAccess
      */
     public function listInvalidProperties()
     {
-        $invalid_properties = parent::listInvalidProperties();
+        $invalid_properties = [];
 
         return $invalid_properties;
     }
@@ -142,13 +153,73 @@ class Response implements ArrayAccess
      */
     public function valid()
     {
-        if (!parent::valid()) {
-            return false;
-        }
 
         return true;
     }
 
+
+    /**
+     * Gets status
+     * @return bool
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     * @param bool $status
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     * @param string $message
+     * @return $this
+     */
+    public function setMessage($message)
+    {
+        $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets context
+     * @return \Swagger\Client\Model\Context[]
+     */
+    public function getContext()
+    {
+        return $this->container['context'];
+    }
+
+    /**
+     * Sets context
+     * @param \Swagger\Client\Model\Context[] $context
+     * @return $this
+     */
+    public function setContext($context)
+    {
+        $this->container['context'] = $context;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

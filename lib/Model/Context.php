@@ -1,6 +1,6 @@
 <?php
 /**
- * Error
+ * Context
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Error Class Doc Comment
+ * Context Class Doc Comment
  *
  * @category    Class
- * @description Server Error Response
+ * @description Key value map
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Error implements ArrayAccess
+class Context implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,17 +48,15 @@ class Error implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Error';
+    protected static $swaggerModelName = 'Context';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'bool',
-        'message' => 'string',
         'key' => 'string',
-        'context' => '\Swagger\Client\Model\Context[]'
+        'value' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,10 +69,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-        'message' => 'message',
         'key' => 'key',
-        'context' => 'context'
+        'value' => 'value'
     ];
 
 
@@ -83,10 +79,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-        'message' => 'setMessage',
         'key' => 'setKey',
-        'context' => 'setContext'
+        'value' => 'setValue'
     ];
 
 
@@ -95,10 +89,8 @@ class Error implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-        'message' => 'getMessage',
         'key' => 'getKey',
-        'context' => 'getContext'
+        'value' => 'getValue'
     ];
 
     public static function attributeMap()
@@ -132,10 +124,8 @@ class Error implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['message'] = isset($data['message']) ? $data['message'] : null;
         $this->container['key'] = isset($data['key']) ? $data['key'] : null;
-        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -164,48 +154,6 @@ class Error implements ArrayAccess
 
 
     /**
-     * Gets code
-     * @return bool
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     * @param bool $code HTTP STATUS CODE
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets message
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     * @param string $message
-     * @return $this
-     */
-    public function setMessage($message)
-    {
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
      * Gets key
      * @return string
      */
@@ -216,7 +164,7 @@ class Error implements ArrayAccess
 
     /**
      * Sets key
-     * @param string $key error message key
+     * @param string $key
      * @return $this
      */
     public function setKey($key)
@@ -227,22 +175,22 @@ class Error implements ArrayAccess
     }
 
     /**
-     * Gets context
-     * @return \Swagger\Client\Model\Context[]
+     * Gets value
+     * @return string
      */
-    public function getContext()
+    public function getValue()
     {
-        return $this->container['context'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets context
-     * @param \Swagger\Client\Model\Context[] $context
+     * Sets value
+     * @param string $value
      * @return $this
      */
-    public function setContext($context)
+    public function setValue($value)
     {
-        $this->container['context'] = $context;
+        $this->container['value'] = $value;
 
         return $this;
     }

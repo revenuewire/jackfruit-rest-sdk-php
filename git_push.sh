@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #679 in SMP/jackfruit from feature/SMP-8695 to development
-
-Squashed commit of the following:
-
-commit 6f128152766d53c93be39c3b108003bfe8b1b524
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Mon May 15 12:49:36 2017 -0700
-
-    SMP-8695 worldpay renewals failing after credit card update with error - no valid payment"
+    release_note="SMP-8557: fix another doc error"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

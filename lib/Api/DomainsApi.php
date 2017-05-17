@@ -88,6 +88,95 @@ class DomainsApi
     }
 
     /**
+     * Operation domainsDelete
+     *
+     * 
+     *
+     * @param string $id  (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Domain[]
+     */
+    public function domainsDelete($id)
+    {
+        list($response) = $this->domainsDeleteWithHttpInfo($id);
+        return $response;
+    }
+
+    /**
+     * Operation domainsDeleteWithHttpInfo
+     *
+     * 
+     *
+     * @param string $id  (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Domain[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function domainsDeleteWithHttpInfo($id)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsDelete');
+        }
+        // parse inputs
+        $resourcePath = "/domains/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'DELETE',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Domain[]',
+                '/domains/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Domain[]', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation domainsEmailIdDelete
      *
      * 
@@ -308,6 +397,11 @@ class DomainsApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -338,7 +432,7 @@ class DomainsApi
     }
 
     /**
-     * Operation domainsIdDelete
+     * Operation domainsGet_0
      *
      * 
      *
@@ -346,14 +440,14 @@ class DomainsApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Domain[]
      */
-    public function domainsIdDelete($id)
+    public function domainsGet_0($id)
     {
-        list($response) = $this->domainsIdDeleteWithHttpInfo($id);
+        list($response) = $this->domainsGet_0WithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation domainsIdDeleteWithHttpInfo
+     * Operation domainsGet_0WithHttpInfo
      *
      * 
      *
@@ -361,100 +455,11 @@ class DomainsApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Domain[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function domainsIdDeleteWithHttpInfo($id)
+    public function domainsGet_0WithHttpInfo($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsIdDelete');
-        }
-        // parse inputs
-        $resourcePath = "/domains/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'DELETE',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Domain[]',
-                '/domains/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Domain[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation domainsIdGet
-     *
-     * 
-     *
-     * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Domain[]
-     */
-    public function domainsIdGet($id)
-    {
-        list($response) = $this->domainsIdGetWithHttpInfo($id);
-        return $response;
-    }
-
-    /**
-     * Operation domainsIdGetWithHttpInfo
-     *
-     * 
-     *
-     * @param string $id  (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Domain[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function domainsIdGetWithHttpInfo($id)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsIdGet');
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsGet_0');
         }
         // parse inputs
         $resourcePath = "/domains/{id}";
@@ -503,107 +508,6 @@ class DomainsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation domainsIdPut
-     *
-     * 
-     *
-     * @param string $id  (required)
-     * @param string $status Status of the domain (optional)
-     * @param bool $hop Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. (optional, default to on)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Domain
-     */
-    public function domainsIdPut($id, $status = null, $hop = null)
-    {
-        list($response) = $this->domainsIdPutWithHttpInfo($id, $status, $hop);
-        return $response;
-    }
-
-    /**
-     * Operation domainsIdPutWithHttpInfo
-     *
-     * 
-     *
-     * @param string $id  (required)
-     * @param string $status Status of the domain (optional)
-     * @param bool $hop Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. (optional, default to on)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Domain, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function domainsIdPutWithHttpInfo($id, $status = null, $hop = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsIdPut');
-        }
-        // parse inputs
-        $resourcePath = "/domains/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // query params
-        if ($status !== null) {
-            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
-        }
-        // query params
-        if ($hop !== null) {
-            $queryParams['hop'] = $this->apiClient->getSerializer()->toQueryValue($hop);
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Domain',
-                '/domains/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Domain', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -852,6 +756,107 @@ class DomainsApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation domainsUpdate
+     *
+     * 
+     *
+     * @param string $id  (required)
+     * @param string $status Status of the domain (optional)
+     * @param string $hop Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. (optional, default to on)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Domain
+     */
+    public function domainsUpdate($id, $status = null, $hop = null)
+    {
+        list($response) = $this->domainsUpdateWithHttpInfo($id, $status, $hop);
+        return $response;
+    }
+
+    /**
+     * Operation domainsUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $id  (required)
+     * @param string $status Status of the domain (optional)
+     * @param string $hop Whether to turn of hop for linker, by default, it should be on unless you know what you are doing. (optional, default to on)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Domain, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function domainsUpdateWithHttpInfo($id, $status = null, $hop = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling domainsUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/domains/{id}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if ($status !== null) {
+            $queryParams['status'] = $this->apiClient->getSerializer()->toQueryValue($status);
+        }
+        // query params
+        if ($hop !== null) {
+            $queryParams['hop'] = $this->apiClient->getSerializer()->toQueryValue($hop);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Domain',
+                '/domains/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Domain', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Domain', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

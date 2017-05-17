@@ -70,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerIdBillingInfoBillingInfoIdPut**
-> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
+> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
 
 
 
@@ -84,7 +84,8 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
 $billingInfoId = 56; // int | bill info id for the recurring transaction item
-$cardHolderName = "cardHolderName_example"; // string | Customer's full name
+$firstName = "firstName_example"; // string | Customer's new first name
+$lastName = "lastName_example"; // string | Customer's new last name
 $cardNumber = "cardNumber_example"; // string | Credit Card number
 $cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
 $cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
@@ -92,7 +93,7 @@ $selectedGateway = "selectedGateway_example"; // string | gateway prefered used 
 $postalCode = "postalCode_example"; // string | Postal code (optional)
 
 try {
-    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
+    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdBillingInfoBillingInfoIdPut: ', $e->getMessage(), PHP_EOL;
@@ -106,9 +107,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customerId** | **string**| Customer id |
  **billingInfoId** | **int**| bill info id for the recurring transaction item |
- **cardHolderName** | **string**| Customer&#39;s full name |
- **cardNumber** | **string**| Credit Card number |
- **cardExpiry** | **string**| Credit Card expiry |
+ **firstName** | **string**| Customer&#39;s new first name | [optional]
+ **lastName** | **string**| Customer&#39;s new last name | [optional]
+ **cardNumber** | **string**| Credit Card number | [optional]
+ **cardExpiry** | **string**| Credit Card expiry | [optional]
  **cardCCV** | **string**| Credit CCV (optional) | [optional]
  **selectedGateway** | **string**| gateway prefered used to update billinfo (optional) | [optional]
  **postalCode** | **string**| Postal code (optional) | [optional]
