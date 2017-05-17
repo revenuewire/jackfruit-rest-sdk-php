@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #679 in SMP/jackfruit from feature/SMP-8695 to development
 
-* commit '5bb52332579c948d0c708f48e6af98bd837dd168':
-  Merge pull request #692 in SMP/jackfruit from feature/smp-8688-qa-fix2 to release/1-staging"
+Squashed commit of the following:
+
+commit 6f128152766d53c93be39c3b108003bfe8b1b524
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Mon May 15 12:49:36 2017 -0700
+
+    SMP-8695 worldpay renewals failing after credit card update with error - no valid payment"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
