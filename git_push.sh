@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #702 in SMP/jackfruit from feature/smp-8820-incorrect-address to development
-
-Squashed commit of the following:
-
-commit 35db3cd1aaa9297bd6656906c0a80f4dfa658b38
-Author: stanley <sli@revenuewire.com>
-Date:   Wed May 17 13:33:50 2017 -0700
-
-    SMP-8820 incorrect address"
+    release_note="SMP-8557: fix prefight"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
