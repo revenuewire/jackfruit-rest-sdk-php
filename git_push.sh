@@ -18,33 +18,28 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #708 in SMP/jackfruit from feature/SMP-8552-dev3 to development
+    release_note="Merge pull request #707 in SMP/jackfruit from feature/SMP-8825-new to development
 
 Squashed commit of the following:
 
-commit 1ad4023cae10b7619a6326d55ff43571fc56ee87
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Wed May 17 17:27:47 2017 -0700
+commit bbb4f81752dae6d48a0991f091058240eb7ae3d1
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 18 10:09:34 2017 -0700
 
-    SMP-8552 naming change
+    SMP-8825 Refactor Fixed Term Billing Cycles. Code review fix.
 
-commit 51dc9df0f5206746e59ac86de983558f139bd6c2
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Wed May 17 17:22:44 2017 -0700
+commit ad4cdf549d8de4168eac0c88ff0481d004a6c075
+Merge: 06204b9 73fa8c1
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 18 10:04:14 2017 -0700
 
-    SMP-8552 naming update to account setting API
+    Merge branch 'development' into feature/SMP-8825-new
 
-commit d9fef90596c697fc160f0d597933396ab1a233c9
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 15 12:32:44 2017 -0700
+commit 06204b9c9a652156870c57d24fd2c01586d4debd
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed May 17 16:00:18 2017 -0700
 
-    SMP-8552 typo
-
-commit 7f95b6c6af429ce3f496d5ec78ecfaf52db506a4
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 15 12:31:24 2017 -0700
-
-    SMP-8552 swagger doc update"
+    SMP-8825 Refactor Fixed Term Billing Cycles"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
