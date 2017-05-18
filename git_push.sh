@@ -18,7 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Pipe: just save what I got so far"
+    release_note="Merge pull request #713 in SMP/jackfruit from feature/qa-env-fix to development
+
+Squashed commit of the following:
+
+commit 58612a4cfcd725136e64e43054a55f5e80144cd8
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Thu May 18 11:49:35 2017 -0700
+
+    QA: stable the qa db connection"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

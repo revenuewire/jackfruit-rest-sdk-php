@@ -227,19 +227,18 @@ class CustomersApi
      *
      * @param string $customerId Customer id (required)
      * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $firstName Customer&#39;s new first name (optional)
-     * @param string $lastName Customer&#39;s new last name (optional)
-     * @param string $cardNumber Credit Card number (optional)
-     * @param string $cardExpiry Credit Card expiry (optional)
+     * @param string $cardHolderFullName Card&#39;s holder full name (required)
+     * @param string $cardNumber Credit Card number (required)
+     * @param string $cardExpiry Credit Card expiry (required)
      * @param string $cardCCV Credit CCV (optional) (optional)
      * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
      * @param string $postalCode Postal code (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Customer
      */
-    public function customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName = null, $lastName = null, $cardNumber = null, $cardExpiry = null, $cardCCV = null, $selectedGateway = null, $postalCode = null)
+    public function customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
     {
-        list($response) = $this->customersCustomerIdBillingInfoBillingInfoIdPutWithHttpInfo($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
+        list($response) = $this->customersCustomerIdBillingInfoBillingInfoIdPutWithHttpInfo($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
         return $response;
     }
 
@@ -250,17 +249,16 @@ class CustomersApi
      *
      * @param string $customerId Customer id (required)
      * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $firstName Customer&#39;s new first name (optional)
-     * @param string $lastName Customer&#39;s new last name (optional)
-     * @param string $cardNumber Credit Card number (optional)
-     * @param string $cardExpiry Credit Card expiry (optional)
+     * @param string $cardHolderFullName Card&#39;s holder full name (required)
+     * @param string $cardNumber Credit Card number (required)
+     * @param string $cardExpiry Credit Card expiry (required)
      * @param string $cardCCV Credit CCV (optional) (optional)
      * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
      * @param string $postalCode Postal code (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Customer, HTTP status code, HTTP response headers (array of strings)
      */
-    public function customersCustomerIdBillingInfoBillingInfoIdPutWithHttpInfo($customerId, $billingInfoId, $firstName = null, $lastName = null, $cardNumber = null, $cardExpiry = null, $cardCCV = null, $selectedGateway = null, $postalCode = null)
+    public function customersCustomerIdBillingInfoBillingInfoIdPutWithHttpInfo($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
     {
         // verify the required parameter 'customerId' is set
         if ($customerId === null) {
@@ -269,6 +267,18 @@ class CustomersApi
         // verify the required parameter 'billingInfoId' is set
         if ($billingInfoId === null) {
             throw new \InvalidArgumentException('Missing the required parameter $billingInfoId when calling customersCustomerIdBillingInfoBillingInfoIdPut');
+        }
+        // verify the required parameter 'cardHolderFullName' is set
+        if ($cardHolderFullName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardHolderFullName when calling customersCustomerIdBillingInfoBillingInfoIdPut');
+        }
+        // verify the required parameter 'cardNumber' is set
+        if ($cardNumber === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardNumber when calling customersCustomerIdBillingInfoBillingInfoIdPut');
+        }
+        // verify the required parameter 'cardExpiry' is set
+        if ($cardExpiry === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardExpiry when calling customersCustomerIdBillingInfoBillingInfoIdPut');
         }
         // parse inputs
         $resourcePath = "/customers/{customerId}/billing-info/{billingInfoId}";
@@ -302,12 +312,8 @@ class CustomersApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         // form params
-        if ($firstName !== null) {
-            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($firstName);
-        }
-        // form params
-        if ($lastName !== null) {
-            $formParams['lastName'] = $this->apiClient->getSerializer()->toFormValue($lastName);
+        if ($cardHolderFullName !== null) {
+            $formParams['cardHolderFullName'] = $this->apiClient->getSerializer()->toFormValue($cardHolderFullName);
         }
         // form params
         if ($cardNumber !== null) {
