@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #713 in SMP/jackfruit from feature/qa-env-fix to development
+    release_note="Merge pull request #712 in SMP/jackfruit from feature/SMP-8552-dev4 to development
 
 Squashed commit of the following:
 
-commit 58612a4cfcd725136e64e43054a55f5e80144cd8
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Thu May 18 11:49:35 2017 -0700
+commit b9153079892fab23a412e6640aaf92df7aa9abaf
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu May 18 11:22:43 2017 -0700
 
-    QA: stable the qa db connection"
+    SMP-8552 bug fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
