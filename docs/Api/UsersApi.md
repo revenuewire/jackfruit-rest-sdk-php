@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdate**
-> \Swagger\Client\Model\User userUpdate($id, $accountFullName, $language)
+> \Swagger\Client\Model\User userUpdate($id, $firstName, $language)
 
 
 
@@ -354,11 +354,11 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorizat
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $id = 56; // int | 
-$accountFullName = "accountFullName_example"; // string | Customer's name
+$firstName = "firstName_example"; // string | Customer's name
 $language = "language_example"; // string | Preferred Language code for the user
 
 try {
-    $result = $api_instance->userUpdate($id, $accountFullName, $language);
+    $result = $api_instance->userUpdate($id, $firstName, $language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->userUpdate: ', $e->getMessage(), PHP_EOL;
@@ -371,7 +371,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **accountFullName** | **string**| Customer&#39;s name |
+ **firstName** | **string**| Customer&#39;s name |
  **language** | **string**| Preferred Language code for the user | [optional]
 
 ### Return type

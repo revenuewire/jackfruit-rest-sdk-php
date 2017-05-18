@@ -18,28 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #707 in SMP/jackfruit from feature/SMP-8825-new to development
-
-Squashed commit of the following:
-
-commit bbb4f81752dae6d48a0991f091058240eb7ae3d1
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu May 18 10:09:34 2017 -0700
-
-    SMP-8825 Refactor Fixed Term Billing Cycles. Code review fix.
-
-commit ad4cdf549d8de4168eac0c88ff0481d004a6c075
-Merge: 06204b9 73fa8c1
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu May 18 10:04:14 2017 -0700
-
-    Merge branch 'development' into feature/SMP-8825-new
-
-commit 06204b9c9a652156870c57d24fd2c01586d4debd
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed May 17 16:00:18 2017 -0700
-
-    SMP-8825 Refactor Fixed Term Billing Cycles"
+    release_note="Pipe: just save what I got so far"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
