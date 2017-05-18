@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**userGet**](UsersApi.md#userGet) | **GET** /users/{id} | 
 [**userResetPassword**](UsersApi.md#userResetPassword) | **POST** /users/reset-password | 
 [**userUpdate**](UsersApi.md#userUpdate) | **PUT** /users/{id} | 
+[**userUpdateEmail**](UsersApi.md#userUpdateEmail) | **PUT** /users/{id}/update-email | 
 [**userUpdatePassword**](UsersApi.md#userUpdatePassword) | **PUT** /users/{id}/update-password | 
 [**userVerify**](UsersApi.md#userVerify) | **PUT** /users/verify | 
 
@@ -373,6 +374,58 @@ Name | Type | Description  | Notes
  **id** | **int**|  |
  **accountFullName** | **string**| Customer&#39;s name |
  **language** | **string**| Preferred Language code for the user | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\User**](../Model/User.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **userUpdateEmail**
+> \Swagger\Client\Model\User userUpdateEmail($id, $newEmail)
+
+
+
+Change email
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\UsersApi();
+$id = 56; // int | User id
+$newEmail = "newEmail_example"; // string | New email address
+
+try {
+    $result = $api_instance->userUpdateEmail($id, $newEmail);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->userUpdateEmail: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| User id |
+ **newEmail** | **string**| New email address |
 
 ### Return type
 
