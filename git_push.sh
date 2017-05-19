@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #719 in SMP/jackfruit from feature/SMP-7303 to development
+    release_note="Merge pull request #721 in SMP/jackfruit from feature/smp-8823-small-fix to development
 
 Squashed commit of the following:
 
-commit 64db657bfb2beae1f46222b8db2633f3497dfa04
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu May 18 16:09:12 2017 -0700
+commit ec6033be10588e9906d22c0f029428e87bce47a0
+Author: stanley <sli@revenuewire.com>
+Date:   Fri May 19 10:46:53 2017 -0700
 
-    SMP-7303 Subscription API returns incorrect date for next_billing_amount next_billing_amount_usd"
+    SMP-8823 small fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
