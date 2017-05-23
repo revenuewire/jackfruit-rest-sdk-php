@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #723 in SMP/jackfruit from feature/SMP-8811-risk to development
+    release_note="Merge pull request #725 in SMP/jackfruit from feature/smp-8792-backfill-status-to-salesforce to development
 
 Squashed commit of the following:
 
-commit ea16e476de236aae0caf928051bf7480dcf6b75b
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Tue May 23 08:03:55 2017 -0700
+commit c3408788589a2f85b65740957189bfc0d6736a10
+Author: stanley <sli@revenuewire.com>
+Date:   Tue May 23 09:52:17 2017 -0700
 
-    SMP-8811: add value to cpa endpoint"
+    SMP-8792 backfill status to salesforce"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
