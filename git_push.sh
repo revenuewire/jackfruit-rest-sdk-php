@@ -18,7 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="SMP-8849: update pipeline to swagger"
+    release_note="Merge pull request #722 in SMP/jackfruit from feature/SMP-8841 to development
+
+Squashed commit of the following:
+
+commit a16c6528ef10d8a07f5e365dac0f49c0df19ca62
+Author: dferguson <dferguson@revenuewire.com>
+Date:   Fri May 19 13:48:26 2017 -0700
+
+    SMP-8841: Change transaction log message
+
+commit 8c024616f177992b4405cf4752e70d550a35258c
+Author: dferguson <dferguson@revenuewire.com>
+Date:   Fri May 19 13:46:40 2017 -0700
+
+    SMP-8841: Chargeback undo script"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
