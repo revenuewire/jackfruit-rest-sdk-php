@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #725 in SMP/jackfruit from feature/smp-8792-backfill-status-to-salesforce to development
-
-Squashed commit of the following:
-
-commit c3408788589a2f85b65740957189bfc0d6736a10
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 09:52:17 2017 -0700
-
-    SMP-8792 backfill status to salesforce"
+    release_note="try again"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
