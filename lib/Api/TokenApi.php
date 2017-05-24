@@ -145,6 +145,16 @@ class TokenApi
         } elseif (count($formParams) > 0) {
             $httpBody = $formParams; // for HTTP post (form)
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(

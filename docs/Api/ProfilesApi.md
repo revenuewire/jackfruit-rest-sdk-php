@@ -21,6 +21,15 @@ Update `Profiles` password.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\ProfilesApi();
 $currentPassword = "currentPassword_example"; // string | User's current password
 $newPassword = "newPassword_example"; // string | User's new password
@@ -49,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -69,6 +78,15 @@ Gets `Profiles` object.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\ProfilesApi();
 
@@ -90,7 +108,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -110,6 +128,15 @@ Update `Profiles` object.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\ProfilesApi();
 $firstName = "firstName_example"; // string | User's first name
@@ -145,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 

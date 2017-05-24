@@ -20,6 +20,15 @@ Get country options available in the platform .
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\GEOApi();
 
 try {
@@ -40,7 +49,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -60,6 +69,15 @@ Get supported languages in the platform
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\GEOApi();
 
@@ -81,7 +99,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 

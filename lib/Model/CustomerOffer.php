@@ -55,7 +55,7 @@ class CustomerOffer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'offer' => '\Swagger\Client\Model\Offer'
+        'offer' => '\Swagger\Client\Model\CustomerOfferOffer'
     ];
 
     public static function swaggerTypes()
@@ -150,7 +150,7 @@ class CustomerOffer implements ArrayAccess
 
     /**
      * Gets offer
-     * @return \Swagger\Client\Model\Offer
+     * @return \Swagger\Client\Model\CustomerOfferOffer
      */
     public function getOffer()
     {
@@ -159,7 +159,7 @@ class CustomerOffer implements ArrayAccess
 
     /**
      * Sets offer
-     * @param \Swagger\Client\Model\Offer $offer
+     * @param \Swagger\Client\Model\CustomerOfferOffer $offer
      * @return $this
      */
     public function setOffer($offer)

@@ -164,6 +164,11 @@ class UsersApi
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -273,6 +278,11 @@ class UsersApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
         }
         // make the API Call
         try {
@@ -392,6 +402,11 @@ class UsersApi
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -477,6 +492,11 @@ class UsersApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
         }
         // make the API Call
         try {
@@ -571,6 +591,11 @@ class UsersApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
         }
         // make the API Call
         try {
@@ -670,6 +695,11 @@ class UsersApi
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -705,14 +735,14 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $firstName Customer&#39;s name (required)
+     * @param string $accountFullName Customer&#39;s name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\User
      */
-    public function userUpdate($id, $firstName, $language = null)
+    public function userUpdate($id, $accountFullName, $language = null)
     {
-        list($response) = $this->userUpdateWithHttpInfo($id, $firstName, $language);
+        list($response) = $this->userUpdateWithHttpInfo($id, $accountFullName, $language);
         return $response;
     }
 
@@ -722,20 +752,20 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $firstName Customer&#39;s name (required)
+     * @param string $accountFullName Customer&#39;s name (required)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userUpdateWithHttpInfo($id, $firstName, $language = null)
+    public function userUpdateWithHttpInfo($id, $accountFullName, $language = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdate');
         }
-        // verify the required parameter 'firstName' is set
-        if ($firstName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $firstName when calling userUpdate');
+        // verify the required parameter 'accountFullName' is set
+        if ($accountFullName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $accountFullName when calling userUpdate');
         }
         // parse inputs
         $resourcePath = "/users/{id}";
@@ -761,8 +791,8 @@ class UsersApi
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
         // form params
-        if ($firstName !== null) {
-            $formParams['firstName'] = $this->apiClient->getSerializer()->toFormValue($firstName);
+        if ($accountFullName !== null) {
+            $formParams['accountFullName'] = $this->apiClient->getSerializer()->toFormValue($accountFullName);
         }
         // form params
         if ($language !== null) {
@@ -780,6 +810,11 @@ class UsersApi
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -790,6 +825,115 @@ class UsersApi
                 $headerParams,
                 '\Swagger\Client\Model\User',
                 '/users/{id}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userUpdateEmail
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $newEmail New email address (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\User
+     */
+    public function userUpdateEmail($id, $newEmail)
+    {
+        list($response) = $this->userUpdateEmailWithHttpInfo($id, $newEmail);
+        return $response;
+    }
+
+    /**
+     * Operation userUpdateEmailWithHttpInfo
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $newEmail New email address (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userUpdateEmailWithHttpInfo($id, $newEmail)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdateEmail');
+        }
+        // verify the required parameter 'newEmail' is set
+        if ($newEmail === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $newEmail when calling userUpdateEmail');
+        }
+        // parse inputs
+        $resourcePath = "/users/{id}/update-email";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($newEmail !== null) {
+            $formParams['newEmail'] = $this->apiClient->getSerializer()->toFormValue($newEmail);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\User',
+                '/users/{id}/update-email'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
@@ -894,6 +1038,11 @@ class UsersApi
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
         }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
         // make the API Call
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
@@ -993,6 +1142,11 @@ class UsersApi
         $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
         if (strlen($apiKey) !== 0) {
             $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
         }
         // make the API Call
         try {

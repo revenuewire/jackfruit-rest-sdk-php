@@ -24,6 +24,15 @@ Update customer group account address
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
 $transactionId = 56; // int | transaction id
@@ -60,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -70,7 +79,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerIdBillingInfoBillingInfoIdPut**
-> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
+> \Swagger\Client\Model\Customer customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
 
 
 
@@ -81,11 +90,19 @@ Update customer billing info for a recurring profile
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
 $billingInfoId = 56; // int | bill info id for the recurring transaction item
-$firstName = "firstName_example"; // string | Customer's new first name
-$lastName = "lastName_example"; // string | Customer's new last name
+$cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
 $cardNumber = "cardNumber_example"; // string | Credit Card number
 $cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
 $cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
@@ -93,7 +110,7 @@ $selectedGateway = "selectedGateway_example"; // string | gateway prefered used 
 $postalCode = "postalCode_example"; // string | Postal code (optional)
 
 try {
-    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $firstName, $lastName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
+    $result = $api_instance->customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->customersCustomerIdBillingInfoBillingInfoIdPut: ', $e->getMessage(), PHP_EOL;
@@ -107,10 +124,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **customerId** | **string**| Customer id |
  **billingInfoId** | **int**| bill info id for the recurring transaction item |
- **firstName** | **string**| Customer&#39;s new first name | [optional]
- **lastName** | **string**| Customer&#39;s new last name | [optional]
- **cardNumber** | **string**| Credit Card number | [optional]
- **cardExpiry** | **string**| Credit Card expiry | [optional]
+ **cardHolderFullName** | **string**| Card&#39;s holder full name |
+ **cardNumber** | **string**| Credit Card number |
+ **cardExpiry** | **string**| Credit Card expiry |
  **cardCCV** | **string**| Credit CCV (optional) | [optional]
  **selectedGateway** | **string**| gateway prefered used to update billinfo (optional) | [optional]
  **postalCode** | **string**| Postal code (optional) | [optional]
@@ -121,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -141,6 +157,15 @@ Get a `Customer` object.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
@@ -166,7 +191,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -186,6 +211,15 @@ Get a list of `Offers` purchased by the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerUserId = "customerUserId_example"; // string | Customer user id
@@ -211,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -231,6 +265,15 @@ Get a list of `Transactions` purchased by the customer.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerUserId = "customerUserId_example"; // string | Customer user id
@@ -258,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -278,6 +321,15 @@ Get list of `Customers` objects.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $email = "email_example"; // string | Customer's Email
@@ -313,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 

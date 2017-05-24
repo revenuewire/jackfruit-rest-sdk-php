@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**offer** | [**\Swagger\Client\Model\Offer**](Offer.md) |  | [optional] 
+**offer** | [**\Swagger\Client\Model\CustomerOfferOffer**](CustomerOfferOffer.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

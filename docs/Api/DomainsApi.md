@@ -26,6 +26,15 @@ Get a `Domain`.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | 
 
@@ -50,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -70,6 +79,15 @@ Delete a `Email` for the domain.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | Email address
@@ -95,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -115,6 +133,15 @@ Create a `Email` for the domain.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $labels = new \Swagger\Client\Model\NewDomain(); // \Swagger\Client\Model\NewDomain | Json Formatted body
@@ -140,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -161,6 +188,10 @@ Get `Domain` objects.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
 // Configure API key authorization: API-KEY
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -186,7 +217,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[API-KEY](../../README.md#API-KEY)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -206,6 +237,15 @@ Delete `Domain`.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | 
@@ -231,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -251,6 +291,15 @@ Update `Domain` certificate.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | 
@@ -280,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -300,6 +349,15 @@ Create `Domain` objects.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $domain = "domain_example"; // string | Domain
@@ -331,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -351,6 +409,15 @@ Update `Domain` status.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\DomainsApi();
 $id = "id_example"; // string | 
@@ -380,7 +447,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 

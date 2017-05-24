@@ -56,6 +56,15 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
 $transactionId = 56; // int | transaction id
@@ -112,6 +121,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**userGet**](docs/Api/UsersApi.md#userget) | **GET** /users/{id} | 
 *UsersApi* | [**userResetPassword**](docs/Api/UsersApi.md#userresetpassword) | **POST** /users/reset-password | 
 *UsersApi* | [**userUpdate**](docs/Api/UsersApi.md#userupdate) | **PUT** /users/{id} | 
+*UsersApi* | [**userUpdateEmail**](docs/Api/UsersApi.md#userupdateemail) | **PUT** /users/{id}/update-email | 
 *UsersApi* | [**userUpdatePassword**](docs/Api/UsersApi.md#userupdatepassword) | **PUT** /users/{id}/update-password | 
 *UsersApi* | [**userVerify**](docs/Api/UsersApi.md#userverify) | **PUT** /users/verify | 
 
@@ -125,6 +135,9 @@ Class | Method | HTTP request | Description
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
  - [CustomerOffer](docs/Model/CustomerOffer.md)
+ - [CustomerOfferOffer](docs/Model/CustomerOfferOffer.md)
+ - [CustomerOfferOfferRecurringItem](docs/Model/CustomerOfferOfferRecurringItem.md)
+ - [CustomerOfferOfferTransactionItem](docs/Model/CustomerOfferOfferTransactionItem.md)
  - [CustomerOrder](docs/Model/CustomerOrder.md)
  - [CustomerOrders](docs/Model/CustomerOrders.md)
  - [CustomerPhone](docs/Model/CustomerPhone.md)
@@ -135,9 +148,7 @@ Class | Method | HTTP request | Description
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
  - [NewDomain](docs/Model/NewDomain.md)
- - [Offer](docs/Model/Offer.md)
  - [Profile](docs/Model/Profile.md)
- - [RecurringItem](docs/Model/RecurringItem.md)
  - [Response](docs/Model/Response.md)
  - [State](docs/Model/State.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)

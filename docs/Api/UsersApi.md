@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**userGet**](UsersApi.md#userGet) | **GET** /users/{id} | 
 [**userResetPassword**](UsersApi.md#userResetPassword) | **POST** /users/reset-password | 
 [**userUpdate**](UsersApi.md#userUpdate) | **PUT** /users/{id} | 
+[**userUpdateEmail**](UsersApi.md#userUpdateEmail) | **PUT** /users/{id}/update-email | 
 [**userUpdatePassword**](UsersApi.md#userUpdatePassword) | **PUT** /users/{id}/update-password | 
 [**userVerify**](UsersApi.md#userVerify) | **PUT** /users/verify | 
 
@@ -31,6 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $username = "username_example"; // string | User name
@@ -60,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -85,6 +90,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $orderReference = "orderReference_example"; // string | Order reference
@@ -114,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -139,6 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $email = "email_example"; // string | User's email
@@ -172,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -197,6 +210,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $email = "email_example"; // string | Your email address
@@ -222,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -247,6 +264,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $id = "id_example"; // string | Users Id
@@ -272,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -297,6 +318,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $email = "email_example"; // string | Your email address
@@ -326,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -336,7 +361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdate**
-> \Swagger\Client\Model\User userUpdate($id, $firstName, $language)
+> \Swagger\Client\Model\User userUpdate($id, $accountFullName, $language)
 
 
 
@@ -351,14 +376,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $id = 56; // int | 
-$firstName = "firstName_example"; // string | Customer's name
+$accountFullName = "accountFullName_example"; // string | Customer's name
 $language = "language_example"; // string | Preferred Language code for the user
 
 try {
-    $result = $api_instance->userUpdate($id, $firstName, $language);
+    $result = $api_instance->userUpdate($id, $accountFullName, $language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->userUpdate: ', $e->getMessage(), PHP_EOL;
@@ -371,7 +400,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **firstName** | **string**| Customer&#39;s name |
+ **accountFullName** | **string**| Customer&#39;s name |
  **language** | **string**| Preferred Language code for the user | [optional]
 
 ### Return type
@@ -380,7 +409,63 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **userUpdateEmail**
+> \Swagger\Client\Model\User userUpdateEmail($id, $newEmail)
+
+
+
+Change email
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\UsersApi();
+$id = 56; // int | User id
+$newEmail = "newEmail_example"; // string | New email address
+
+try {
+    $result = $api_instance->userUpdateEmail($id, $newEmail);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->userUpdateEmail: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| User id |
+ **newEmail** | **string**| New email address |
+
+### Return type
+
+[**\Swagger\Client\Model\User**](../Model/User.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -405,6 +490,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $id = 56; // int | User id
@@ -434,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
@@ -459,6 +548,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $email = "email_example"; // string | User email
@@ -486,7 +579,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[JWT](../../README.md#JWT)
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
 
 ### HTTP request headers
 
