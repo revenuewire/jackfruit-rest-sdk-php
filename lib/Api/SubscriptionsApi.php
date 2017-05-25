@@ -88,7 +88,7 @@ class SubscriptionsApi
     }
 
     /**
-     * Operation subscriptionsRecurringTransactionItemIdCancelPut
+     * Operation subscriptionCancel
      *
      * 
      *
@@ -96,14 +96,14 @@ class SubscriptionsApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\Response[]
      */
-    public function subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId)
+    public function subscriptionCancel($recurringTransactionItemId)
     {
-        list($response) = $this->subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo($recurringTransactionItemId);
+        list($response) = $this->subscriptionCancelWithHttpInfo($recurringTransactionItemId);
         return $response;
     }
 
     /**
-     * Operation subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo
+     * Operation subscriptionCancelWithHttpInfo
      *
      * 
      *
@@ -111,11 +111,11 @@ class SubscriptionsApi
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function subscriptionsRecurringTransactionItemIdCancelPutWithHttpInfo($recurringTransactionItemId)
+    public function subscriptionCancelWithHttpInfo($recurringTransactionItemId)
     {
         // verify the required parameter 'recurringTransactionItemId' is set
         if ($recurringTransactionItemId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $recurringTransactionItemId when calling subscriptionsRecurringTransactionItemIdCancelPut');
+            throw new \InvalidArgumentException('Missing the required parameter $recurringTransactionItemId when calling subscriptionCancel');
         }
         // parse inputs
         $resourcePath = "/subscriptions/{recurringTransactionItemId}/cancel";

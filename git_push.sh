@@ -18,10 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #733 in SMP/jackfruit from feature/SMP-8557 to development
 
-* commit '51c7e76e9babf9da6914fe61fc8eb7035c2f2be5':
-  Merge pull request #731 in SMP/jackfruit from feature/SMP-8825-new-task to release/1-staging"
+Squashed commit of the following:
+
+commit aa5840e4fc08df752ac24c0078e7259785748e9f
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Wed May 24 14:25:20 2017 -0700
+
+    SMP-8557: small fixes
+
+commit 5337bb4c6a3a18d4d06a85bc76dca9eb88e501a1
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Wed May 24 14:17:43 2017 -0700
+
+    SMP-8557: streamline api key login according to swagger spec designed, deprecated username and token"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

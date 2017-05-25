@@ -4,11 +4,11 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**subscriptionsRecurringTransactionItemIdCancelPut**](SubscriptionsApi.md#subscriptionsRecurringTransactionItemIdCancelPut) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
+[**subscriptionCancel**](SubscriptionsApi.md#subscriptionCancel) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
 
 
-# **subscriptionsRecurringTransactionItemIdCancelPut**
-> \Swagger\Client\Model\Response[] subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId)
+# **subscriptionCancel**
+> \Swagger\Client\Model\Response[] subscriptionCancel($recurringTransactionItemId)
 
 
 
@@ -32,10 +32,10 @@ $api_instance = new Swagger\Client\Api\SubscriptionsApi();
 $recurringTransactionItemId = 56; // int | Recurring transaction item id
 
 try {
-    $result = $api_instance->subscriptionsRecurringTransactionItemIdCancelPut($recurringTransactionItemId);
+    $result = $api_instance->subscriptionCancel($recurringTransactionItemId);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscriptionsApi->subscriptionsRecurringTransactionItemIdCancelPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscriptionsApi->subscriptionCancel: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

@@ -54,10 +54,7 @@ class TokenData implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'userId' => 'int',
-        'token' => 'string',
-        'expired' => 'string'
+        'token' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,10 +67,7 @@ class TokenData implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'userId' => 'userId',
-        'token' => 'token',
-        'expired' => 'expired'
+        'token' => 'token'
     ];
 
 
@@ -82,10 +76,7 @@ class TokenData implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'userId' => 'setUserId',
-        'token' => 'setToken',
-        'expired' => 'setExpired'
+        'token' => 'setToken'
     ];
 
 
@@ -94,10 +85,7 @@ class TokenData implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'userId' => 'getUserId',
-        'token' => 'getToken',
-        'expired' => 'getExpired'
+        'token' => 'getToken'
     ];
 
     public static function attributeMap()
@@ -131,10 +119,7 @@ class TokenData implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['userId'] = isset($data['userId']) ? $data['userId'] : null;
         $this->container['token'] = isset($data['token']) ? $data['token'] : null;
-        $this->container['expired'] = isset($data['expired']) ? $data['expired'] : null;
     }
 
     /**
@@ -163,48 +148,6 @@ class TokenData implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets userId
-     * @return int
-     */
-    public function getUserId()
-    {
-        return $this->container['userId'];
-    }
-
-    /**
-     * Sets userId
-     * @param int $userId
-     * @return $this
-     */
-    public function setUserId($userId)
-    {
-        $this->container['userId'] = $userId;
-
-        return $this;
-    }
-
-    /**
      * Gets token
      * @return string
      */
@@ -221,27 +164,6 @@ class TokenData implements ArrayAccess
     public function setToken($token)
     {
         $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * Gets expired
-     * @return string
-     */
-    public function getExpired()
-    {
-        return $this->container['expired'];
-    }
-
-    /**
-     * Sets expired
-     * @param string $expired
-     * @return $this
-     */
-    public function setExpired($expired)
-    {
-        $this->container['expired'] = $expired;
 
         return $this;
     }
