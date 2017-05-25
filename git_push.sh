@@ -18,53 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #728 in SMP/jackfruit from feature/smp-8602-cpa-credit-limit to development
+    release_note="Merge pull request #746 in SMP/jackfruit from feature/RSPO-34-bill to development
 
 Squashed commit of the following:
 
-commit b768ac7036515837097ca1781fe39a13c063b9bf
-Author: stanley <sli@revenuewire.com>
-Date:   Thu May 25 10:53:52 2017 -0700
+commit 54e4ccd8de17d4ef2f063d7be89e77b28a695d81
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 25 16:35:44 2017 -0700
 
-    SMP-8602 CPA Credit Limit Code Review Fix
-
-commit ba09679fa37d817b93f833a6b6f517ff50a28ca7
-Merge: c17d7af 5ab5c58
-Author: stanley <sli@revenuewire.com>
-Date:   Thu May 25 10:30:54 2017 -0700
-
-    Merge branch 'development' into feature/smp-8602-cpa-credit-limit
-
-commit c17d7af6af5e6970efc507478dd902c1f39792eb
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 15:15:35 2017 -0700
-
-    SMP-8602 CPA Credit Limit
-
-commit b6e60319d88b85652106cf75dc14bc60b1502d2e
-Merge: e06332d d5671ff
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 15:12:13 2017 -0700
-
-    Merge branch 'development' into feature/smp-8602-cpa-credit-limit
-
-commit e06332d0d4fa556b4d25e30dd4727e469f110b79
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 15:10:49 2017 -0700
-
-    SMP-8602 CPA Credit Limit
-
-commit 20d5a31b78595006baa1f9c8e0225936d27d8f9d
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 14:43:42 2017 -0700
-
-    SMP-8602 CPA Credit Limit
-
-commit bd9794d223c8c2d01538242af4190f62763828eb
-Author: stanley <sli@revenuewire.com>
-Date:   Tue May 23 14:27:43 2017 -0700
-
-    SMP-8602 CPA Credit Limit"
+    RSPO-34 Update BillInfo API. Add customer billing info id in recurring transaction item info."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
