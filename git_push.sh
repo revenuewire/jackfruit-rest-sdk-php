@@ -18,21 +18,28 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #733 in SMP/jackfruit from feature/SMP-8557 to development
+    release_note="Merge pull request #726 in SMP/jackfruit from feature/RSPO-34 to development
 
 Squashed commit of the following:
 
-commit aa5840e4fc08df752ac24c0078e7259785748e9f
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Wed May 24 14:25:20 2017 -0700
+commit 253b27025f8f5809e609324f361d4c083b799218
+Merge: f6daa69 40b988b
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed May 24 13:53:01 2017 -0700
 
-    SMP-8557: small fixes
+    Merge branch 'development' into feature/RSPO-34
 
-commit 5337bb4c6a3a18d4d06a85bc76dca9eb88e501a1
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Wed May 24 14:17:43 2017 -0700
+commit f6daa695ac6a7cfc708d75a56dd41c5f07bd0a62
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed May 24 13:26:44 2017 -0700
 
-    SMP-8557: streamline api key login according to swagger spec designed, deprecated username and token"
+    RSPO-34 Updates to /customers/{customerId}/billing-info/{billingInfoId} API. Update codes according to code review.
+
+commit 813e592bb1c310db4a76591e911c82caf2c4181e
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri May 19 10:17:16 2017 -0700
+
+    RSPO-34 Updates to /customers/{customerId}/billing-info/{billingInfoId} API"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
