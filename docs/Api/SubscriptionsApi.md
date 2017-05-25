@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **subscriptionCancel**
-> \Swagger\Client\Model\Response[] subscriptionCancel($recurringTransactionItemId)
+> \Swagger\Client\Model\Response subscriptionCancel($recurringTransactionItemId)
 
 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Response[]**](../Model/Response.md)
+[**\Swagger\Client\Model\Response**](../Model/Response.md)
 
 ### Authorization
 

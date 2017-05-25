@@ -94,7 +94,7 @@ class SubscriptionsApi
      *
      * @param int $recurringTransactionItemId Recurring transaction item id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Response[]
+     * @return \Swagger\Client\Model\Response
      */
     public function subscriptionCancel($recurringTransactionItemId)
     {
@@ -109,7 +109,7 @@ class SubscriptionsApi
      *
      * @param int $recurringTransactionItemId Recurring transaction item id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function subscriptionCancelWithHttpInfo($recurringTransactionItemId)
     {
@@ -165,15 +165,15 @@ class SubscriptionsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Response[]',
+                '\Swagger\Client\Model\Response',
                 '/subscriptions/{recurringTransactionItemId}/cancel'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
