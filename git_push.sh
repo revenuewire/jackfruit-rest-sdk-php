@@ -18,7 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="SMP-8557: fix response"
+    release_note="Automatic merge from release/1-staging -> development
+
+* commit 'fb84a92bc950d6c5170a6c8259c81dfa4706c767':
+  Merge pull request #715 in SMP/jackfruit from feature/pagb to release/0-blue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
