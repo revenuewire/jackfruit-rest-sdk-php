@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #743 in SMP/jackfruit from feature/SMP-8112 to development
 
-* commit '54adc8616bd9bd8377af220296713a73b771d380':
-  Merge pull request #739 in SMP/jackfruit from feature/SMP-8825-ui to release/1-staging"
+Squashed commit of the following:
+
+commit d344ec3576ae35f823fe9d6ac1131bea73395f07
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Thu May 25 14:36:32 2017 -0700
+
+    SMP-8112: set max expiry year to 15 years"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
