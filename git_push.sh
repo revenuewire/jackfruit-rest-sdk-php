@@ -18,28 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #726 in SMP/jackfruit from feature/RSPO-34 to development
-
-Squashed commit of the following:
-
-commit 253b27025f8f5809e609324f361d4c083b799218
-Merge: f6daa69 40b988b
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed May 24 13:53:01 2017 -0700
-
-    Merge branch 'development' into feature/RSPO-34
-
-commit f6daa695ac6a7cfc708d75a56dd41c5f07bd0a62
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed May 24 13:26:44 2017 -0700
-
-    RSPO-34 Updates to /customers/{customerId}/billing-info/{billingInfoId} API. Update codes according to code review.
-
-commit 813e592bb1c310db4a76591e911c82caf2c4181e
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Fri May 19 10:17:16 2017 -0700
-
-    RSPO-34 Updates to /customers/{customerId}/billing-info/{billingInfoId} API"
+    release_note="Merge branch 'development' of ssh://git.rw.app:7999/smp/jackfruit into development"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
