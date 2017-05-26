@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #748 in SMP/jackfruit from feature/RSPO-34-offer to development
-
-Squashed commit of the following:
-
-commit f653c771349fef55a60ce31ffd7ccc9aa82d32c5
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Fri May 26 09:39:19 2017 -0700
-
-    RSPO-34 update billinfo. Put detailed billinfo in recurring transaction item."
+    release_note="Pipe: swagger generation"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
