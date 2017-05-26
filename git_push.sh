@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #744 in SMP/jackfruit from feature/SMP-8828 to development
-
-Squashed commit of the following:
-
-commit bbf7193b82268668ca0e1904a82b5f3ebbf4b9b9
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Thu May 25 14:51:11 2017 -0700
-
-    SMP-8828: Adding all MaxAttempts is 0 error codes into Grace period logic"
+    release_note="Pipe: some diving in now for the hard part"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
