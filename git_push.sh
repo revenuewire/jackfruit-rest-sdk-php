@@ -18,7 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Pipe: some diving in now for the hard part"
+    release_note="Automatic merge from release/1-staging -> development
+
+* commit 'eff6b1ac97d613683473fb1ffae3ec1bc81a11b8':
+  Merge pull request #751 in SMP/jackfruit from feature/SMP-8840-fast to release/0-blue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
