@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #745 in SMP/jackfruit from feature/smp-8513-experiment-custom-url to development
+    release_note="Merge pull request #748 in SMP/jackfruit from feature/RSPO-34-offer to development
 
 Squashed commit of the following:
 
-commit fcdb5102118dfa03fd867bcf61b99053223421e4
-Author: stanley <sli@revenuewire.com>
-Date:   Thu May 25 15:28:56 2017 -0700
+commit f653c771349fef55a60ce31ffd7ccc9aa82d32c5
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri May 26 09:39:19 2017 -0700
 
-    SMP-8513 Experiment Custom Url"
+    RSPO-34 update billinfo. Put detailed billinfo in recurring transaction item."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
