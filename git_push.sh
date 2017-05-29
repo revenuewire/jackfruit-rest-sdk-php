@@ -18,10 +18,11 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge remote-tracking branch 'origin/development' into feature/pipelinetest
 
-* commit 'eeb7e83401b8015f8f790444b614c4f713005ee0':
-  Merge pull request #759 in SMP/jackfruit from feature/SMP-8804-paypal to release/1-staging"
+* origin/development:
+  Merge pull request #754 in SMP/jackfruit from feature/RSPO-34 to development
+  Merge pull request #742 in SMP/jackfruit from feature/SMP-8857 to development"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
