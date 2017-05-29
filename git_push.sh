@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #749 in SMP/jackfruit from feature/SMP-8552-dev5 to development
+    release_note="Merge pull request #757 in SMP/jackfruit from feature/smp-8736-translation-array-issue to development
 
 Squashed commit of the following:
 
-commit 0d5c374b32c00c6ae22e5da5933c0f25352e649b
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 11:13:56 2017 -0700
+commit 2bbe6f940c85c5f66ff9fd7b37f6c66d461f717a
+Author: stanley <sli@revenuewire.com>
+Date:   Mon May 29 09:30:11 2017 -0700
 
-    SMP-8552 swagger update and bug fix"
+    SMP-8736 Translation Array Issue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
