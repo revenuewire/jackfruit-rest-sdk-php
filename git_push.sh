@@ -18,7 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="pipe: improvement"
+    release_note="Merge pull request #742 in SMP/jackfruit from feature/SMP-8857 to development
+
+Squashed commit of the following:
+
+commit 6380b505d6ff36fdb6b870920357efac258c0de8
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri May 26 13:26:48 2017 -0700
+
+    SMP-8857 update unit test to make sure API can make worldpay sale and collect tax.
+
+commit 60fc51599d73254b1e60f03cecd985817fdef69c
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 25 10:22:31 2017 -0700
+
+    SMP-8857 create unit test to make sure we charge tax when do api sale"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
