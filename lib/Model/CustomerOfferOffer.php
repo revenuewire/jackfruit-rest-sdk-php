@@ -66,7 +66,7 @@ class CustomerOfferOffer implements ArrayAccess
         'isRecurring' => 'bool',
         'isTrial' => 'bool',
         'transactionItem' => '\Swagger\Client\Model\CustomerOfferOfferTransactionItem',
-        'recurringItem' => '\Swagger\Client\Model\CustomerOfferOfferRecurringItem'
+        'recurringTransactionItem' => '\Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem'
     ];
 
     public static function swaggerTypes()
@@ -90,7 +90,7 @@ class CustomerOfferOffer implements ArrayAccess
         'isRecurring' => 'isRecurring',
         'isTrial' => 'isTrial',
         'transactionItem' => 'transactionItem',
-        'recurringItem' => 'recurringItem'
+        'recurringTransactionItem' => 'recurringTransactionItem'
     ];
 
 
@@ -110,7 +110,7 @@ class CustomerOfferOffer implements ArrayAccess
         'isRecurring' => 'setIsRecurring',
         'isTrial' => 'setIsTrial',
         'transactionItem' => 'setTransactionItem',
-        'recurringItem' => 'setRecurringItem'
+        'recurringTransactionItem' => 'setRecurringTransactionItem'
     ];
 
 
@@ -130,7 +130,7 @@ class CustomerOfferOffer implements ArrayAccess
         'isRecurring' => 'getIsRecurring',
         'isTrial' => 'getIsTrial',
         'transactionItem' => 'getTransactionItem',
-        'recurringItem' => 'getRecurringItem'
+        'recurringTransactionItem' => 'getRecurringTransactionItem'
     ];
 
     public static function attributeMap()
@@ -175,7 +175,7 @@ class CustomerOfferOffer implements ArrayAccess
         $this->container['isRecurring'] = isset($data['isRecurring']) ? $data['isRecurring'] : null;
         $this->container['isTrial'] = isset($data['isTrial']) ? $data['isTrial'] : null;
         $this->container['transactionItem'] = isset($data['transactionItem']) ? $data['transactionItem'] : null;
-        $this->container['recurringItem'] = isset($data['recurringItem']) ? $data['recurringItem'] : null;
+        $this->container['recurringTransactionItem'] = isset($data['recurringTransactionItem']) ? $data['recurringTransactionItem'] : null;
     }
 
     /**
@@ -435,22 +435,22 @@ class CustomerOfferOffer implements ArrayAccess
     }
 
     /**
-     * Gets recurringItem
-     * @return \Swagger\Client\Model\CustomerOfferOfferRecurringItem
+     * Gets recurringTransactionItem
+     * @return \Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem
      */
-    public function getRecurringItem()
+    public function getRecurringTransactionItem()
     {
-        return $this->container['recurringItem'];
+        return $this->container['recurringTransactionItem'];
     }
 
     /**
-     * Sets recurringItem
-     * @param \Swagger\Client\Model\CustomerOfferOfferRecurringItem $recurringItem
+     * Sets recurringTransactionItem
+     * @param \Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem $recurringTransactionItem
      * @return $this
      */
-    public function setRecurringItem($recurringItem)
+    public function setRecurringTransactionItem($recurringTransactionItem)
     {
-        $this->container['recurringItem'] = $recurringItem;
+        $this->container['recurringTransactionItem'] = $recurringTransactionItem;
 
         return $this;
     }

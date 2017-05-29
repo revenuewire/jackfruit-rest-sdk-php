@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **isRecurring** | **bool** |  | [optional] 
 **isTrial** | **bool** |  | [optional] 
 **transactionItem** | [**\Swagger\Client\Model\CustomerOfferOfferTransactionItem**](CustomerOfferOfferTransactionItem.md) |  | [optional] 
-**recurringItem** | [**\Swagger\Client\Model\CustomerOfferOfferRecurringItem**](CustomerOfferOfferRecurringItem.md) |  | [optional] 
+**recurringTransactionItem** | [**\Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem**](CustomerOfferOfferRecurringTransactionItem.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

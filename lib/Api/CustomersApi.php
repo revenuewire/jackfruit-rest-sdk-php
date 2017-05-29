@@ -244,7 +244,7 @@ class CustomersApi
      * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
      * @param string $postalCode Postal code (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Customer
+     * @return \Swagger\Client\Model\InlineResponse200
      */
     public function customersCustomerIdBillingInfoBillingInfoIdPut($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
     {
@@ -266,7 +266,7 @@ class CustomersApi
      * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
      * @param string $postalCode Postal code (optional) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Customer, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersCustomerIdBillingInfoBillingInfoIdPutWithHttpInfo($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
     {
@@ -370,15 +370,15 @@ class CustomersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Customer',
+                '\Swagger\Client\Model\InlineResponse200',
                 '/customers/{customerId}/billing-info/{billingInfoId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Customer', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Customer', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

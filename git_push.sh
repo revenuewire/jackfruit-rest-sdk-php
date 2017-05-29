@@ -18,21 +18,51 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #742 in SMP/jackfruit from feature/SMP-8857 to development
+    release_note="Merge pull request #754 in SMP/jackfruit from feature/RSPO-34 to development
 
 Squashed commit of the following:
 
-commit 6380b505d6ff36fdb6b870920357efac258c0de8
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Fri May 26 13:26:48 2017 -0700
+commit 6de8ae12e2efd0f66ff18be2b72f814ed37c5920
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Mon May 29 09:25:01 2017 -0700
 
-    SMP-8857 update unit test to make sure API can make worldpay sale and collect tax.
+    RSPO-34 clean up
 
-commit 60fc51599d73254b1e60f03cecd985817fdef69c
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu May 25 10:22:31 2017 -0700
+commit c0fd1eb7632a2fa9458b1002d1f8410e86e6ae47
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 16:19:46 2017 -0700
 
-    SMP-8857 create unit test to make sure we charge tax when do api sale"
+    RSPO-34
+
+commit ac826735c8e7f7c15daf4f423aa63923361fc5ce
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 15:51:34 2017 -0700
+
+    RSPO-34
+
+commit c3a226f99536a7badd1cb93349e3e619b14866f0
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 15:38:29 2017 -0700
+
+    RSPO-34 yml fix
+
+commit 7334b3bfdd13c1bf617d9126799b77c9a04fc80a
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 15:32:34 2017 -0700
+
+    RSPO-34
+
+commit 89a70f00c8639c016cc5a2159288fdc29277e426
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 15:24:08 2017 -0700
+
+    RSPO-34 declaration fix
+
+commit e5f304817fb9b26d3d2cd6c676a4c6de265843dd
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri May 26 15:03:57 2017 -0700
+
+    RSPO-34 return resorce update and swagger doc update"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
