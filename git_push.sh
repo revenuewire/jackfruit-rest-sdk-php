@@ -18,51 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #754 in SMP/jackfruit from feature/RSPO-34 to development
+    release_note="Merge pull request #749 in SMP/jackfruit from feature/SMP-8552-dev5 to development
 
 Squashed commit of the following:
 
-commit 6de8ae12e2efd0f66ff18be2b72f814ed37c5920
+commit 0d5c374b32c00c6ae22e5da5933c0f25352e649b
 Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 29 09:25:01 2017 -0700
+Date:   Fri May 26 11:13:56 2017 -0700
 
-    RSPO-34 clean up
-
-commit c0fd1eb7632a2fa9458b1002d1f8410e86e6ae47
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 16:19:46 2017 -0700
-
-    RSPO-34
-
-commit ac826735c8e7f7c15daf4f423aa63923361fc5ce
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 15:51:34 2017 -0700
-
-    RSPO-34
-
-commit c3a226f99536a7badd1cb93349e3e619b14866f0
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 15:38:29 2017 -0700
-
-    RSPO-34 yml fix
-
-commit 7334b3bfdd13c1bf617d9126799b77c9a04fc80a
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 15:32:34 2017 -0700
-
-    RSPO-34
-
-commit 89a70f00c8639c016cc5a2159288fdc29277e426
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 15:24:08 2017 -0700
-
-    RSPO-34 declaration fix
-
-commit e5f304817fb9b26d3d2cd6c676a4c6de265843dd
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri May 26 15:03:57 2017 -0700
-
-    RSPO-34 return resorce update and swagger doc update"
+    SMP-8552 swagger update and bug fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
