@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="SMP-8861: small fix on deployment"
+    release_note="SMP-8861: fix runtime conf"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
