@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #764 in SMP/jackfruit from feature/smp-8790-ie10-issue to development
+    release_note="Merge pull request #768 in SMP/jackfruit from feature/smp-8602-merchant-cpa-limit-new-req to development
 
 Squashed commit of the following:
 
-commit 24c0d08d6441153b9a80be5544b188f938c3c7a7
+commit 5db692ff6e5727aa0954eb14380c8271724a5caf
 Author: stanley <sli@revenuewire.com>
-Date:   Mon May 29 13:07:04 2017 -0700
+Date:   Mon May 29 16:18:39 2017 -0700
 
-    SMP-8790 ie 10 style problem"
+    SMP-8602 Cpa Credit Limit New Req"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
