@@ -67,18 +67,19 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 
 $api_instance = new Swagger\Client\Api\CustomersApi();
 $customerId = "customerId_example"; // string | Customer id
-$transactionId = 56; // int | transaction id
-$name = "name_example"; // string | Customer's name
-$address = "address_example"; // string | Customer's address
-$countryCode = "countryCode_example"; // string | Country code
-$city = "city_example"; // string | City
-$postalCode = "postalCode_example"; // string | Postal code
+$billingInfoId = 56; // int | bill info id for the recurring transaction item
+$cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
+$cardNumber = "cardNumber_example"; // string | Credit Card number
+$cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
+$cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
+$selectedGateway = "selectedGateway_example"; // string | gateway prefered used to update billinfo (optional)
+$postalCode = "postalCode_example"; // string | Postal code (optional)
 
 try {
-    $result = $api_instance->customersCustomerIdAddressTransactionIdPut($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode);
+    $result = $api_instance->billingInfoUpdate($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->customersCustomerIdAddressTransactionIdPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomersApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,8 +91,8 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*CustomersApi* | [**billingInfoUpdate**](docs/Api/CustomersApi.md#billinginfoupdate) | **PUT** /customers/{customerId}/billing-info/{billingInfoId} | 
 *CustomersApi* | [**customersCustomerIdAddressTransactionIdPut**](docs/Api/CustomersApi.md#customerscustomeridaddresstransactionidput) | **PUT** /customers/{customerId}/address/{transactionId} | 
-*CustomersApi* | [**customersCustomerIdBillingInfoBillingInfoIdPut**](docs/Api/CustomersApi.md#customerscustomeridbillinginfobillinginfoidput) | **PUT** /customers/{customerId}/billing-info/{billingInfoId} | 
 *CustomersApi* | [**customersCustomerIdGet**](docs/Api/CustomersApi.md#customerscustomeridget) | **GET** /customers/{customerId} | 
 *CustomersApi* | [**customersCustomerUserIdOffersGet**](docs/Api/CustomersApi.md#customerscustomeruseridoffersget) | **GET** /customers/{customerUserId}/offers | 
 *CustomersApi* | [**customersCustomerUserIdTransactionsGet**](docs/Api/CustomersApi.md#customerscustomeruseridtransactionsget) | **GET** /customers/{customerUserId}/transactions | 
