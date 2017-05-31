@@ -18,11 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #773 in SMP/jackfruit from feature/SMP-8864 to development
 
-* commit 'c545f823a1dc93fe82a38d0e5417ad09c965dafb':
-  Merge pull request #780 in SMP/jackfruit from feature/SMP-8736-pick to release/0-blue
-  Merge pull request #777 in SMP/jackfruit from feature/smp-8871-test-decline-code to release/0-blue"
+Squashed commit of the following:
+
+commit 6c2b8a0967b4ed89cce845cf48b6a9783d3242e2
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Wed May 31 09:46:04 2017 -0700
+
+    SMp-8864: improve build stage
+
+commit ace3fa7d3efafeb173bdca57bb892b32352402c0
+Author: Scott Wang <swang@ceastgaard.revenuewire.com>
+Date:   Wed May 31 09:28:00 2017 -0700
+
+    SMP-8864: remove the affiliate link api restrictions"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
