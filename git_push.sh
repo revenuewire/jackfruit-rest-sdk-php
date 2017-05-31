@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #756 in SMP/jackfruit from feature/SMP-8701 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 665b5fabf52844620a1f8b21587537f28d46b6f1
-Author: Nick Arnoldi <narnoldi@revenuewire.com>
-Date:   Mon May 29 16:48:49 2017 +0700
-
-    SMP-8701 Sitel custom cart & 3ds decline causing processing button to get stuck"
+* commit '8d8a7a0b9bdf364539a9cc598cade88965888b4d':
+  Merge pull request #770 in SMP/jackfruit from feature/SMP-8821-feedback to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
