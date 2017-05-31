@@ -18,39 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #771 in SMP/jackfruit from feature/SMP-8552-dev5 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit e0d7577cab35a2dff9f68ea2c1627f66efc03618
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 30 11:34:55 2017 -0700
-
-    SMP-8552 clean up
-
-commit c7f28d338bfdd8b41212afb26f4f16aae0d8665e
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue May 30 11:30:42 2017 -0700
-
-    SMP-8552 add shipping address to offers
-
-commit 9f534823d6bc573f79ae8277cc132aab76e93f08
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 29 16:53:40 2017 -0700
-
-    SMP-8552 swagger update
-
-commit 91e904157ca50e87f946477147b3950519f45662
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 29 16:03:28 2017 -0700
-
-    SMP-8552
-
-commit f0e5d641e01980845edd7c0052d9f43f6e7c8291
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon May 29 16:01:49 2017 -0700
-
-    SMP-8552 shipping address API update"
+* commit '78a3591dbc354729e77ac4c28ed1e6135dc43433':
+  Merge pull request #775 in SMP/jackfruit from feature/SMP-8825-rw to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
