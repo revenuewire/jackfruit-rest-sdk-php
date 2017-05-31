@@ -18,21 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #773 in SMP/jackfruit from feature/SMP-8864 to development
+    release_note="Merge pull request #782 in SMP/jackfruit from feature/SMP-8494 to development
 
 Squashed commit of the following:
 
-commit 6c2b8a0967b4ed89cce845cf48b6a9783d3242e2
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Wed May 31 09:46:04 2017 -0700
+commit 5d81e89d42cb7d75c7bf163d4606ae58203f1c8e
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Wed May 31 14:00:36 2017 -0700
 
-    SMp-8864: improve build stage
-
-commit ace3fa7d3efafeb173bdca57bb892b32352402c0
-Author: Scott Wang <swang@ceastgaard.revenuewire.com>
-Date:   Wed May 31 09:28:00 2017 -0700
-
-    SMP-8864: remove the affiliate link api restrictions"
+    SMP-8494 updated error message to be more clear."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
