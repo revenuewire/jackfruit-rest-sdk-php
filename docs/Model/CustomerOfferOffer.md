@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **receiptUrl** | **string** | Receipt Url for this transaction | [optional] 
 **isRecurring** | **bool** |  | [optional] 
 **isTrial** | **bool** |  | [optional] 
+**shippingAddress** | [**\Swagger\Client\Model\CustomerAddress**](CustomerAddress.md) |  | [optional] 
 **transactionItem** | [**\Swagger\Client\Model\CustomerOfferOfferTransactionItem**](CustomerOfferOfferTransactionItem.md) |  | [optional] 
 **recurringTransactionItem** | [**\Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem**](CustomerOfferOfferRecurringTransactionItem.md) |  | [optional] 
 

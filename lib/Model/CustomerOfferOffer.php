@@ -65,6 +65,7 @@ class CustomerOfferOffer implements ArrayAccess
         'receiptUrl' => 'string',
         'isRecurring' => 'bool',
         'isTrial' => 'bool',
+        'shippingAddress' => '\Swagger\Client\Model\CustomerAddress',
         'transactionItem' => '\Swagger\Client\Model\CustomerOfferOfferTransactionItem',
         'recurringTransactionItem' => '\Swagger\Client\Model\CustomerOfferOfferRecurringTransactionItem'
     ];
@@ -89,6 +90,7 @@ class CustomerOfferOffer implements ArrayAccess
         'receiptUrl' => 'receiptUrl',
         'isRecurring' => 'isRecurring',
         'isTrial' => 'isTrial',
+        'shippingAddress' => 'shippingAddress',
         'transactionItem' => 'transactionItem',
         'recurringTransactionItem' => 'recurringTransactionItem'
     ];
@@ -109,6 +111,7 @@ class CustomerOfferOffer implements ArrayAccess
         'receiptUrl' => 'setReceiptUrl',
         'isRecurring' => 'setIsRecurring',
         'isTrial' => 'setIsTrial',
+        'shippingAddress' => 'setShippingAddress',
         'transactionItem' => 'setTransactionItem',
         'recurringTransactionItem' => 'setRecurringTransactionItem'
     ];
@@ -129,6 +132,7 @@ class CustomerOfferOffer implements ArrayAccess
         'receiptUrl' => 'getReceiptUrl',
         'isRecurring' => 'getIsRecurring',
         'isTrial' => 'getIsTrial',
+        'shippingAddress' => 'getShippingAddress',
         'transactionItem' => 'getTransactionItem',
         'recurringTransactionItem' => 'getRecurringTransactionItem'
     ];
@@ -174,6 +178,7 @@ class CustomerOfferOffer implements ArrayAccess
         $this->container['receiptUrl'] = isset($data['receiptUrl']) ? $data['receiptUrl'] : null;
         $this->container['isRecurring'] = isset($data['isRecurring']) ? $data['isRecurring'] : null;
         $this->container['isTrial'] = isset($data['isTrial']) ? $data['isTrial'] : null;
+        $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
         $this->container['transactionItem'] = isset($data['transactionItem']) ? $data['transactionItem'] : null;
         $this->container['recurringTransactionItem'] = isset($data['recurringTransactionItem']) ? $data['recurringTransactionItem'] : null;
     }
@@ -409,6 +414,27 @@ class CustomerOfferOffer implements ArrayAccess
     public function setIsTrial($isTrial)
     {
         $this->container['isTrial'] = $isTrial;
+
+        return $this;
+    }
+
+    /**
+     * Gets shippingAddress
+     * @return \Swagger\Client\Model\CustomerAddress
+     */
+    public function getShippingAddress()
+    {
+        return $this->container['shippingAddress'];
+    }
+
+    /**
+     * Sets shippingAddress
+     * @param \Swagger\Client\Model\CustomerAddress $shippingAddress
+     * @return $this
+     */
+    public function setShippingAddress($shippingAddress)
+    {
+        $this->container['shippingAddress'] = $shippingAddress;
 
         return $this;
     }
