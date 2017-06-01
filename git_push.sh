@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #784 in SMP/jackfruit from feature/SMP-8862 to development
 
-* commit 'ab510585f685e9aa4380c264f4f27e1bc764a06f':
-  Merge pull request #785 in SMP/jackfruit from feature/SMP-8811 to release/1-staging"
+Squashed commit of the following:
+
+commit 6b0ee2007055816c5fbc3ab1f4980a1a153f9173
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu May 25 16:03:41 2017 -0700
+
+    SMP-8862 make tx21 reminder email better."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
