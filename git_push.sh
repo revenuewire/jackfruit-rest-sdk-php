@@ -18,29 +18,28 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #795 in SMP/jackfruit from feature/SMP-8856 to development
+    release_note="Merge pull request #793 in SMP/jackfruit from feature/smp-8246-cpa-credit-report to development
 
 Squashed commit of the following:
 
-commit 3e75a4a02db97fdae0c8e3a494a7aa9135b35c8b
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 6 13:23:17 2017 -0700
+commit da8f0556be093b7ab7eb44b78f60497d946b3b02
+Author: stanley <sli@revenuewire.com>
+Date:   Tue Jun 6 12:17:06 2017 -0700
 
-    feature/SMP-8856
-    clean up
+    SMP-8246 cpa credit report
 
-commit 0a8c1f2c709df0796f3206138313aee6a33e19ac
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 6 13:17:28 2017 -0700
+commit 4bf0663c68b71e1e5e87abc2a65af39198e0f274
+Merge: f60a6b9 48b38e5
+Author: stanley <sli@revenuewire.com>
+Date:   Tue Jun 6 12:16:20 2017 -0700
 
-    feature/SMP-8856
-    typo fix
+    Merge branch 'development' into feature/smp-8246-cpa-credit-report
 
-commit 09d2ec597834127f298a695812acc7611e8c208c
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 6 13:13:45 2017 -0700
+commit f60a6b9d8be3a16070ecf8ec7b547f03713b2ba6
+Author: stanley <sli@revenuewire.com>
+Date:   Tue Jun 6 09:24:32 2017 -0700
 
-    feature/SMP-8856 legacy cancel"
+    SMP-8246 Cpa Credit Report"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
