@@ -88,6 +88,105 @@ class SubscriptionsApi
     }
 
     /**
+     * Operation legacySubscriptionCancel
+     *
+     * 
+     *
+     * @param int $transactionItemId Transaction item id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\Response
+     */
+    public function legacySubscriptionCancel($transactionItemId)
+    {
+        list($response) = $this->legacySubscriptionCancelWithHttpInfo($transactionItemId);
+        return $response;
+    }
+
+    /**
+     * Operation legacySubscriptionCancelWithHttpInfo
+     *
+     * 
+     *
+     * @param int $transactionItemId Transaction item id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\Response, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function legacySubscriptionCancelWithHttpInfo($transactionItemId)
+    {
+        // verify the required parameter 'transactionItemId' is set
+        if ($transactionItemId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $transactionItemId when calling legacySubscriptionCancel');
+        }
+        // parse inputs
+        $resourcePath = "/subscriptions/legacy/{transactionItemId}/cancel";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($transactionItemId !== null) {
+            $resourcePath = str_replace(
+                "{" . "transactionItemId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($transactionItemId),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\Response',
+                '/subscriptions/legacy/{transactionItemId}/cancel'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation subscriptionCancel
      *
      * 
