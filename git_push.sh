@@ -18,10 +18,33 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #800 in SMP/jackfruit from feature/SMP-8112-fix to development
 
-* commit '3321edaa23d474ddf60e47a8ed757c88f618958d':
-  Merge pull request #796 in SMP/jackfruit from feature/SMP-8899 to release/0-blue"
+Squashed commit of the following:
+
+commit 8cd6a05ef3ba9e693963bcd93e3c14d491daabd3
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Wed Jun 7 15:24:33 2017 -0700
+
+    SMP-8112: fix commets
+
+commit 47bc0384dfd448593a542b7561442d5f45b1a77a
+Merge: db94858 b3d453e
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Wed Jun 7 15:23:46 2017 -0700
+
+    Merge remote-tracking branch 'origin/development' into feature/SMP-8112-fix
+
+    * origin/development:
+      Merge pull request #796 in SMP/jackfruit from feature/SMP-8899 to release/0-blue
+      Merge pull request #799 in SMP/jackfruit from feature/SMP-8855-fix to release/1-staging
+      Merge pull request #798 in SMP/jackfruit from feature/smp-8888-rebranch to release/1-staging
+
+commit db948588aad749617749bdfe5cc16d3c12bd3d13
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Wed Jun 7 12:00:41 2017 -0700
+
+    SMP-8112: fix the expire date"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
