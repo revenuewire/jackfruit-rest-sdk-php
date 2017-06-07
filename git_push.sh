@@ -18,28 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #793 in SMP/jackfruit from feature/smp-8246-cpa-credit-report to development
+    release_note="Merge pull request #797 in SMP/jackfruit from feature/smp-8888-xss to development
 
 Squashed commit of the following:
 
-commit da8f0556be093b7ab7eb44b78f60497d946b3b02
+commit 0ca4e80a43076caf4fc9ed30f336f8324d3e5b29
 Author: stanley <sli@revenuewire.com>
-Date:   Tue Jun 6 12:17:06 2017 -0700
+Date:   Tue Jun 6 15:32:21 2017 -0700
 
-    SMP-8246 cpa credit report
-
-commit 4bf0663c68b71e1e5e87abc2a65af39198e0f274
-Merge: f60a6b9 48b38e5
-Author: stanley <sli@revenuewire.com>
-Date:   Tue Jun 6 12:16:20 2017 -0700
-
-    Merge branch 'development' into feature/smp-8246-cpa-credit-report
-
-commit f60a6b9d8be3a16070ecf8ec7b547f03713b2ba6
-Author: stanley <sli@revenuewire.com>
-Date:   Tue Jun 6 09:24:32 2017 -0700
-
-    SMP-8246 Cpa Credit Report"
+    SMP-8888 solve xss problem"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
