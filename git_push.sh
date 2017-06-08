@@ -18,7 +18,12 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Pipe: update pipeline build for feature branch"
+    release_note="Automatic merge from release/1-staging -> development
+
+* commit 'b4175f789f740cc42afad0d5a06656a07ebc207b':
+  Merge pull request #806 in SMP/jackfruit from feature/SMP-5937 to release/0-blue
+  Staging deployment pipeline
+  Staging deployment pipeline"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
