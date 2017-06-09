@@ -18,10 +18,33 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #812 in SMP/jackfruit from feature/SMP-5937-revert to development
 
-* commit 'de62a79757c39e541cf4de323a10a3d8aa33c0b2':
-  Merge pull request #808 in SMP/jackfruit from feature/smp-5543-qa-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 4300855b0cd5f67227854e34004461e8f8051e07
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Jun 9 09:48:54 2017 -0700
+
+    Revert feature/SMP-5937
+
+    This reverts commit dda4dc68fff8ef19cf9f2f86b0995dcaf1acb691.
+
+commit 635ec8a831911ae727158fa415296a14b8cc25bc
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Jun 9 09:48:34 2017 -0700
+
+    Revert feature/SMP-5937
+
+    This reverts commit c78945880407a743ac783eb3ab7debfe368bfa5b.
+
+commit 8646b5a8e1224fb7167fe0a1e0228a7e6d0919af
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Jun 9 09:48:07 2017 -0700
+
+    Revert feature/SMP-5937
+
+    This reverts commit b8aa573cf83699ad10fa1684a69c36c2506fcb23."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
