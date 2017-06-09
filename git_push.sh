@@ -18,33 +18,29 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #812 in SMP/jackfruit from feature/SMP-5937-revert to development
+    release_note="Merge pull request #810 in SMP/jackfruit from feature/SMP-8897 to development
 
 Squashed commit of the following:
 
-commit 4300855b0cd5f67227854e34004461e8f8051e07
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Jun 9 09:48:54 2017 -0700
+commit 4c0d74572afd6a631f341d735318311466529eeb
+Merge: 225dcc5 92d2c77
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 12:17:59 2017 -0700
 
-    Revert feature/SMP-5937
+    Merge branch 'development' into feature/SMP-8897
 
-    This reverts commit dda4dc68fff8ef19cf9f2f86b0995dcaf1acb691.
+commit 225dcc5d096f106e42ccf48effeab14ca24023f5
+Merge: e0fea02 d9a913f
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 08:51:56 2017 -0700
 
-commit 635ec8a831911ae727158fa415296a14b8cc25bc
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Jun 9 09:48:34 2017 -0700
+    Merge branch 'development' into feature/SMP-8897
 
-    Revert feature/SMP-5937
+commit e0fea02518d80fc38a547d558482c16d1a2af8f6
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu Jun 8 14:01:35 2017 -0700
 
-    This reverts commit c78945880407a743ac783eb3ab7debfe368bfa5b.
-
-commit 8646b5a8e1224fb7167fe0a1e0228a7e6d0919af
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Jun 9 09:48:07 2017 -0700
-
-    Revert feature/SMP-5937
-
-    This reverts commit b8aa573cf83699ad10fa1684a69c36c2506fcb23."
+    SMP-8897 Cart 2.0: Displayed currency and billed currency not the same"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
