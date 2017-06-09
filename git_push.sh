@@ -18,7 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Pipe: fix the build notifier"
+    release_note="Automatic merge from release/1-staging -> development
+
+* commit 'de62a79757c39e541cf4de323a10a3d8aa33c0b2':
+  Merge pull request #808 in SMP/jackfruit from feature/smp-5543-qa-fix to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
