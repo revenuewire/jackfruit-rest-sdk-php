@@ -18,10 +18,57 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #815 in SMP/jackfruit from feature/SMP-8912 to development
 
-* commit '10e74fd15b70399f8dbb4010fd53a287ead4bf19':
-  Merge pull request #825 in SMP/jackfruit from feature/smp-8602-qa-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 0fc4f229189715d47066599c1ebae5e30c4db0f7
+Merge: 7009310 4066603
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Tue Jun 13 07:56:27 2017 -0700
+
+    SMP-8912: fix conflicts
+
+commit 7009310b86c815ef0d633edc3597241c4f8b44ca
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Mon Jun 12 08:06:15 2017 -0700
+
+    SMP-8912: update mac user
+
+commit 329ca50758a58c02f03ae0808a750a5088c8d588
+Merge: cd13869 f1e07ca
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Mon Jun 12 08:01:27 2017 -0700
+
+    Merge remote-tracking branch 'origin/development' into feature/SMP-8912
+
+    * origin/development:
+      Merge pull request #814 in SMP/jackfruit from feature/SMP-8913 to development
+      Merge pull request #810 in SMP/jackfruit from feature/SMP-8897 to development
+
+commit cd13869ed25562c68df7568aa12217f483008637
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Fri Jun 9 16:15:55 2017 -0700
+
+    SMP-8912: add parallel testings
+
+commit 17b8a4dc4cdb2f070a1d6b7a42ddc20a967dfd31
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Fri Jun 9 14:53:19 2017 -0700
+
+    SMP-8912: add parallel testings
+
+commit 95fca5b59b9cb35780672c21617602f8c41cc8b9
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Fri Jun 9 14:15:20 2017 -0700
+
+    SMP-8912: fix
+
+commit fdf813736fc864ed7ac046b9be8550e715fc5cee
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Fri Jun 9 12:22:01 2017 -0700
+
+    SMP-8912: update docker"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
