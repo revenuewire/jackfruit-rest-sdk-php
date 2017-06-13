@@ -18,10 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #822 in SMP/jackfruit from feature/fix-jenkins to development
 
-* commit 'd2b098574404b65d8b39bc345855bde0a597d3b4':
-  Merge pull request #824 in SMP/jackfruit from feature/SMP-8861-fix-crosssale to release/1-staging"
+Squashed commit of the following:
+
+commit a910671d6ae068788a1b269ddad736c46464f816
+Author: ttang <ttang@revenuewire.com>
+Date:   Mon Jun 12 14:47:13 2017 -0700
+
+    fix jenkins not notifying failures
+
+commit 854b0b3c3b682ac1279f6baf47987068e6085c87
+Author: ttang <ttang@revenuewire.com>
+Date:   Mon Jun 12 14:39:32 2017 -0700
+
+    break the build on purpose"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
