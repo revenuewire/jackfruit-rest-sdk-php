@@ -18,21 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #822 in SMP/jackfruit from feature/fix-jenkins to development
+    release_note="Merge pull request #826 in SMP/jackfruit from feature/SMP-6992-translate to development
 
 Squashed commit of the following:
 
-commit a910671d6ae068788a1b269ddad736c46464f816
-Author: ttang <ttang@revenuewire.com>
-Date:   Mon Jun 12 14:47:13 2017 -0700
+commit 8870a9edeccd3468d5b968fdc7fe4dbd19ebf02c
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Mon Jun 12 14:49:40 2017 -0700
 
-    fix jenkins not notifying failures
-
-commit 854b0b3c3b682ac1279f6baf47987068e6085c87
-Author: ttang <ttang@revenuewire.com>
-Date:   Mon Jun 12 14:39:32 2017 -0700
-
-    break the build on purpose"
+    SMP-6992 Provide translations for tx14 reminder email"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
