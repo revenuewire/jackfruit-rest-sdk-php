@@ -88,167 +88,6 @@ class CustomersApi
     }
 
     /**
-     * Operation billingInfoUpdate
-     *
-     * 
-     *
-     * @param string $customerId Customer id (required)
-     * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $cardHolderFullName Card&#39;s holder full name (required)
-     * @param string $cardNumber Credit Card number (required)
-     * @param string $cardExpiry Credit Card expiry (required)
-     * @param string $cardCCV Credit CCV (optional) (optional)
-     * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
-     * @param string $postalCode Postal code (optional) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse200
-     */
-    public function billingInfoUpdate($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
-    {
-        list($response) = $this->billingInfoUpdateWithHttpInfo($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
-        return $response;
-    }
-
-    /**
-     * Operation billingInfoUpdateWithHttpInfo
-     *
-     * 
-     *
-     * @param string $customerId Customer id (required)
-     * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $cardHolderFullName Card&#39;s holder full name (required)
-     * @param string $cardNumber Credit Card number (required)
-     * @param string $cardExpiry Credit Card expiry (required)
-     * @param string $cardCCV Credit CCV (optional) (optional)
-     * @param string $selectedGateway gateway prefered used to update billinfo (optional) (optional)
-     * @param string $postalCode Postal code (optional) (optional)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function billingInfoUpdateWithHttpInfo($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $selectedGateway = null, $postalCode = null)
-    {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling billingInfoUpdate');
-        }
-        // verify the required parameter 'billingInfoId' is set
-        if ($billingInfoId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $billingInfoId when calling billingInfoUpdate');
-        }
-        // verify the required parameter 'cardHolderFullName' is set
-        if ($cardHolderFullName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cardHolderFullName when calling billingInfoUpdate');
-        }
-        // verify the required parameter 'cardNumber' is set
-        if ($cardNumber === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cardNumber when calling billingInfoUpdate');
-        }
-        // verify the required parameter 'cardExpiry' is set
-        if ($cardExpiry === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $cardExpiry when calling billingInfoUpdate');
-        }
-        // parse inputs
-        $resourcePath = "/customers/{customerId}/billing-info/{billingInfoId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
-
-        // path params
-        if ($customerId !== null) {
-            $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($billingInfoId !== null) {
-            $resourcePath = str_replace(
-                "{" . "billingInfoId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($billingInfoId),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // form params
-        if ($cardHolderFullName !== null) {
-            $formParams['cardHolderFullName'] = $this->apiClient->getSerializer()->toFormValue($cardHolderFullName);
-        }
-        // form params
-        if ($cardNumber !== null) {
-            $formParams['cardNumber'] = $this->apiClient->getSerializer()->toFormValue($cardNumber);
-        }
-        // form params
-        if ($cardExpiry !== null) {
-            $formParams['cardExpiry'] = $this->apiClient->getSerializer()->toFormValue($cardExpiry);
-        }
-        // form params
-        if ($cardCCV !== null) {
-            $formParams['cardCCV'] = $this->apiClient->getSerializer()->toFormValue($cardCCV);
-        }
-        // form params
-        if ($selectedGateway !== null) {
-            $formParams['selectedGateway'] = $this->apiClient->getSerializer()->toFormValue($selectedGateway);
-        }
-        // form params
-        if ($postalCode !== null) {
-            $formParams['postalCode'] = $this->apiClient->getSerializer()->toFormValue($postalCode);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-API-KEY'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\InlineResponse200',
-                '/customers/{customerId}/billing-info/{billingInfoId}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse200', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation customersCustomerIdAddressTransactionIdPut
      *
      * 
@@ -497,7 +336,7 @@ class CustomersApi
      *
      * @param string $customerUserId Customer user id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomerOffer[]
+     * @return \Swagger\Client\Model\CustomerOffers
      */
     public function customersCustomerUserIdOffersGet($customerUserId)
     {
@@ -512,7 +351,7 @@ class CustomersApi
      *
      * @param string $customerUserId Customer user id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomerOffer[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\CustomerOffers, HTTP status code, HTTP response headers (array of strings)
      */
     public function customersCustomerUserIdOffersGetWithHttpInfo($customerUserId)
     {
@@ -568,15 +407,15 @@ class CustomersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomerOffer[]',
+                '\Swagger\Client\Model\CustomerOffers',
                 '/customers/{customerUserId}/offers'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomerOffer[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomerOffers', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomerOffer[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomerOffers', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

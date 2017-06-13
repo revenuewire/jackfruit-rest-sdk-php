@@ -55,17 +55,8 @@ class CustomerAddress implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'customerAccountId' => 'int',
-        'transactionId' => 'int',
-        'name' => 'string',
-        'address' => 'string',
-        'address2' => 'string',
-        'countryCode' => 'string',
-        'regionCode' => 'string',
-        'city' => 'string',
-        'postalCode' => 'string',
-        'type' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\CustomerAddressData'
     ];
 
     public static function swaggerTypes()
@@ -78,17 +69,8 @@ class CustomerAddress implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'customerAccountId' => 'customerAccountId',
-        'transactionId' => 'transactionId',
-        'name' => 'name',
-        'address' => 'address',
-        'address2' => 'address2',
-        'countryCode' => 'countryCode',
-        'regionCode' => 'regionCode',
-        'city' => 'city',
-        'postalCode' => 'postalCode',
-        'type' => 'type'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -97,17 +79,8 @@ class CustomerAddress implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'customerAccountId' => 'setCustomerAccountId',
-        'transactionId' => 'setTransactionId',
-        'name' => 'setName',
-        'address' => 'setAddress',
-        'address2' => 'setAddress2',
-        'countryCode' => 'setCountryCode',
-        'regionCode' => 'setRegionCode',
-        'city' => 'setCity',
-        'postalCode' => 'setPostalCode',
-        'type' => 'setType'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -116,17 +89,8 @@ class CustomerAddress implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'customerAccountId' => 'getCustomerAccountId',
-        'transactionId' => 'getTransactionId',
-        'name' => 'getName',
-        'address' => 'getAddress',
-        'address2' => 'getAddress2',
-        'countryCode' => 'getCountryCode',
-        'regionCode' => 'getRegionCode',
-        'city' => 'getCity',
-        'postalCode' => 'getPostalCode',
-        'type' => 'getType'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -160,17 +124,8 @@ class CustomerAddress implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['customerAccountId'] = isset($data['customerAccountId']) ? $data['customerAccountId'] : null;
-        $this->container['transactionId'] = isset($data['transactionId']) ? $data['transactionId'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
-        $this->container['address2'] = isset($data['address2']) ? $data['address2'] : null;
-        $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
-        $this->container['regionCode'] = isset($data['regionCode']) ? $data['regionCode'] : null;
-        $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -199,232 +154,43 @@ class CustomerAddress implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getId()
+    public function getResponse()
     {
-        return $this->container['id'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setId($id)
+    public function setResponse($response)
     {
-        $this->container['id'] = $id;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets customerAccountId
-     * @return int
+     * Gets data
+     * @return \Swagger\Client\Model\CustomerAddressData
      */
-    public function getCustomerAccountId()
+    public function getData()
     {
-        return $this->container['customerAccountId'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets customerAccountId
-     * @param int $customerAccountId
+     * Sets data
+     * @param \Swagger\Client\Model\CustomerAddressData $data
      * @return $this
      */
-    public function setCustomerAccountId($customerAccountId)
+    public function setData($data)
     {
-        $this->container['customerAccountId'] = $customerAccountId;
-
-        return $this;
-    }
-
-    /**
-     * Gets transactionId
-     * @return int
-     */
-    public function getTransactionId()
-    {
-        return $this->container['transactionId'];
-    }
-
-    /**
-     * Sets transactionId
-     * @param int $transactionId
-     * @return $this
-     */
-    public function setTransactionId($transactionId)
-    {
-        $this->container['transactionId'] = $transactionId;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets address
-     * @return string
-     */
-    public function getAddress()
-    {
-        return $this->container['address'];
-    }
-
-    /**
-     * Sets address
-     * @param string $address
-     * @return $this
-     */
-    public function setAddress($address)
-    {
-        $this->container['address'] = $address;
-
-        return $this;
-    }
-
-    /**
-     * Gets address2
-     * @return string
-     */
-    public function getAddress2()
-    {
-        return $this->container['address2'];
-    }
-
-    /**
-     * Sets address2
-     * @param string $address2
-     * @return $this
-     */
-    public function setAddress2($address2)
-    {
-        $this->container['address2'] = $address2;
-
-        return $this;
-    }
-
-    /**
-     * Gets countryCode
-     * @return string
-     */
-    public function getCountryCode()
-    {
-        return $this->container['countryCode'];
-    }
-
-    /**
-     * Sets countryCode
-     * @param string $countryCode
-     * @return $this
-     */
-    public function setCountryCode($countryCode)
-    {
-        $this->container['countryCode'] = $countryCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets regionCode
-     * @return string
-     */
-    public function getRegionCode()
-    {
-        return $this->container['regionCode'];
-    }
-
-    /**
-     * Sets regionCode
-     * @param string $regionCode
-     * @return $this
-     */
-    public function setRegionCode($regionCode)
-    {
-        $this->container['regionCode'] = $regionCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets city
-     * @return string
-     */
-    public function getCity()
-    {
-        return $this->container['city'];
-    }
-
-    /**
-     * Sets city
-     * @param string $city
-     * @return $this
-     */
-    public function setCity($city)
-    {
-        $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets postalCode
-     * @return string
-     */
-    public function getPostalCode()
-    {
-        return $this->container['postalCode'];
-    }
-
-    /**
-     * Sets postalCode
-     * @param string $postalCode
-     * @return $this
-     */
-    public function setPostalCode($postalCode)
-    {
-        $this->container['postalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['data'] = $data;
 
         return $this;
     }

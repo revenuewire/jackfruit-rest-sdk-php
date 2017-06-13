@@ -65,21 +65,20 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CustomersApi();
-$customerId = "customerId_example"; // string | Customer id
+$api_instance = new Swagger\Client\Api\BillingsApi();
 $billingInfoId = 56; // int | bill info id for the recurring transaction item
 $cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
 $cardNumber = "cardNumber_example"; // string | Credit Card number
 $cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
 $cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
-$selectedGateway = "selectedGateway_example"; // string | gateway prefered used to update billinfo (optional)
+$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated (optional)
 $postalCode = "postalCode_example"; // string | Postal code (optional)
 
 try {
-    $result = $api_instance->billingInfoUpdate($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
+    $result = $api_instance->billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BillingsApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -91,7 +90,9 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*CustomersApi* | [**billingInfoUpdate**](docs/Api/CustomersApi.md#billinginfoupdate) | **PUT** /customers/{customerId}/billing-info/{billingInfoId} | 
+*BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
+*BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/{billingInfoId}/update-paypal | 
+*BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
 *CustomersApi* | [**customersCustomerIdAddressTransactionIdPut**](docs/Api/CustomersApi.md#customerscustomeridaddresstransactionidput) | **PUT** /customers/{customerId}/address/{transactionId} | 
 *CustomersApi* | [**customersCustomerIdGet**](docs/Api/CustomersApi.md#customerscustomeridget) | **GET** /customers/{customerId} | 
 *CustomersApi* | [**customersCustomerUserIdOffersGet**](docs/Api/CustomersApi.md#customerscustomeruseridoffersget) | **GET** /customers/{customerUserId}/offers | 
@@ -136,21 +137,25 @@ Class | Method | HTTP request | Description
  - [CountryList](docs/Model/CountryList.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
- - [CustomerOffer](docs/Model/CustomerOffer.md)
- - [CustomerOfferOffer](docs/Model/CustomerOfferOffer.md)
- - [CustomerOfferOfferRecurringTransactionItem](docs/Model/CustomerOfferOfferRecurringTransactionItem.md)
- - [CustomerOfferOfferTransactionItem](docs/Model/CustomerOfferOfferTransactionItem.md)
+ - [CustomerAddressData](docs/Model/CustomerAddressData.md)
+ - [CustomerData](docs/Model/CustomerData.md)
+ - [CustomerOffers](docs/Model/CustomerOffers.md)
+ - [CustomerOffersData](docs/Model/CustomerOffersData.md)
+ - [CustomerOffersRecurringTransactionItem](docs/Model/CustomerOffersRecurringTransactionItem.md)
+ - [CustomerOffersTransactionItem](docs/Model/CustomerOffersTransactionItem.md)
  - [CustomerOrder](docs/Model/CustomerOrder.md)
  - [CustomerOrders](docs/Model/CustomerOrders.md)
  - [CustomerPhone](docs/Model/CustomerPhone.md)
+ - [CustomerPhoneData](docs/Model/CustomerPhoneData.md)
  - [Domain](docs/Model/Domain.md)
  - [DomainEmail](docs/Model/DomainEmail.md)
  - [DomainEmailLabel](docs/Model/DomainEmailLabel.md)
  - [Error](docs/Model/Error.md)
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
- - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [NewDomain](docs/Model/NewDomain.md)
+ - [PaypalUrl](docs/Model/PaypalUrl.md)
+ - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
  - [State](docs/Model/State.md)

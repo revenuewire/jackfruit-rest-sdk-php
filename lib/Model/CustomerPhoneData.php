@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * CustomerPhoneData
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * CustomerPhoneData Class Doc Comment
  *
  * @category    Class
- * @description Customer object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class CustomerPhoneData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +47,18 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'CustomerPhone_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerData'
+        'id' => 'int',
+        'customerAccountId' => 'int',
+        'phoneNumber' => 'string',
+        'countryCode' => 'string',
+        'type' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +71,11 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'id' => 'id',
+        'customerAccountId' => 'customerAccountId',
+        'phoneNumber' => 'phoneNumber',
+        'countryCode' => 'countryCode',
+        'type' => 'type'
     ];
 
 
@@ -79,8 +84,11 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'id' => 'setId',
+        'customerAccountId' => 'setCustomerAccountId',
+        'phoneNumber' => 'setPhoneNumber',
+        'countryCode' => 'setCountryCode',
+        'type' => 'setType'
     ];
 
 
@@ -89,8 +97,11 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'id' => 'getId',
+        'customerAccountId' => 'getCustomerAccountId',
+        'phoneNumber' => 'getPhoneNumber',
+        'countryCode' => 'getCountryCode',
+        'type' => 'getType'
     ];
 
     public static function attributeMap()
@@ -124,8 +135,11 @@ class Customer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['customerAccountId'] = isset($data['customerAccountId']) ? $data['customerAccountId'] : null;
+        $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
+        $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
     }
 
     /**
@@ -154,43 +168,106 @@ class Customer implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return int
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\CustomerData
+     * Gets customerAccountId
+     * @return int
      */
-    public function getData()
+    public function getCustomerAccountId()
     {
-        return $this->container['data'];
+        return $this->container['customerAccountId'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\CustomerData $data
+     * Sets customerAccountId
+     * @param int $customerAccountId
      * @return $this
      */
-    public function setData($data)
+    public function setCustomerAccountId($customerAccountId)
     {
-        $this->container['data'] = $data;
+        $this->container['customerAccountId'] = $customerAccountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets phoneNumber
+     * @return string
+     */
+    public function getPhoneNumber()
+    {
+        return $this->container['phoneNumber'];
+    }
+
+    /**
+     * Sets phoneNumber
+     * @param string $phoneNumber
+     * @return $this
+     */
+    public function setPhoneNumber($phoneNumber)
+    {
+        $this->container['phoneNumber'] = $phoneNumber;
+
+        return $this;
+    }
+
+    /**
+     * Gets countryCode
+     * @return string
+     */
+    public function getCountryCode()
+    {
+        return $this->container['countryCode'];
+    }
+
+    /**
+     * Sets countryCode
+     * @param string $countryCode
+     * @return $this
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->container['countryCode'] = $countryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
 
         return $this;
     }

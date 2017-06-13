@@ -4,81 +4,12 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**billingInfoUpdate**](CustomersApi.md#billingInfoUpdate) | **PUT** /customers/{customerId}/billing-info/{billingInfoId} | 
 [**customersCustomerIdAddressTransactionIdPut**](CustomersApi.md#customersCustomerIdAddressTransactionIdPut) | **PUT** /customers/{customerId}/address/{transactionId} | 
 [**customersCustomerIdGet**](CustomersApi.md#customersCustomerIdGet) | **GET** /customers/{customerId} | 
 [**customersCustomerUserIdOffersGet**](CustomersApi.md#customersCustomerUserIdOffersGet) | **GET** /customers/{customerUserId}/offers | 
 [**customersCustomerUserIdTransactionsGet**](CustomersApi.md#customersCustomerUserIdTransactionsGet) | **GET** /customers/{customerUserId}/transactions | 
 [**customersGet**](CustomersApi.md#customersGet) | **GET** /customers | 
 
-
-# **billingInfoUpdate**
-> \Swagger\Client\Model\InlineResponse200 billingInfoUpdate($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode)
-
-
-
-Update customer billing info for a recurring profile
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-// Configure API key authorization: API-KEY
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\CustomersApi();
-$customerId = "customerId_example"; // string | Customer id
-$billingInfoId = 56; // int | bill info id for the recurring transaction item
-$cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
-$cardNumber = "cardNumber_example"; // string | Credit Card number
-$cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
-$cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
-$selectedGateway = "selectedGateway_example"; // string | gateway prefered used to update billinfo (optional)
-$postalCode = "postalCode_example"; // string | Postal code (optional)
-
-try {
-    $result = $api_instance->billingInfoUpdate($customerId, $billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $selectedGateway, $postalCode);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling CustomersApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **customerId** | **string**| Customer id |
- **billingInfoId** | **int**| bill info id for the recurring transaction item |
- **cardHolderFullName** | **string**| Card&#39;s holder full name |
- **cardNumber** | **string**| Credit Card number |
- **cardExpiry** | **string**| Credit Card expiry |
- **cardCCV** | **string**| Credit CCV (optional) | [optional]
- **selectedGateway** | **string**| gateway prefered used to update billinfo (optional) | [optional]
- **postalCode** | **string**| Postal code (optional) | [optional]
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
-
-### Authorization
-
-[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerIdAddressTransactionIdPut**
 > \Swagger\Client\Model\CustomerAddress customersCustomerIdAddressTransactionIdPut($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode)
@@ -201,7 +132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **customersCustomerUserIdOffersGet**
-> \Swagger\Client\Model\CustomerOffer[] customersCustomerUserIdOffersGet($customerUserId)
+> \Swagger\Client\Model\CustomerOffers customersCustomerUserIdOffersGet($customerUserId)
 
 
 
@@ -241,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerOffer[]**](../Model/CustomerOffer.md)
+[**\Swagger\Client\Model\CustomerOffers**](../Model/CustomerOffers.md)
 
 ### Authorization
 

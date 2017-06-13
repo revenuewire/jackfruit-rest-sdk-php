@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * PaypalUrl
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * PaypalUrl Class Doc Comment
  *
  * @category    Class
- * @description Customer object
+ * @description Paypal Url
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class PaypalUrl implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'PaypalUrl';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,7 @@ class Customer implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerData'
+        'data' => '\Swagger\Client\Model\PaypalUrlData'
     ];
 
     public static function swaggerTypes()
@@ -176,7 +176,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CustomerData
+     * @return \Swagger\Client\Model\PaypalUrlData
      */
     public function getData()
     {
@@ -185,7 +185,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CustomerData $data
+     * @param \Swagger\Client\Model\PaypalUrlData $data
      * @return $this
      */
     public function setData($data)

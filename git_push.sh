@@ -18,57 +18,73 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #815 in SMP/jackfruit from feature/SMP-8912 to development
+    release_note="Merge pull request #805 in SMP/jackfruit from feature/SMP-8867 to development
 
 Squashed commit of the following:
 
-commit 0fc4f229189715d47066599c1ebae5e30c4db0f7
-Merge: 7009310 4066603
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Tue Jun 13 07:56:27 2017 -0700
+commit 17978d7c50181c92bfc6cbff56fd97b45d98279d
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Mon Jun 12 11:05:59 2017 -0700
 
-    SMP-8912: fix conflicts
+    SMP-8867 SPO Paypal payment update. Update according to code review.
 
-commit 7009310b86c815ef0d633edc3597241c4f8b44ca
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Mon Jun 12 08:06:15 2017 -0700
+commit 0d5f93c81870b33a9429cff4cc030e71034e41a9
+Merge: 935342e aa358b7
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Mon Jun 12 09:42:57 2017 -0700
 
-    SMP-8912: update mac user
+    Merge branch 'development' into feature/SMP-8867
 
-commit 329ca50758a58c02f03ae0808a750a5088c8d588
-Merge: cd13869 f1e07ca
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Mon Jun 12 08:01:27 2017 -0700
+commit 935342ec153f24c40c060e182a8834f40e2ccdb3
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 16:00:23 2017 -0700
 
-    Merge remote-tracking branch 'origin/development' into feature/SMP-8912
+    SMP-8867 SPO Paypal payment update API
 
-    * origin/development:
-      Merge pull request #814 in SMP/jackfruit from feature/SMP-8913 to development
-      Merge pull request #810 in SMP/jackfruit from feature/SMP-8897 to development
+commit 04aa0b522db9b44c7a702ac70b65ec1bdc6cce57
+Merge: 3dcbe52 f1e07ca
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 15:43:31 2017 -0700
 
-commit cd13869ed25562c68df7568aa12217f483008637
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Fri Jun 9 16:15:55 2017 -0700
+    Merge branch 'development' into feature/SMP-8867
 
-    SMP-8912: add parallel testings
+commit 3dcbe52118f4cad3b7c98a0f74c70d0d09e8dfd6
+Merge: 1a73dec 92d2c77
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 12:17:25 2017 -0700
 
-commit 17b8a4dc4cdb2f070a1d6b7a42ddc20a967dfd31
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Fri Jun 9 14:53:19 2017 -0700
+    Merge branch 'development' into feature/SMP-8867
 
-    SMP-8912: add parallel testings
+commit 1a73decbabad56a4e77e4a6c50214a7a7767a1df
+Merge: f6fdb0b d9a913f
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 09:13:54 2017 -0700
 
-commit 95fca5b59b9cb35780672c21617602f8c41cc8b9
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Fri Jun 9 14:15:20 2017 -0700
+    Merge branch 'development' into feature/SMP-8867
 
-    SMP-8912: fix
+commit f6fdb0b5eee69de3e896e3f452d09d0b66bb2cbc
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 9 09:13:11 2017 -0700
 
-commit fdf813736fc864ed7ac046b9be8550e715fc5cee
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Fri Jun 9 12:22:01 2017 -0700
+    SMP-8867 SPO Paypal payment update API. Update according to code review.
 
-    SMP-8912: update docker"
+commit 37345f5e1fe090912feeef165c6556b9bbe1e6e1
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu Jun 8 16:17:56 2017 -0700
+
+    SMP-8867 Paypal Update payment API. update according to code review.
+
+commit 30a82115d7dd44c541160ab4c83d55f089aaf43e
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu Jun 8 12:23:54 2017 -0700
+
+    SMP-8867 SPO Paypal payment update API. update according to code reveiw
+
+commit eb4025e94122d4e7a1554f0b5c5575fdc6f6a52c
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu Jun 1 16:12:18 2017 -0700
+
+    SMP-8867 SPO Paypal payment update API"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

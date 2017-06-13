@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * PaypalUrlData
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * PaypalUrlData Class Doc Comment
  *
  * @category    Class
- * @description Customer object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class PaypalUrlData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,15 +47,14 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'PaypalUrl_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerData'
+        'paypalUrl' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +67,7 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'paypalUrl' => 'paypalUrl'
     ];
 
 
@@ -79,8 +76,7 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'paypalUrl' => 'setPaypalUrl'
     ];
 
 
@@ -89,8 +85,7 @@ class Customer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'paypalUrl' => 'getPaypalUrl'
     ];
 
     public static function attributeMap()
@@ -124,8 +119,7 @@ class Customer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['paypalUrl'] = isset($data['paypalUrl']) ? $data['paypalUrl'] : null;
     }
 
     /**
@@ -154,43 +148,22 @@ class Customer implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets paypalUrl
+     * @return string
      */
-    public function getResponse()
+    public function getPaypalUrl()
     {
-        return $this->container['response'];
+        return $this->container['paypalUrl'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets paypalUrl
+     * @param string $paypalUrl
      * @return $this
      */
-    public function setResponse($response)
+    public function setPaypalUrl($paypalUrl)
     {
-        $this->container['response'] = $response;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     * @return \Swagger\Client\Model\CustomerData
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \Swagger\Client\Model\CustomerData $data
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
+        $this->container['paypalUrl'] = $paypalUrl;
 
         return $this;
     }

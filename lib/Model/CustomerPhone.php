@@ -55,11 +55,8 @@ class CustomerPhone implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-        'customerAccountId' => 'int',
-        'phoneNumber' => 'string',
-        'countryCode' => 'string',
-        'type' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\CustomerPhoneData'
     ];
 
     public static function swaggerTypes()
@@ -72,11 +69,8 @@ class CustomerPhone implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'customerAccountId' => 'customerAccountId',
-        'phoneNumber' => 'phoneNumber',
-        'countryCode' => 'countryCode',
-        'type' => 'type'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -85,11 +79,8 @@ class CustomerPhone implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'customerAccountId' => 'setCustomerAccountId',
-        'phoneNumber' => 'setPhoneNumber',
-        'countryCode' => 'setCountryCode',
-        'type' => 'setType'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -98,11 +89,8 @@ class CustomerPhone implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'customerAccountId' => 'getCustomerAccountId',
-        'phoneNumber' => 'getPhoneNumber',
-        'countryCode' => 'getCountryCode',
-        'type' => 'getType'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -136,11 +124,8 @@ class CustomerPhone implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['customerAccountId'] = isset($data['customerAccountId']) ? $data['customerAccountId'] : null;
-        $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
-        $this->container['countryCode'] = isset($data['countryCode']) ? $data['countryCode'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -169,106 +154,43 @@ class CustomerPhone implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getId()
+    public function getResponse()
     {
-        return $this->container['id'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets id
-     * @param int $id
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setId($id)
+    public function setResponse($response)
     {
-        $this->container['id'] = $id;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets customerAccountId
-     * @return int
+     * Gets data
+     * @return \Swagger\Client\Model\CustomerPhoneData
      */
-    public function getCustomerAccountId()
+    public function getData()
     {
-        return $this->container['customerAccountId'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets customerAccountId
-     * @param int $customerAccountId
+     * Sets data
+     * @param \Swagger\Client\Model\CustomerPhoneData $data
      * @return $this
      */
-    public function setCustomerAccountId($customerAccountId)
+    public function setData($data)
     {
-        $this->container['customerAccountId'] = $customerAccountId;
-
-        return $this;
-    }
-
-    /**
-     * Gets phoneNumber
-     * @return string
-     */
-    public function getPhoneNumber()
-    {
-        return $this->container['phoneNumber'];
-    }
-
-    /**
-     * Sets phoneNumber
-     * @param string $phoneNumber
-     * @return $this
-     */
-    public function setPhoneNumber($phoneNumber)
-    {
-        $this->container['phoneNumber'] = $phoneNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets countryCode
-     * @return string
-     */
-    public function getCountryCode()
-    {
-        return $this->container['countryCode'];
-    }
-
-    /**
-     * Sets countryCode
-     * @param string $countryCode
-     * @return $this
-     */
-    public function setCountryCode($countryCode)
-    {
-        $this->container['countryCode'] = $countryCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
+        $this->container['data'] = $data;
 
         return $this;
     }
