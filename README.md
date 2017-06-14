@@ -91,7 +91,7 @@ All URIs are relative to *https://localhost/rest/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
-*BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/{billingInfoId}/update-paypal | 
+*BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
 *CustomersApi* | [**customersCustomerIdAddressTransactionIdPut**](docs/Api/CustomersApi.md#customerscustomeridaddresstransactionidput) | **PUT** /customers/{customerId}/address/{transactionId} | 
 *CustomersApi* | [**customersCustomerIdGet**](docs/Api/CustomersApi.md#customerscustomeridget) | **GET** /customers/{customerId} | 

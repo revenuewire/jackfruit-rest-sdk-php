@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #835 in SMP/jackfruit from feature/SMP-8213 to development
+    release_note="Merge pull request #838 in SMP/jackfruit from feature/SMP-8867-update to development
 
 Squashed commit of the following:
 
-commit 2f326f59e35421d5361de5b14cea35aea582389c
-Author: lcabal <lcabal@revenuewire.com>
-Date:   Wed Jun 14 10:26:41 2017 -0700
+commit 21dd11590c0238c18058e1d739f12aeb7606a3d8
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed Jun 14 13:59:43 2017 -0700
 
-    SMP-8213 Add new tax type - Australian GST"
+    SMP-8867 SPO: Paypal Payment update API. Do not require billinfo id when we do paypal update."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
