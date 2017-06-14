@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #838 in SMP/jackfruit from feature/SMP-8867-update to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 21dd11590c0238c18058e1d739f12aeb7606a3d8
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed Jun 14 13:59:43 2017 -0700
-
-    SMP-8867 SPO: Paypal Payment update API. Do not require billinfo id when we do paypal update."
+* commit '433cd21c50dfe001a49054d78b7362c7f29d30c2':
+  Merge pull request #839 in SMP/jackfruit from feature/smp-8763-qa-fix-3 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
