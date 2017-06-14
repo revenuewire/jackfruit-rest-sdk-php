@@ -18,30 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #801 in SMP/jackfruit from feature/SMP-8685 to development
-
-SMP-8685 worldpay renewals failing because of new non-recurring purchase by the same customer
+    release_note="Merge pull request #834 in SMP/jackfruit from feature/SMP-8903 to development
 
 Squashed commit of the following:
 
-commit 5f5f60649dd858601d941fd7adacd465681ba7c0
-Merge: 1c3392b 659696b
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Tue Jun 13 12:37:37 2017 -0700
+commit 781a0ae79fb892901523c9b41bdd7ca3e05059d3
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Wed Jun 14 08:15:20 2017 -0700
 
-    Merge branch 'development' of http://git.rw.app:7990/scm/smp/jackfruit into feature/SMP-8685
+    SMP-8903: fix one more unit test
 
-commit 1c3392b70283bc2838f5991ac2122fe5fc11eea4
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Thu Jun 8 12:16:03 2017 -0700
+commit 4f15bc5486c5da0b862be0e77aecdeb2d8abde56
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Tue Jun 13 15:42:39 2017 -0700
 
-    SMP-8685 adjust PagBrasil to avoid the same mistake that the WorldPayProcessor had
-
-commit e4f4f6eff4801a99146f70baf86b28928c1050d4
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Wed Jun 7 13:15:20 2017 -0700
-
-    SMP-8685 worldpay renewals failing because of new non-recurring purchase by the same customer"
+    SMP-8903: calculate process fee based on after-tax value"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

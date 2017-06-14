@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
 *SubscriptionsApi* | [**subscriptionCancel**](docs/Api/SubscriptionsApi.md#subscriptioncancel) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
+*SubscriptionsApi* | [**subscriptionGetOffer**](docs/Api/SubscriptionsApi.md#subscriptiongetoffer) | **GET** /subscriptions/offer/{transactionItemId} | 
 *TokenApi* | [**tokenGenerate**](docs/Api/TokenApi.md#tokengenerate) | **POST** /token | 
 *UsersApi* | [**customerLogin**](docs/Api/UsersApi.md#customerlogin) | **POST** /users/login | 
 *UsersApi* | [**customerOrderLogin**](docs/Api/UsersApi.md#customerorderlogin) | **POST** /users/order-login | 
@@ -154,6 +155,7 @@ Class | Method | HTTP request | Description
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
  - [NewDomain](docs/Model/NewDomain.md)
+ - [Offer](docs/Model/Offer.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [Profile](docs/Model/Profile.md)
