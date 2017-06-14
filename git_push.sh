@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #833 in SMP/jackfruit from feature/SMP-8883 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit eadeb87467c03a4bc5a75a01b3fc6398e0543611
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Tue Jun 13 13:52:04 2017 -0700
-
-    SMP-8883 Change restriction on merchant filters on CPA reports to be based on whether they have CPA offers or not"
+* commit '4048d3355638e492c0d9b939f3786fedae6f2fa0':
+  Merge pull request #837 in SMP/jackfruit from feature/smp-8602-qa-fix to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
