@@ -18,39 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #831 in SMP/jackfruit from feature/SMP-8856 to development
+    release_note="Merge pull request #835 in SMP/jackfruit from feature/SMP-8213 to development
 
 Squashed commit of the following:
 
-commit dcb674d6512d7331ea480bd7ce6eddfd245be509
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Wed Jun 14 09:57:18 2017 -0700
+commit 2f326f59e35421d5361de5b14cea35aea582389c
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Wed Jun 14 10:26:41 2017 -0700
 
-    feature/SMP-8856 fixes
-
-commit aad55f853978aaf83709b8de0baa1c92e350071c
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 13 14:16:44 2017 -0700
-
-    feature/SMP-8856 swagger fix
-
-commit a3e8fd09515bc8e61111f03459c33c2db395d746
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 13 14:07:47 2017 -0700
-
-     feature/SMP-8856 swagger schema fix
-
-commit 3c2af84582b82985163dedd6deeecfce688048ae
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 13 13:33:23 2017 -0700
-
-    feature/SMP-8856
-
-commit bc997aea20181c0190a853e0c8492aebfff7bf64
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Tue Jun 13 13:30:55 2017 -0700
-
-    feature/SMP-8856 get offer details API"
+    SMP-8213 Add new tax type - Australian GST"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
