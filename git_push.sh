@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #833 in SMP/jackfruit from feature/SMP-8883 to development
 
-* commit 'a4350779290691606221f643fc5afb78c97d5462':
-  Merge pull request #840 in SMP/jackfruit from feature/SMP-8861-fix to release/1-staging"
+Squashed commit of the following:
+
+commit eadeb87467c03a4bc5a75a01b3fc6398e0543611
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Tue Jun 13 13:52:04 2017 -0700
+
+    SMP-8883 Change restriction on merchant filters on CPA reports to be based on whether they have CPA offers or not"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
