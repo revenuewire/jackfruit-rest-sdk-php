@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #841 in SMP/jackfruit from feature/SMP-8884 to development
 
-* commit 'f4f0e2dc9b0177477c86ce89898f676449c116be':
-  Merge pull request #843 in SMP/jackfruit from feature/SMP-8861-fix-2 to release/1-staging"
+Squashed commit of the following:
+
+commit 613c4b6b42b79803273f8b64465557790f810e2d
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Wed Jun 14 16:06:26 2017 -0700
+
+    SMP-8884 Cart 2.0 doesn't show 1 click upsell response in ITN for APM."
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
