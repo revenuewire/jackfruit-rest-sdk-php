@@ -18,21 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #846 in SMP/jackfruit from feature/SMP-8867-fix to development
+    release_note="Merge pull request #849 in SMP/jackfruit from feature/SMP-8859 to development
 
 Squashed commit of the following:
 
-commit fd0a270f053fd0c0a7c14226d30718f01ad9d3f9
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Thu Jun 15 12:22:15 2017 -0700
+commit 1c7eec101793b234bb00525291f774ad0f7876a1
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Thu Jun 15 14:22:10 2017 -0700
 
-    SMP-8867 swagger indent fix
-
-commit d823fcf68e32ec6d60152540ccfea201fa5d9c7c
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Thu Jun 15 11:44:46 2017 -0700
-
-    feature/SMP-8867 swagger yaml fix"
+    SMP-8859 Add unique class or ID to elements on Cart 2.0 templates"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
