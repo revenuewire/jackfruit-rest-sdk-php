@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #821 in SMP/jackfruit from feature/SMP-8821_refund_fix to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 157dcd6d514c8b6d7050f6db37ee91ff742b49cd
-Author: Nick Arnoldi <narnoldi@revenuewire.com>
-Date:   Tue Jun 13 00:05:59 2017 +0700
-
-    SMP-8821 PagBrasil legacy cart - Bank Transfer refund fix"
+* commit 'f4f0e2dc9b0177477c86ce89898f676449c116be':
+  Merge pull request #843 in SMP/jackfruit from feature/SMP-8861-fix-2 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
