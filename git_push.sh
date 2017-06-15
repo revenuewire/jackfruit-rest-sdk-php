@@ -18,15 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #841 in SMP/jackfruit from feature/SMP-8884 to development
+    release_note="Merge pull request #846 in SMP/jackfruit from feature/SMP-8867-fix to development
 
 Squashed commit of the following:
 
-commit 613c4b6b42b79803273f8b64465557790f810e2d
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed Jun 14 16:06:26 2017 -0700
+commit fd0a270f053fd0c0a7c14226d30718f01ad9d3f9
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu Jun 15 12:22:15 2017 -0700
 
-    SMP-8884 Cart 2.0 doesn't show 1 click upsell response in ITN for APM."
+    SMP-8867 swagger indent fix
+
+commit d823fcf68e32ec6d60152540ccfea201fa5d9c7c
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu Jun 15 11:44:46 2017 -0700
+
+    feature/SMP-8867 swagger yaml fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
