@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **billingInfoUpdate**
-> \Swagger\Client\Model\BillInfo billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode)
+> \Swagger\Client\Model\BillInfoResponse billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode)
 
 
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BillInfo**](../Model/BillInfo.md)
+[**\Swagger\Client\Model\BillInfoResponse**](../Model/BillInfoResponse.md)
 
 ### Authorization
 
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingInfoUpdatePaypal**
-> \Swagger\Client\Model\BillInfo billingInfoUpdatePaypal($ppToken, $token)
+> \Swagger\Client\Model\BillInfoResponse billingInfoUpdatePaypal($ppToken, $token)
 
 
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\BillInfo**](../Model/BillInfo.md)
+[**\Swagger\Client\Model\BillInfoResponse**](../Model/BillInfoResponse.md)
 
 ### Authorization
 

@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **payerId** | **string** |  | [optional] 
 **gatewayReference** | **string** |  | [optional] 
 **billingAddressName** | **string** |  | [optional] 
+**billingAddressAddress** | **string** |  | [optional] 
+**billingAddressAddress2** | **string** |  | [optional] 
 **billingAddressPostalCode** | **string** |  | [optional] 
 **billingAddressRegionCode** | **string** |  | [optional] 
 **billingAddressCountryCode** | **string** |  | [optional] 

@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BillInfo](docs/Model/BillInfo.md)
+ - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [Context](docs/Model/Context.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)

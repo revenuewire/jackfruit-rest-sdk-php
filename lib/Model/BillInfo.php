@@ -64,6 +64,8 @@ class BillInfo implements ArrayAccess
         'payerId' => 'string',
         'gatewayReference' => 'string',
         'billingAddressName' => 'string',
+        'billingAddressAddress' => 'string',
+        'billingAddressAddress2' => 'string',
         'billingAddressPostalCode' => 'string',
         'billingAddressRegionCode' => 'string',
         'billingAddressCountryCode' => 'string'
@@ -88,6 +90,8 @@ class BillInfo implements ArrayAccess
         'payerId' => 'payerId',
         'gatewayReference' => 'gatewayReference',
         'billingAddressName' => 'billingAddressName',
+        'billingAddressAddress' => 'billingAddressAddress',
+        'billingAddressAddress2' => 'billingAddressAddress2',
         'billingAddressPostalCode' => 'billingAddressPostalCode',
         'billingAddressRegionCode' => 'billingAddressRegionCode',
         'billingAddressCountryCode' => 'billingAddressCountryCode'
@@ -108,6 +112,8 @@ class BillInfo implements ArrayAccess
         'payerId' => 'setPayerId',
         'gatewayReference' => 'setGatewayReference',
         'billingAddressName' => 'setBillingAddressName',
+        'billingAddressAddress' => 'setBillingAddressAddress',
+        'billingAddressAddress2' => 'setBillingAddressAddress2',
         'billingAddressPostalCode' => 'setBillingAddressPostalCode',
         'billingAddressRegionCode' => 'setBillingAddressRegionCode',
         'billingAddressCountryCode' => 'setBillingAddressCountryCode'
@@ -128,6 +134,8 @@ class BillInfo implements ArrayAccess
         'payerId' => 'getPayerId',
         'gatewayReference' => 'getGatewayReference',
         'billingAddressName' => 'getBillingAddressName',
+        'billingAddressAddress' => 'getBillingAddressAddress',
+        'billingAddressAddress2' => 'getBillingAddressAddress2',
         'billingAddressPostalCode' => 'getBillingAddressPostalCode',
         'billingAddressRegionCode' => 'getBillingAddressRegionCode',
         'billingAddressCountryCode' => 'getBillingAddressCountryCode'
@@ -173,6 +181,8 @@ class BillInfo implements ArrayAccess
         $this->container['payerId'] = isset($data['payerId']) ? $data['payerId'] : null;
         $this->container['gatewayReference'] = isset($data['gatewayReference']) ? $data['gatewayReference'] : null;
         $this->container['billingAddressName'] = isset($data['billingAddressName']) ? $data['billingAddressName'] : null;
+        $this->container['billingAddressAddress'] = isset($data['billingAddressAddress']) ? $data['billingAddressAddress'] : null;
+        $this->container['billingAddressAddress2'] = isset($data['billingAddressAddress2']) ? $data['billingAddressAddress2'] : null;
         $this->container['billingAddressPostalCode'] = isset($data['billingAddressPostalCode']) ? $data['billingAddressPostalCode'] : null;
         $this->container['billingAddressRegionCode'] = isset($data['billingAddressRegionCode']) ? $data['billingAddressRegionCode'] : null;
         $this->container['billingAddressCountryCode'] = isset($data['billingAddressCountryCode']) ? $data['billingAddressCountryCode'] : null;
@@ -388,6 +398,48 @@ class BillInfo implements ArrayAccess
     public function setBillingAddressName($billingAddressName)
     {
         $this->container['billingAddressName'] = $billingAddressName;
+
+        return $this;
+    }
+
+    /**
+     * Gets billingAddressAddress
+     * @return string
+     */
+    public function getBillingAddressAddress()
+    {
+        return $this->container['billingAddressAddress'];
+    }
+
+    /**
+     * Sets billingAddressAddress
+     * @param string $billingAddressAddress
+     * @return $this
+     */
+    public function setBillingAddressAddress($billingAddressAddress)
+    {
+        $this->container['billingAddressAddress'] = $billingAddressAddress;
+
+        return $this;
+    }
+
+    /**
+     * Gets billingAddressAddress2
+     * @return string
+     */
+    public function getBillingAddressAddress2()
+    {
+        return $this->container['billingAddressAddress2'];
+    }
+
+    /**
+     * Sets billingAddressAddress2
+     * @param string $billingAddressAddress2
+     * @return $this
+     */
+    public function setBillingAddressAddress2($billingAddressAddress2)
+    {
+        $this->container['billingAddressAddress2'] = $billingAddressAddress2;
 
         return $this;
     }
