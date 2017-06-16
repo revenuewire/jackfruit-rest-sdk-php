@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #849 in SMP/jackfruit from feature/SMP-8859 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 1c7eec101793b234bb00525291f774ad0f7876a1
-Author: lcabal <lcabal@revenuewire.com>
-Date:   Thu Jun 15 14:22:10 2017 -0700
-
-    SMP-8859 Add unique class or ID to elements on Cart 2.0 templates"
+* commit '6eee25d3c131d63e4f82d368e02248243e9c9688':
+  Merge pull request #853 in SMP/jackfruit from feature/SMP-8861-fix-4 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
