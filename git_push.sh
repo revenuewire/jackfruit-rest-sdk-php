@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #829 in SMP/jackfruit from feature/SMP-8684 to development
+    release_note="Merge pull request #860 in SMP/jackfruit from feature/SMP-8856 to development
 
 Squashed commit of the following:
 
-commit b7d2b29e7d1750fb7bcb6d5e2a91c4485be3099a
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Tue Jun 13 12:36:24 2017 -0700
+commit 0deda4c11d775f4dfb75ba6ac9962a1c97fde703
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Jun 16 15:14:58 2017 -0700
 
-    SMP-8684 Paypal Direct Renewals failing because reference transaction is too old."
+    feature/SMP-8856 permissions fix"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
