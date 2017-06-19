@@ -18,15 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #860 in SMP/jackfruit from feature/SMP-8856 to development
+    release_note="Merge pull request #859 in SMP/jackfruit from feature/smp-8611-add-plus-sales-to-authroization-settlement to development
 
 Squashed commit of the following:
 
-commit 0deda4c11d775f4dfb75ba6ac9962a1c97fde703
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Jun 16 15:14:58 2017 -0700
+commit 5d2c654abaaf14aab45288deadb994839bc397a7
+Author: stanley <sli@revenuewire.com>
+Date:   Fri Jun 16 14:38:05 2017 -0700
 
-    feature/SMP-8856 permissions fix"
+    SMP-8611 add plus sales
+
+commit 93308b6b5a3e69d5c33df7583a8ff4d3577f88ee
+Author: stanley <sli@revenuewire.com>
+Date:   Fri Jun 16 14:23:43 2017 -0700
+
+    SMP-8611 add plus sales to authorization settlement"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
