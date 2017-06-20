@@ -18,21 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #859 in SMP/jackfruit from feature/smp-8611-add-plus-sales-to-authroization-settlement to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 5d2c654abaaf14aab45288deadb994839bc397a7
-Author: stanley <sli@revenuewire.com>
-Date:   Fri Jun 16 14:38:05 2017 -0700
-
-    SMP-8611 add plus sales
-
-commit 93308b6b5a3e69d5c33df7583a8ff4d3577f88ee
-Author: stanley <sli@revenuewire.com>
-Date:   Fri Jun 16 14:23:43 2017 -0700
-
-    SMP-8611 add plus sales to authorization settlement"
+* commit '3fd6a9b87f86b658a209cd7dfe20e7d5e6953c7f':
+  Merge pull request #864 in SMP/jackfruit from release/1-staging to release/0-blue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
