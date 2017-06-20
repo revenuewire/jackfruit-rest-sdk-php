@@ -20,8 +20,8 @@ fi
 if [ "$release_note" = "" ]; then
     release_note="Automatic merge from release/1-staging -> development
 
-* commit '263fe85ece4a3adb20e6aa02c9724121b3e3614d':
-  Merge pull request #866 in SMP/jackfruit from feature/SMP-8853-ut to release/1-staging"
+* commit '79c25f0634f68aa0cfaec6ecb69d878c99f1f77c':
+  Merge pull request #868 in SMP/jackfruit from feature/blue-pipe to release/0-blue"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
