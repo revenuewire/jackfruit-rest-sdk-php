@@ -18,15 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #869 in SMP/jackfruit from feature/SMP-8222 to development
-
-Squashed commit of the following:
-
-commit a57678b11f9c9b9f18f61541e01fe238dbb1a316
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Wed Jun 21 09:48:54 2017 -0700
-
-    SMP-8222 TX14/21 doesn't send to customer if browser isn't set to English at time of purchase"
+    release_note="Pipe: test dev build"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
