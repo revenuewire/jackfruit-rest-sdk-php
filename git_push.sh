@@ -18,10 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #858 in SMP/jackfruit from feature/SMP-8608 to development
 
-* commit '79c25f0634f68aa0cfaec6ecb69d878c99f1f77c':
-  Merge pull request #868 in SMP/jackfruit from feature/blue-pipe to release/0-blue"
+Squashed commit of the following:
+
+commit 862fccfc34733e1fd59a9ce975ce76c721167de9
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Mon Jun 19 20:36:09 2017 -0700
+
+    SMP-8608 add function header as per feedback from review
+
+commit 19a1b04b737efe2a45797d0080fcec46b2d26fcc
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Fri Jun 16 13:24:55 2017 -0700
+
+    SMP-8608 Add new error to Order API to stop worldpay transactions being blocked due to invalid ip address in xml"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
