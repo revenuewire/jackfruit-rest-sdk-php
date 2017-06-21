@@ -18,22 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #861 in SMP/jackfruit from feature/SMP-8725 to development
+    release_note="Merge pull request #869 in SMP/jackfruit from feature/SMP-8222 to development
 
 Squashed commit of the following:
 
-commit d9de681c4357ce79596c3f3a0cb02b321a0c4620
-Merge: 672b81f 4effa5e
+commit a57678b11f9c9b9f18f61541e01fe238dbb1a316
 Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Tue Jun 20 12:33:19 2017 -0700
+Date:   Wed Jun 21 09:48:54 2017 -0700
 
-    Merge branch 'development' into feature/SMP-8725
-
-commit 672b81f32a329b31d5e400eede7a38091b6c9d33
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu Jun 15 10:31:38 2017 -0700
-
-    SMP-8725 SPO: Migrate custom-login to users table"
+    SMP-8222 TX14/21 doesn't send to customer if browser isn't set to English at time of purchase"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
