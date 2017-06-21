@@ -18,22 +18,22 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #863 in SMP/jackfruit from feature/smp-8865-merchant-itn to development
+    release_note="Merge pull request #861 in SMP/jackfruit from feature/SMP-8725 to development
 
 Squashed commit of the following:
 
-commit d30527044a71753bb2f896870a0f9c3206dddcd5
-Merge: 64c6ef6 4effa5e
-Author: stanley <sli@revenuewire.com>
-Date:   Tue Jun 20 13:15:25 2017 -0700
+commit d9de681c4357ce79596c3f3a0cb02b321a0c4620
+Merge: 672b81f 4effa5e
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Tue Jun 20 12:33:19 2017 -0700
 
-    Merge branch 'development' into feature/smp-8865-merchant-itn
+    Merge branch 'development' into feature/SMP-8725
 
-commit 64c6ef689a1927c58d37cadcb1bf63ef836e2b5f
-Author: stanley <sli@revenuewire.com>
-Date:   Mon Jun 19 15:40:48 2017 -0700
+commit 672b81f32a329b31d5e400eede7a38091b6c9d33
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Thu Jun 15 10:31:38 2017 -0700
 
-    SMP-8865 merchant ITN"
+    SMP-8725 SPO: Migrate custom-login to users table"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
