@@ -18,21 +18,22 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #858 in SMP/jackfruit from feature/SMP-8608 to development
+    release_note="Merge pull request #863 in SMP/jackfruit from feature/smp-8865-merchant-itn to development
 
 Squashed commit of the following:
 
-commit 862fccfc34733e1fd59a9ce975ce76c721167de9
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Mon Jun 19 20:36:09 2017 -0700
+commit d30527044a71753bb2f896870a0f9c3206dddcd5
+Merge: 64c6ef6 4effa5e
+Author: stanley <sli@revenuewire.com>
+Date:   Tue Jun 20 13:15:25 2017 -0700
 
-    SMP-8608 add function header as per feedback from review
+    Merge branch 'development' into feature/smp-8865-merchant-itn
 
-commit 19a1b04b737efe2a45797d0080fcec46b2d26fcc
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Fri Jun 16 13:24:55 2017 -0700
+commit 64c6ef689a1927c58d37cadcb1bf63ef836e2b5f
+Author: stanley <sli@revenuewire.com>
+Date:   Mon Jun 19 15:40:48 2017 -0700
 
-    SMP-8608 Add new error to Order API to stop worldpay transactions being blocked due to invalid ip address in xml"
+    SMP-8865 merchant ITN"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
