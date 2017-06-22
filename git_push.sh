@@ -18,7 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Pipe: test dev build"
+    release_note="Merge pull request #872 in SMP/jackfruit from feature/SMP-8552 to development
+
+Squashed commit of the following:
+
+commit d3d3eee5d320aba94f76582a8c8fa00495275cbe
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Wed Jun 21 12:11:47 2017 -0700
+
+    feature/SMP-8552 API errors new format minor fixes
+
+commit fd01935959017f8c138ae375808094b603d21db3
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Wed Jun 21 11:23:20 2017 -0700
+
+    feture/SMP-8552 API error response new format"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
