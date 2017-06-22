@@ -735,14 +735,18 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $accountFullName Customer&#39;s name (required)
+     * @param string $accountFullName User&#39;s name (optional)
+     * @param string $email User&#39;s contact email (optional)
+     * @param string $timezone Setup your timezone. (optional)
+     * @param string $defaultDashboard User&#39;s default dashboard (optional)
+     * @param string $defaultProductView User&#39;s default product view. (optional)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\User
      */
-    public function userUpdate($id, $accountFullName, $language = null)
+    public function userUpdate($id, $accountFullName = null, $email = null, $timezone = null, $defaultDashboard = null, $defaultProductView = null, $language = null)
     {
-        list($response) = $this->userUpdateWithHttpInfo($id, $accountFullName, $language);
+        list($response) = $this->userUpdateWithHttpInfo($id, $accountFullName, $email, $timezone, $defaultDashboard, $defaultProductView, $language);
         return $response;
     }
 
@@ -752,20 +756,20 @@ class UsersApi
      * 
      *
      * @param int $id  (required)
-     * @param string $accountFullName Customer&#39;s name (required)
+     * @param string $accountFullName User&#39;s name (optional)
+     * @param string $email User&#39;s contact email (optional)
+     * @param string $timezone Setup your timezone. (optional)
+     * @param string $defaultDashboard User&#39;s default dashboard (optional)
+     * @param string $defaultProductView User&#39;s default product view. (optional)
      * @param string $language Preferred Language code for the user (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
-    public function userUpdateWithHttpInfo($id, $accountFullName, $language = null)
+    public function userUpdateWithHttpInfo($id, $accountFullName = null, $email = null, $timezone = null, $defaultDashboard = null, $defaultProductView = null, $language = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
             throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdate');
-        }
-        // verify the required parameter 'accountFullName' is set
-        if ($accountFullName === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $accountFullName when calling userUpdate');
         }
         // parse inputs
         $resourcePath = "/users/{id}";
@@ -793,6 +797,22 @@ class UsersApi
         // form params
         if ($accountFullName !== null) {
             $formParams['accountFullName'] = $this->apiClient->getSerializer()->toFormValue($accountFullName);
+        }
+        // form params
+        if ($email !== null) {
+            $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
+        }
+        // form params
+        if ($timezone !== null) {
+            $formParams['timezone'] = $this->apiClient->getSerializer()->toFormValue($timezone);
+        }
+        // form params
+        if ($defaultDashboard !== null) {
+            $formParams['defaultDashboard'] = $this->apiClient->getSerializer()->toFormValue($defaultDashboard);
+        }
+        // form params
+        if ($defaultProductView !== null) {
+            $formParams['defaultProductView'] = $this->apiClient->getSerializer()->toFormValue($defaultProductView);
         }
         // form params
         if ($language !== null) {

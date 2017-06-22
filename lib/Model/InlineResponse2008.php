@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * InlineResponse2008
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * InlineResponse2008 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ArrayAccess
+class InlineResponse2008 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class InlineResponse200 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'inline_response_200_8';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,7 +55,7 @@ class InlineResponse200 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\AffiliateLink[]'
+        'data' => '\Swagger\Client\Model\PostbackTest'
     ];
 
     public static function swaggerTypes()
@@ -187,7 +187,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\AffiliateLink[]
+     * @return \Swagger\Client\Model\PostbackTest
      */
     public function getData()
     {
@@ -196,7 +196,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\AffiliateLink[] $data Array containing affiliate linker links
+     * @param \Swagger\Client\Model\PostbackTest $data Test results
      * @return $this
      */
     public function setData($data)

@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * Destination
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * Destination Class Doc Comment
  *
  * @category    Class
+ * @description Destinations object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ArrayAccess
+class Destination implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,19 @@ class InlineResponse200 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'Destination';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\AffiliateLink[]'
+        'id' => 'int',
+        'fid' => 'string',
+        'name' => 'string',
+        'url' => 'string',
+        'isCustom' => 'bool',
+        'geos' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +73,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'id' => 'id',
+        'fid' => 'fid',
+        'name' => 'name',
+        'url' => 'url',
+        'isCustom' => 'isCustom',
+        'geos' => 'geos'
     ];
 
 
@@ -78,8 +87,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'id' => 'setId',
+        'fid' => 'setFid',
+        'name' => 'setName',
+        'url' => 'setUrl',
+        'isCustom' => 'setIsCustom',
+        'geos' => 'setGeos'
     ];
 
 
@@ -88,8 +101,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'id' => 'getId',
+        'fid' => 'getFid',
+        'name' => 'getName',
+        'url' => 'getUrl',
+        'isCustom' => 'getIsCustom',
+        'geos' => 'getGeos'
     ];
 
     public static function attributeMap()
@@ -123,8 +140,12 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['fid'] = isset($data['fid']) ? $data['fid'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['isCustom'] = isset($data['isCustom']) ? $data['isCustom'] : null;
+        $this->container['geos'] = isset($data['geos']) ? $data['geos'] : null;
     }
 
     /**
@@ -136,11 +157,17 @@ class InlineResponse200 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalid_properties[] = "'data' can't be null";
+        if ($this->container['fid'] === null) {
+            $invalid_properties[] = "'fid' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
+        }
+        if ($this->container['url'] === null) {
+            $invalid_properties[] = "'url' can't be null";
         }
         return $invalid_properties;
     }
@@ -154,10 +181,16 @@ class InlineResponse200 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        if ($this->container['id'] === null) {
             return false;
         }
-        if ($this->container['data'] === null) {
+        if ($this->container['fid'] === null) {
+            return false;
+        }
+        if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['url'] === null) {
             return false;
         }
         return true;
@@ -165,43 +198,127 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return int
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\AffiliateLink[]
+     * Gets fid
+     * @return string
      */
-    public function getData()
+    public function getFid()
     {
-        return $this->container['data'];
+        return $this->container['fid'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\AffiliateLink[] $data Array containing affiliate linker links
+     * Sets fid
+     * @param string $fid
      * @return $this
      */
-    public function setData($data)
+    public function setFid($fid)
     {
-        $this->container['data'] = $data;
+        $this->container['fid'] = $fid;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     * @param string $url
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets isCustom
+     * @return bool
+     */
+    public function getIsCustom()
+    {
+        return $this->container['isCustom'];
+    }
+
+    /**
+     * Sets isCustom
+     * @param bool $isCustom
+     * @return $this
+     */
+    public function setIsCustom($isCustom)
+    {
+        $this->container['isCustom'] = $isCustom;
+
+        return $this;
+    }
+
+    /**
+     * Gets geos
+     * @return string
+     */
+    public function getGeos()
+    {
+        return $this->container['geos'];
+    }
+
+    /**
+     * Sets geos
+     * @param string $geos
+     * @return $this
+     */
+    public function setGeos($geos)
+    {
+        $this->container['geos'] = $geos;
 
         return $this;
     }

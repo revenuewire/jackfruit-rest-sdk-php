@@ -1,10 +1,13 @@
-# InlineResponse200
+# Tracking
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Swagger\Client\Model\Response**](Response.md) |  | 
-**data** | [**\Swagger\Client\Model\AffiliateLink[]**](AffiliateLink.md) | Array containing affiliate linker links | 
+**id** | **string** |  | 
+**type** | **string** |  | 
+**name** | **string** |  | 
+**isGlobal** | **bool** |  | 
+**data** | **object** | custom object containing data specific to tracking type | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

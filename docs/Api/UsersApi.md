@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdate**
-> \Swagger\Client\Model\User userUpdate($id, $accountFullName, $language)
+> \Swagger\Client\Model\User userUpdate($id, $accountFullName, $email, $timezone, $defaultDashboard, $defaultProductView, $language)
 
 
 
@@ -383,11 +383,15 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 
 $api_instance = new Swagger\Client\Api\UsersApi();
 $id = 56; // int | 
-$accountFullName = "accountFullName_example"; // string | Customer's name
+$accountFullName = "accountFullName_example"; // string | User's name
+$email = "email_example"; // string | User's contact email
+$timezone = "timezone_example"; // string | Setup your timezone.
+$defaultDashboard = "defaultDashboard_example"; // string | User's default dashboard
+$defaultProductView = "defaultProductView_example"; // string | User's default product view.
 $language = "language_example"; // string | Preferred Language code for the user
 
 try {
-    $result = $api_instance->userUpdate($id, $accountFullName, $language);
+    $result = $api_instance->userUpdate($id, $accountFullName, $email, $timezone, $defaultDashboard, $defaultProductView, $language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->userUpdate: ', $e->getMessage(), PHP_EOL;
@@ -400,7 +404,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  |
- **accountFullName** | **string**| Customer&#39;s name |
+ **accountFullName** | **string**| User&#39;s name | [optional]
+ **email** | **string**| User&#39;s contact email | [optional]
+ **timezone** | **string**| Setup your timezone. | [optional]
+ **defaultDashboard** | **string**| User&#39;s default dashboard | [optional]
+ **defaultProductView** | **string**| User&#39;s default product view. | [optional]
  **language** | **string**| Preferred Language code for the user | [optional]
 
 ### Return type

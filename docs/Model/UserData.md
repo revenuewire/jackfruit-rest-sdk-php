@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **lastName** | **string** |  | [optional] 
 **timezone** | **string** |  | [optional] 
 **accountId** | **int** |  | [optional] 
+**defaultDashboard** | **string** |  | [optional] 
+**defaultProductView** | **string** |  | [optional] 
 **passwordExpiryDates** | **int** |  | [optional] 
 **lastLoginDate** | **string** |  | [optional] 
 **lastLoginIp** | **string** |  | [optional] 

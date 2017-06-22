@@ -61,6 +61,8 @@ class UserData implements ArrayAccess
         'lastName' => 'string',
         'timezone' => 'string',
         'accountId' => 'int',
+        'defaultDashboard' => 'string',
+        'defaultProductView' => 'string',
         'passwordExpiryDates' => 'int',
         'lastLoginDate' => 'string',
         'lastLoginIp' => 'string',
@@ -84,6 +86,8 @@ class UserData implements ArrayAccess
         'lastName' => 'lastName',
         'timezone' => 'timezone',
         'accountId' => 'accountId',
+        'defaultDashboard' => 'defaultDashboard',
+        'defaultProductView' => 'defaultProductView',
         'passwordExpiryDates' => 'passwordExpiryDates',
         'lastLoginDate' => 'lastLoginDate',
         'lastLoginIp' => 'lastLoginIp',
@@ -103,6 +107,8 @@ class UserData implements ArrayAccess
         'lastName' => 'setLastName',
         'timezone' => 'setTimezone',
         'accountId' => 'setAccountId',
+        'defaultDashboard' => 'setDefaultDashboard',
+        'defaultProductView' => 'setDefaultProductView',
         'passwordExpiryDates' => 'setPasswordExpiryDates',
         'lastLoginDate' => 'setLastLoginDate',
         'lastLoginIp' => 'setLastLoginIp',
@@ -122,6 +128,8 @@ class UserData implements ArrayAccess
         'lastName' => 'getLastName',
         'timezone' => 'getTimezone',
         'accountId' => 'getAccountId',
+        'defaultDashboard' => 'getDefaultDashboard',
+        'defaultProductView' => 'getDefaultProductView',
         'passwordExpiryDates' => 'getPasswordExpiryDates',
         'lastLoginDate' => 'getLastLoginDate',
         'lastLoginIp' => 'getLastLoginIp',
@@ -166,6 +174,8 @@ class UserData implements ArrayAccess
         $this->container['lastName'] = isset($data['lastName']) ? $data['lastName'] : null;
         $this->container['timezone'] = isset($data['timezone']) ? $data['timezone'] : null;
         $this->container['accountId'] = isset($data['accountId']) ? $data['accountId'] : null;
+        $this->container['defaultDashboard'] = isset($data['defaultDashboard']) ? $data['defaultDashboard'] : null;
+        $this->container['defaultProductView'] = isset($data['defaultProductView']) ? $data['defaultProductView'] : null;
         $this->container['passwordExpiryDates'] = isset($data['passwordExpiryDates']) ? $data['passwordExpiryDates'] : null;
         $this->container['lastLoginDate'] = isset($data['lastLoginDate']) ? $data['lastLoginDate'] : null;
         $this->container['lastLoginIp'] = isset($data['lastLoginIp']) ? $data['lastLoginIp'] : null;
@@ -340,6 +350,48 @@ class UserData implements ArrayAccess
     public function setAccountId($accountId)
     {
         $this->container['accountId'] = $accountId;
+
+        return $this;
+    }
+
+    /**
+     * Gets defaultDashboard
+     * @return string
+     */
+    public function getDefaultDashboard()
+    {
+        return $this->container['defaultDashboard'];
+    }
+
+    /**
+     * Sets defaultDashboard
+     * @param string $defaultDashboard
+     * @return $this
+     */
+    public function setDefaultDashboard($defaultDashboard)
+    {
+        $this->container['defaultDashboard'] = $defaultDashboard;
+
+        return $this;
+    }
+
+    /**
+     * Gets defaultProductView
+     * @return string
+     */
+    public function getDefaultProductView()
+    {
+        return $this->container['defaultProductView'];
+    }
+
+    /**
+     * Sets defaultProductView
+     * @param string $defaultProductView
+     * @return $this
+     */
+    public function setDefaultProductView($defaultProductView)
+    {
+        $this->container['defaultProductView'] = $defaultProductView;
 
         return $this;
     }

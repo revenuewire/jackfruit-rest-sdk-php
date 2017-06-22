@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * AffiliateLink
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * AffiliateLink Class Doc Comment
  *
  * @category    Class
+ * @description Affiliate Link object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ArrayAccess
+class AffiliateLink implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,16 @@ class InlineResponse200 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'AffiliateLink';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\AffiliateLink[]'
+        'url' => 'string',
+        'destinationId' => 'int',
+        'aliasId' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'url' => 'url',
+        'destinationId' => 'destinationId',
+        'aliasId' => 'aliasId'
     ];
 
 
@@ -78,8 +81,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'url' => 'setUrl',
+        'destinationId' => 'setDestinationId',
+        'aliasId' => 'setAliasId'
     ];
 
 
@@ -88,8 +92,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'url' => 'getUrl',
+        'destinationId' => 'getDestinationId',
+        'aliasId' => 'getAliasId'
     ];
 
     public static function attributeMap()
@@ -123,8 +128,9 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['destinationId'] = isset($data['destinationId']) ? $data['destinationId'] : null;
+        $this->container['aliasId'] = isset($data['aliasId']) ? $data['aliasId'] : null;
     }
 
     /**
@@ -136,11 +142,11 @@ class InlineResponse200 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        if ($this->container['url'] === null) {
+            $invalid_properties[] = "'url' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalid_properties[] = "'data' can't be null";
+        if ($this->container['destinationId'] === null) {
+            $invalid_properties[] = "'destinationId' can't be null";
         }
         return $invalid_properties;
     }
@@ -154,10 +160,10 @@ class InlineResponse200 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        if ($this->container['url'] === null) {
             return false;
         }
-        if ($this->container['data'] === null) {
+        if ($this->container['destinationId'] === null) {
             return false;
         }
         return true;
@@ -165,43 +171,64 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets url
+     * @return string
      */
-    public function getResponse()
+    public function getUrl()
     {
-        return $this->container['response'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets url
+     * @param string $url
      * @return $this
      */
-    public function setResponse($response)
+    public function setUrl($url)
     {
-        $this->container['response'] = $response;
+        $this->container['url'] = $url;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\AffiliateLink[]
+     * Gets destinationId
+     * @return int
      */
-    public function getData()
+    public function getDestinationId()
     {
-        return $this->container['data'];
+        return $this->container['destinationId'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\AffiliateLink[] $data Array containing affiliate linker links
+     * Sets destinationId
+     * @param int $destinationId
      * @return $this
      */
-    public function setData($data)
+    public function setDestinationId($destinationId)
     {
-        $this->container['data'] = $data;
+        $this->container['destinationId'] = $destinationId;
+
+        return $this;
+    }
+
+    /**
+     * Gets aliasId
+     * @return int
+     */
+    public function getAliasId()
+    {
+        return $this->container['aliasId'];
+    }
+
+    /**
+     * Sets aliasId
+     * @param int $aliasId
+     * @return $this
+     */
+    public function setAliasId($aliasId)
+    {
+        $this->container['aliasId'] = $aliasId;
 
         return $this;
     }

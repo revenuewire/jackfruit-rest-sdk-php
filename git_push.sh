@@ -18,15 +18,33 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #876 in SMP/jackfruit from feature/SMP-8782 to development
+    release_note="Merge pull request #879 in SMP/jackfruit from feature/fix-user-unittest to projects/UAC
 
 Squashed commit of the following:
 
-commit 893df5baaf08bf8399ea6144b0837cecfeb61cc6
-Author: Nick Arnoldi <narnoldi@revenuewire.com>
-Date:   Wed Jun 21 22:20:08 2017 +0700
+commit 7daa0e80f79819bc6f5b1e1e74c1ccc41befe0bb
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Thu Jun 22 15:18:53 2017 -0700
 
-    SMP-8782 PagBrazil: Recurring payment compliance"
+    Clean up the build
+
+commit 72f16571d0d5ef21198c136b649eb2befdd4a650
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Thu Jun 22 15:13:59 2017 -0700
+
+    keep fixing
+
+commit 8d8a5b1a020e973521b33a01faf935dbc8de7b54
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Thu Jun 22 14:55:28 2017 -0700
+
+    UAC: fix
+
+commit c09e75082e2b3e9466c94fc48fbe17c55911d216
+Author: Scott Wang <swang@revenuewire.com>
+Date:   Thu Jun 22 14:49:00 2017 -0700
+
+    fix unit test"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

@@ -65,20 +65,14 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingsApi();
-$billingInfoId = 56; // int | bill info id for the recurring transaction item
-$cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
-$cardNumber = "cardNumber_example"; // string | Credit Card number
-$cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
-$cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
-$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated (optional)
-$postalCode = "postalCode_example"; // string | Postal code (optional)
+$api_instance = new Swagger\Client\Api\AffiliateLinkerLinksApi();
+$catalogFid = "catalogFid_example"; // string | Offer's catalog FID
 
 try {
-    $result = $api_instance->billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode);
+    $result = $api_instance->affiliateLinksGet($catalogFid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BillingsApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AffiliateLinkerLinksApi->affiliateLinksGet: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -90,6 +84,8 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AffiliateLinkerLinksApi* | [**affiliateLinksGet**](docs/Api/AffiliateLinkerLinksApi.md#affiliatelinksget) | **GET** /affiliatelinks | 
+*AliasesApi* | [**aliasesGet**](docs/Api/AliasesApi.md#aliasesget) | **GET** /aliases | 
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
@@ -98,6 +94,10 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**customersCustomerUserIdOffersGet**](docs/Api/CustomersApi.md#customerscustomeruseridoffersget) | **GET** /customers/{customerUserId}/offers | 
 *CustomersApi* | [**customersCustomerUserIdTransactionsGet**](docs/Api/CustomersApi.md#customerscustomeruseridtransactionsget) | **GET** /customers/{customerUserId}/transactions | 
 *CustomersApi* | [**customersGet**](docs/Api/CustomersApi.md#customersget) | **GET** /customers | 
+*DestinationsApi* | [**destinationsAdd**](docs/Api/DestinationsApi.md#destinationsadd) | **POST** /destinations | 
+*DestinationsApi* | [**destinationsDelete**](docs/Api/DestinationsApi.md#destinationsdelete) | **DELETE** /destinations/{id} | 
+*DestinationsApi* | [**destinationsGet**](docs/Api/DestinationsApi.md#destinationsget) | **GET** /destinations | 
+*DestinationsApi* | [**destinationsUpdate**](docs/Api/DestinationsApi.md#destinationsupdate) | **PUT** /destinations/{id} | 
 *DomainsApi* | [**domainsDelete**](docs/Api/DomainsApi.md#domainsdelete) | **DELETE** /domains/{id} | 
 *DomainsApi* | [**domainsEmailIdDelete**](docs/Api/DomainsApi.md#domainsemailiddelete) | **DELETE** /domains/email/{id} | 
 *DomainsApi* | [**domainsEmailPost**](docs/Api/DomainsApi.md#domainsemailpost) | **POST** /domains/email | 
@@ -118,6 +118,11 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**subscriptionCancel**](docs/Api/SubscriptionsApi.md#subscriptioncancel) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
 *SubscriptionsApi* | [**subscriptionGetOffer**](docs/Api/SubscriptionsApi.md#subscriptiongetoffer) | **GET** /subscriptions/offer/{transactionItemId} | 
 *TokenApi* | [**tokenGenerate**](docs/Api/TokenApi.md#tokengenerate) | **POST** /token | 
+*TrackingsApi* | [**postbackTest**](docs/Api/TrackingsApi.md#postbacktest) | **POST** /trackings/{id}/test | 
+*TrackingsApi* | [**trackingsAdd**](docs/Api/TrackingsApi.md#trackingsadd) | **POST** /trackings | 
+*TrackingsApi* | [**trackingsDelete**](docs/Api/TrackingsApi.md#trackingsdelete) | **DELETE** /trackings/{id} | 
+*TrackingsApi* | [**trackingsGet**](docs/Api/TrackingsApi.md#trackingsget) | **GET** /trackings | 
+*TrackingsApi* | [**trackingsUpdate**](docs/Api/TrackingsApi.md#trackingsupdate) | **PUT** /trackings/{id} | 
 *UsersApi* | [**customerLogin**](docs/Api/UsersApi.md#customerlogin) | **POST** /users/login | 
 *UsersApi* | [**customerOrderLogin**](docs/Api/UsersApi.md#customerorderlogin) | **POST** /users/order-login | 
 *UsersApi* | [**customerSignup**](docs/Api/UsersApi.md#customersignup) | **POST** /users/sign-up | 
@@ -132,6 +137,9 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AffiliateLink](docs/Model/AffiliateLink.md)
+ - [Alias](docs/Model/Alias.md)
+ - [Aliases](docs/Model/Aliases.md)
  - [BillInfo](docs/Model/BillInfo.md)
  - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [Context](docs/Model/Context.md)
@@ -149,16 +157,27 @@ Class | Method | HTTP request | Description
  - [CustomerOrders](docs/Model/CustomerOrders.md)
  - [CustomerPhone](docs/Model/CustomerPhone.md)
  - [CustomerPhoneData](docs/Model/CustomerPhoneData.md)
+ - [Destination](docs/Model/Destination.md)
  - [Domain](docs/Model/Domain.md)
  - [DomainEmail](docs/Model/DomainEmail.md)
  - [DomainEmailLabel](docs/Model/DomainEmailLabel.md)
  - [Error](docs/Model/Error.md)
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
+ - [InlineResponse200](docs/Model/InlineResponse200.md)
+ - [InlineResponse2001](docs/Model/InlineResponse2001.md)
+ - [InlineResponse2002](docs/Model/InlineResponse2002.md)
+ - [InlineResponse2003](docs/Model/InlineResponse2003.md)
+ - [InlineResponse2004](docs/Model/InlineResponse2004.md)
+ - [InlineResponse2005](docs/Model/InlineResponse2005.md)
+ - [InlineResponse2006](docs/Model/InlineResponse2006.md)
+ - [InlineResponse2007](docs/Model/InlineResponse2007.md)
+ - [InlineResponse2008](docs/Model/InlineResponse2008.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [Offer](docs/Model/Offer.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
+ - [PostbackTest](docs/Model/PostbackTest.md)
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
  - [State](docs/Model/State.md)
@@ -166,6 +185,7 @@ Class | Method | HTTP request | Description
  - [SupportedLanguages](docs/Model/SupportedLanguages.md)
  - [Token](docs/Model/Token.md)
  - [TokenData](docs/Model/TokenData.md)
+ - [Tracking](docs/Model/Tracking.md)
  - [Transaction](docs/Model/Transaction.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
  - [User](docs/Model/User.md)

@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * Tracking
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * Tracking Class Doc Comment
  *
  * @category    Class
+ * @description Tracking string
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ArrayAccess
+class Tracking implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,18 @@ class InlineResponse200 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'Tracking';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\AffiliateLink[]'
+        'id' => 'string',
+        'type' => 'string',
+        'name' => 'string',
+        'isGlobal' => 'bool',
+        'data' => 'object'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +72,10 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
+        'id' => 'id',
+        'type' => 'type',
+        'name' => 'name',
+        'isGlobal' => 'isGlobal',
         'data' => 'data'
     ];
 
@@ -78,7 +85,10 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
+        'id' => 'setId',
+        'type' => 'setType',
+        'name' => 'setName',
+        'isGlobal' => 'setIsGlobal',
         'data' => 'setData'
     ];
 
@@ -88,7 +98,10 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
+        'id' => 'getId',
+        'type' => 'getType',
+        'name' => 'getName',
+        'isGlobal' => 'getIsGlobal',
         'data' => 'getData'
     ];
 
@@ -123,7 +136,10 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['isGlobal'] = isset($data['isGlobal']) ? $data['isGlobal'] : null;
         $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
@@ -136,8 +152,17 @@ class InlineResponse200 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
+        }
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
+        }
+        if ($this->container['isGlobal'] === null) {
+            $invalid_properties[] = "'isGlobal' can't be null";
         }
         if ($this->container['data'] === null) {
             $invalid_properties[] = "'data' can't be null";
@@ -154,7 +179,16 @@ class InlineResponse200 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        if ($this->container['id'] === null) {
+            return false;
+        }
+        if ($this->container['type'] === null) {
+            return false;
+        }
+        if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['isGlobal'] === null) {
             return false;
         }
         if ($this->container['data'] === null) {
@@ -165,29 +199,92 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return string
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param string $id
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets isGlobal
+     * @return bool
+     */
+    public function getIsGlobal()
+    {
+        return $this->container['isGlobal'];
+    }
+
+    /**
+     * Sets isGlobal
+     * @param bool $isGlobal
+     * @return $this
+     */
+    public function setIsGlobal($isGlobal)
+    {
+        $this->container['isGlobal'] = $isGlobal;
 
         return $this;
     }
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\AffiliateLink[]
+     * @return object
      */
     public function getData()
     {
@@ -196,7 +293,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\AffiliateLink[] $data Array containing affiliate linker links
+     * @param object $data custom object containing data specific to tracking type
      * @return $this
      */
     public function setData($data)
