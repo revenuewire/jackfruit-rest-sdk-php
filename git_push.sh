@@ -18,34 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #878 in SMP/jackfruit from feature/SMP-5921 to development
+    release_note="Merge pull request #880 in SMP/jackfruit from feature/SMP-8946 to development
 
 Squashed commit of the following:
 
-commit 25330aa63ef706767f9408a1b149119f50d3bdcb
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Fri Jun 23 08:50:59 2017 -0700
+commit bcf0c6166c5ee4a4d7aae9adc7bf2468c5879df2
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Fri Jun 23 13:28:54 2017 -0700
 
-    SMP-5921 API Refund update. Pull out paypal direct unit test again because paypal sandbox is not stable.
+    feature/SMP-8946 7 days a week fix
 
-commit 1230e36688fb2ba2ca0ff70429f2b2db6b427552
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu Jun 22 17:05:53 2017 -0700
+commit 7cedae4c54b5c4900c047e67da34c4d3480e9aa7
+Author: Guy Segal <gsegal@revenuewire.com>
+Date:   Thu Jun 22 15:09:09 2017 -0700
 
-    SMP-5921 update refund api. Enable paypal test again.
-
-commit 0d551cd433d70b739fb1aa2e213b26be05aa99d2
-Merge: 3482906 e049138
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu Jun 22 17:02:38 2017 -0700
-
-    Merge branch 'development' into feature/SMP-5921
-
-commit 3482906dfe1bf66aaedd17eb5d14b193b34e51b6
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Thu Jun 22 13:50:57 2017 -0700
-
-    SMP-5921 API Refund Interface: Selective Persist Recurring Profile if Refund Initiated"
+    feature/SMP-8946"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
