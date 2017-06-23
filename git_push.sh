@@ -18,33 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #879 in SMP/jackfruit from feature/fix-user-unittest to projects/UAC
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 7daa0e80f79819bc6f5b1e1e74c1ccc41befe0bb
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Thu Jun 22 15:18:53 2017 -0700
-
-    Clean up the build
-
-commit 72f16571d0d5ef21198c136b649eb2befdd4a650
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Thu Jun 22 15:13:59 2017 -0700
-
-    keep fixing
-
-commit 8d8a5b1a020e973521b33a01faf935dbc8de7b54
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Thu Jun 22 14:55:28 2017 -0700
-
-    UAC: fix
-
-commit c09e75082e2b3e9466c94fc48fbe17c55911d216
-Author: Scott Wang <swang@revenuewire.com>
-Date:   Thu Jun 22 14:49:00 2017 -0700
-
-    fix unit test"
+* commit 'c2768ca1abc4b13e26da734d8048c37e10d86c39':
+  Merge pull request #883 in SMP/jackfruit from UAC/SMP-8805 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
