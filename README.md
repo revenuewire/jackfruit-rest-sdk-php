@@ -85,6 +85,8 @@ All URIs are relative to *https://localhost/rest/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AffiliateLinkerLinksApi* | [**affiliateLinksGet**](docs/Api/AffiliateLinkerLinksApi.md#affiliatelinksget) | **GET** /affiliatelinks | 
+*AffiliatesApi* | [**getAffiliateById**](docs/Api/AffiliatesApi.md#getaffiliatebyid) | **GET** /affiliates/{id} | 
+*AffiliatesApi* | [**saveAffiliateById**](docs/Api/AffiliatesApi.md#saveaffiliatebyid) | **PUT** /affiliates/{id} | 
 *AliasesApi* | [**aliasesGet**](docs/Api/AliasesApi.md#aliasesget) | **GET** /aliases | 
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
@@ -137,6 +139,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AffiliateAccount](docs/Model/AffiliateAccount.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
  - [Alias](docs/Model/Alias.md)
  - [Aliases](docs/Model/Aliases.md)
@@ -173,6 +176,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2006](docs/Model/InlineResponse2006.md)
  - [InlineResponse2007](docs/Model/InlineResponse2007.md)
  - [InlineResponse2008](docs/Model/InlineResponse2008.md)
+ - [InlineResponse2009](docs/Model/InlineResponse2009.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [Offer](docs/Model/Offer.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)

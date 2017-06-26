@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2005
+ * InlineResponse2009
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2005 Class Doc Comment
+ * InlineResponse2009 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2005 implements ArrayAccess
+class InlineResponse2009 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,14 +47,15 @@ class InlineResponse2005 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_5';
+    protected static $swaggerModelName = 'inline_response_200_9';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\PostbackTest'
     ];
 
     public static function swaggerTypes()
@@ -67,7 +68,8 @@ class InlineResponse2005 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -76,7 +78,8 @@ class InlineResponse2005 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -85,7 +88,8 @@ class InlineResponse2005 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -120,6 +124,7 @@ class InlineResponse2005 implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -134,6 +139,9 @@ class InlineResponse2005 implements ArrayAccess
         if ($this->container['response'] === null) {
             $invalid_properties[] = "'response' can't be null";
         }
+        if ($this->container['data'] === null) {
+            $invalid_properties[] = "'data' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -147,6 +155,9 @@ class InlineResponse2005 implements ArrayAccess
     {
 
         if ($this->container['response'] === null) {
+            return false;
+        }
+        if ($this->container['data'] === null) {
             return false;
         }
         return true;
@@ -170,6 +181,27 @@ class InlineResponse2005 implements ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     * @return \Swagger\Client\Model\PostbackTest
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     * @param \Swagger\Client\Model\PostbackTest $data Test results
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
 
         return $this;
     }
