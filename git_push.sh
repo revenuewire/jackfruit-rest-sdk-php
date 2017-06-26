@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #888 in SMP/jackfruit from feature/SMP-8807 to development
 
-* commit '29f5d9c293b5557ef8b0c0c591d8823015ce059a':
-  Merge pull request #887 in SMP/jackfruit from feature/SMP-8968-fix-users-api to release/1-staging"
+Squashed commit of the following:
+
+commit ce17ef0cea0c6c5e4544840822bc78a1b60f7390
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Fri Jun 23 15:05:31 2017 -0700
+
+    SMP-8807 Add Time Field to the Sales API"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
