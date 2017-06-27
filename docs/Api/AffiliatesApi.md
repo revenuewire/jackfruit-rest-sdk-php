@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **getAffiliateById**
-> \Swagger\Client\Model\InlineResponse2001 getAffiliateById($id)
+> \Swagger\Client\Model\InlineResponse2002 getAffiliateById($id)
 
 
 
@@ -49,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveAffiliateById**
-> \Swagger\Client\Model\InlineResponse2001 saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince, $zipPostalCode, $gstNumber, $taxRegion)
+> \Swagger\Client\Model\InlineResponse2002 saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince, $zipPostalCode, $gstNumber, $taxRegion)
 
 
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

@@ -54,8 +54,7 @@ class InlineResponse2001 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\AffiliateAccount'
+        'response' => '\Swagger\Client\Model\Response'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +67,7 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'response' => 'response'
     ];
 
 
@@ -78,8 +76,7 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'response' => 'setResponse'
     ];
 
 
@@ -88,8 +85,7 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'response' => 'getResponse'
     ];
 
     public static function attributeMap()
@@ -124,7 +120,6 @@ class InlineResponse2001 implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -139,9 +134,6 @@ class InlineResponse2001 implements ArrayAccess
         if ($this->container['response'] === null) {
             $invalid_properties[] = "'response' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalid_properties[] = "'data' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -155,9 +147,6 @@ class InlineResponse2001 implements ArrayAccess
     {
 
         if ($this->container['response'] === null) {
-            return false;
-        }
-        if ($this->container['data'] === null) {
             return false;
         }
         return true;
@@ -181,27 +170,6 @@ class InlineResponse2001 implements ArrayAccess
     public function setResponse($response)
     {
         $this->container['response'] = $response;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     * @return \Swagger\Client\Model\AffiliateAccount
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     * @param \Swagger\Client\Model\AffiliateAccount $data
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
 
         return $this;
     }

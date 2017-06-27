@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **destinationsAdd**
-> \Swagger\Client\Model\InlineResponse2003 destinationsAdd($catalogFid, $name, $url)
+> \Swagger\Client\Model\InlineResponse2004 destinationsAdd($catalogFid, $name, $url)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destinationsDelete**
-> \Swagger\Client\Model\InlineResponse2005 destinationsDelete($id)
+> \Swagger\Client\Model\InlineResponse2001 destinationsDelete($id)
 
 
 
@@ -109,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destinationsGet**
-> \Swagger\Client\Model\InlineResponse2002 destinationsGet($catalogFid)
+> \Swagger\Client\Model\InlineResponse2003 destinationsGet($catalogFid)
 
 
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destinationsUpdate**
-> \Swagger\Client\Model\InlineResponse2004 destinationsUpdate($id, $name, $url)
+> \Swagger\Client\Model\InlineResponse2005 destinationsUpdate($id, $name, $url)
 
 
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

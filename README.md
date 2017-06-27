@@ -85,6 +85,7 @@ All URIs are relative to *https://localhost/rest/v1*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AffiliateLinkerLinksApi* | [**affiliateLinksGet**](docs/Api/AffiliateLinkerLinksApi.md#affiliatelinksget) | **GET** /affiliatelinks | 
+*AffiliateMerchantTermsApi* | [**affiliateMerchantTermsAdd**](docs/Api/AffiliateMerchantTermsApi.md#affiliatemerchanttermsadd) | **POST** /affiliatemerchantterms | 
 *AffiliatesApi* | [**getAffiliateById**](docs/Api/AffiliatesApi.md#getaffiliatebyid) | **GET** /affiliates/{id} | 
 *AffiliatesApi* | [**saveAffiliateById**](docs/Api/AffiliatesApi.md#saveaffiliatebyid) | **PUT** /affiliates/{id} | 
 *AliasesApi* | [**aliasesGet**](docs/Api/AliasesApi.md#aliasesget) | **GET** /aliases | 

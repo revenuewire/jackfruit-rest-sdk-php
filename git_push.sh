@@ -18,15 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #899 in SMP/jackfruit from feature/SMP-8732 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 8c8fa0fe22a796f4e4e3de7c0e1346c640d1b53b
-Author: Leo Shen <lshen@lshen2.revenuewire.com>
-Date:   Mon Jun 26 10:20:06 2017 -0700
-
-    SMP-8732 Function to add line items to CPA invoices"
+* commit 'a74a02c8ea49a5d0a7956170035a36d24363f133':
+  Merge pull request #893 in SMP/jackfruit from UAC/SMP-8808 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 

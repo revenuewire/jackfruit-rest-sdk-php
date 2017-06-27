@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackingsDelete**
-> \Swagger\Client\Model\InlineResponse2005 trackingsDelete($id)
+> \Swagger\Client\Model\InlineResponse2001 trackingsDelete($id)
 
 
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 

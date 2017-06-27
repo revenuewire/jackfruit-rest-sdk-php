@@ -94,7 +94,7 @@ class AffiliatesApi
      *
      * @param int $id Affiliate Id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Model\InlineResponse2002
      */
     public function getAffiliateById($id)
     {
@@ -109,7 +109,7 @@ class AffiliatesApi
      *
      * @param int $id Affiliate Id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAffiliateByIdWithHttpInfo($id)
     {
@@ -165,15 +165,15 @@ class AffiliatesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2001',
+                '\Swagger\Client\Model\InlineResponse2002',
                 '/affiliates/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -205,7 +205,7 @@ class AffiliatesApi
      * @param string $gstNumber Affiliate&#39;s Canadian gst tax number (if applicable) (optional)
      * @param string $taxRegion Affiliate&#39;s Canadian province that tax number is registered in (if applicable) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Model\InlineResponse2002
      */
     public function saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince = null, $zipPostalCode = null, $gstNumber = null, $taxRegion = null)
     {
@@ -232,7 +232,7 @@ class AffiliatesApi
      * @param string $gstNumber Affiliate&#39;s Canadian gst tax number (if applicable) (optional)
      * @param string $taxRegion Affiliate&#39;s Canadian province that tax number is registered in (if applicable) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function saveAffiliateByIdWithHttpInfo($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince = null, $zipPostalCode = null, $gstNumber = null, $taxRegion = null)
     {
@@ -368,15 +368,15 @@ class AffiliatesApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2001',
+                '\Swagger\Client\Model\InlineResponse2002',
                 '/affiliates/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2002', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2002', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
