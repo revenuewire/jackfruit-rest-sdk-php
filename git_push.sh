@@ -18,10 +18,47 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #874 in SMP/jackfruit from feature/SMP-8754 to development
 
-* commit 'def7fca7578b6eb9af8100ec3c89854ec1c1335c':
-  Merge pull request #902 in SMP/jackfruit from UAC-fixes to release/1-staging"
+Squashed commit of the following:
+
+commit 0e9c41df526f57015c87991ca4189971270f6c90
+Merge: e81e2a5 f243eb9
+Author: arook <arook@revenuewire.com>
+Date:   Tue Jun 27 11:21:08 2017 -0700
+
+    Merge branch 'development' into feature/SMP-8754
+
+    Conflicts:
+    	package.json
+
+commit e81e2a556ab0b459c7034df97012a003a7810fa9
+Author: arook <arook@revenuewire.com>
+Date:   Fri Jun 23 09:23:37 2017 -0700
+
+    SMP-8754: review fixes
+
+commit a782d619d29c1743f3cf6e59ac730c414315f1ed
+Merge: cd7189e e049138
+Author: arook <arook@revenuewire.com>
+Date:   Fri Jun 23 07:09:22 2017 -0700
+
+    Merge branch 'projects/UAC' into feature/SMP-8754
+
+    Conflicts:
+    	library/RWAPI/Revenuewire/classes/CallStreamSystem/UserPeer.php
+    	package.json
+    	react-apps/portal/components/ToastAlert.jsx
+
+commit cd7189e751b66ab131e1d418d1e4add0ba03fe0c
+Author: arook <arook@revenuewire.com>
+Date:   Thu Apr 20 16:16:46 2017 -0700
+
+    SMP-8754, SMP-6036: login page, reset password page, and forgot password page react conversion and style update
+
+    Conflicts:
+    	library/RWAPI/Revenuewire/classes/CallStreamSystem/UserPeer.php
+    	package.json"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
