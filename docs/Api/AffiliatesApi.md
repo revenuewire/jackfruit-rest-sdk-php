@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **saveAffiliateById**
-> \Swagger\Client\Model\InlineResponse2002 saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince, $zipPostalCode, $gstNumber, $taxRegion)
+> \Swagger\Client\Model\InlineResponse2002 saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $zipPostalCode, $paymentThreshold, $stateProvince, $gstNumber, $taxRegion)
 
 
 
@@ -92,14 +92,14 @@ $contactName = "contactName_example"; // string | Affiliate's company contact na
 $technicalEmail = "technicalEmail_example"; // string | Affiliate's company email address to receive system notifications from RevenueWire
 $address = "address_example"; // string | Affiliate's company address
 $city = "city_example"; // string | Affiliate's company city
+$zipPostalCode = "zipPostalCode_example"; // string | Affiliate's company postal code
 $paymentThreshold = 56; // int | Minimum amount that Affiliate wants to receive per payment
 $stateProvince = "stateProvince_example"; // string | Affiliate's company country region (if applicable for that country)
-$zipPostalCode = "zipPostalCode_example"; // string | Affiliate's company postal code
 $gstNumber = "gstNumber_example"; // string | Affiliate's Canadian gst tax number (if applicable)
 $taxRegion = "taxRegion_example"; // string | Affiliate's Canadian province that tax number is registered in (if applicable)
 
 try {
-    $result = $api_instance->saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince, $zipPostalCode, $gstNumber, $taxRegion);
+    $result = $api_instance->saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $zipPostalCode, $paymentThreshold, $stateProvince, $gstNumber, $taxRegion);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AffiliatesApi->saveAffiliateById: ', $e->getMessage(), PHP_EOL;
@@ -119,9 +119,9 @@ Name | Type | Description  | Notes
  **technicalEmail** | **string**| Affiliate&#39;s company email address to receive system notifications from RevenueWire |
  **address** | **string**| Affiliate&#39;s company address |
  **city** | **string**| Affiliate&#39;s company city |
+ **zipPostalCode** | **string**| Affiliate&#39;s company postal code |
  **paymentThreshold** | **int**| Minimum amount that Affiliate wants to receive per payment |
  **stateProvince** | **string**| Affiliate&#39;s company country region (if applicable for that country) | [optional]
- **zipPostalCode** | **string**| Affiliate&#39;s company postal code | [optional]
  **gstNumber** | **string**| Affiliate&#39;s Canadian gst tax number (if applicable) | [optional]
  **taxRegion** | **string**| Affiliate&#39;s Canadian province that tax number is registered in (if applicable) | [optional]
 

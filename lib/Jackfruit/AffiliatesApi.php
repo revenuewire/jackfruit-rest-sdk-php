@@ -199,17 +199,17 @@ class AffiliatesApi
      * @param string $technicalEmail Affiliate&#39;s company email address to receive system notifications from RevenueWire (required)
      * @param string $address Affiliate&#39;s company address (required)
      * @param string $city Affiliate&#39;s company city (required)
+     * @param string $zipPostalCode Affiliate&#39;s company postal code (required)
      * @param int $paymentThreshold Minimum amount that Affiliate wants to receive per payment (required)
      * @param string $stateProvince Affiliate&#39;s company country region (if applicable for that country) (optional)
-     * @param string $zipPostalCode Affiliate&#39;s company postal code (optional)
      * @param string $gstNumber Affiliate&#39;s Canadian gst tax number (if applicable) (optional)
      * @param string $taxRegion Affiliate&#39;s Canadian province that tax number is registered in (if applicable) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\InlineResponse2002
      */
-    public function saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince = null, $zipPostalCode = null, $gstNumber = null, $taxRegion = null)
+    public function saveAffiliateById($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $zipPostalCode, $paymentThreshold, $stateProvince = null, $gstNumber = null, $taxRegion = null)
     {
-        list($response) = $this->saveAffiliateByIdWithHttpInfo($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince, $zipPostalCode, $gstNumber, $taxRegion);
+        list($response) = $this->saveAffiliateByIdWithHttpInfo($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $zipPostalCode, $paymentThreshold, $stateProvince, $gstNumber, $taxRegion);
         return $response;
     }
 
@@ -226,15 +226,15 @@ class AffiliatesApi
      * @param string $technicalEmail Affiliate&#39;s company email address to receive system notifications from RevenueWire (required)
      * @param string $address Affiliate&#39;s company address (required)
      * @param string $city Affiliate&#39;s company city (required)
+     * @param string $zipPostalCode Affiliate&#39;s company postal code (required)
      * @param int $paymentThreshold Minimum amount that Affiliate wants to receive per payment (required)
      * @param string $stateProvince Affiliate&#39;s company country region (if applicable for that country) (optional)
-     * @param string $zipPostalCode Affiliate&#39;s company postal code (optional)
      * @param string $gstNumber Affiliate&#39;s Canadian gst tax number (if applicable) (optional)
      * @param string $taxRegion Affiliate&#39;s Canadian province that tax number is registered in (if applicable) (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function saveAffiliateByIdWithHttpInfo($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $paymentThreshold, $stateProvince = null, $zipPostalCode = null, $gstNumber = null, $taxRegion = null)
+    public function saveAffiliateByIdWithHttpInfo($id, $companyName, $website, $phone, $contactName, $technicalEmail, $address, $city, $zipPostalCode, $paymentThreshold, $stateProvince = null, $gstNumber = null, $taxRegion = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null) {
@@ -267,6 +267,10 @@ class AffiliatesApi
         // verify the required parameter 'city' is set
         if ($city === null) {
             throw new \InvalidArgumentException('Missing the required parameter $city when calling saveAffiliateById');
+        }
+        // verify the required parameter 'zipPostalCode' is set
+        if ($zipPostalCode === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $zipPostalCode when calling saveAffiliateById');
         }
         // verify the required parameter 'paymentThreshold' is set
         if ($paymentThreshold === null) {

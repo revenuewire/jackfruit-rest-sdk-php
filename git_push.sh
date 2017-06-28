@@ -18,21 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #901 in SMP/jackfruit from feature/smp-8933-filter-affiliates-from-am-sync to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit bee18b502ff2b6a9cd12508f6e9055181269cd97
-Author: stanley <sli@revenuewire.com>
-Date:   Wed Jun 28 09:21:56 2017 -0700
-
-    SMP-8933 filter private network affiliates
-
-commit 366869302aa847264dd1fecdde6b61e93b3c5480
-Author: stanley <sli@revenuewire.com>
-Date:   Wed Jun 28 09:19:42 2017 -0700
-
-    SMP-8933 filter out private network affiliates from salesforce sync"
+* commit 'def7fca7578b6eb9af8100ec3c89854ec1c1335c':
+  Merge pull request #902 in SMP/jackfruit from UAC-fixes to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
