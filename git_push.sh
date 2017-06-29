@@ -18,10 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #903 in SMP/jackfruit from feature/SMP-8651 to development
 
-* commit 'e9f4171454d692bd9dd8d596ce91034540356e33':
-  Merge pull request #910 in SMP/jackfruit from UAC-QA-fixes to release/1-staging"
+Squashed commit of the following:
+
+commit 5fd4158061fd63c843083c5f3e04d5944d9e756f
+Author: Jeff Richards <jrichards@revenuewire.com>
+Date:   Wed Jun 28 13:37:53 2017 -0700
+
+    SMP-8651 Customers having a client IP address that is an anonymous proxy are triggering a worldpay invalid address error"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
