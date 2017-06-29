@@ -18,15 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #903 in SMP/jackfruit from feature/SMP-8651 to development
+    release_note="Merge pull request #911 in SMP/jackfruit from feature/SMP-8850 to development
 
 Squashed commit of the following:
 
-commit 5fd4158061fd63c843083c5f3e04d5944d9e756f
-Author: Jeff Richards <jrichards@revenuewire.com>
-Date:   Wed Jun 28 13:37:53 2017 -0700
+commit 19ba05cbcab5940f102f2c38d002b9d48fb55ec8
+Author: Leo Shen <lshen@lshen2.revenuewire.com>
+Date:   Fri Jun 23 13:39:03 2017 -0700
 
-    SMP-8651 Customers having a client IP address that is an anonymous proxy are triggering a worldpay invalid address error"
+    SMP-8850 Duplicate Orders via WorldPay & PayPal Express"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
