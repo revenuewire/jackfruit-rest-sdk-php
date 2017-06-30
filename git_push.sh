@@ -18,10 +18,34 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #915 in SMP/jackfruit from feature/SMP-8973 to development
 
-* commit '3d582fde58e7944159d18081d117ee496630890e':
-  Merge pull request #914 in SMP/jackfruit from feature/SMP-8883-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 9bcee3a956b396caeea2bed4b4633a3112712813
+Author: arook <arook@revenuewire.com>
+Date:   Fri Jun 30 14:30:05 2017 -0700
+
+    SMP-8973: review fixes
+
+commit 104bb3c87b80cecfc36616e4c718507b7af91958
+Author: arook <arook@revenuewire.com>
+Date:   Fri Jun 30 12:40:37 2017 -0700
+
+    review fix
+
+commit be5aa16cdf6c368788d6d4b1e850380c91823b72
+Merge: 4629f1e 203e327
+Author: arook <arook@revenuewire.com>
+Date:   Fri Jun 30 12:25:41 2017 -0700
+
+    Merge branch 'development' into feature/SMP-8973
+
+commit 4629f1e4be8d509420658604c2bec2e3d68c693a
+Author: arook <arook@revenuewire.com>
+Date:   Thu Jun 29 10:19:11 2017 -0700
+
+    SMP-8973: login, forgot password, and reset password pages changes"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
