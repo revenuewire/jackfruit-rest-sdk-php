@@ -18,10 +18,30 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #930 in SMP/jackfruit from feature/SMP-8994-fix to development
 
-* commit 'bcd0d327fae7a3a18cae77933f902f3d3ee4dee4':
-  Merge pull request #926 in SMP/jackfruit from feature/SMP-8224 to release/1-staging"
+Squashed commit of the following:
+
+commit 0b5810454891a11d211b66d840b0d3fa37fc4247
+Merge: 9c8fcf1 70fd1f7
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Wed Jul 5 13:38:22 2017 -0700
+
+    SMP-8994 fix merge conflict in development
+
+commit 70fd1f7bf2c34512d2f87e38311008067508fa57
+Author: Lawrence Cabal <lcabal@revenuewire.com>
+Date:   Wed Jul 5 20:04:43 2017 +0000
+
+    Merge pull request #928 in SMP/jackfruit from feature/SMP-8994 to release/1-staging
+
+    Squashed commit of the following:
+
+    commit fc8ae611e3857cdd5b5e29ec742dc16b035dff66
+    Author: lcabal <lcabal@revenuewire.com>
+    Date:   Wed Jul 5 12:23:55 2017 -0700
+
+        SMP-8994 turn off auto complete"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
