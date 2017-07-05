@@ -18,15 +18,27 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #923 in SMP/jackfruit from feature/smp-8951-charge-back-missing to development
+    release_note="Merge pull request #916 in SMP/jackfruit from feature/SMP-8929 to development
 
 Squashed commit of the following:
 
-commit b67d7c85d4adcb72ca0a1df426cda4a406b4601b
-Author: stanley <sli@revenuewire.com>
-Date:   Tue Jul 4 14:11:31 2017 -0700
+commit 2a75def3a750a58b08050987c6e710537ce18b15
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Wed Jul 5 08:34:20 2017 -0700
 
-    SMP-8951 chargeback transactions missing"
+    SMP-8929 Code review fixes
+
+commit b1bb747d871f287dda5e47d71a6ea32de9fef40e
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Tue Jul 4 09:24:04 2017 -0700
+
+    SMP-8929 Category Level Redirect is not showing upon saving the newly created CPA offer
+
+commit 8389d260380e5237a91eb62b7d29e1afb5e32e0b
+Author: lcabal <lcabal@revenuewire.com>
+Date:   Tue Jul 4 09:21:58 2017 -0700
+
+    SMP-8929 Category Level Redirect is not showing upon saving the newly created CPA offer"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
