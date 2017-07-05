@@ -18,27 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #916 in SMP/jackfruit from feature/SMP-8929 to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit 2a75def3a750a58b08050987c6e710537ce18b15
-Author: lcabal <lcabal@revenuewire.com>
-Date:   Wed Jul 5 08:34:20 2017 -0700
-
-    SMP-8929 Code review fixes
-
-commit b1bb747d871f287dda5e47d71a6ea32de9fef40e
-Author: lcabal <lcabal@revenuewire.com>
-Date:   Tue Jul 4 09:24:04 2017 -0700
-
-    SMP-8929 Category Level Redirect is not showing upon saving the newly created CPA offer
-
-commit 8389d260380e5237a91eb62b7d29e1afb5e32e0b
-Author: lcabal <lcabal@revenuewire.com>
-Date:   Tue Jul 4 09:21:58 2017 -0700
-
-    SMP-8929 Category Level Redirect is not showing upon saving the newly created CPA offer"
+* commit '434923cd166d6a99c5b51e6f0310744172aacee2':
+  Merge pull request #925 in SMP/jackfruit from feature/SMP-8263 to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
