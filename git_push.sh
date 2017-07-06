@@ -18,7 +18,15 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Fix merge conflicts"
+    release_note="Merge pull request #927 in SMP/jackfruit from feature/SMP-8436 to development
+
+Squashed commit of the following:
+
+commit 9a6350f01c4dc25774469dd34a0ab2fec20865e2
+Author: dferguson <dferguson@revenuewire.com>
+Date:   Wed Jul 5 12:16:24 2017 -0700
+
+    SMP-8436: Fix previous month when on last day of month"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
