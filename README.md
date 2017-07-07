@@ -120,6 +120,10 @@ Class | Method | HTTP request | Description
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
 *SubscriptionsApi* | [**subscriptionCancel**](docs/Api/SubscriptionsApi.md#subscriptioncancel) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
 *SubscriptionsApi* | [**subscriptionGetOffer**](docs/Api/SubscriptionsApi.md#subscriptiongetoffer) | **GET** /subscriptions/offer/{transactionItemId} | 
+*TemplatesApi* | [**templatesGet**](docs/Api/TemplatesApi.md#templatesget) | **GET** /templates | 
+*TemplatesManagementApi* | [**templateSync**](docs/Api/TemplatesManagementApi.md#templatesync) | **POST** /templates/sync | Sync templates from cart 2.0
+*TemplatesManagementApi* | [**templatesDeploy**](docs/Api/TemplatesManagementApi.md#templatesdeploy) | **POST** /templates/deploy | Deploy templates to a new version
+*TemplatesManagementApi* | [**templatesRelease**](docs/Api/TemplatesManagementApi.md#templatesrelease) | **POST** /templates/release | Release templates
 *TokenApi* | [**tokenGenerate**](docs/Api/TokenApi.md#tokengenerate) | **POST** /token | 
 *TrackingsApi* | [**postbackTest**](docs/Api/TrackingsApi.md#postbacktest) | **POST** /trackings/{id}/test | 
 *TrackingsApi* | [**trackingsAdd**](docs/Api/TrackingsApi.md#trackingsadd) | **POST** /trackings | 
@@ -140,6 +144,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AccountTemplate](docs/Model/AccountTemplate.md)
  - [AffiliateAccount](docs/Model/AffiliateAccount.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
  - [Alias](docs/Model/Alias.md)
@@ -161,6 +166,7 @@ Class | Method | HTTP request | Description
  - [CustomerOrders](docs/Model/CustomerOrders.md)
  - [CustomerPhone](docs/Model/CustomerPhone.md)
  - [CustomerPhoneData](docs/Model/CustomerPhoneData.md)
+ - [Deployment](docs/Model/Deployment.md)
  - [Destination](docs/Model/Destination.md)
  - [Domain](docs/Model/Domain.md)
  - [DomainEmail](docs/Model/DomainEmail.md)
@@ -179,6 +185,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2008](docs/Model/InlineResponse2008.md)
  - [InlineResponse2009](docs/Model/InlineResponse2009.md)
  - [NewDomain](docs/Model/NewDomain.md)
+ - [NewTemplate](docs/Model/NewTemplate.md)
+ - [NewTemplates](docs/Model/NewTemplates.md)
  - [Offer](docs/Model/Offer.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
@@ -188,6 +196,9 @@ Class | Method | HTTP request | Description
  - [State](docs/Model/State.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)
  - [SupportedLanguages](docs/Model/SupportedLanguages.md)
+ - [TemplateDataObject](docs/Model/TemplateDataObject.md)
+ - [TemplateMediaBlock](docs/Model/TemplateMediaBlock.md)
+ - [Templates](docs/Model/Templates.md)
  - [Token](docs/Model/Token.md)
  - [TokenData](docs/Model/TokenData.md)
  - [Tracking](docs/Model/Tracking.md)
