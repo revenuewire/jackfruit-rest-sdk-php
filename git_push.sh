@@ -18,10 +18,21 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Automatic merge from release/1-staging -> development
+    release_note="Merge pull request #937 in SMP/jackfruit from feature/SMP-8616 to development
 
-* commit 'a7d7b8dee9079d11490c737f7c47489efe5d1abd':
-  Merge pull request #950 in SMP/jackfruit from feature/SMP-8907-fix to release/1-staging"
+Squashed commit of the following:
+
+commit 9f89a6ffd4c30c47314537bd0fda2e2b3c63c91a
+Author: dferguson <dferguson@revenuewire.com>
+Date:   Thu Jul 6 11:52:01 2017 -0700
+
+    SMP-8616: Revshare register QA fixes
+
+commit d278caf9eb9dec3e267060a10e660cbe9ab38515
+Author: dferguson <dferguson@revenuewire.com>
+Date:   Thu Jul 6 09:44:24 2017 -0700
+
+    SMP-8471: Revshare report qa fixes"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
