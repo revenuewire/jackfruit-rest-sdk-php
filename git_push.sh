@@ -18,15 +18,22 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #934 in SMP/jackfruit from feature/SMP-8821_chargebacks to development
+    release_note="Merge pull request #939 in SMP/jackfruit from feature/smp-7704-missing-transactions to development
 
 Squashed commit of the following:
 
-commit bd97be0a5add655925172ec2099947478a1916be
-Author: Nick Arnoldi <narnoldi@revenuewire.com>
-Date:   Thu Jul 6 13:32:16 2017 +0700
+commit f04ec6513b9890c9989a2527c37f2ad550226ba0
+Merge: 2bc98ae 60ecb13
+Author: stanley <sli@revenuewire.com>
+Date:   Mon Jul 10 12:27:38 2017 -0700
 
-    SMP-8821 Add Chargeback support, testing tools and improve ITN workflow"
+    SMP-7704 fix code conflict
+
+commit 2bc98ae79084b3f82400c63d5ab88e0a3725afa5
+Author: stanley <sli@revenuewire.com>
+Date:   Thu Jul 6 14:38:06 2017 -0700
+
+    SMP-7704 missing transactions"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
