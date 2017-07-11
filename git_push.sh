@@ -18,22 +18,10 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #939 in SMP/jackfruit from feature/smp-7704-missing-transactions to development
+    release_note="Automatic merge from release/1-staging -> development
 
-Squashed commit of the following:
-
-commit f04ec6513b9890c9989a2527c37f2ad550226ba0
-Merge: 2bc98ae 60ecb13
-Author: stanley <sli@revenuewire.com>
-Date:   Mon Jul 10 12:27:38 2017 -0700
-
-    SMP-7704 fix code conflict
-
-commit 2bc98ae79084b3f82400c63d5ab88e0a3725afa5
-Author: stanley <sli@revenuewire.com>
-Date:   Thu Jul 6 14:38:06 2017 -0700
-
-    SMP-7704 missing transactions"
+* commit 'c70993d269f53aa2a8f6dd63fea4de01ce5998ec':
+  Merge pull request #948 in SMP/jackfruit from feature/SMP-9004-new to release/1-staging"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
