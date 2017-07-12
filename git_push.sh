@@ -18,21 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="Merge pull request #941 in SMP/jackfruit from feature/SMP-8914 to development
-
-Squashed commit of the following:
-
-commit bf41a10bb5faca542ad5acd22506b81e97a25e09
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Mon Jul 10 17:15:12 2017 -0700
-
-    feature/SMP-8914
-
-commit 621c522a12989cb704f46ec648b131dba4f705cf
-Author: Guy Segal <gsegal@revenuewire.com>
-Date:   Fri Jul 7 10:42:50 2017 -0700
-
-    feature/SMP-8914"
+    release_note="Rancher: update enviroment"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
