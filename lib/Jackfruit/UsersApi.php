@@ -1021,15 +1021,19 @@ class UsersApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
 
-        // query params
-        if ($token !== null) {
-            $queryParams['token'] = $this->apiClient->getSerializer()->toQueryValue($token);
-        }
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
                 "{" . "id" . "}",
                 $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($token !== null) {
+            $resourcePath = str_replace(
+                "{" . "token" . "}",
+                $this->apiClient->getSerializer()->toPathValue($token),
                 $resourcePath
             );
         }
