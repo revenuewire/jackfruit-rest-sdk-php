@@ -872,7 +872,7 @@ class UsersApi
      * @param int $id User id (required)
      * @param string $newEmail New email address (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\User
+     * @return \Swagger\Client\Model\UpdateEmailResponse
      */
     public function userUpdateEmail($id, $newEmail)
     {
@@ -888,7 +888,7 @@ class UsersApi
      * @param int $id User id (required)
      * @param string $newEmail New email address (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UpdateEmailResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function userUpdateEmailWithHttpInfo($id, $newEmail)
     {
@@ -948,12 +948,121 @@ class UsersApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\UpdateEmailResponse',
+                '/users/{id}/update-email'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UpdateEmailResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UpdateEmailResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation userUpdateEmailConfirm
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $token Token generated when creating email update request (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\User
+     */
+    public function userUpdateEmailConfirm($id, $token)
+    {
+        list($response) = $this->userUpdateEmailConfirmWithHttpInfo($id, $token);
+        return $response;
+    }
+
+    /**
+     * Operation userUpdateEmailConfirmWithHttpInfo
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $token Token generated when creating email update request (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userUpdateEmailConfirmWithHttpInfo($id, $token)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userUpdateEmailConfirm');
+        }
+        // verify the required parameter 'token' is set
+        if ($token === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $token when calling userUpdateEmailConfirm');
+        }
+        // parse inputs
+        $resourcePath = "/users/{id}/update-email/{token}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // query params
+        if ($token !== null) {
+            $queryParams['token'] = $this->apiClient->getSerializer()->toQueryValue($token);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
                 'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
                 '\Swagger\Client\Model\User',
-                '/users/{id}/update-email'
+                '/users/{id}/update-email/{token}'
             );
 
             return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
@@ -961,6 +1070,10 @@ class UsersApi
             switch ($e->getCode()) {
                 case 200:
                     $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 405:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

@@ -11,7 +11,8 @@ Method | HTTP request | Description
 [**userGet**](UsersApi.md#userGet) | **GET** /users/{id} | 
 [**userResetPassword**](UsersApi.md#userResetPassword) | **POST** /users/reset-password | 
 [**userUpdate**](UsersApi.md#userUpdate) | **PUT** /users/{id} | 
-[**userUpdateEmail**](UsersApi.md#userUpdateEmail) | **PUT** /users/{id}/update-email | 
+[**userUpdateEmail**](UsersApi.md#userUpdateEmail) | **POST** /users/{id}/update-email | 
+[**userUpdateEmailConfirm**](UsersApi.md#userUpdateEmailConfirm) | **PUT** /users/{id}/update-email/{token} | 
 [**userUpdatePassword**](UsersApi.md#userUpdatePassword) | **PUT** /users/{id}/update-password | 
 [**userVerify**](UsersApi.md#userVerify) | **PUT** /users/verify | 
 
@@ -427,11 +428,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userUpdateEmail**
-> \Swagger\Client\Model\User userUpdateEmail($id, $newEmail)
+> \Swagger\Client\Model\UpdateEmailResponse userUpdateEmail($id, $newEmail)
 
 
 
-Change email
+request email change
 
 ### Example
 ```php
@@ -466,6 +467,62 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| User id |
  **newEmail** | **string**| New email address |
+
+### Return type
+
+[**\Swagger\Client\Model\UpdateEmailResponse**](../Model/UpdateEmailResponse.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **userUpdateEmailConfirm**
+> \Swagger\Client\Model\User userUpdateEmailConfirm($id, $token)
+
+
+
+confirm email change
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\UsersApi();
+$id = 56; // int | User id
+$token = "token_example"; // string | Token generated when creating email update request
+
+try {
+    $result = $api_instance->userUpdateEmailConfirm($id, $token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UsersApi->userUpdateEmailConfirm: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| User id |
+ **token** | **string**| Token generated when creating email update request |
 
 ### Return type
 

@@ -137,7 +137,8 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**userGet**](docs/Api/UsersApi.md#userget) | **GET** /users/{id} | 
 *UsersApi* | [**userResetPassword**](docs/Api/UsersApi.md#userresetpassword) | **POST** /users/reset-password | 
 *UsersApi* | [**userUpdate**](docs/Api/UsersApi.md#userupdate) | **PUT** /users/{id} | 
-*UsersApi* | [**userUpdateEmail**](docs/Api/UsersApi.md#userupdateemail) | **PUT** /users/{id}/update-email | 
+*UsersApi* | [**userUpdateEmail**](docs/Api/UsersApi.md#userupdateemail) | **POST** /users/{id}/update-email | 
+*UsersApi* | [**userUpdateEmailConfirm**](docs/Api/UsersApi.md#userupdateemailconfirm) | **PUT** /users/{id}/update-email/{token} | 
 *UsersApi* | [**userUpdatePassword**](docs/Api/UsersApi.md#userupdatepassword) | **PUT** /users/{id}/update-password | 
 *UsersApi* | [**userVerify**](docs/Api/UsersApi.md#userverify) | **PUT** /users/verify | 
 
@@ -204,6 +205,8 @@ Class | Method | HTTP request | Description
  - [Tracking](docs/Model/Tracking.md)
  - [Transaction](docs/Model/Transaction.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
+ - [UpdateEmailResponse](docs/Model/UpdateEmailResponse.md)
+ - [UpdateEmailResponseData](docs/Model/UpdateEmailResponseData.md)
  - [User](docs/Model/User.md)
  - [UserData](docs/Model/UserData.md)
 
