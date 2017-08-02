@@ -111,6 +111,8 @@ Class | Method | HTTP request | Description
 *DomainsApi* | [**domainsUpdate**](docs/Api/DomainsApi.md#domainsupdate) | **PUT** /domains/{id} | 
 *GEOApi* | [**geoGetCountryList**](docs/Api/GEOApi.md#geogetcountrylist) | **GET** /geo-info/countries | 
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
+*MerchantsApi* | [**createAffiliateBlock**](docs/Api/MerchantsApi.md#createaffiliateblock) | **POST** /merchants/{merchantId}/block-affiliate/ | Create merchant affiliate block
+*MerchantsApi* | [**deleteAffiliateBlock**](docs/Api/MerchantsApi.md#deleteaffiliateblock) | **DELETE** /merchants/{merchantId}/block-affiliate/{blockId}/ | Delete Merchant Affiliate Block
 *OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**ordersOrderIdGet**](docs/Api/OrdersApi.md#ordersorderidget) | **GET** /orders/{orderId} | 
 *OrdersApi* | [**ordersPurchaseLookupPost**](docs/Api/OrdersApi.md#orderspurchaselookuppost) | **POST** /orders/purchase-lookup | 
@@ -147,6 +149,8 @@ Class | Method | HTTP request | Description
 
  - [AccountTemplate](docs/Model/AccountTemplate.md)
  - [AffiliateAccount](docs/Model/AffiliateAccount.md)
+ - [AffiliateBlockObj](docs/Model/AffiliateBlockObj.md)
+ - [AffiliateBlockObjs](docs/Model/AffiliateBlockObjs.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
  - [Alias](docs/Model/Alias.md)
  - [Aliases](docs/Model/Aliases.md)
@@ -185,6 +189,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse2007](docs/Model/InlineResponse2007.md)
  - [InlineResponse2008](docs/Model/InlineResponse2008.md)
  - [InlineResponse2009](docs/Model/InlineResponse2009.md)
+ - [Merchant](docs/Model/Merchant.md)
+ - [MerchantData](docs/Model/MerchantData.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)
  - [NewTemplates](docs/Model/NewTemplates.md)
