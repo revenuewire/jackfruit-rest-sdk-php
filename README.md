@@ -150,7 +150,6 @@ Class | Method | HTTP request | Description
  - [AccountTemplate](docs/Model/AccountTemplate.md)
  - [AffiliateAccount](docs/Model/AffiliateAccount.md)
  - [AffiliateBlockObj](docs/Model/AffiliateBlockObj.md)
- - [AffiliateBlockObjs](docs/Model/AffiliateBlockObjs.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
  - [Alias](docs/Model/Alias.md)
  - [Aliases](docs/Model/Aliases.md)

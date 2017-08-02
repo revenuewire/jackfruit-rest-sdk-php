@@ -57,7 +57,7 @@ class MerchantData implements ArrayAccess
         'merchantId' => 'int',
         'merchantName' => 'string',
         'merchantFid' => 'string',
-        'blockedAffiliates' => '\Swagger\Client\Model\AffiliateBlockObjs'
+        'blockedAffiliates' => '\Swagger\Client\Model\AffiliateBlockObj[]'
     ];
 
     public static function swaggerTypes()
@@ -227,7 +227,7 @@ class MerchantData implements ArrayAccess
 
     /**
      * Gets blockedAffiliates
-     * @return \Swagger\Client\Model\AffiliateBlockObjs
+     * @return \Swagger\Client\Model\AffiliateBlockObj[]
      */
     public function getBlockedAffiliates()
     {
@@ -236,7 +236,7 @@ class MerchantData implements ArrayAccess
 
     /**
      * Sets blockedAffiliates
-     * @param \Swagger\Client\Model\AffiliateBlockObjs $blockedAffiliates
+     * @param \Swagger\Client\Model\AffiliateBlockObj[] $blockedAffiliates
      * @return $this
      */
     public function setBlockedAffiliates($blockedAffiliates)
