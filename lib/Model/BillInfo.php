@@ -66,9 +66,10 @@ class BillInfo implements ArrayAccess
         'billingAddressName' => 'string',
         'billingAddressAddress' => 'string',
         'billingAddressAddress2' => 'string',
+        'billingAddressCity' => 'string',
         'billingAddressPostalCode' => 'string',
-        'billingAddressRegionCode' => 'string',
-        'billingAddressCountryCode' => 'string'
+        'billingAddressCountryCode' => 'string',
+        'billingAddressRegionCode' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -92,9 +93,10 @@ class BillInfo implements ArrayAccess
         'billingAddressName' => 'billingAddressName',
         'billingAddressAddress' => 'billingAddressAddress',
         'billingAddressAddress2' => 'billingAddressAddress2',
+        'billingAddressCity' => 'billingAddressCity',
         'billingAddressPostalCode' => 'billingAddressPostalCode',
-        'billingAddressRegionCode' => 'billingAddressRegionCode',
-        'billingAddressCountryCode' => 'billingAddressCountryCode'
+        'billingAddressCountryCode' => 'billingAddressCountryCode',
+        'billingAddressRegionCode' => 'billingAddressRegionCode'
     ];
 
 
@@ -114,9 +116,10 @@ class BillInfo implements ArrayAccess
         'billingAddressName' => 'setBillingAddressName',
         'billingAddressAddress' => 'setBillingAddressAddress',
         'billingAddressAddress2' => 'setBillingAddressAddress2',
+        'billingAddressCity' => 'setBillingAddressCity',
         'billingAddressPostalCode' => 'setBillingAddressPostalCode',
-        'billingAddressRegionCode' => 'setBillingAddressRegionCode',
-        'billingAddressCountryCode' => 'setBillingAddressCountryCode'
+        'billingAddressCountryCode' => 'setBillingAddressCountryCode',
+        'billingAddressRegionCode' => 'setBillingAddressRegionCode'
     ];
 
 
@@ -136,9 +139,10 @@ class BillInfo implements ArrayAccess
         'billingAddressName' => 'getBillingAddressName',
         'billingAddressAddress' => 'getBillingAddressAddress',
         'billingAddressAddress2' => 'getBillingAddressAddress2',
+        'billingAddressCity' => 'getBillingAddressCity',
         'billingAddressPostalCode' => 'getBillingAddressPostalCode',
-        'billingAddressRegionCode' => 'getBillingAddressRegionCode',
-        'billingAddressCountryCode' => 'getBillingAddressCountryCode'
+        'billingAddressCountryCode' => 'getBillingAddressCountryCode',
+        'billingAddressRegionCode' => 'getBillingAddressRegionCode'
     ];
 
     public static function attributeMap()
@@ -183,9 +187,10 @@ class BillInfo implements ArrayAccess
         $this->container['billingAddressName'] = isset($data['billingAddressName']) ? $data['billingAddressName'] : null;
         $this->container['billingAddressAddress'] = isset($data['billingAddressAddress']) ? $data['billingAddressAddress'] : null;
         $this->container['billingAddressAddress2'] = isset($data['billingAddressAddress2']) ? $data['billingAddressAddress2'] : null;
+        $this->container['billingAddressCity'] = isset($data['billingAddressCity']) ? $data['billingAddressCity'] : null;
         $this->container['billingAddressPostalCode'] = isset($data['billingAddressPostalCode']) ? $data['billingAddressPostalCode'] : null;
-        $this->container['billingAddressRegionCode'] = isset($data['billingAddressRegionCode']) ? $data['billingAddressRegionCode'] : null;
         $this->container['billingAddressCountryCode'] = isset($data['billingAddressCountryCode']) ? $data['billingAddressCountryCode'] : null;
+        $this->container['billingAddressRegionCode'] = isset($data['billingAddressRegionCode']) ? $data['billingAddressRegionCode'] : null;
     }
 
     /**
@@ -445,6 +450,27 @@ class BillInfo implements ArrayAccess
     }
 
     /**
+     * Gets billingAddressCity
+     * @return string
+     */
+    public function getBillingAddressCity()
+    {
+        return $this->container['billingAddressCity'];
+    }
+
+    /**
+     * Sets billingAddressCity
+     * @param string $billingAddressCity
+     * @return $this
+     */
+    public function setBillingAddressCity($billingAddressCity)
+    {
+        $this->container['billingAddressCity'] = $billingAddressCity;
+
+        return $this;
+    }
+
+    /**
      * Gets billingAddressPostalCode
      * @return string
      */
@@ -466,27 +492,6 @@ class BillInfo implements ArrayAccess
     }
 
     /**
-     * Gets billingAddressRegionCode
-     * @return string
-     */
-    public function getBillingAddressRegionCode()
-    {
-        return $this->container['billingAddressRegionCode'];
-    }
-
-    /**
-     * Sets billingAddressRegionCode
-     * @param string $billingAddressRegionCode
-     * @return $this
-     */
-    public function setBillingAddressRegionCode($billingAddressRegionCode)
-    {
-        $this->container['billingAddressRegionCode'] = $billingAddressRegionCode;
-
-        return $this;
-    }
-
-    /**
      * Gets billingAddressCountryCode
      * @return string
      */
@@ -503,6 +508,27 @@ class BillInfo implements ArrayAccess
     public function setBillingAddressCountryCode($billingAddressCountryCode)
     {
         $this->container['billingAddressCountryCode'] = $billingAddressCountryCode;
+
+        return $this;
+    }
+
+    /**
+     * Gets billingAddressRegionCode
+     * @return string
+     */
+    public function getBillingAddressRegionCode()
+    {
+        return $this->container['billingAddressRegionCode'];
+    }
+
+    /**
+     * Sets billingAddressRegionCode
+     * @param string $billingAddressRegionCode
+     * @return $this
+     */
+    public function setBillingAddressRegionCode($billingAddressRegionCode)
+    {
+        $this->container['billingAddressRegionCode'] = $billingAddressRegionCode;
 
         return $this;
     }

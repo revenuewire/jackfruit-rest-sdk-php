@@ -93,12 +93,12 @@ class BillingsApi
      * 
      *
      * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $cardHolderFullName Card&#39;s holder full name (required)
+     * @param string $cardHolderFullName Card holder full name (required)
      * @param string $cardNumber Credit Card number (required)
      * @param string $cardExpiry Credit Card expiry (required)
-     * @param string $cardCCV Credit CCV (optional) (optional)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional) (optional)
-     * @param string $postalCode Postal code (optional) (optional)
+     * @param string $cardCCV Credit CCV (optional)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
+     * @param string $postalCode Postal code (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BillInfoResponse
      */
@@ -114,12 +114,12 @@ class BillingsApi
      * 
      *
      * @param int $billingInfoId bill info id for the recurring transaction item (required)
-     * @param string $cardHolderFullName Card&#39;s holder full name (required)
+     * @param string $cardHolderFullName Card holder full name (required)
      * @param string $cardNumber Credit Card number (required)
      * @param string $cardExpiry Credit Card expiry (required)
-     * @param string $cardCCV Credit CCV (optional) (optional)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional) (optional)
-     * @param string $postalCode Postal code (optional) (optional)
+     * @param string $cardCCV Credit CCV (optional)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
+     * @param string $postalCode Postal code (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BillInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
@@ -336,14 +336,14 @@ class BillingsApi
      *
      * 
      *
-     * @param string $billingInfoId billing info id (required)
-     * @param string $returnUrl return url if everything goes well in paypal website (optional)
-     * @param string $cancelUrl cancel url if customer click cancel button in paypal website (optional)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional) (optional)
+     * @param int $billingInfoId billing info id (required)
+     * @param string $returnUrl return url if everything goes well in paypal website (required)
+     * @param string $cancelUrl cancel url if customer click cancel button in paypal website (required)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\PaypalUrl
      */
-    public function setUpPaypalUrl($billingInfoId, $returnUrl = null, $cancelUrl = null, $recurringTransactionItemId = null)
+    public function setUpPaypalUrl($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId = null)
     {
         list($response) = $this->setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId);
         return $response;
@@ -354,18 +354,26 @@ class BillingsApi
      *
      * 
      *
-     * @param string $billingInfoId billing info id (required)
-     * @param string $returnUrl return url if everything goes well in paypal website (optional)
-     * @param string $cancelUrl cancel url if customer click cancel button in paypal website (optional)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional) (optional)
+     * @param int $billingInfoId billing info id (required)
+     * @param string $returnUrl return url if everything goes well in paypal website (required)
+     * @param string $cancelUrl cancel url if customer click cancel button in paypal website (required)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\PaypalUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl = null, $cancelUrl = null, $recurringTransactionItemId = null)
+    public function setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId = null)
     {
         // verify the required parameter 'billingInfoId' is set
         if ($billingInfoId === null) {
             throw new \InvalidArgumentException('Missing the required parameter $billingInfoId when calling setUpPaypalUrl');
+        }
+        // verify the required parameter 'returnUrl' is set
+        if ($returnUrl === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $returnUrl when calling setUpPaypalUrl');
+        }
+        // verify the required parameter 'cancelUrl' is set
+        if ($cancelUrl === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cancelUrl when calling setUpPaypalUrl');
         }
         // parse inputs
         $resourcePath = "/billings/{billingInfoId}/setup-paypal-url";

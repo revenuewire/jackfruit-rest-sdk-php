@@ -32,12 +32,12 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 
 $api_instance = new Swagger\Client\Api\BillingsApi();
 $billingInfoId = 56; // int | bill info id for the recurring transaction item
-$cardHolderFullName = "cardHolderFullName_example"; // string | Card's holder full name
+$cardHolderFullName = "cardHolderFullName_example"; // string | Card holder full name
 $cardNumber = "cardNumber_example"; // string | Credit Card number
 $cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
-$cardCCV = "cardCCV_example"; // string | Credit CCV (optional)
-$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated (optional)
-$postalCode = "postalCode_example"; // string | Postal code (optional)
+$cardCCV = "cardCCV_example"; // string | Credit CCV
+$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated
+$postalCode = "postalCode_example"; // string | Postal code
 
 try {
     $result = $api_instance->billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode);
@@ -53,12 +53,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **billingInfoId** | **int**| bill info id for the recurring transaction item |
- **cardHolderFullName** | **string**| Card&#39;s holder full name |
+ **cardHolderFullName** | **string**| Card holder full name |
  **cardNumber** | **string**| Credit Card number |
  **cardExpiry** | **string**| Credit Card expiry |
- **cardCCV** | **string**| Credit CCV (optional) | [optional]
- **recurringTransactionItemId** | **string**| recurring transaction item to be updated (optional) | [optional]
- **postalCode** | **string**| Postal code (optional) | [optional]
+ **cardCCV** | **string**| Credit CCV | [optional]
+ **recurringTransactionItemId** | **string**| recurring transaction item to be updated | [optional]
+ **postalCode** | **string**| Postal code | [optional]
 
 ### Return type
 
@@ -153,10 +153,10 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\BillingsApi();
-$billingInfoId = "billingInfoId_example"; // string | billing info id
+$billingInfoId = 56; // int | billing info id
 $returnUrl = "returnUrl_example"; // string | return url if everything goes well in paypal website
 $cancelUrl = "cancelUrl_example"; // string | cancel url if customer click cancel button in paypal website
-$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated (optional)
+$recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated
 
 try {
     $result = $api_instance->setUpPaypalUrl($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId);
@@ -171,10 +171,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **billingInfoId** | **string**| billing info id |
- **returnUrl** | **string**| return url if everything goes well in paypal website | [optional]
- **cancelUrl** | **string**| cancel url if customer click cancel button in paypal website | [optional]
- **recurringTransactionItemId** | **string**| recurring transaction item to be updated (optional) | [optional]
+ **billingInfoId** | **int**| billing info id |
+ **returnUrl** | **string**| return url if everything goes well in paypal website |
+ **cancelUrl** | **string**| cancel url if customer click cancel button in paypal website |
+ **recurringTransactionItemId** | **string**| recurring transaction item to be updated | [optional]
 
 ### Return type
 

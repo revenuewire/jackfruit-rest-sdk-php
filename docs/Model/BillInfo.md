@@ -14,9 +14,10 @@ Name | Type | Description | Notes
 **billingAddressName** | **string** |  | [optional] 
 **billingAddressAddress** | **string** |  | [optional] 
 **billingAddressAddress2** | **string** |  | [optional] 
+**billingAddressCity** | **string** |  | [optional] 
 **billingAddressPostalCode** | **string** |  | [optional] 
-**billingAddressRegionCode** | **string** |  | [optional] 
 **billingAddressCountryCode** | **string** |  | [optional] 
+**billingAddressRegionCode** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
