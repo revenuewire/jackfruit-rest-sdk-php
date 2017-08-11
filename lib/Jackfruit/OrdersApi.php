@@ -88,36 +88,135 @@ class OrdersApi
     }
 
     /**
-     * Operation ordersCustomerEmailEmailGet
+     * Operation getOrderDetail
      *
      * 
      *
-     * @param string $email Customer email (required)
-     * @param string $merchantFid Merchant fid (optional) (optional)
+     * @param int $orderId Order id (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\CustomerOrders[]
+     * @return \Swagger\Client\Model\OrderDetails
      */
-    public function ordersCustomerEmailEmailGet($email, $merchantFid = null)
+    public function getOrderDetail($orderId)
     {
-        list($response) = $this->ordersCustomerEmailEmailGetWithHttpInfo($email, $merchantFid);
+        list($response) = $this->getOrderDetailWithHttpInfo($orderId);
         return $response;
     }
 
     /**
-     * Operation ordersCustomerEmailEmailGetWithHttpInfo
+     * Operation getOrderDetailWithHttpInfo
+     *
+     * 
+     *
+     * @param int $orderId Order id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\OrderDetails, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getOrderDetailWithHttpInfo($orderId)
+    {
+        // verify the required parameter 'orderId' is set
+        if ($orderId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $orderId when calling getOrderDetail');
+        }
+        // parse inputs
+        $resourcePath = "/orders/{orderId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // path params
+        if ($orderId !== null) {
+            $resourcePath = str_replace(
+                "{" . "orderId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($orderId),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\OrderDetails',
+                '/orders/{orderId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\OrderDetails', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\OrderDetails', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getOrderList
      *
      * 
      *
      * @param string $email Customer email (required)
-     * @param string $merchantFid Merchant fid (optional) (optional)
+     * @param string $merchantFid Merchant fid (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\CustomerOrders[], HTTP status code, HTTP response headers (array of strings)
+     * @return \Swagger\Client\Model\ListOrders
      */
-    public function ordersCustomerEmailEmailGetWithHttpInfo($email, $merchantFid = null)
+    public function getOrderList($email, $merchantFid = null)
+    {
+        list($response) = $this->getOrderListWithHttpInfo($email, $merchantFid);
+        return $response;
+    }
+
+    /**
+     * Operation getOrderListWithHttpInfo
+     *
+     * 
+     *
+     * @param string $email Customer email (required)
+     * @param string $merchantFid Merchant fid (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\ListOrders, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getOrderListWithHttpInfo($email, $merchantFid = null)
     {
         // verify the required parameter 'email' is set
         if ($email === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email when calling ordersCustomerEmailEmailGet');
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling getOrderList');
         }
         // parse inputs
         $resourcePath = "/orders/customer-email/{email}";
@@ -171,15 +270,15 @@ class OrdersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\CustomerOrders[]',
+                '\Swagger\Client\Model\ListOrders',
                 '/orders/customer-email/{email}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CustomerOrders[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ListOrders', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CustomerOrders[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ListOrders', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -193,133 +292,36 @@ class OrdersApi
     }
 
     /**
-     * Operation ordersOrderIdGet
+     * Operation orderLookUp
      *
      * 
      *
-     * @param int $orderId Order id (required)
+     * @param string $email customer email (required)
+     * @param string $merchantFid merchant fid (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Transaction[]
+     * @return \Swagger\Client\Model\OrderLookUpRes
      */
-    public function ordersOrderIdGet($orderId)
+    public function orderLookUp($email, $merchantFid = null)
     {
-        list($response) = $this->ordersOrderIdGetWithHttpInfo($orderId);
+        list($response) = $this->orderLookUpWithHttpInfo($email, $merchantFid);
         return $response;
     }
 
     /**
-     * Operation ordersOrderIdGetWithHttpInfo
+     * Operation orderLookUpWithHttpInfo
      *
      * 
      *
-     * @param int $orderId Order id (required)
+     * @param string $email customer email (required)
+     * @param string $merchantFid merchant fid (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Transaction[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\OrderLookUpRes, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ordersOrderIdGetWithHttpInfo($orderId)
-    {
-        // verify the required parameter 'orderId' is set
-        if ($orderId === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $orderId when calling ordersOrderIdGet');
-        }
-        // parse inputs
-        $resourcePath = "/orders/{orderId}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
-
-        // path params
-        if ($orderId !== null) {
-            $resourcePath = str_replace(
-                "{" . "orderId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($orderId),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-API-KEY'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'GET',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\Transaction[]',
-                '/orders/{orderId}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Transaction[]', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Transaction[]', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation ordersPurchaseLookupPost
-     *
-     * 
-     *
-     * @param string $email email (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Response[]
-     */
-    public function ordersPurchaseLookupPost($email)
-    {
-        list($response) = $this->ordersPurchaseLookupPostWithHttpInfo($email);
-        return $response;
-    }
-
-    /**
-     * Operation ordersPurchaseLookupPostWithHttpInfo
-     *
-     * 
-     *
-     * @param string $email email (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Response[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function ordersPurchaseLookupPostWithHttpInfo($email)
+    public function orderLookUpWithHttpInfo($email, $merchantFid = null)
     {
         // verify the required parameter 'email' is set
         if ($email === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $email when calling ordersPurchaseLookupPost');
+            throw new \InvalidArgumentException('Missing the required parameter $email when calling orderLookUp');
         }
         // parse inputs
         $resourcePath = "/orders/purchase-lookup";
@@ -331,7 +333,7 @@ class OrdersApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['multipart/form-data']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -339,6 +341,10 @@ class OrdersApi
         // form params
         if ($email !== null) {
             $formParams['email'] = $this->apiClient->getSerializer()->toFormValue($email);
+        }
+        // form params
+        if ($merchantFid !== null) {
+            $formParams['merchantFid'] = $this->apiClient->getSerializer()->toFormValue($merchantFid);
         }
         
         // for model (json/xml)
@@ -365,15 +371,15 @@ class OrdersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Response[]',
+                '\Swagger\Client\Model\OrderLookUpRes',
                 '/orders/purchase-lookup'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\OrderLookUpRes', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\OrderLookUpRes', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

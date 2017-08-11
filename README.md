@@ -113,9 +113,9 @@ Class | Method | HTTP request | Description
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
 *MerchantsApi* | [**createAffiliateBlock**](docs/Api/MerchantsApi.md#createaffiliateblock) | **POST** /merchants/{merchantId}/block-affiliate/ | Create merchant affiliate block
 *MerchantsApi* | [**deleteAffiliateBlock**](docs/Api/MerchantsApi.md#deleteaffiliateblock) | **DELETE** /merchants/{merchantId}/block-affiliate/{blockId}/ | Delete Merchant Affiliate Block
-*OrdersApi* | [**ordersCustomerEmailEmailGet**](docs/Api/OrdersApi.md#orderscustomeremailemailget) | **GET** /orders/customer-email/{email} | 
-*OrdersApi* | [**ordersOrderIdGet**](docs/Api/OrdersApi.md#ordersorderidget) | **GET** /orders/{orderId} | 
-*OrdersApi* | [**ordersPurchaseLookupPost**](docs/Api/OrdersApi.md#orderspurchaselookuppost) | **POST** /orders/purchase-lookup | 
+*OrdersApi* | [**getOrderDetail**](docs/Api/OrdersApi.md#getorderdetail) | **GET** /orders/{orderId} | 
+*OrdersApi* | [**getOrderList**](docs/Api/OrdersApi.md#getorderlist) | **GET** /orders/customer-email/{email} | 
+*OrdersApi* | [**orderLookUp**](docs/Api/OrdersApi.md#orderlookup) | **POST** /orders/purchase-lookup | 
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
@@ -167,7 +167,6 @@ Class | Method | HTTP request | Description
  - [CustomerOffersRecurringTransactionItem](docs/Model/CustomerOffersRecurringTransactionItem.md)
  - [CustomerOffersTransactionItem](docs/Model/CustomerOffersTransactionItem.md)
  - [CustomerOrder](docs/Model/CustomerOrder.md)
- - [CustomerOrders](docs/Model/CustomerOrders.md)
  - [CustomerPhone](docs/Model/CustomerPhone.md)
  - [CustomerPhoneData](docs/Model/CustomerPhoneData.md)
  - [Deployment](docs/Model/Deployment.md)
@@ -188,12 +187,17 @@ Class | Method | HTTP request | Description
  - [InlineResponse2007](docs/Model/InlineResponse2007.md)
  - [InlineResponse2008](docs/Model/InlineResponse2008.md)
  - [InlineResponse2009](docs/Model/InlineResponse2009.md)
+ - [ListOrders](docs/Model/ListOrders.md)
+ - [ListOrdersData](docs/Model/ListOrdersData.md)
  - [Merchant](docs/Model/Merchant.md)
  - [MerchantData](docs/Model/MerchantData.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)
  - [NewTemplates](docs/Model/NewTemplates.md)
  - [Offer](docs/Model/Offer.md)
+ - [OrderDetails](docs/Model/OrderDetails.md)
+ - [OrderDetailsData](docs/Model/OrderDetailsData.md)
+ - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [PostbackTest](docs/Model/PostbackTest.md)

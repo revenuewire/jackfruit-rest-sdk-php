@@ -1,6 +1,6 @@
 <?php
 /**
- * TransactionItem
+ * OrderDetailsData
  *
  * PHP version 5
  *
@@ -32,15 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * TransactionItem Class Doc Comment
+ * OrderDetailsData Class Doc Comment
  *
  * @category    Class
- * @description Transaction Item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TransactionItem implements ArrayAccess
+class OrderDetailsData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +47,7 @@ class TransactionItem implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'TransactionItem';
+    protected static $swaggerModelName = 'OrderDetails_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,14 +55,9 @@ class TransactionItem implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'sku' => 'string',
-        'productName' => 'string',
-        'quantity' => 'int',
-        'price' => 'float',
-        'priceTax' => 'float',
-        'usdPrice' => 'float',
-        'usdPriceTax' => 'float',
-        'image' => 'string'
+        'reference' => 'string',
+        'created' => 'string',
+        'transactions' => '\Swagger\Client\Model\Transaction[]'
     ];
 
     public static function swaggerTypes()
@@ -77,14 +71,9 @@ class TransactionItem implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'sku' => 'sku',
-        'productName' => 'productName',
-        'quantity' => 'quantity',
-        'price' => 'price',
-        'priceTax' => 'priceTax',
-        'usdPrice' => 'usdPrice',
-        'usdPriceTax' => 'usdPriceTax',
-        'image' => 'image'
+        'reference' => 'reference',
+        'created' => 'created',
+        'transactions' => 'transactions'
     ];
 
 
@@ -94,14 +83,9 @@ class TransactionItem implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'sku' => 'setSku',
-        'productName' => 'setProductName',
-        'quantity' => 'setQuantity',
-        'price' => 'setPrice',
-        'priceTax' => 'setPriceTax',
-        'usdPrice' => 'setUsdPrice',
-        'usdPriceTax' => 'setUsdPriceTax',
-        'image' => 'setImage'
+        'reference' => 'setReference',
+        'created' => 'setCreated',
+        'transactions' => 'setTransactions'
     ];
 
 
@@ -111,14 +95,9 @@ class TransactionItem implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'sku' => 'getSku',
-        'productName' => 'getProductName',
-        'quantity' => 'getQuantity',
-        'price' => 'getPrice',
-        'priceTax' => 'getPriceTax',
-        'usdPrice' => 'getUsdPrice',
-        'usdPriceTax' => 'getUsdPriceTax',
-        'image' => 'getImage'
+        'reference' => 'getReference',
+        'created' => 'getCreated',
+        'transactions' => 'getTransactions'
     ];
 
     public static function attributeMap()
@@ -153,14 +132,9 @@ class TransactionItem implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['sku'] = isset($data['sku']) ? $data['sku'] : null;
-        $this->container['productName'] = isset($data['productName']) ? $data['productName'] : null;
-        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
-        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
-        $this->container['priceTax'] = isset($data['priceTax']) ? $data['priceTax'] : null;
-        $this->container['usdPrice'] = isset($data['usdPrice']) ? $data['usdPrice'] : null;
-        $this->container['usdPriceTax'] = isset($data['usdPriceTax']) ? $data['usdPriceTax'] : null;
-        $this->container['image'] = isset($data['image']) ? $data['image'] : null;
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
+        $this->container['created'] = isset($data['created']) ? $data['created'] : null;
+        $this->container['transactions'] = isset($data['transactions']) ? $data['transactions'] : null;
     }
 
     /**
@@ -199,7 +173,7 @@ class TransactionItem implements ArrayAccess
 
     /**
      * Sets id
-     * @param int $id Transaction Item Id
+     * @param int $id
      * @return $this
      */
     public function setId($id)
@@ -210,169 +184,64 @@ class TransactionItem implements ArrayAccess
     }
 
     /**
-     * Gets sku
+     * Gets reference
      * @return string
      */
-    public function getSku()
+    public function getReference()
     {
-        return $this->container['sku'];
+        return $this->container['reference'];
     }
 
     /**
-     * Sets sku
-     * @param string $sku
+     * Sets reference
+     * @param string $reference
      * @return $this
      */
-    public function setSku($sku)
+    public function setReference($reference)
     {
-        $this->container['sku'] = $sku;
+        $this->container['reference'] = $reference;
 
         return $this;
     }
 
     /**
-     * Gets productName
+     * Gets created
      * @return string
      */
-    public function getProductName()
+    public function getCreated()
     {
-        return $this->container['productName'];
+        return $this->container['created'];
     }
 
     /**
-     * Sets productName
-     * @param string $productName
+     * Sets created
+     * @param string $created
      * @return $this
      */
-    public function setProductName($productName)
+    public function setCreated($created)
     {
-        $this->container['productName'] = $productName;
+        $this->container['created'] = $created;
 
         return $this;
     }
 
     /**
-     * Gets quantity
-     * @return int
+     * Gets transactions
+     * @return \Swagger\Client\Model\Transaction[]
      */
-    public function getQuantity()
+    public function getTransactions()
     {
-        return $this->container['quantity'];
+        return $this->container['transactions'];
     }
 
     /**
-     * Sets quantity
-     * @param int $quantity
+     * Sets transactions
+     * @param \Swagger\Client\Model\Transaction[] $transactions
      * @return $this
      */
-    public function setQuantity($quantity)
+    public function setTransactions($transactions)
     {
-        $this->container['quantity'] = $quantity;
-
-        return $this;
-    }
-
-    /**
-     * Gets price
-     * @return float
-     */
-    public function getPrice()
-    {
-        return $this->container['price'];
-    }
-
-    /**
-     * Sets price
-     * @param float $price
-     * @return $this
-     */
-    public function setPrice($price)
-    {
-        $this->container['price'] = $price;
-
-        return $this;
-    }
-
-    /**
-     * Gets priceTax
-     * @return float
-     */
-    public function getPriceTax()
-    {
-        return $this->container['priceTax'];
-    }
-
-    /**
-     * Sets priceTax
-     * @param float $priceTax
-     * @return $this
-     */
-    public function setPriceTax($priceTax)
-    {
-        $this->container['priceTax'] = $priceTax;
-
-        return $this;
-    }
-
-    /**
-     * Gets usdPrice
-     * @return float
-     */
-    public function getUsdPrice()
-    {
-        return $this->container['usdPrice'];
-    }
-
-    /**
-     * Sets usdPrice
-     * @param float $usdPrice
-     * @return $this
-     */
-    public function setUsdPrice($usdPrice)
-    {
-        $this->container['usdPrice'] = $usdPrice;
-
-        return $this;
-    }
-
-    /**
-     * Gets usdPriceTax
-     * @return float
-     */
-    public function getUsdPriceTax()
-    {
-        return $this->container['usdPriceTax'];
-    }
-
-    /**
-     * Sets usdPriceTax
-     * @param float $usdPriceTax
-     * @return $this
-     */
-    public function setUsdPriceTax($usdPriceTax)
-    {
-        $this->container['usdPriceTax'] = $usdPriceTax;
-
-        return $this;
-    }
-
-    /**
-     * Gets image
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->container['image'];
-    }
-
-    /**
-     * Sets image
-     * @param string $image
-     * @return $this
-     */
-    public function setImage($image)
-    {
-        $this->container['image'] = $image;
+        $this->container['transactions'] = $transactions;
 
         return $this;
     }

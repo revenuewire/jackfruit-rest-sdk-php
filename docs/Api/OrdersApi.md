@@ -4,13 +4,67 @@ All URIs are relative to *https://localhost/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ordersCustomerEmailEmailGet**](OrdersApi.md#ordersCustomerEmailEmailGet) | **GET** /orders/customer-email/{email} | 
-[**ordersOrderIdGet**](OrdersApi.md#ordersOrderIdGet) | **GET** /orders/{orderId} | 
-[**ordersPurchaseLookupPost**](OrdersApi.md#ordersPurchaseLookupPost) | **POST** /orders/purchase-lookup | 
+[**getOrderDetail**](OrdersApi.md#getOrderDetail) | **GET** /orders/{orderId} | 
+[**getOrderList**](OrdersApi.md#getOrderList) | **GET** /orders/customer-email/{email} | 
+[**orderLookUp**](OrdersApi.md#orderLookUp) | **POST** /orders/purchase-lookup | 
 
 
-# **ordersCustomerEmailEmailGet**
-> \Swagger\Client\Model\CustomerOrders[] ordersCustomerEmailEmailGet($email, $merchantFid)
+# **getOrderDetail**
+> \Swagger\Client\Model\OrderDetails getOrderDetail($orderId)
+
+
+
+Get this order info and transactions of this order
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\OrdersApi();
+$orderId = 56; // int | Order id
+
+try {
+    $result = $api_instance->getOrderDetail($orderId);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersApi->getOrderDetail: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int**| Order id |
+
+### Return type
+
+[**\Swagger\Client\Model\OrderDetails**](../Model/OrderDetails.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getOrderList**
+> \Swagger\Client\Model\ListOrders getOrderList($email, $merchantFid)
 
 
 
@@ -32,13 +86,13 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 
 $api_instance = new Swagger\Client\Api\OrdersApi();
 $email = "email_example"; // string | Customer email
-$merchantFid = "merchantFid_example"; // string | Merchant fid (optional)
+$merchantFid = "merchantFid_example"; // string | Merchant fid
 
 try {
-    $result = $api_instance->ordersCustomerEmailEmailGet($email, $merchantFid);
+    $result = $api_instance->getOrderList($email, $merchantFid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->ordersCustomerEmailEmailGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->getOrderList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -48,11 +102,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **email** | **string**| Customer email |
- **merchantFid** | **string**| Merchant fid (optional) | [optional]
+ **merchantFid** | **string**| Merchant fid | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CustomerOrders[]**](../Model/CustomerOrders.md)
+[**\Swagger\Client\Model\ListOrders**](../Model/ListOrders.md)
 
 ### Authorization
 
@@ -65,62 +119,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **ordersOrderIdGet**
-> \Swagger\Client\Model\Transaction[] ordersOrderIdGet($orderId)
-
-
-
-Get a list of transactions a order has
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-// Configure API key authorization: API-KEY
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\OrdersApi();
-$orderId = 56; // int | Order id
-
-try {
-    $result = $api_instance->ordersOrderIdGet($orderId);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->ordersOrderIdGet: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **orderId** | **int**| Order id |
-
-### Return type
-
-[**\Swagger\Client\Model\Transaction[]**](../Model/Transaction.md)
-
-### Authorization
-
-[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **ordersPurchaseLookupPost**
-> \Swagger\Client\Model\Response[] ordersPurchaseLookupPost($email)
+# **orderLookUp**
+> \Swagger\Client\Model\OrderLookUpRes orderLookUp($email, $merchantFid)
 
 
 
@@ -141,13 +141,14 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\OrdersApi();
-$email = "email_example"; // string | email
+$email = "email_example"; // string | customer email
+$merchantFid = "merchantFid_example"; // string | merchant fid
 
 try {
-    $result = $api_instance->ordersPurchaseLookupPost($email);
+    $result = $api_instance->orderLookUp($email, $merchantFid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling OrdersApi->ordersPurchaseLookupPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling OrdersApi->orderLookUp: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -156,11 +157,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **string**| email |
+ **email** | **string**| customer email |
+ **merchantFid** | **string**| merchant fid | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\Response[]**](../Model/Response.md)
+[**\Swagger\Client\Model\OrderLookUpRes**](../Model/OrderLookUpRes.md)
 
 ### Authorization
 
@@ -168,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

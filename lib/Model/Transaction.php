@@ -60,13 +60,14 @@ class Transaction implements ArrayAccess
         'date' => '\DateTime',
         'reference' => 'string',
         'fullReference' => 'string',
-        'merchantNamr' => 'string',
+        'merchantName' => 'string',
+        'currency' => 'string',
         'supportEmail' => 'string',
         'totalPrice' => 'float',
         'subTotalPrice' => 'float',
         'totalPriceTax' => 'float',
-        'totalUsdPrice' => 'float',
-        'totalUsdPriceTax' => 'float',
+        'totalUSDPrice' => 'float',
+        'totalUSDPriceTax' => 'float',
         'gateway' => 'string',
         'gatewayReference' => 'string',
         'extraParameters' => 'string',
@@ -92,13 +93,14 @@ class Transaction implements ArrayAccess
         'date' => 'date',
         'reference' => 'reference',
         'fullReference' => 'fullReference',
-        'merchantNamr' => 'merchantNamr',
+        'merchantName' => 'merchantName',
+        'currency' => 'currency',
         'supportEmail' => 'supportEmail',
         'totalPrice' => 'totalPrice',
         'subTotalPrice' => 'subTotalPrice',
         'totalPriceTax' => 'totalPriceTax',
-        'totalUsdPrice' => 'totalUsdPrice',
-        'totalUsdPriceTax' => 'totalUsdPriceTax',
+        'totalUSDPrice' => 'totalUSDPrice',
+        'totalUSDPriceTax' => 'totalUSDPriceTax',
         'gateway' => 'gateway',
         'gatewayReference' => 'gatewayReference',
         'extraParameters' => 'extraParameters',
@@ -120,13 +122,14 @@ class Transaction implements ArrayAccess
         'date' => 'setDate',
         'reference' => 'setReference',
         'fullReference' => 'setFullReference',
-        'merchantNamr' => 'setMerchantNamr',
+        'merchantName' => 'setMerchantName',
+        'currency' => 'setCurrency',
         'supportEmail' => 'setSupportEmail',
         'totalPrice' => 'setTotalPrice',
         'subTotalPrice' => 'setSubTotalPrice',
         'totalPriceTax' => 'setTotalPriceTax',
-        'totalUsdPrice' => 'setTotalUsdPrice',
-        'totalUsdPriceTax' => 'setTotalUsdPriceTax',
+        'totalUSDPrice' => 'setTotalUSDPrice',
+        'totalUSDPriceTax' => 'setTotalUSDPriceTax',
         'gateway' => 'setGateway',
         'gatewayReference' => 'setGatewayReference',
         'extraParameters' => 'setExtraParameters',
@@ -148,13 +151,14 @@ class Transaction implements ArrayAccess
         'date' => 'getDate',
         'reference' => 'getReference',
         'fullReference' => 'getFullReference',
-        'merchantNamr' => 'getMerchantNamr',
+        'merchantName' => 'getMerchantName',
+        'currency' => 'getCurrency',
         'supportEmail' => 'getSupportEmail',
         'totalPrice' => 'getTotalPrice',
         'subTotalPrice' => 'getSubTotalPrice',
         'totalPriceTax' => 'getTotalPriceTax',
-        'totalUsdPrice' => 'getTotalUsdPrice',
-        'totalUsdPriceTax' => 'getTotalUsdPriceTax',
+        'totalUSDPrice' => 'getTotalUSDPrice',
+        'totalUSDPriceTax' => 'getTotalUSDPriceTax',
         'gateway' => 'getGateway',
         'gatewayReference' => 'getGatewayReference',
         'extraParameters' => 'getExtraParameters',
@@ -201,13 +205,14 @@ class Transaction implements ArrayAccess
         $this->container['date'] = isset($data['date']) ? $data['date'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['fullReference'] = isset($data['fullReference']) ? $data['fullReference'] : null;
-        $this->container['merchantNamr'] = isset($data['merchantNamr']) ? $data['merchantNamr'] : null;
+        $this->container['merchantName'] = isset($data['merchantName']) ? $data['merchantName'] : null;
+        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['supportEmail'] = isset($data['supportEmail']) ? $data['supportEmail'] : null;
         $this->container['totalPrice'] = isset($data['totalPrice']) ? $data['totalPrice'] : null;
         $this->container['subTotalPrice'] = isset($data['subTotalPrice']) ? $data['subTotalPrice'] : null;
         $this->container['totalPriceTax'] = isset($data['totalPriceTax']) ? $data['totalPriceTax'] : null;
-        $this->container['totalUsdPrice'] = isset($data['totalUsdPrice']) ? $data['totalUsdPrice'] : null;
-        $this->container['totalUsdPriceTax'] = isset($data['totalUsdPriceTax']) ? $data['totalUsdPriceTax'] : null;
+        $this->container['totalUSDPrice'] = isset($data['totalUSDPrice']) ? $data['totalUSDPrice'] : null;
+        $this->container['totalUSDPriceTax'] = isset($data['totalUSDPriceTax']) ? $data['totalUSDPriceTax'] : null;
         $this->container['gateway'] = isset($data['gateway']) ? $data['gateway'] : null;
         $this->container['gatewayReference'] = isset($data['gatewayReference']) ? $data['gatewayReference'] : null;
         $this->container['extraParameters'] = isset($data['extraParameters']) ? $data['extraParameters'] : null;
@@ -349,22 +354,43 @@ class Transaction implements ArrayAccess
     }
 
     /**
-     * Gets merchantNamr
+     * Gets merchantName
      * @return string
      */
-    public function getMerchantNamr()
+    public function getMerchantName()
     {
-        return $this->container['merchantNamr'];
+        return $this->container['merchantName'];
     }
 
     /**
-     * Sets merchantNamr
-     * @param string $merchantNamr
+     * Sets merchantName
+     * @param string $merchantName
      * @return $this
      */
-    public function setMerchantNamr($merchantNamr)
+    public function setMerchantName($merchantName)
     {
-        $this->container['merchantNamr'] = $merchantNamr;
+        $this->container['merchantName'] = $merchantName;
+
+        return $this;
+    }
+
+    /**
+     * Gets currency
+     * @return string
+     */
+    public function getCurrency()
+    {
+        return $this->container['currency'];
+    }
+
+    /**
+     * Sets currency
+     * @param string $currency
+     * @return $this
+     */
+    public function setCurrency($currency)
+    {
+        $this->container['currency'] = $currency;
 
         return $this;
     }
@@ -454,43 +480,43 @@ class Transaction implements ArrayAccess
     }
 
     /**
-     * Gets totalUsdPrice
+     * Gets totalUSDPrice
      * @return float
      */
-    public function getTotalUsdPrice()
+    public function getTotalUSDPrice()
     {
-        return $this->container['totalUsdPrice'];
+        return $this->container['totalUSDPrice'];
     }
 
     /**
-     * Sets totalUsdPrice
-     * @param float $totalUsdPrice
+     * Sets totalUSDPrice
+     * @param float $totalUSDPrice
      * @return $this
      */
-    public function setTotalUsdPrice($totalUsdPrice)
+    public function setTotalUSDPrice($totalUSDPrice)
     {
-        $this->container['totalUsdPrice'] = $totalUsdPrice;
+        $this->container['totalUSDPrice'] = $totalUSDPrice;
 
         return $this;
     }
 
     /**
-     * Gets totalUsdPriceTax
+     * Gets totalUSDPriceTax
      * @return float
      */
-    public function getTotalUsdPriceTax()
+    public function getTotalUSDPriceTax()
     {
-        return $this->container['totalUsdPriceTax'];
+        return $this->container['totalUSDPriceTax'];
     }
 
     /**
-     * Sets totalUsdPriceTax
-     * @param float $totalUsdPriceTax
+     * Sets totalUSDPriceTax
+     * @param float $totalUSDPriceTax
      * @return $this
      */
-    public function setTotalUsdPriceTax($totalUsdPriceTax)
+    public function setTotalUSDPriceTax($totalUSDPriceTax)
     {
-        $this->container['totalUsdPriceTax'] = $totalUsdPriceTax;
+        $this->container['totalUSDPriceTax'] = $totalUSDPriceTax;
 
         return $this;
     }
