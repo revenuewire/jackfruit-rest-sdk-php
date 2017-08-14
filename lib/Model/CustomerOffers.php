@@ -35,7 +35,7 @@ use \ArrayAccess;
  * CustomerOffers Class Doc Comment
  *
  * @category    Class
- * @description Customer Offer
+ * @description Customer offers object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -56,7 +56,7 @@ class CustomerOffers implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerOffersData[]'
+        'data' => '\Swagger\Client\Model\CustomerOffersObj[]'
     ];
 
     public static function swaggerTypes()
@@ -176,7 +176,7 @@ class CustomerOffers implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CustomerOffersData[]
+     * @return \Swagger\Client\Model\CustomerOffersObj[]
      */
     public function getData()
     {
@@ -185,7 +185,7 @@ class CustomerOffers implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CustomerOffersData[] $data
+     * @param \Swagger\Client\Model\CustomerOffersObj[] $data
      * @return $this
      */
     public function setData($data)

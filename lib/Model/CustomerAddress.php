@@ -56,7 +56,7 @@ class CustomerAddress implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerAddressData'
+        'data' => '\Swagger\Client\Model\CustomerAddressObj'
     ];
 
     public static function swaggerTypes()
@@ -176,7 +176,7 @@ class CustomerAddress implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CustomerAddressData
+     * @return \Swagger\Client\Model\CustomerAddressObj
      */
     public function getData()
     {
@@ -185,7 +185,7 @@ class CustomerAddress implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CustomerAddressData $data
+     * @param \Swagger\Client\Model\CustomerAddressObj $data
      * @return $this
      */
     public function setData($data)

@@ -1,6 +1,6 @@
 <?php
 /**
- * Customer
+ * CustomerTransactions
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Customer Class Doc Comment
+ * CustomerTransactions Class Doc Comment
  *
  * @category    Class
- * @description Customer object
+ * @description Customer transactions object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Customer implements ArrayAccess
+class CustomerTransactions implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Customer implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Customer';
+    protected static $swaggerModelName = 'CustomerTransactions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,7 +56,7 @@ class Customer implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CustomerObj'
+        'data' => '\Swagger\Client\Model\Transaction[]'
     ];
 
     public static function swaggerTypes()
@@ -176,7 +176,7 @@ class Customer implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CustomerObj
+     * @return \Swagger\Client\Model\Transaction[]
      */
     public function getData()
     {
@@ -185,7 +185,7 @@ class Customer implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CustomerObj $data
+     * @param \Swagger\Client\Model\Transaction[] $data
      * @return $this
      */
     public function setData($data)

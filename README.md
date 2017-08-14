@@ -92,11 +92,11 @@ Class | Method | HTTP request | Description
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
-*CustomersApi* | [**customersCustomerIdAddressTransactionIdPut**](docs/Api/CustomersApi.md#customerscustomeridaddresstransactionidput) | **PUT** /customers/{customerId}/address/{transactionId} | 
-*CustomersApi* | [**customersCustomerIdGet**](docs/Api/CustomersApi.md#customerscustomeridget) | **GET** /customers/{customerId} | 
-*CustomersApi* | [**customersCustomerUserIdOffersGet**](docs/Api/CustomersApi.md#customerscustomeruseridoffersget) | **GET** /customers/{customerUserId}/offers | 
-*CustomersApi* | [**customersCustomerUserIdTransactionsGet**](docs/Api/CustomersApi.md#customerscustomeruseridtransactionsget) | **GET** /customers/{customerUserId}/transactions | 
-*CustomersApi* | [**customersGet**](docs/Api/CustomersApi.md#customersget) | **GET** /customers | 
+*CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customerId} | 
+*CustomersApi* | [**getCustomersForMerchant**](docs/Api/CustomersApi.md#getcustomersformerchant) | **GET** /customers | 
+*CustomersApi* | [**getOffers**](docs/Api/CustomersApi.md#getoffers) | **GET** /customers/{customerUserId}/offers | 
+*CustomersApi* | [**getTransactions**](docs/Api/CustomersApi.md#gettransactions) | **GET** /customers/{customerUserId}/transactions | 
+*CustomersApi* | [**updateShippingAddress**](docs/Api/CustomersApi.md#updateshippingaddress) | **PUT** /customers/{customerId}/address/{transactionId} | 
 *DestinationsApi* | [**destinationsAdd**](docs/Api/DestinationsApi.md#destinationsadd) | **POST** /destinations | 
 *DestinationsApi* | [**destinationsDelete**](docs/Api/DestinationsApi.md#destinationsdelete) | **DELETE** /destinations/{id} | 
 *DestinationsApi* | [**destinationsGet**](docs/Api/DestinationsApi.md#destinationsget) | **GET** /destinations | 
@@ -160,15 +160,16 @@ Class | Method | HTTP request | Description
  - [CountryList](docs/Model/CountryList.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
- - [CustomerAddressData](docs/Model/CustomerAddressData.md)
- - [CustomerData](docs/Model/CustomerData.md)
+ - [CustomerAddressObj](docs/Model/CustomerAddressObj.md)
+ - [CustomerObj](docs/Model/CustomerObj.md)
  - [CustomerOffers](docs/Model/CustomerOffers.md)
- - [CustomerOffersData](docs/Model/CustomerOffersData.md)
- - [CustomerOffersRecurringTransactionItem](docs/Model/CustomerOffersRecurringTransactionItem.md)
- - [CustomerOffersTransactionItem](docs/Model/CustomerOffersTransactionItem.md)
+ - [CustomerOffersObj](docs/Model/CustomerOffersObj.md)
+ - [CustomerOffersObjRecurringTransactionItem](docs/Model/CustomerOffersObjRecurringTransactionItem.md)
+ - [CustomerOffersObjTransactionItem](docs/Model/CustomerOffersObjTransactionItem.md)
  - [CustomerOrder](docs/Model/CustomerOrder.md)
- - [CustomerPhone](docs/Model/CustomerPhone.md)
- - [CustomerPhoneData](docs/Model/CustomerPhoneData.md)
+ - [CustomerPhoneObj](docs/Model/CustomerPhoneObj.md)
+ - [CustomerTransactions](docs/Model/CustomerTransactions.md)
+ - [CustomersRespone](docs/Model/CustomersRespone.md)
  - [Deployment](docs/Model/Deployment.md)
  - [Destination](docs/Model/Destination.md)
  - [Domain](docs/Model/Domain.md)
