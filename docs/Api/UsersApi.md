@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userForgotPassword**
-> \Swagger\Client\Model\Response userForgotPassword($email)
+> \Swagger\Client\Model\UserForgetPassword userForgotPassword($email)
 
 
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Response**](../Model/Response.md)
+[**\Swagger\Client\Model\UserForgetPassword**](../Model/UserForgetPassword.md)
 
 ### Authorization
 

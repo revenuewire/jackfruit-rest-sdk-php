@@ -443,7 +443,7 @@ class UsersApi
      *
      * @param string $email Your email address (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\Response
+     * @return \Swagger\Client\Model\UserForgetPassword
      */
     public function userForgotPassword($email = null)
     {
@@ -458,7 +458,7 @@ class UsersApi
      *
      * @param string $email Your email address (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\UserForgetPassword, HTTP status code, HTTP response headers (array of strings)
      */
     public function userForgotPasswordWithHttpInfo($email = null)
     {
@@ -506,15 +506,15 @@ class UsersApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\Response',
+                '\Swagger\Client\Model\UserForgetPassword',
                 '/users/forget-password'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\Response', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\UserForgetPassword', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Response', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\UserForgetPassword', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

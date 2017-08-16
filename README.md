@@ -219,6 +219,7 @@ Class | Method | HTTP request | Description
  - [UpdateEmailResponseData](docs/Model/UpdateEmailResponseData.md)
  - [User](docs/Model/User.md)
  - [UserData](docs/Model/UserData.md)
+ - [UserForgetPassword](docs/Model/UserForgetPassword.md)
 
 
 ## Documentation For Authorization
