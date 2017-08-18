@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **legacySubscriptionCancel**
-> \Swagger\Client\Model\Response legacySubscriptionCancel($transactionItemId)
+> \Swagger\Client\Model\CancelProfileResponse legacySubscriptionCancel($transactionItemId)
 
 
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Response**](../Model/Response.md)
+[**\Swagger\Client\Model\CancelProfileResponse**](../Model/CancelProfileResponse.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionCancel**
-> \Swagger\Client\Model\Response subscriptionCancel($recurringTransactionItemId)
+> \Swagger\Client\Model\CancelProfileResponse subscriptionCancel($recurringTransactionItemId)
 
 
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Response**](../Model/Response.md)
+[**\Swagger\Client\Model\CancelProfileResponse**](../Model/CancelProfileResponse.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **subscriptionGetOffer**
-> \Swagger\Client\Model\Offer subscriptionGetOffer($transactionItemId)
+> \Swagger\Client\Model\OfferResponse subscriptionGetOffer($transactionItemId)
 
 
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\Offer**](../Model/Offer.md)
+[**\Swagger\Client\Model\OfferResponse**](../Model/OfferResponse.md)
 
 ### Authorization
 
