@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * Geo
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * Geo Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ArrayAccess
+class Geo implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class InlineResponse2004 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'Geo';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOfferDetail'
+        'code' => 'string',
+        'payout' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'code' => 'code',
+        'payout' => 'payout'
     ];
 
 
@@ -78,8 +78,8 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'code' => 'setCode',
+        'payout' => 'setPayout'
     ];
 
 
@@ -88,8 +88,8 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'code' => 'getCode',
+        'payout' => 'getPayout'
     ];
 
     public static function attributeMap()
@@ -123,8 +123,8 @@ class InlineResponse2004 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['payout'] = isset($data['payout']) ? $data['payout'] : null;
     }
 
     /**
@@ -136,9 +136,6 @@ class InlineResponse2004 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -151,51 +148,48 @@ class InlineResponse2004 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets code
+     * @return string
      */
-    public function getResponse()
+    public function getCode()
     {
-        return $this->container['response'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets code
+     * @param string $code
      * @return $this
      */
-    public function setResponse($response)
+    public function setCode($code)
     {
-        $this->container['response'] = $response;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\CatalogOfferDetail
+     * Gets payout
+     * @return string
      */
-    public function getData()
+    public function getPayout()
     {
-        return $this->container['data'];
+        return $this->container['payout'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\CatalogOfferDetail $data
+     * Sets payout
+     * @param string $payout
      * @return $this
      */
-    public function setData($data)
+    public function setPayout($payout)
     {
-        $this->container['data'] = $data;
+        $this->container['payout'] = $payout;
 
         return $this;
     }

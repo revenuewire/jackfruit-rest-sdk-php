@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * MerchantTerms
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * MerchantTerms Class Doc Comment
  *
  * @category    Class
+ * @description Merchant additional terms
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ArrayAccess
+class MerchantTerms implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,16 @@ class InlineResponse2004 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'MerchantTerms';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOfferDetail'
+        'id' => 'int',
+        'acceptRequired' => 'string',
+        'terms' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'id' => 'id',
+        'acceptRequired' => 'acceptRequired',
+        'terms' => 'terms'
     ];
 
 
@@ -78,8 +81,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'id' => 'setId',
+        'acceptRequired' => 'setAcceptRequired',
+        'terms' => 'setTerms'
     ];
 
 
@@ -88,8 +92,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'id' => 'getId',
+        'acceptRequired' => 'getAcceptRequired',
+        'terms' => 'getTerms'
     ];
 
     public static function attributeMap()
@@ -123,8 +128,9 @@ class InlineResponse2004 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['acceptRequired'] = isset($data['acceptRequired']) ? $data['acceptRequired'] : null;
+        $this->container['terms'] = isset($data['terms']) ? $data['terms'] : null;
     }
 
     /**
@@ -136,8 +142,14 @@ class InlineResponse2004 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
+        if ($this->container['acceptRequired'] === null) {
+            $invalid_properties[] = "'acceptRequired' can't be null";
+        }
+        if ($this->container['terms'] === null) {
+            $invalid_properties[] = "'terms' can't be null";
         }
         return $invalid_properties;
     }
@@ -151,7 +163,13 @@ class InlineResponse2004 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        if ($this->container['id'] === null) {
+            return false;
+        }
+        if ($this->container['acceptRequired'] === null) {
+            return false;
+        }
+        if ($this->container['terms'] === null) {
             return false;
         }
         return true;
@@ -159,43 +177,64 @@ class InlineResponse2004 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return int
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\CatalogOfferDetail
+     * Gets acceptRequired
+     * @return string
      */
-    public function getData()
+    public function getAcceptRequired()
     {
-        return $this->container['data'];
+        return $this->container['acceptRequired'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\CatalogOfferDetail $data
+     * Sets acceptRequired
+     * @param string $acceptRequired
      * @return $this
      */
-    public function setData($data)
+    public function setAcceptRequired($acceptRequired)
     {
-        $this->container['data'] = $data;
+        $this->container['acceptRequired'] = $acceptRequired;
+
+        return $this;
+    }
+
+    /**
+     * Gets terms
+     * @return string
+     */
+    public function getTerms()
+    {
+        return $this->container['terms'];
+    }
+
+    /**
+     * Sets terms
+     * @param string $terms
+     * @return $this
+     */
+    public function setTerms($terms)
+    {
+        $this->container['terms'] = $terms;
 
         return $this;
     }

@@ -1,10 +1,11 @@
-# InlineResponse2009
+# MarketingMaterial
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**response** | [**\Swagger\Client\Model\Response**](Response.md) |  | 
-**data** | [**\Swagger\Client\Model\Tracking**](Tracking.md) | Newly created tracking | 
+**filename** | **string** |  | [optional] 
+**url** | **string** |  | [optional] 
+**dimensions** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

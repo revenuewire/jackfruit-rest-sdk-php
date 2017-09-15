@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * CpaPayoutPolicy
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * CpaPayoutPolicy Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ArrayAccess
+class CpaPayoutPolicy implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,18 @@ class InlineResponse2004 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'CpaPayoutPolicy';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOfferDetail'
+        'id' => 'int',
+        'hasApplied' => 'bool',
+        'acceptedTerms' => 'bool',
+        'type' => 'string',
+        'terms' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +71,11 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'id' => 'id',
+        'hasApplied' => 'hasApplied',
+        'acceptedTerms' => 'acceptedTerms',
+        'type' => 'type',
+        'terms' => 'terms'
     ];
 
 
@@ -78,8 +84,11 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'id' => 'setId',
+        'hasApplied' => 'setHasApplied',
+        'acceptedTerms' => 'setAcceptedTerms',
+        'type' => 'setType',
+        'terms' => 'setTerms'
     ];
 
 
@@ -88,8 +97,11 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'id' => 'getId',
+        'hasApplied' => 'getHasApplied',
+        'acceptedTerms' => 'getAcceptedTerms',
+        'type' => 'getType',
+        'terms' => 'getTerms'
     ];
 
     public static function attributeMap()
@@ -107,8 +119,24 @@ class InlineResponse2004 implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_PUBLIC = 'PUBLIC';
+    const TYPE_APPLY_TO_RUN = 'APPLY_TO_RUN';
+    const TYPE_LIMIT = 'LIMIT';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_PUBLIC,
+            self::TYPE_APPLY_TO_RUN,
+            self::TYPE_LIMIT,
+        ];
+    }
     
 
     /**
@@ -123,8 +151,11 @@ class InlineResponse2004 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['hasApplied'] = isset($data['hasApplied']) ? $data['hasApplied'] : null;
+        $this->container['acceptedTerms'] = isset($data['acceptedTerms']) ? $data['acceptedTerms'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['terms'] = isset($data['terms']) ? $data['terms'] : null;
     }
 
     /**
@@ -136,9 +167,11 @@ class InlineResponse2004 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        $allowed_values = ["PUBLIC", "APPLY_TO_RUN", "LIMIT"];
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of 'PUBLIC', 'APPLY_TO_RUN', 'LIMIT'.";
         }
+
         return $invalid_properties;
     }
 
@@ -151,7 +184,8 @@ class InlineResponse2004 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        $allowed_values = ["PUBLIC", "APPLY_TO_RUN", "LIMIT"];
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -159,43 +193,110 @@ class InlineResponse2004 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return int
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param int $id
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\CatalogOfferDetail
+     * Gets hasApplied
+     * @return bool
      */
-    public function getData()
+    public function getHasApplied()
     {
-        return $this->container['data'];
+        return $this->container['hasApplied'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\CatalogOfferDetail $data
+     * Sets hasApplied
+     * @param bool $hasApplied
      * @return $this
      */
-    public function setData($data)
+    public function setHasApplied($hasApplied)
     {
-        $this->container['data'] = $data;
+        $this->container['hasApplied'] = $hasApplied;
+
+        return $this;
+    }
+
+    /**
+     * Gets acceptedTerms
+     * @return bool
+     */
+    public function getAcceptedTerms()
+    {
+        return $this->container['acceptedTerms'];
+    }
+
+    /**
+     * Sets acceptedTerms
+     * @param bool $acceptedTerms
+     * @return $this
+     */
+    public function setAcceptedTerms($acceptedTerms)
+    {
+        $this->container['acceptedTerms'] = $acceptedTerms;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('PUBLIC', 'APPLY_TO_RUN', 'LIMIT');
+        if (!is_null($type) && (!in_array($type, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'PUBLIC', 'APPLY_TO_RUN', 'LIMIT'");
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets terms
+     * @return string
+     */
+    public function getTerms()
+    {
+        return $this->container['terms'];
+    }
+
+    /**
+     * Sets terms
+     * @param string $terms
+     * @return $this
+     */
+    public function setTerms($terms)
+    {
+        $this->container['terms'] = $terms;
 
         return $this;
     }

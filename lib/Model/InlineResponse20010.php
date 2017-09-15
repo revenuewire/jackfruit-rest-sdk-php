@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * InlineResponse20010
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * InlineResponse20010 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ArrayAccess
+class InlineResponse20010 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class InlineResponse2004 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'inline_response_200_10';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,7 +55,7 @@ class InlineResponse2004 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOfferDetail'
+        'data' => '\Swagger\Client\Model\Tracking'
     ];
 
     public static function swaggerTypes()
@@ -139,6 +139,9 @@ class InlineResponse2004 implements ArrayAccess
         if ($this->container['response'] === null) {
             $invalid_properties[] = "'response' can't be null";
         }
+        if ($this->container['data'] === null) {
+            $invalid_properties[] = "'data' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -152,6 +155,9 @@ class InlineResponse2004 implements ArrayAccess
     {
 
         if ($this->container['response'] === null) {
+            return false;
+        }
+        if ($this->container['data'] === null) {
             return false;
         }
         return true;
@@ -181,7 +187,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CatalogOfferDetail
+     * @return \Swagger\Client\Model\Tracking
      */
     public function getData()
     {
@@ -190,7 +196,7 @@ class InlineResponse2004 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CatalogOfferDetail $data
+     * @param \Swagger\Client\Model\Tracking $data Newly updated tracking
      * @return $this
      */
     public function setData($data)

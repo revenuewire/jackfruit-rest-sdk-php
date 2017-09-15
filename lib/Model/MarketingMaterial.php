@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2004
+ * MarketingMaterial
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2004 Class Doc Comment
+ * MarketingMaterial Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2004 implements ArrayAccess
+class MarketingMaterial implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,16 @@ class InlineResponse2004 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_4';
+    protected static $swaggerModelName = 'MarketingMaterial';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOfferDetail'
+        'filename' => 'string',
+        'url' => 'string',
+        'dimensions' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +69,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'filename' => 'filename',
+        'url' => 'url',
+        'dimensions' => 'dimensions'
     ];
 
 
@@ -78,8 +80,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'filename' => 'setFilename',
+        'url' => 'setUrl',
+        'dimensions' => 'setDimensions'
     ];
 
 
@@ -88,8 +91,9 @@ class InlineResponse2004 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'filename' => 'getFilename',
+        'url' => 'getUrl',
+        'dimensions' => 'getDimensions'
     ];
 
     public static function attributeMap()
@@ -123,8 +127,9 @@ class InlineResponse2004 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['filename'] = isset($data['filename']) ? $data['filename'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['dimensions'] = isset($data['dimensions']) ? $data['dimensions'] : null;
     }
 
     /**
@@ -136,9 +141,6 @@ class InlineResponse2004 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -151,51 +153,69 @@ class InlineResponse2004 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets filename
+     * @return string
      */
-    public function getResponse()
+    public function getFilename()
     {
-        return $this->container['response'];
+        return $this->container['filename'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets filename
+     * @param string $filename
      * @return $this
      */
-    public function setResponse($response)
+    public function setFilename($filename)
     {
-        $this->container['response'] = $response;
+        $this->container['filename'] = $filename;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\CatalogOfferDetail
+     * Gets url
+     * @return string
      */
-    public function getData()
+    public function getUrl()
     {
-        return $this->container['data'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\CatalogOfferDetail $data
+     * Sets url
+     * @param string $url
      * @return $this
      */
-    public function setData($data)
+    public function setUrl($url)
     {
-        $this->container['data'] = $data;
+        $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets dimensions
+     * @return string
+     */
+    public function getDimensions()
+    {
+        return $this->container['dimensions'];
+    }
+
+    /**
+     * Sets dimensions
+     * @param string $dimensions
+     * @return $this
+     */
+    public function setDimensions($dimensions)
+    {
+        $this->container['dimensions'] = $dimensions;
 
         return $this;
     }

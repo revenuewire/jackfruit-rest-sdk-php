@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **destinationsAdd**
-> \Swagger\Client\Model\InlineResponse2004 destinationsAdd($catalogFid, $name, $url)
+> \Swagger\Client\Model\InlineResponse2006 destinationsAdd($catalogFid, $name, $url)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destinationsGet**
-> \Swagger\Client\Model\InlineResponse2003 destinationsGet($catalogFid)
+> \Swagger\Client\Model\InlineResponse2005 destinationsGet($catalogFid)
 
 
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **destinationsUpdate**
-> \Swagger\Client\Model\InlineResponse2005 destinationsUpdate($id, $name, $url)
+> \Swagger\Client\Model\InlineResponse2007 destinationsUpdate($id, $name, $url)
 
 
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
