@@ -127,9 +127,10 @@ Class | Method | HTTP request | Description
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
+*SubscriptionsApi* | [**getLegacySubscriptionInfo**](docs/Api/SubscriptionsApi.md#getlegacysubscriptioninfo) | **GET** /subscriptions/legacy/{id} | 
+*SubscriptionsApi* | [**getSubscriptionInfo**](docs/Api/SubscriptionsApi.md#getsubscriptioninfo) | **GET** /subscriptions/{id} | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
 *SubscriptionsApi* | [**subscriptionCancel**](docs/Api/SubscriptionsApi.md#subscriptioncancel) | **PUT** /subscriptions/{recurringTransactionItemId}/cancel | 
-*SubscriptionsApi* | [**subscriptionGetOffer**](docs/Api/SubscriptionsApi.md#subscriptiongetoffer) | **GET** /subscriptions/offer/{transactionItemId} | 
 *TemplatesApi* | [**templatesGet**](docs/Api/TemplatesApi.md#templatesget) | **GET** /templates | 
 *TemplatesManagementApi* | [**templateSync**](docs/Api/TemplatesManagementApi.md#templatesync) | **POST** /templates/sync | Sync templates from cart 2.0
 *TemplatesManagementApi* | [**templatesDeploy**](docs/Api/TemplatesManagementApi.md#templatesdeploy) | **POST** /templates/deploy | Deploy templates to a new version
@@ -212,8 +213,6 @@ Class | Method | HTTP request | Description
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)
  - [NewTemplates](docs/Model/NewTemplates.md)
- - [Offer](docs/Model/Offer.md)
- - [OfferResponse](docs/Model/OfferResponse.md)
  - [OrderDetails](docs/Model/OrderDetails.md)
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
  - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
@@ -223,6 +222,9 @@ Class | Method | HTTP request | Description
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
  - [State](docs/Model/State.md)
+ - [SubscriptionInfoResponse](docs/Model/SubscriptionInfoResponse.md)
+ - [SubscriptionInfoResponseData](docs/Model/SubscriptionInfoResponseData.md)
+ - [SubscriptionInfoResponseDataOffer](docs/Model/SubscriptionInfoResponseDataOffer.md)
  - [SupportedLanguage](docs/Model/SupportedLanguage.md)
  - [SupportedLanguages](docs/Model/SupportedLanguages.md)
  - [TemplateDataObject](docs/Model/TemplateDataObject.md)
