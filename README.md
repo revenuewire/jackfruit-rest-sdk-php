@@ -92,6 +92,14 @@ Class | Method | HTTP request | Description
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
+*CPAAcceptTermsApi* | [**cpaTermsAccept**](docs/Api/CPAAcceptTermsApi.md#cpatermsaccept) | **PUT** /cpaapplytorun/{payoutPolicyId}/accept | 
+*CPAApplyToRunApi* | [**cpaApplyToRunAdd**](docs/Api/CPAApplyToRunApi.md#cpaapplytorunadd) | **POST** /cpaapplytorun | 
+*CatalogApi* | [**catalogOfferGet**](docs/Api/CatalogApi.md#catalogofferget) | **GET** /catalog/{id} | 
+*CatalogApi* | [**catalogOffersGet**](docs/Api/CatalogApi.md#catalogoffersget) | **GET** /catalog | 
+*CatalogApi* | [**newOffersGet**](docs/Api/CatalogApi.md#newoffersget) | **GET** /catalog/new-offers | 
+*CatalogApi* | [**newOffersPut**](docs/Api/CatalogApi.md#newoffersput) | **PUT** /catalog/new-offers | 
+*CatalogApi* | [**topOffersGet**](docs/Api/CatalogApi.md#topoffersget) | **GET** /catalog/top-offers | 
+*CatalogApi* | [**topOffersPut**](docs/Api/CatalogApi.md#topoffersput) | **PUT** /catalog/top-offers | 
 *CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customerId} | 
 *CustomersApi* | [**getCustomersForMerchant**](docs/Api/CustomersApi.md#getcustomersformerchant) | **GET** /customers | 
 *CustomersApi* | [**getOffers**](docs/Api/CustomersApi.md#getoffers) | **GET** /customers/{customerUserId}/offers | 
@@ -156,9 +164,12 @@ Class | Method | HTTP request | Description
  - [BillInfo](docs/Model/BillInfo.md)
  - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [CancelProfileResponse](docs/Model/CancelProfileResponse.md)
+ - [CatalogOffer](docs/Model/CatalogOffer.md)
+ - [CatalogOfferDetail](docs/Model/CatalogOfferDetail.md)
  - [Context](docs/Model/Context.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)
+ - [CpaPayoutPolicy](docs/Model/CpaPayoutPolicy.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
  - [CustomerAddressObj](docs/Model/CustomerAddressObj.md)
@@ -177,10 +188,13 @@ Class | Method | HTTP request | Description
  - [DomainEmail](docs/Model/DomainEmail.md)
  - [DomainEmailLabel](docs/Model/DomainEmailLabel.md)
  - [Error](docs/Model/Error.md)
+ - [Geo](docs/Model/Geo.md)
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
+ - [InlineResponse20010](docs/Model/InlineResponse20010.md)
+ - [InlineResponse20011](docs/Model/InlineResponse20011.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InlineResponse2004](docs/Model/InlineResponse2004.md)
@@ -191,8 +205,10 @@ Class | Method | HTTP request | Description
  - [InlineResponse2009](docs/Model/InlineResponse2009.md)
  - [ListOrders](docs/Model/ListOrders.md)
  - [ListOrdersData](docs/Model/ListOrdersData.md)
+ - [MarketingMaterial](docs/Model/MarketingMaterial.md)
  - [Merchant](docs/Model/Merchant.md)
  - [MerchantData](docs/Model/MerchantData.md)
+ - [MerchantTerms](docs/Model/MerchantTerms.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)
  - [NewTemplates](docs/Model/NewTemplates.md)

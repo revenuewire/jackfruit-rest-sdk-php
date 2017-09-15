@@ -55,7 +55,7 @@ class InlineResponse2005 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\Destination'
+        'data' => '\Swagger\Client\Model\Destination[]'
     ];
 
     public static function swaggerTypes()
@@ -187,7 +187,7 @@ class InlineResponse2005 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\Destination
+     * @return \Swagger\Client\Model\Destination[]
      */
     public function getData()
     {
@@ -196,7 +196,7 @@ class InlineResponse2005 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\Destination $data Newly updated destination link
+     * @param \Swagger\Client\Model\Destination[] $data Array containing destination links
      * @return $this
      */
     public function setData($data)
