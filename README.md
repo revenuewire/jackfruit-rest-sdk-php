@@ -127,6 +127,18 @@ Class | Method | HTTP request | Description
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
+*ReportsPerformanceApi* | [**reportsPerformance**](docs/Api/ReportsPerformanceApi.md#reportsperformance) | **GET** /reports/safecartcampaign | 
+*ReportsPerformanceApi* | [**reportsPerformanceCount**](docs/Api/ReportsPerformanceApi.md#reportsperformancecount) | **GET** /reports/safecartcampaign/count | 
+*ReportsPerformanceApi* | [**reportsPerformanceExport**](docs/Api/ReportsPerformanceApi.md#reportsperformanceexport) | **GET** /reports/safecartcampaign/export | 
+*ReportsPerformanceApi* | [**reportsPerformanceGraph**](docs/Api/ReportsPerformanceApi.md#reportsperformancegraph) | **GET** /reports/safecartcampaign/graph | 
+*ReportsPerformanceApi* | [**reportsPerformanceSummary**](docs/Api/ReportsPerformanceApi.md#reportsperformancesummary) | **GET** /reports/safecartcampaign/summary | 
+*ReportsPerformanceApi* | [**reportsPerformanceTotals**](docs/Api/ReportsPerformanceApi.md#reportsperformancetotals) | **GET** /reports/safecartcampaign/totals | 
+*ReportsRevshareApi* | [**reportsRevshareSummary**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary) | **GET** /reports/revshare/summary | 
+*ReportsRevshareApi* | [**reportsRevshareSummary_0**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary_0) | **GET** /reports/revshare | 
+*ReportsRevshareApi* | [**reportsRevshareSummary_1**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary_1) | **GET** /reports/revshare/graph | 
+*ReportsRevshareApi* | [**reportsRevshareSummary_2**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary_2) | **GET** /reports/revshare/count | 
+*ReportsRevshareApi* | [**reportsRevshareSummary_3**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary_3) | **GET** /reports/revshare/totals | 
+*ReportsRevshareApi* | [**reportsRevshareSummary_4**](docs/Api/ReportsRevshareApi.md#reportsrevsharesummary_4) | **GET** /reports/revshare/export | 
 *SubscriptionsApi* | [**getLegacySubscriptionInfo**](docs/Api/SubscriptionsApi.md#getlegacysubscriptioninfo) | **GET** /subscriptions/legacy/{id} | 
 *SubscriptionsApi* | [**getSubscriptionInfo**](docs/Api/SubscriptionsApi.md#getsubscriptioninfo) | **GET** /subscriptions/{id} | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
@@ -216,11 +228,32 @@ Class | Method | HTTP request | Description
  - [OrderDetails](docs/Model/OrderDetails.md)
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
  - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
+ - [Pagination](docs/Model/Pagination.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [PostbackTest](docs/Model/PostbackTest.md)
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
+ - [RevshareCountData](docs/Model/RevshareCountData.md)
+ - [RevshareData](docs/Model/RevshareData.md)
+ - [RevshareDatas](docs/Model/RevshareDatas.md)
+ - [RevshareExportData](docs/Model/RevshareExportData.md)
+ - [RevshareGraphData](docs/Model/RevshareGraphData.md)
+ - [RevshareGraphDatas](docs/Model/RevshareGraphDatas.md)
+ - [RevshareSummaryData](docs/Model/RevshareSummaryData.md)
+ - [RevshareSummaryDatas](docs/Model/RevshareSummaryDatas.md)
+ - [RevshareTotalsData](docs/Model/RevshareTotalsData.md)
+ - [SafecartCampaignCountData](docs/Model/SafecartCampaignCountData.md)
+ - [SafecartCampaignData](docs/Model/SafecartCampaignData.md)
+ - [SafecartCampaignDatas](docs/Model/SafecartCampaignDatas.md)
+ - [SafecartCampaignExportData](docs/Model/SafecartCampaignExportData.md)
+ - [SafecartCampaignGraphData](docs/Model/SafecartCampaignGraphData.md)
+ - [SafecartCampaignGraphDatas](docs/Model/SafecartCampaignGraphDatas.md)
+ - [SafecartCampaignSummaryData](docs/Model/SafecartCampaignSummaryData.md)
+ - [SafecartCampaignSummaryDatas](docs/Model/SafecartCampaignSummaryDatas.md)
+ - [SafecartCampaignTotalsData](docs/Model/SafecartCampaignTotalsData.md)
+ - [Sort](docs/Model/Sort.md)
+ - [Sort1](docs/Model/Sort1.md)
  - [State](docs/Model/State.md)
  - [SubscriptionInfoResponse](docs/Model/SubscriptionInfoResponse.md)
  - [SubscriptionInfoResponseData](docs/Model/SubscriptionInfoResponseData.md)
