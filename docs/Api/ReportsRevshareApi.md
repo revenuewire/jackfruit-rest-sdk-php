@@ -90,7 +90,7 @@ $offers = array("offers_example"); // string[] | A JSON encoded array of offer I
 $aliases = array("aliases_example"); // string[] | A JSON encoded array of alias IDs (eg [\"1\",\"2\"])
 $graphScale = "graphScale_example"; // string | The x-axis scale to use for graph data. Also defines the length of 'period' when grouping on 'period'.
 $graphMetric = array("graphMetric_example"); // string[] | The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\"col1\",\"col2\"])
-$sort = new \Swagger\Client\Model\Sort(); // \Swagger\Client\Model\Sort | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
+$sort = new \Swagger\Client\Model\Sort5(); // \Swagger\Client\Model\Sort5 | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
 $groupableColumns = array("groupableColumns_example"); // string[] | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 $pagination = new \Swagger\Client\Model\Pagination(); // \Swagger\Client\Model\Pagination | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
  **aliases** | [**string[]**](../Model/string.md)| A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) |
  **graphScale** | **string**| The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. |
  **graphMetric** | [**string[]**](../Model/string.md)| The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) |
- **sort** | [**\Swagger\Client\Model\Sort**](../Model/\Swagger\Client\Model\Sort.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
+ **sort** | [**\Swagger\Client\Model\Sort5**](../Model/\Swagger\Client\Model\Sort5.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
  **groupableColumns** | [**string[]**](../Model/string.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
  **pagination** | [**\Swagger\Client\Model\Pagination**](../Model/\Swagger\Client\Model\Pagination.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
 
@@ -160,7 +160,7 @@ $offers = array("offers_example"); // string[] | A JSON encoded array of offer I
 $aliases = array("aliases_example"); // string[] | A JSON encoded array of alias IDs (eg [\"1\",\"2\"])
 $graphScale = "graphScale_example"; // string | The x-axis scale to use for graph data. Also defines the length of 'period' when grouping on 'period'.
 $graphMetric = array("graphMetric_example"); // string[] | The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\"col1\",\"col2\"])
-$sort = new \Swagger\Client\Model\Sort(); // \Swagger\Client\Model\Sort | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
+$sort = new \Swagger\Client\Model\Sort5(); // \Swagger\Client\Model\Sort5 | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
 $groupableColumns = array("groupableColumns_example"); // string[] | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 $pagination = new \Swagger\Client\Model\Pagination(); // \Swagger\Client\Model\Pagination | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
  **aliases** | [**string[]**](../Model/string.md)| A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) |
  **graphScale** | **string**| The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. |
  **graphMetric** | [**string[]**](../Model/string.md)| The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) |
- **sort** | [**\Swagger\Client\Model\Sort**](../Model/\Swagger\Client\Model\Sort.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
+ **sort** | [**\Swagger\Client\Model\Sort5**](../Model/\Swagger\Client\Model\Sort5.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
  **groupableColumns** | [**string[]**](../Model/string.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
  **pagination** | [**\Swagger\Client\Model\Pagination**](../Model/\Swagger\Client\Model\Pagination.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportsRevshareSummary_2**
-> \Swagger\Client\Model\RevshareCountData reportsRevshareSummary_2($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
+> \Swagger\Client\Model\CountData reportsRevshareSummary_2($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
 
 
 
@@ -230,7 +230,7 @@ $offers = array("offers_example"); // string[] | A JSON encoded array of offer I
 $aliases = array("aliases_example"); // string[] | A JSON encoded array of alias IDs (eg [\"1\",\"2\"])
 $graphScale = "graphScale_example"; // string | The x-axis scale to use for graph data. Also defines the length of 'period' when grouping on 'period'.
 $graphMetric = array("graphMetric_example"); // string[] | The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\"col1\",\"col2\"])
-$sort = new \Swagger\Client\Model\Sort(); // \Swagger\Client\Model\Sort | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
+$sort = new \Swagger\Client\Model\Sort5(); // \Swagger\Client\Model\Sort5 | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
 $groupableColumns = array("groupableColumns_example"); // string[] | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 $pagination = new \Swagger\Client\Model\Pagination(); // \Swagger\Client\Model\Pagination | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 
@@ -253,13 +253,13 @@ Name | Type | Description  | Notes
  **aliases** | [**string[]**](../Model/string.md)| A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) |
  **graphScale** | **string**| The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. |
  **graphMetric** | [**string[]**](../Model/string.md)| The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) |
- **sort** | [**\Swagger\Client\Model\Sort**](../Model/\Swagger\Client\Model\Sort.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
+ **sort** | [**\Swagger\Client\Model\Sort5**](../Model/\Swagger\Client\Model\Sort5.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
  **groupableColumns** | [**string[]**](../Model/string.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
  **pagination** | [**\Swagger\Client\Model\Pagination**](../Model/\Swagger\Client\Model\Pagination.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
 
 ### Return type
 
-[**\Swagger\Client\Model\RevshareCountData**](../Model/RevshareCountData.md)
+[**\Swagger\Client\Model\CountData**](../Model/CountData.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ $offers = array("offers_example"); // string[] | A JSON encoded array of offer I
 $aliases = array("aliases_example"); // string[] | A JSON encoded array of alias IDs (eg [\"1\",\"2\"])
 $graphScale = "graphScale_example"; // string | The x-axis scale to use for graph data. Also defines the length of 'period' when grouping on 'period'.
 $graphMetric = array("graphMetric_example"); // string[] | The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\"col1\",\"col2\"])
-$sort = new \Swagger\Client\Model\Sort(); // \Swagger\Client\Model\Sort | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
+$sort = new \Swagger\Client\Model\Sort5(); // \Swagger\Client\Model\Sort5 | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
 $groupableColumns = array("groupableColumns_example"); // string[] | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 $pagination = new \Swagger\Client\Model\Pagination(); // \Swagger\Client\Model\Pagination | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
  **aliases** | [**string[]**](../Model/string.md)| A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) |
  **graphScale** | **string**| The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. |
  **graphMetric** | [**string[]**](../Model/string.md)| The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) |
- **sort** | [**\Swagger\Client\Model\Sort**](../Model/\Swagger\Client\Model\Sort.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
+ **sort** | [**\Swagger\Client\Model\Sort5**](../Model/\Swagger\Client\Model\Sort5.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
  **groupableColumns** | [**string[]**](../Model/string.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
  **pagination** | [**\Swagger\Client\Model\Pagination**](../Model/\Swagger\Client\Model\Pagination.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
 
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportsRevshareSummary_4**
-> \Swagger\Client\Model\RevshareExportData reportsRevshareSummary_4($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
+> \Swagger\Client\Model\ExportData reportsRevshareSummary_4($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
 
 
 
@@ -370,7 +370,7 @@ $offers = array("offers_example"); // string[] | A JSON encoded array of offer I
 $aliases = array("aliases_example"); // string[] | A JSON encoded array of alias IDs (eg [\"1\",\"2\"])
 $graphScale = "graphScale_example"; // string | The x-axis scale to use for graph data. Also defines the length of 'period' when grouping on 'period'.
 $graphMetric = array("graphMetric_example"); // string[] | The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\"col1\",\"col2\"])
-$sort = new \Swagger\Client\Model\Sort(); // \Swagger\Client\Model\Sort | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
+$sort = new \Swagger\Client\Model\Sort5(); // \Swagger\Client\Model\Sort5 | A JSON encoded object with the column to sort on and the sort direction (eg. {\"col\":\"sales\",\"dir\":\"DESC\"})
 $groupableColumns = array("groupableColumns_example"); // string[] | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 $pagination = new \Swagger\Client\Model\Pagination(); // \Swagger\Client\Model\Pagination | A JSON encoded array with the columns to group data on (eg. [\"period\",\"alias\"])
 
@@ -393,13 +393,13 @@ Name | Type | Description  | Notes
  **aliases** | [**string[]**](../Model/string.md)| A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) |
  **graphScale** | **string**| The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. |
  **graphMetric** | [**string[]**](../Model/string.md)| The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) |
- **sort** | [**\Swagger\Client\Model\Sort**](../Model/\Swagger\Client\Model\Sort.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
+ **sort** | [**\Swagger\Client\Model\Sort5**](../Model/\Swagger\Client\Model\Sort5.md)| A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) |
  **groupableColumns** | [**string[]**](../Model/string.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
  **pagination** | [**\Swagger\Client\Model\Pagination**](../Model/\Swagger\Client\Model\Pagination.md)| A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) |
 
 ### Return type
 
-[**\Swagger\Client\Model\RevshareExportData**](../Model/RevshareExportData.md)
+[**\Swagger\Client\Model\ExportData**](../Model/ExportData.md)
 
 ### Authorization
 

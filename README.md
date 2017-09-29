@@ -127,6 +127,28 @@ Class | Method | HTTP request | Description
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
+*ReportsClickRegisterApi* | [**reportsClickRegister**](docs/Api/ReportsClickRegisterApi.md#reportsclickregister) | **GET** /reports/clickregister | 
+*ReportsClickRegisterApi* | [**reportsClickRegisterGetCount**](docs/Api/ReportsClickRegisterApi.md#reportsclickregistergetcount) | **GET** /reports/clickregister/count | 
+*ReportsConversionsApi* | [**reportsConversionsDaily**](docs/Api/ReportsConversionsApi.md#reportsconversionsdaily) | **GET** /reports/conversions/daily | 
+*ReportsConversionsApi* | [**reportsConversionsHourly**](docs/Api/ReportsConversionsApi.md#reportsconversionshourly) | **GET** /reports/conversions/hourly | 
+*ReportsConversionsApi* | [**reportsConversionsHourly_0**](docs/Api/ReportsConversionsApi.md#reportsconversionshourly_0) | **GET** /reports/conversions/register/totals | 
+*ReportsConversionsApi* | [**reportsConversionsRegister**](docs/Api/ReportsConversionsApi.md#reportsconversionsregister) | **GET** /reports/conversions/register | 
+*ReportsConversionsApi* | [**reportsConversionsRegisterCount**](docs/Api/ReportsConversionsApi.md#reportsconversionsregistercount) | **GET** /reports/conversions/register/count | 
+*ReportsConversionsApi* | [**reportsConversionsRegisterExport**](docs/Api/ReportsConversionsApi.md#reportsconversionsregisterexport) | **GET** /reports/conversions/register/export | 
+*ReportsConversionsApi* | [**reportsConversionsRegisterGraph**](docs/Api/ReportsConversionsApi.md#reportsconversionsregistergraph) | **GET** /reports/conversions/register/graph | 
+*ReportsPaymentsApi* | [**reportsPayments**](docs/Api/ReportsPaymentsApi.md#reportspayments) | **GET** /reports/payments | 
+*ReportsPaymentsApi* | [**reportsPaymentsCount**](docs/Api/ReportsPaymentsApi.md#reportspaymentscount) | **GET** /reports/payments/count | 
+*ReportsPaymentsApi* | [**reportsPaymentsExport**](docs/Api/ReportsPaymentsApi.md#reportspaymentsexport) | **GET** /reports/payments/export | 
+*ReportsPaymentsApi* | [**reportsPaymentsGraph**](docs/Api/ReportsPaymentsApi.md#reportspaymentsgraph) | **GET** /reports/payments/graph | 
+*ReportsPaymentsApi* | [**reportsRevshareSummary**](docs/Api/ReportsPaymentsApi.md#reportsrevsharesummary) | **GET** /reports/payments/summary | 
+*ReportsPaymentsCPADetailsApi* | [**reportPaymentsCpa**](docs/Api/ReportsPaymentsCPADetailsApi.md#reportpaymentscpa) | **GET** /reports/payments/details/cpa | 
+*ReportsPaymentsCPADetailsApi* | [**reportPaymentsCpa_0**](docs/Api/ReportsPaymentsCPADetailsApi.md#reportpaymentscpa_0) | **GET** /reports/payments/details/cpa/totals | 
+*ReportsPaymentsCPADetailsApi* | [**reportsPaymentsCount**](docs/Api/ReportsPaymentsCPADetailsApi.md#reportspaymentscount) | **GET** /reports/payments/details/cpa/count | 
+*ReportsPaymentsCPADetailsApi* | [**reportsPaymentsExport**](docs/Api/ReportsPaymentsCPADetailsApi.md#reportspaymentsexport) | **GET** /reports/payments/details/cpa/export | 
+*ReportsPaymentsRevshareDetailsApi* | [**reportPaymentsCpa**](docs/Api/ReportsPaymentsRevshareDetailsApi.md#reportpaymentscpa) | **GET** /reports/payments/details/revshare | 
+*ReportsPaymentsRevshareDetailsApi* | [**reportPaymentsCpa_0**](docs/Api/ReportsPaymentsRevshareDetailsApi.md#reportpaymentscpa_0) | **GET** /reports/payments/details/revshare/totals | 
+*ReportsPaymentsRevshareDetailsApi* | [**reportsPaymentsCount**](docs/Api/ReportsPaymentsRevshareDetailsApi.md#reportspaymentscount) | **GET** /reports/payments/details/revshare/count | 
+*ReportsPaymentsRevshareDetailsApi* | [**reportsPaymentsExport**](docs/Api/ReportsPaymentsRevshareDetailsApi.md#reportspaymentsexport) | **GET** /reports/payments/details/revshare/export | 
 *ReportsPerformanceApi* | [**reportsPerformance**](docs/Api/ReportsPerformanceApi.md#reportsperformance) | **GET** /reports/safecartcampaign | 
 *ReportsPerformanceApi* | [**reportsPerformanceCount**](docs/Api/ReportsPerformanceApi.md#reportsperformancecount) | **GET** /reports/safecartcampaign/count | 
 *ReportsPerformanceApi* | [**reportsPerformanceExport**](docs/Api/ReportsPerformanceApi.md#reportsperformanceexport) | **GET** /reports/safecartcampaign/export | 
@@ -179,7 +201,17 @@ Class | Method | HTTP request | Description
  - [CancelProfileResponse](docs/Model/CancelProfileResponse.md)
  - [CatalogOffer](docs/Model/CatalogOffer.md)
  - [CatalogOfferDetail](docs/Model/CatalogOfferDetail.md)
+ - [ClickRegisterData](docs/Model/ClickRegisterData.md)
+ - [ClickRegisterDatas](docs/Model/ClickRegisterDatas.md)
  - [Context](docs/Model/Context.md)
+ - [ConversionsDailyOrHourlyData](docs/Model/ConversionsDailyOrHourlyData.md)
+ - [ConversionsDailyOrHourlyDatas](docs/Model/ConversionsDailyOrHourlyDatas.md)
+ - [ConversionsRegisterData](docs/Model/ConversionsRegisterData.md)
+ - [ConversionsRegisterDatas](docs/Model/ConversionsRegisterDatas.md)
+ - [ConversionsRegisterGraphData](docs/Model/ConversionsRegisterGraphData.md)
+ - [ConversionsRegisterGraphDatas](docs/Model/ConversionsRegisterGraphDatas.md)
+ - [ConversionsRegisterTotalsData](docs/Model/ConversionsRegisterTotalsData.md)
+ - [CountData](docs/Model/CountData.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)
  - [CpaPayoutPolicy](docs/Model/CpaPayoutPolicy.md)
@@ -201,6 +233,8 @@ Class | Method | HTTP request | Description
  - [DomainEmail](docs/Model/DomainEmail.md)
  - [DomainEmailLabel](docs/Model/DomainEmailLabel.md)
  - [Error](docs/Model/Error.md)
+ - [ExportData](docs/Model/ExportData.md)
+ - [ExportDataData](docs/Model/ExportDataData.md)
  - [Geo](docs/Model/Geo.md)
  - [Identity](docs/Model/Identity.md)
  - [IdentityData](docs/Model/IdentityData.md)
@@ -229,24 +263,32 @@ Class | Method | HTTP request | Description
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
  - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
  - [Pagination](docs/Model/Pagination.md)
+ - [PaymentsData](docs/Model/PaymentsData.md)
+ - [PaymentsDatas](docs/Model/PaymentsDatas.md)
+ - [PaymentsDetailsCpaData](docs/Model/PaymentsDetailsCpaData.md)
+ - [PaymentsDetailsCpaDatas](docs/Model/PaymentsDetailsCpaDatas.md)
+ - [PaymentsDetailsRevshareData](docs/Model/PaymentsDetailsRevshareData.md)
+ - [PaymentsDetailsRevshareDatas](docs/Model/PaymentsDetailsRevshareDatas.md)
+ - [PaymentsGraphData](docs/Model/PaymentsGraphData.md)
+ - [PaymentsGraphDatas](docs/Model/PaymentsGraphDatas.md)
+ - [PaymentsSummaryData](docs/Model/PaymentsSummaryData.md)
+ - [PaymentsSummaryDatas](docs/Model/PaymentsSummaryDatas.md)
+ - [PaymentsTotalsData](docs/Model/PaymentsTotalsData.md)
+ - [PaymentsTotalsDataData](docs/Model/PaymentsTotalsDataData.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [PostbackTest](docs/Model/PostbackTest.md)
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
- - [RevshareCountData](docs/Model/RevshareCountData.md)
  - [RevshareData](docs/Model/RevshareData.md)
  - [RevshareDatas](docs/Model/RevshareDatas.md)
- - [RevshareExportData](docs/Model/RevshareExportData.md)
  - [RevshareGraphData](docs/Model/RevshareGraphData.md)
  - [RevshareGraphDatas](docs/Model/RevshareGraphDatas.md)
  - [RevshareSummaryData](docs/Model/RevshareSummaryData.md)
  - [RevshareSummaryDatas](docs/Model/RevshareSummaryDatas.md)
  - [RevshareTotalsData](docs/Model/RevshareTotalsData.md)
- - [SafecartCampaignCountData](docs/Model/SafecartCampaignCountData.md)
  - [SafecartCampaignData](docs/Model/SafecartCampaignData.md)
  - [SafecartCampaignDatas](docs/Model/SafecartCampaignDatas.md)
- - [SafecartCampaignExportData](docs/Model/SafecartCampaignExportData.md)
  - [SafecartCampaignGraphData](docs/Model/SafecartCampaignGraphData.md)
  - [SafecartCampaignGraphDatas](docs/Model/SafecartCampaignGraphDatas.md)
  - [SafecartCampaignSummaryData](docs/Model/SafecartCampaignSummaryData.md)
@@ -254,6 +296,11 @@ Class | Method | HTTP request | Description
  - [SafecartCampaignTotalsData](docs/Model/SafecartCampaignTotalsData.md)
  - [Sort](docs/Model/Sort.md)
  - [Sort1](docs/Model/Sort1.md)
+ - [Sort2](docs/Model/Sort2.md)
+ - [Sort3](docs/Model/Sort3.md)
+ - [Sort4](docs/Model/Sort4.md)
+ - [Sort5](docs/Model/Sort5.md)
+ - [Sort6](docs/Model/Sort6.md)
  - [State](docs/Model/State.md)
  - [SubscriptionInfoResponse](docs/Model/SubscriptionInfoResponse.md)
  - [SubscriptionInfoResponseData](docs/Model/SubscriptionInfoResponseData.md)

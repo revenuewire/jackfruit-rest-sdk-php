@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * Sort6
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * Sort6 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class Sort6 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'sort_6';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -107,12 +107,17 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
+    const COL_ALIASES = 'aliases';
+    const COL_OFFERS = 'offers';
+    const COL_TYPE = 'type';
+    const COL_CATEGORY = 'category';
+    const COL_PERIOD = 'period';
+    const COL_CLICKS = 'clicks';
+    const COL_CONVERSIONS = 'conversions';
+    const COL_SALES = 'sales';
+    const COL_EPC = 'epc';
+    const COL_PAYOUT = 'payout';
+    const COL_CONVERSION_RATE = 'conversionRate';
     const DIR_ASC = 'ASC';
     const DIR_DESC = 'DESC';
     
@@ -125,12 +130,17 @@ class Sort implements ArrayAccess
     public function getColAllowableValues()
     {
         return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
+            self::COL_ALIASES,
+            self::COL_OFFERS,
+            self::COL_TYPE,
+            self::COL_CATEGORY,
+            self::COL_PERIOD,
+            self::COL_CLICKS,
+            self::COL_CONVERSIONS,
+            self::COL_SALES,
+            self::COL_EPC,
+            self::COL_PAYOUT,
+            self::COL_CONVERSION_RATE,
         ];
     }
     
@@ -172,9 +182,9 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["aliases", "offers", "type", "category", "period", "clicks", "conversions", "sales", "epc", "payout", "conversionRate"];
         if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+            $invalid_properties[] = "invalid value for 'col', must be one of 'aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate'.";
         }
 
         $allowed_values = ["ASC", "DESC"];
@@ -194,7 +204,7 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["aliases", "offers", "type", "category", "period", "clicks", "conversions", "sales", "epc", "payout", "conversionRate"];
         if (!in_array($this->container['col'], $allowed_values)) {
             return false;
         }
@@ -222,9 +232,9 @@ class Sort implements ArrayAccess
      */
     public function setCol($col)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
+        $allowed_values = array('aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate');
         if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
+            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate'");
         }
         $this->container['col'] = $col;
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * PaymentsSummaryData
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * PaymentsSummaryData Class Doc Comment
  *
  * @category    Class
+ * @description Payments data object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class PaymentsSummaryData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,17 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'PaymentsSummaryData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'col' => 'string',
-        'dir' => 'string'
+        'id' => 'string',
+        'period' => 'string',
+        'paymentDate' => 'string',
+        'payout' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +71,10 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'col' => 'col',
-        'dir' => 'dir'
+        'id' => 'id',
+        'period' => 'period',
+        'paymentDate' => 'paymentDate',
+        'payout' => 'payout'
     ];
 
 
@@ -78,8 +83,10 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'col' => 'setCol',
-        'dir' => 'setDir'
+        'id' => 'setId',
+        'period' => 'setPeriod',
+        'paymentDate' => 'setPaymentDate',
+        'payout' => 'setPayout'
     ];
 
 
@@ -88,8 +95,10 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'col' => 'getCol',
-        'dir' => 'getDir'
+        'id' => 'getId',
+        'period' => 'getPeriod',
+        'paymentDate' => 'getPaymentDate',
+        'payout' => 'getPayout'
     ];
 
     public static function attributeMap()
@@ -107,44 +116,8 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
-    const DIR_ASC = 'ASC';
-    const DIR_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getColAllowableValues()
-    {
-        return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getDirAllowableValues()
-    {
-        return [
-            self::DIR_ASC,
-            self::DIR_DESC,
-        ];
-    }
     
 
     /**
@@ -159,8 +132,10 @@ class Sort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['col'] = isset($data['col']) ? $data['col'] : null;
-        $this->container['dir'] = isset($data['dir']) ? $data['dir'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['period'] = isset($data['period']) ? $data['period'] : null;
+        $this->container['paymentDate'] = isset($data['paymentDate']) ? $data['paymentDate'] : null;
+        $this->container['payout'] = isset($data['payout']) ? $data['payout'] : null;
     }
 
     /**
@@ -172,16 +147,18 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
         }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'dir', must be one of 'ASC', 'DESC'.";
+        if ($this->container['period'] === null) {
+            $invalid_properties[] = "'period' can't be null";
         }
-
+        if ($this->container['paymentDate'] === null) {
+            $invalid_properties[] = "'paymentDate' can't be null";
+        }
+        if ($this->container['payout'] === null) {
+            $invalid_properties[] = "'payout' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -194,12 +171,16 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
+        if ($this->container['id'] === null) {
             return false;
         }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
+        if ($this->container['period'] === null) {
+            return false;
+        }
+        if ($this->container['paymentDate'] === null) {
+            return false;
+        }
+        if ($this->container['payout'] === null) {
             return false;
         }
         return true;
@@ -207,51 +188,85 @@ class Sort implements ArrayAccess
 
 
     /**
-     * Gets col
+     * Gets id
      * @return string
      */
-    public function getCol()
+    public function getId()
     {
-        return $this->container['col'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets col
-     * @param string $col
+     * Sets id
+     * @param string $id
      * @return $this
      */
-    public function setCol($col)
+    public function setId($id)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
-        if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
-        }
-        $this->container['col'] = $col;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets dir
+     * Gets period
      * @return string
      */
-    public function getDir()
+    public function getPeriod()
     {
-        return $this->container['dir'];
+        return $this->container['period'];
     }
 
     /**
-     * Sets dir
-     * @param string $dir
+     * Sets period
+     * @param string $period
      * @return $this
      */
-    public function setDir($dir)
+    public function setPeriod($period)
     {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($dir) && (!in_array($dir, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'dir', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['dir'] = $dir;
+        $this->container['period'] = $period;
+
+        return $this;
+    }
+
+    /**
+     * Gets paymentDate
+     * @return string
+     */
+    public function getPaymentDate()
+    {
+        return $this->container['paymentDate'];
+    }
+
+    /**
+     * Sets paymentDate
+     * @param string $paymentDate
+     * @return $this
+     */
+    public function setPaymentDate($paymentDate)
+    {
+        $this->container['paymentDate'] = $paymentDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets payout
+     * @return float
+     */
+    public function getPayout()
+    {
+        return $this->container['payout'];
+    }
+
+    /**
+     * Sets payout
+     * @param float $payout
+     * @return $this
+     */
+    public function setPayout($payout)
+    {
+        $this->container['payout'] = $payout;
 
         return $this;
     }

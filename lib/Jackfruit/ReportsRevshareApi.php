@@ -183,7 +183,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -206,7 +206,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -372,7 +372,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -395,7 +395,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -561,11 +561,11 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\RevshareCountData
+     * @return \Swagger\Client\Model\CountData
      */
     public function reportsRevshareSummary_2($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
     {
@@ -584,11 +584,11 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\RevshareCountData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\CountData, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsRevshareSummary_2WithHttpInfo($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
     {
@@ -718,15 +718,15 @@ class ReportsRevshareApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\RevshareCountData',
+                '\Swagger\Client\Model\CountData',
                 '/reports/revshare/count'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RevshareCountData', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CountData', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RevshareCountData', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CountData', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -750,7 +750,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -773,7 +773,7 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
@@ -939,11 +939,11 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\RevshareExportData
+     * @return \Swagger\Client\Model\ExportData
      */
     public function reportsRevshareSummary_4($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
     {
@@ -962,11 +962,11 @@ class ReportsRevshareApi
      * @param string[] $aliases A JSON encoded array of alias IDs (eg [\&quot;1\&quot;,\&quot;2\&quot;]) (required)
      * @param string $graphScale The x-axis scale to use for graph data. Also defines the length of &#39;period&#39; when grouping on &#39;period&#39;. (required)
      * @param string[] $graphMetric The y-axis metrics to use for graph data. A JSON encoded array of one or two strings (eg. [\&quot;col1\&quot;,\&quot;col2\&quot;]) (required)
-     * @param \Swagger\Client\Model\Sort $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
+     * @param \Swagger\Client\Model\Sort5 $sort A JSON encoded object with the column to sort on and the sort direction (eg. {\&quot;col\&quot;:\&quot;sales\&quot;,\&quot;dir\&quot;:\&quot;DESC\&quot;}) (required)
      * @param string[] $groupableColumns A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @param \Swagger\Client\Model\Pagination $pagination A JSON encoded array with the columns to group data on (eg. [\&quot;period\&quot;,\&quot;alias\&quot;]) (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\RevshareExportData, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\ExportData, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportsRevshareSummary_4WithHttpInfo($start, $end, $offers, $aliases, $graphScale, $graphMetric, $sort, $groupableColumns, $pagination)
     {
@@ -1096,15 +1096,15 @@ class ReportsRevshareApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\RevshareExportData',
+                '\Swagger\Client\Model\ExportData',
                 '/reports/revshare/export'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\RevshareExportData', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\ExportData', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\RevshareExportData', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\ExportData', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

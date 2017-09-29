@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * Sort5
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * Sort5 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class Sort5 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'sort_5';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -107,12 +107,25 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
     const COL_ALIAS = 'alias';
     const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
+    const COL_PERIOD = 'period';
+    const COL_CLICKS = 'clicks';
+    const COL_ORDERS = 'orders';
+    const COL_SALES = 'sales';
+    const COL_CONVERSION_RATE = 'conversionRate';
+    const COL_REFUNDS_AND_CHARGEBACKS = 'refundsAndChargebacks';
+    const COL_REFUND_AND_CHARGEBACK_RATE = 'refundAndChargebackRate';
+    const COL_NET_ORDERS = 'netOrders';
+    const COL_NET_SALES = 'netSales';
+    const COL_INITIAL_ORDERS = 'initialOrders';
+    const COL_INITIAL_SALES = 'initialSales';
+    const COL_RECURRING_ORDERS = 'recurringOrders';
+    const COL_RECURRING_SALES = 'recurringSales';
+    const COL_CANCELLED_SUBSCRIPTIONS = 'cancelledSubscriptions';
+    const COL_ACTIVE_SUBSCRIPTIONS = 'activeSubscriptions';
+    const COL_LIFETIME_AVG_SUBSCRIPTION_AGE = 'lifetimeAvgSubscriptionAge';
+    const COL_LIFETIME_AVG_SUBSCRIPTION_VALUE = 'lifetimeAvgSubscriptionValue';
     const DIR_ASC = 'ASC';
     const DIR_DESC = 'DESC';
     
@@ -125,12 +138,25 @@ class Sort implements ArrayAccess
     public function getColAllowableValues()
     {
         return [
-            self::COL_DATE,
             self::COL_ALIAS,
             self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
+            self::COL_PERIOD,
+            self::COL_CLICKS,
+            self::COL_ORDERS,
+            self::COL_SALES,
+            self::COL_CONVERSION_RATE,
+            self::COL_REFUNDS_AND_CHARGEBACKS,
+            self::COL_REFUND_AND_CHARGEBACK_RATE,
+            self::COL_NET_ORDERS,
+            self::COL_NET_SALES,
+            self::COL_INITIAL_ORDERS,
+            self::COL_INITIAL_SALES,
+            self::COL_RECURRING_ORDERS,
+            self::COL_RECURRING_SALES,
+            self::COL_CANCELLED_SUBSCRIPTIONS,
+            self::COL_ACTIVE_SUBSCRIPTIONS,
+            self::COL_LIFETIME_AVG_SUBSCRIPTION_AGE,
+            self::COL_LIFETIME_AVG_SUBSCRIPTION_VALUE,
         ];
     }
     
@@ -172,9 +198,9 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["alias", "offer", "period", "clicks", "orders", "sales", "conversionRate", "refundsAndChargebacks", "refundAndChargebackRate", "netOrders", "netSales", "initialOrders", "initialSales", "recurringOrders", "recurringSales", "cancelledSubscriptions", "activeSubscriptions", "lifetimeAvgSubscriptionAge", "lifetimeAvgSubscriptionValue"];
         if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+            $invalid_properties[] = "invalid value for 'col', must be one of 'alias', 'offer', 'period', 'clicks', 'orders', 'sales', 'conversionRate', 'refundsAndChargebacks', 'refundAndChargebackRate', 'netOrders', 'netSales', 'initialOrders', 'initialSales', 'recurringOrders', 'recurringSales', 'cancelledSubscriptions', 'activeSubscriptions', 'lifetimeAvgSubscriptionAge', 'lifetimeAvgSubscriptionValue'.";
         }
 
         $allowed_values = ["ASC", "DESC"];
@@ -194,7 +220,7 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["alias", "offer", "period", "clicks", "orders", "sales", "conversionRate", "refundsAndChargebacks", "refundAndChargebackRate", "netOrders", "netSales", "initialOrders", "initialSales", "recurringOrders", "recurringSales", "cancelledSubscriptions", "activeSubscriptions", "lifetimeAvgSubscriptionAge", "lifetimeAvgSubscriptionValue"];
         if (!in_array($this->container['col'], $allowed_values)) {
             return false;
         }
@@ -222,9 +248,9 @@ class Sort implements ArrayAccess
      */
     public function setCol($col)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
+        $allowed_values = array('alias', 'offer', 'period', 'clicks', 'orders', 'sales', 'conversionRate', 'refundsAndChargebacks', 'refundAndChargebackRate', 'netOrders', 'netSales', 'initialOrders', 'initialSales', 'recurringOrders', 'recurringSales', 'cancelledSubscriptions', 'activeSubscriptions', 'lifetimeAvgSubscriptionAge', 'lifetimeAvgSubscriptionValue');
         if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
+            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'alias', 'offer', 'period', 'clicks', 'orders', 'sales', 'conversionRate', 'refundsAndChargebacks', 'refundAndChargebackRate', 'netOrders', 'netSales', 'initialOrders', 'initialSales', 'recurringOrders', 'recurringSales', 'cancelledSubscriptions', 'activeSubscriptions', 'lifetimeAvgSubscriptionAge', 'lifetimeAvgSubscriptionValue'");
         }
         $this->container['col'] = $col;
 

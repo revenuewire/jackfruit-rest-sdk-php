@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * ConversionsRegisterGraphData
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * ConversionsRegisterGraphData Class Doc Comment
  *
  * @category    Class
+ * @description Conversions register graph data object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class ConversionsRegisterGraphData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,16 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'ConversionsRegisterGraphData';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'col' => 'string',
-        'dir' => 'string'
+        'conversions' => 'string',
+        'locale' => 'string',
+        'salesRate' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,9 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'col' => 'col',
-        'dir' => 'dir'
+        'conversions' => 'conversions',
+        'locale' => 'locale',
+        'salesRate' => 'salesRate'
     ];
 
 
@@ -78,8 +81,9 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'col' => 'setCol',
-        'dir' => 'setDir'
+        'conversions' => 'setConversions',
+        'locale' => 'setLocale',
+        'salesRate' => 'setSalesRate'
     ];
 
 
@@ -88,8 +92,9 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'col' => 'getCol',
-        'dir' => 'getDir'
+        'conversions' => 'getConversions',
+        'locale' => 'getLocale',
+        'salesRate' => 'getSalesRate'
     ];
 
     public static function attributeMap()
@@ -107,44 +112,8 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
-    const DIR_ASC = 'ASC';
-    const DIR_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getColAllowableValues()
-    {
-        return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getDirAllowableValues()
-    {
-        return [
-            self::DIR_ASC,
-            self::DIR_DESC,
-        ];
-    }
     
 
     /**
@@ -159,8 +128,9 @@ class Sort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['col'] = isset($data['col']) ? $data['col'] : null;
-        $this->container['dir'] = isset($data['dir']) ? $data['dir'] : null;
+        $this->container['conversions'] = isset($data['conversions']) ? $data['conversions'] : null;
+        $this->container['locale'] = isset($data['locale']) ? $data['locale'] : null;
+        $this->container['salesRate'] = isset($data['salesRate']) ? $data['salesRate'] : null;
     }
 
     /**
@@ -172,16 +142,15 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+        if ($this->container['conversions'] === null) {
+            $invalid_properties[] = "'conversions' can't be null";
         }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'dir', must be one of 'ASC', 'DESC'.";
+        if ($this->container['locale'] === null) {
+            $invalid_properties[] = "'locale' can't be null";
         }
-
+        if ($this->container['salesRate'] === null) {
+            $invalid_properties[] = "'salesRate' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -194,12 +163,13 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
+        if ($this->container['conversions'] === null) {
             return false;
         }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
+        if ($this->container['locale'] === null) {
+            return false;
+        }
+        if ($this->container['salesRate'] === null) {
             return false;
         }
         return true;
@@ -207,51 +177,64 @@ class Sort implements ArrayAccess
 
 
     /**
-     * Gets col
+     * Gets conversions
      * @return string
      */
-    public function getCol()
+    public function getConversions()
     {
-        return $this->container['col'];
+        return $this->container['conversions'];
     }
 
     /**
-     * Sets col
-     * @param string $col
+     * Sets conversions
+     * @param string $conversions
      * @return $this
      */
-    public function setCol($col)
+    public function setConversions($conversions)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
-        if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
-        }
-        $this->container['col'] = $col;
+        $this->container['conversions'] = $conversions;
 
         return $this;
     }
 
     /**
-     * Gets dir
+     * Gets locale
      * @return string
      */
-    public function getDir()
+    public function getLocale()
     {
-        return $this->container['dir'];
+        return $this->container['locale'];
     }
 
     /**
-     * Sets dir
-     * @param string $dir
+     * Sets locale
+     * @param string $locale
      * @return $this
      */
-    public function setDir($dir)
+    public function setLocale($locale)
     {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($dir) && (!in_array($dir, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'dir', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['dir'] = $dir;
+        $this->container['locale'] = $locale;
+
+        return $this;
+    }
+
+    /**
+     * Gets salesRate
+     * @return float
+     */
+    public function getSalesRate()
+    {
+        return $this->container['salesRate'];
+    }
+
+    /**
+     * Sets salesRate
+     * @param float $salesRate
+     * @return $this
+     */
+    public function setSalesRate($salesRate)
+    {
+        $this->container['salesRate'] = $salesRate;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * ExportDataData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * ExportDataData Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class ExportDataData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,14 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'ExportData_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'col' => 'string',
-        'dir' => 'string'
+        'url' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +67,7 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'col' => 'col',
-        'dir' => 'dir'
+        'url' => 'url'
     ];
 
 
@@ -78,8 +76,7 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'col' => 'setCol',
-        'dir' => 'setDir'
+        'url' => 'setUrl'
     ];
 
 
@@ -88,8 +85,7 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'col' => 'getCol',
-        'dir' => 'getDir'
+        'url' => 'getUrl'
     ];
 
     public static function attributeMap()
@@ -107,44 +103,8 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
-    const DIR_ASC = 'ASC';
-    const DIR_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getColAllowableValues()
-    {
-        return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getDirAllowableValues()
-    {
-        return [
-            self::DIR_ASC,
-            self::DIR_DESC,
-        ];
-    }
     
 
     /**
@@ -159,8 +119,7 @@ class Sort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['col'] = isset($data['col']) ? $data['col'] : null;
-        $this->container['dir'] = isset($data['dir']) ? $data['dir'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -172,16 +131,9 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+        if ($this->container['url'] === null) {
+            $invalid_properties[] = "'url' can't be null";
         }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'dir', must be one of 'ASC', 'DESC'.";
-        }
-
         return $invalid_properties;
     }
 
@@ -194,12 +146,7 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            return false;
-        }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
+        if ($this->container['url'] === null) {
             return false;
         }
         return true;
@@ -207,51 +154,22 @@ class Sort implements ArrayAccess
 
 
     /**
-     * Gets col
+     * Gets url
      * @return string
      */
-    public function getCol()
+    public function getUrl()
     {
-        return $this->container['col'];
+        return $this->container['url'];
     }
 
     /**
-     * Sets col
-     * @param string $col
+     * Sets url
+     * @param string $url
      * @return $this
      */
-    public function setCol($col)
+    public function setUrl($url)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
-        if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
-        }
-        $this->container['col'] = $col;
-
-        return $this;
-    }
-
-    /**
-     * Gets dir
-     * @return string
-     */
-    public function getDir()
-    {
-        return $this->container['dir'];
-    }
-
-    /**
-     * Sets dir
-     * @param string $dir
-     * @return $this
-     */
-    public function setDir($dir)
-    {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($dir) && (!in_array($dir, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'dir', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['dir'] = $dir;
+        $this->container['url'] = $url;
 
         return $this;
     }

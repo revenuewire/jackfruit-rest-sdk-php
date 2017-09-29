@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * PaymentsTotalsDataData
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * PaymentsTotalsDataData Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class PaymentsTotalsDataData implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +47,15 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'PaymentsTotalsData_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'col' => 'string',
-        'dir' => 'string'
+        'conversions' => 'int',
+        'netSales' => 'float'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +68,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'col' => 'col',
-        'dir' => 'dir'
+        'conversions' => 'conversions',
+        'netSales' => 'netSales'
     ];
 
 
@@ -78,8 +78,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'col' => 'setCol',
-        'dir' => 'setDir'
+        'conversions' => 'setConversions',
+        'netSales' => 'setNetSales'
     ];
 
 
@@ -88,8 +88,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'col' => 'getCol',
-        'dir' => 'getDir'
+        'conversions' => 'getConversions',
+        'netSales' => 'getNetSales'
     ];
 
     public static function attributeMap()
@@ -107,44 +107,8 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
-    const DIR_ASC = 'ASC';
-    const DIR_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getColAllowableValues()
-    {
-        return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getDirAllowableValues()
-    {
-        return [
-            self::DIR_ASC,
-            self::DIR_DESC,
-        ];
-    }
     
 
     /**
@@ -159,8 +123,8 @@ class Sort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['col'] = isset($data['col']) ? $data['col'] : null;
-        $this->container['dir'] = isset($data['dir']) ? $data['dir'] : null;
+        $this->container['conversions'] = isset($data['conversions']) ? $data['conversions'] : null;
+        $this->container['netSales'] = isset($data['netSales']) ? $data['netSales'] : null;
     }
 
     /**
@@ -172,16 +136,12 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+        if ($this->container['conversions'] === null) {
+            $invalid_properties[] = "'conversions' can't be null";
         }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'dir', must be one of 'ASC', 'DESC'.";
+        if ($this->container['netSales'] === null) {
+            $invalid_properties[] = "'netSales' can't be null";
         }
-
         return $invalid_properties;
     }
 
@@ -194,12 +154,10 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
+        if ($this->container['conversions'] === null) {
             return false;
         }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
+        if ($this->container['netSales'] === null) {
             return false;
         }
         return true;
@@ -207,51 +165,43 @@ class Sort implements ArrayAccess
 
 
     /**
-     * Gets col
-     * @return string
+     * Gets conversions
+     * @return int
      */
-    public function getCol()
+    public function getConversions()
     {
-        return $this->container['col'];
+        return $this->container['conversions'];
     }
 
     /**
-     * Sets col
-     * @param string $col
+     * Sets conversions
+     * @param int $conversions
      * @return $this
      */
-    public function setCol($col)
+    public function setConversions($conversions)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
-        if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
-        }
-        $this->container['col'] = $col;
+        $this->container['conversions'] = $conversions;
 
         return $this;
     }
 
     /**
-     * Gets dir
-     * @return string
+     * Gets netSales
+     * @return float
      */
-    public function getDir()
+    public function getNetSales()
     {
-        return $this->container['dir'];
+        return $this->container['netSales'];
     }
 
     /**
-     * Sets dir
-     * @param string $dir
+     * Sets netSales
+     * @param float $netSales
      * @return $this
      */
-    public function setDir($dir)
+    public function setNetSales($netSales)
     {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($dir) && (!in_array($dir, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'dir', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['dir'] = $dir;
+        $this->container['netSales'] = $netSales;
 
         return $this;
     }

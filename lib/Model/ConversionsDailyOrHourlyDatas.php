@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * ConversionsDailyOrHourlyDatas
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * ConversionsDailyOrHourlyDatas Class Doc Comment
  *
  * @category    Class
+ * @description Daily or hourly conversions summary data
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class ConversionsDailyOrHourlyDatas implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,15 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'ConversionsDailyOrHourlyDatas';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'col' => 'string',
-        'dir' => 'string'
+        'response' => '\Swagger\Client\Model\Response',
+        'data' => '\Swagger\Client\Model\ConversionsDailyOrHourlyData[]'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +69,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'col' => 'col',
-        'dir' => 'dir'
+        'response' => 'response',
+        'data' => 'data'
     ];
 
 
@@ -78,8 +79,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'col' => 'setCol',
-        'dir' => 'setDir'
+        'response' => 'setResponse',
+        'data' => 'setData'
     ];
 
 
@@ -88,8 +89,8 @@ class Sort implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'col' => 'getCol',
-        'dir' => 'getDir'
+        'response' => 'getResponse',
+        'data' => 'getData'
     ];
 
     public static function attributeMap()
@@ -107,44 +108,8 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
-    const DIR_ASC = 'ASC';
-    const DIR_DESC = 'DESC';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getColAllowableValues()
-    {
-        return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getDirAllowableValues()
-    {
-        return [
-            self::DIR_ASC,
-            self::DIR_DESC,
-        ];
-    }
     
 
     /**
@@ -159,8 +124,8 @@ class Sort implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['col'] = isset($data['col']) ? $data['col'] : null;
-        $this->container['dir'] = isset($data['dir']) ? $data['dir'] : null;
+        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -172,16 +137,12 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+        if ($this->container['response'] === null) {
+            $invalid_properties[] = "'response' can't be null";
         }
-
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'dir', must be one of 'ASC', 'DESC'.";
+        if ($this->container['data'] === null) {
+            $invalid_properties[] = "'data' can't be null";
         }
-
         return $invalid_properties;
     }
 
@@ -194,12 +155,10 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
-        if (!in_array($this->container['col'], $allowed_values)) {
+        if ($this->container['response'] === null) {
             return false;
         }
-        $allowed_values = ["ASC", "DESC"];
-        if (!in_array($this->container['dir'], $allowed_values)) {
+        if ($this->container['data'] === null) {
             return false;
         }
         return true;
@@ -207,51 +166,43 @@ class Sort implements ArrayAccess
 
 
     /**
-     * Gets col
-     * @return string
+     * Gets response
+     * @return \Swagger\Client\Model\Response
      */
-    public function getCol()
+    public function getResponse()
     {
-        return $this->container['col'];
+        return $this->container['response'];
     }
 
     /**
-     * Sets col
-     * @param string $col
+     * Sets response
+     * @param \Swagger\Client\Model\Response $response
      * @return $this
      */
-    public function setCol($col)
+    public function setResponse($response)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
-        if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
-        }
-        $this->container['col'] = $col;
+        $this->container['response'] = $response;
 
         return $this;
     }
 
     /**
-     * Gets dir
-     * @return string
+     * Gets data
+     * @return \Swagger\Client\Model\ConversionsDailyOrHourlyData[]
      */
-    public function getDir()
+    public function getData()
     {
-        return $this->container['dir'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets dir
-     * @param string $dir
+     * Sets data
+     * @param \Swagger\Client\Model\ConversionsDailyOrHourlyData[] $data
      * @return $this
      */
-    public function setDir($dir)
+    public function setData($data)
     {
-        $allowed_values = array('ASC', 'DESC');
-        if (!is_null($dir) && (!in_array($dir, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'dir', must be one of 'ASC', 'DESC'");
-        }
-        $this->container['dir'] = $dir;
+        $this->container['data'] = $data;
 
         return $this;
     }

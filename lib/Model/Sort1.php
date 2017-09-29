@@ -107,17 +107,24 @@ class Sort1 implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_ALIASES = 'aliases';
-    const COL_OFFERS = 'offers';
-    const COL_TYPE = 'type';
-    const COL_CATEGORY = 'category';
-    const COL_PERIOD = 'period';
-    const COL_CLICKS = 'clicks';
-    const COL_CONVERSIONS = 'conversions';
-    const COL_SALES = 'sales';
-    const COL_EPC = 'epc';
+    const COL_REFERENCE = 'reference';
+    const COL_TRANSACTION_TYPE = 'transactionType';
     const COL_PAYOUT = 'payout';
-    const COL_CONVERSION_RATE = 'conversionRate';
+    const COL_DATE = 'date';
+    const COL_SESSION = 'session';
+    const COL_REFERRER = 'referrer';
+    const COL_IP = 'ip';
+    const COL_ALIAS = 'alias';
+    const COL_OFFER = 'offer';
+    const COL_ZONE = 'zone';
+    const COL_COUNTRY = 'country';
+    const COL_OS = 'os';
+    const COL_BROWSER = 'browser';
+    const COL_CAMPAIGN = 'campaign';
+    const COL_CLICK_ID = 'clickId';
+    const COL_SUB_ID = 'subId';
+    const COL_SUB_ID2 = 'subId2';
+    const COL_SUB_ID3 = 'subId3';
     const DIR_ASC = 'ASC';
     const DIR_DESC = 'DESC';
     
@@ -130,17 +137,24 @@ class Sort1 implements ArrayAccess
     public function getColAllowableValues()
     {
         return [
-            self::COL_ALIASES,
-            self::COL_OFFERS,
-            self::COL_TYPE,
-            self::COL_CATEGORY,
-            self::COL_PERIOD,
-            self::COL_CLICKS,
-            self::COL_CONVERSIONS,
-            self::COL_SALES,
-            self::COL_EPC,
+            self::COL_REFERENCE,
+            self::COL_TRANSACTION_TYPE,
             self::COL_PAYOUT,
-            self::COL_CONVERSION_RATE,
+            self::COL_DATE,
+            self::COL_SESSION,
+            self::COL_REFERRER,
+            self::COL_IP,
+            self::COL_ALIAS,
+            self::COL_OFFER,
+            self::COL_ZONE,
+            self::COL_COUNTRY,
+            self::COL_OS,
+            self::COL_BROWSER,
+            self::COL_CAMPAIGN,
+            self::COL_CLICK_ID,
+            self::COL_SUB_ID,
+            self::COL_SUB_ID2,
+            self::COL_SUB_ID3,
         ];
     }
     
@@ -182,9 +196,9 @@ class Sort1 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["aliases", "offers", "type", "category", "period", "clicks", "conversions", "sales", "epc", "payout", "conversionRate"];
+        $allowed_values = ["reference", "transactionType", "payout", "date", "session", "referrer", "ip", "alias", "offer", "zone", "country", "os", "browser", "campaign", "clickId", "subId", "subId2", "subId3"];
         if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate'.";
+            $invalid_properties[] = "invalid value for 'col', must be one of 'reference', 'transactionType', 'payout', 'date', 'session', 'referrer', 'ip', 'alias', 'offer', 'zone', 'country', 'os', 'browser', 'campaign', 'clickId', 'subId', 'subId2', 'subId3'.";
         }
 
         $allowed_values = ["ASC", "DESC"];
@@ -204,7 +218,7 @@ class Sort1 implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["aliases", "offers", "type", "category", "period", "clicks", "conversions", "sales", "epc", "payout", "conversionRate"];
+        $allowed_values = ["reference", "transactionType", "payout", "date", "session", "referrer", "ip", "alias", "offer", "zone", "country", "os", "browser", "campaign", "clickId", "subId", "subId2", "subId3"];
         if (!in_array($this->container['col'], $allowed_values)) {
             return false;
         }
@@ -232,9 +246,9 @@ class Sort1 implements ArrayAccess
      */
     public function setCol($col)
     {
-        $allowed_values = array('aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate');
+        $allowed_values = array('reference', 'transactionType', 'payout', 'date', 'session', 'referrer', 'ip', 'alias', 'offer', 'zone', 'country', 'os', 'browser', 'campaign', 'clickId', 'subId', 'subId2', 'subId3');
         if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'aliases', 'offers', 'type', 'category', 'period', 'clicks', 'conversions', 'sales', 'epc', 'payout', 'conversionRate'");
+            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'reference', 'transactionType', 'payout', 'date', 'session', 'referrer', 'ip', 'alias', 'offer', 'zone', 'country', 'os', 'browser', 'campaign', 'clickId', 'subId', 'subId2', 'subId3'");
         }
         $this->container['col'] = $col;
 

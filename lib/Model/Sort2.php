@@ -1,6 +1,6 @@
 <?php
 /**
- * Sort
+ * Sort2
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Sort Class Doc Comment
+ * Sort2 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Sort implements ArrayAccess
+class Sort2 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class Sort implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'sort';
+    protected static $swaggerModelName = 'sort_2';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -107,12 +107,11 @@ class Sort implements ArrayAccess
         return self::$getters;
     }
 
-    const COL_DATE = 'date';
-    const COL_ALIAS = 'alias';
-    const COL_OFFER = 'offer';
-    const COL_ZONE = 'zone';
-    const COL_COUNTRY = 'country';
-    const COL_OS = 'os';
+    const COL_ID = 'id';
+    const COL_PERIOD = 'period';
+    const COL_PAYMENT_DATE = 'paymentDate';
+    const COL_GROSS_PAYOUT = 'grossPayout';
+    const COL_PAYOUT = 'payout';
     const DIR_ASC = 'ASC';
     const DIR_DESC = 'DESC';
     
@@ -125,12 +124,11 @@ class Sort implements ArrayAccess
     public function getColAllowableValues()
     {
         return [
-            self::COL_DATE,
-            self::COL_ALIAS,
-            self::COL_OFFER,
-            self::COL_ZONE,
-            self::COL_COUNTRY,
-            self::COL_OS,
+            self::COL_ID,
+            self::COL_PERIOD,
+            self::COL_PAYMENT_DATE,
+            self::COL_GROSS_PAYOUT,
+            self::COL_PAYOUT,
         ];
     }
     
@@ -172,9 +170,9 @@ class Sort implements ArrayAccess
     {
         $invalid_properties = [];
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["id", "period", "paymentDate", "grossPayout", "payout"];
         if (!in_array($this->container['col'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'.";
+            $invalid_properties[] = "invalid value for 'col', must be one of 'id', 'period', 'paymentDate', 'grossPayout', 'payout'.";
         }
 
         $allowed_values = ["ASC", "DESC"];
@@ -194,7 +192,7 @@ class Sort implements ArrayAccess
     public function valid()
     {
 
-        $allowed_values = ["date", "alias", "offer", "zone", "country", "os"];
+        $allowed_values = ["id", "period", "paymentDate", "grossPayout", "payout"];
         if (!in_array($this->container['col'], $allowed_values)) {
             return false;
         }
@@ -222,9 +220,9 @@ class Sort implements ArrayAccess
      */
     public function setCol($col)
     {
-        $allowed_values = array('date', 'alias', 'offer', 'zone', 'country', 'os');
+        $allowed_values = array('id', 'period', 'paymentDate', 'grossPayout', 'payout');
         if (!is_null($col) && (!in_array($col, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'date', 'alias', 'offer', 'zone', 'country', 'os'");
+            throw new \InvalidArgumentException("Invalid value for 'col', must be one of 'id', 'period', 'paymentDate', 'grossPayout', 'payout'");
         }
         $this->container['col'] = $col;
 
