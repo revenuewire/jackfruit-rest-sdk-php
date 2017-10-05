@@ -105,6 +105,7 @@ Class | Method | HTTP request | Description
 *CustomersApi* | [**getOffers**](docs/Api/CustomersApi.md#getoffers) | **GET** /customers/{customerUserId}/offers | 
 *CustomersApi* | [**getTransactions**](docs/Api/CustomersApi.md#gettransactions) | **GET** /customers/{customerUserId}/transactions | 
 *CustomersApi* | [**updateShippingAddress**](docs/Api/CustomersApi.md#updateshippingaddress) | **PUT** /customers/{customerId}/address/{transactionId} | 
+*DashboardApi* | [**dashboardCustomizationPost**](docs/Api/DashboardApi.md#dashboardcustomizationpost) | **POST** /dashboard/customization | 
 *DestinationsApi* | [**destinationsAdd**](docs/Api/DestinationsApi.md#destinationsadd) | **POST** /destinations | 
 *DestinationsApi* | [**destinationsDelete**](docs/Api/DestinationsApi.md#destinationsdelete) | **DELETE** /destinations/{id} | 
 *DestinationsApi* | [**destinationsGet**](docs/Api/DestinationsApi.md#destinationsget) | **GET** /destinations | 
@@ -294,6 +295,7 @@ Class | Method | HTTP request | Description
  - [SafecartCampaignSummaryData](docs/Model/SafecartCampaignSummaryData.md)
  - [SafecartCampaignSummaryDatas](docs/Model/SafecartCampaignSummaryDatas.md)
  - [SafecartCampaignTotalsData](docs/Model/SafecartCampaignTotalsData.md)
+ - [Setting](docs/Model/Setting.md)
  - [Sort](docs/Model/Sort.md)
  - [Sort1](docs/Model/Sort1.md)
  - [Sort2](docs/Model/Sort2.md)
