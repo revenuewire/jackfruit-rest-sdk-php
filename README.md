@@ -125,6 +125,16 @@ Class | Method | HTTP request | Description
 *OrdersApi* | [**getOrderDetail**](docs/Api/OrdersApi.md#getorderdetail) | **GET** /orders/{orderId} | 
 *OrdersApi* | [**getOrderList**](docs/Api/OrdersApi.md#getorderlist) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**orderLookUp**](docs/Api/OrdersApi.md#orderlookup) | **POST** /orders/purchase-lookup | 
+*PathsApi* | [**createNode**](docs/Api/PathsApi.md#createnode) | **POST** /paths/{pathId}/nodes/ | Create path node
+*PathsApi* | [**createPath**](docs/Api/PathsApi.md#createpath) | **POST** /paths | Create path
+*PathsApi* | [**deleteNode**](docs/Api/PathsApi.md#deletenode) | **DELETE** /paths/{pathId}/nodes/{nodeId} | Delete a node
+*PathsApi* | [**deletePath**](docs/Api/PathsApi.md#deletepath) | **DELETE** /paths/{pathId}/ | Delete path
+*PathsApi* | [**getAllPaths**](docs/Api/PathsApi.md#getallpaths) | **GET** /paths | Get Paths
+*PathsApi* | [**getNode**](docs/Api/PathsApi.md#getnode) | **GET** /paths/{pathId}/nodes/{nodeId} | Get a node
+*PathsApi* | [**getNodesInPath**](docs/Api/PathsApi.md#getnodesinpath) | **GET** /paths/{pathId}/nodes/ | Get nodes in a path
+*PathsApi* | [**getPathInfo**](docs/Api/PathsApi.md#getpathinfo) | **GET** /paths/{pathId}/ | Get Path
+*PathsApi* | [**updateNode**](docs/Api/PathsApi.md#updatenode) | **PUT** /paths/{pathId}/nodes/{nodeId} | Update a node
+*PathsApi* | [**updatePath**](docs/Api/PathsApi.md#updatepath) | **PUT** /paths/{pathId}/ | Update path
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
@@ -163,6 +173,8 @@ Class | Method | HTTP request | Description
  - [AffiliateLink](docs/Model/AffiliateLink.md)
  - [Alias](docs/Model/Alias.md)
  - [Aliases](docs/Model/Aliases.md)
+ - [AllPathInfos](docs/Model/AllPathInfos.md)
+ - [AllPathNodes](docs/Model/AllPathNodes.md)
  - [BillInfo](docs/Model/BillInfo.md)
  - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [CancelProfileResponse](docs/Model/CancelProfileResponse.md)
@@ -214,9 +226,16 @@ Class | Method | HTTP request | Description
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)
  - [NewTemplates](docs/Model/NewTemplates.md)
+ - [NodeDeleteObj](docs/Model/NodeDeleteObj.md)
+ - [NodeInfo](docs/Model/NodeInfo.md)
  - [OrderDetails](docs/Model/OrderDetails.md)
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
  - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
+ - [PathInfo](docs/Model/PathInfo.md)
+ - [PathNodeObj](docs/Model/PathNodeObj.md)
+ - [PathObj](docs/Model/PathObj.md)
+ - [PathsDeleteObj](docs/Model/PathsDeleteObj.md)
+ - [PathsDeleteObjData](docs/Model/PathsDeleteObjData.md)
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [PostbackTest](docs/Model/PostbackTest.md)
