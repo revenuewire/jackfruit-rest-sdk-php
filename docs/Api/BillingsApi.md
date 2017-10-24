@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **billingInfoUpdate**
-> \Swagger\Client\Model\BillInfoResponse billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode)
+> \Swagger\Client\Model\BillInfoResponse billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode, $address, $address2, $city, $country, $state)
 
 
 
@@ -38,9 +38,14 @@ $cardExpiry = "cardExpiry_example"; // string | Credit Card expiry
 $cardCCV = "cardCCV_example"; // string | Credit CCV
 $recurringTransactionItemId = "recurringTransactionItemId_example"; // string | recurring transaction item to be updated
 $postalCode = "postalCode_example"; // string | Postal code
+$address = "address_example"; // string | Billing address one
+$address2 = "address2_example"; // string | Billing address two
+$city = "city_example"; // string | Billing city
+$country = "country_example"; // string | Billing country
+$state = "state_example"; // string | Billing state or province
 
 try {
-    $result = $api_instance->billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode);
+    $result = $api_instance->billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode, $address, $address2, $city, $country, $state);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingsApi->billingInfoUpdate: ', $e->getMessage(), PHP_EOL;
@@ -59,6 +64,11 @@ Name | Type | Description  | Notes
  **cardCCV** | **string**| Credit CCV | [optional]
  **recurringTransactionItemId** | **string**| recurring transaction item to be updated | [optional]
  **postalCode** | **string**| Postal code | [optional]
+ **address** | **string**| Billing address one | [optional]
+ **address2** | **string**| Billing address two | [optional]
+ **city** | **string**| Billing city | [optional]
+ **country** | **string**| Billing country | [optional]
+ **state** | **string**| Billing state or province | [optional]
 
 ### Return type
 

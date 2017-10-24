@@ -99,12 +99,17 @@ class BillingsApi
      * @param string $cardCCV Credit CCV (optional)
      * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
      * @param string $postalCode Postal code (optional)
+     * @param string $address Billing address one (optional)
+     * @param string $address2 Billing address two (optional)
+     * @param string $city Billing city (optional)
+     * @param string $country Billing country (optional)
+     * @param string $state Billing state or province (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\BillInfoResponse
      */
-    public function billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $recurringTransactionItemId = null, $postalCode = null)
+    public function billingInfoUpdate($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $recurringTransactionItemId = null, $postalCode = null, $address = null, $address2 = null, $city = null, $country = null, $state = null)
     {
-        list($response) = $this->billingInfoUpdateWithHttpInfo($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode);
+        list($response) = $this->billingInfoUpdateWithHttpInfo($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $recurringTransactionItemId, $postalCode, $address, $address2, $city, $country, $state);
         return $response;
     }
 
@@ -120,10 +125,15 @@ class BillingsApi
      * @param string $cardCCV Credit CCV (optional)
      * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
      * @param string $postalCode Postal code (optional)
+     * @param string $address Billing address one (optional)
+     * @param string $address2 Billing address two (optional)
+     * @param string $city Billing city (optional)
+     * @param string $country Billing country (optional)
+     * @param string $state Billing state or province (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\BillInfoResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function billingInfoUpdateWithHttpInfo($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $recurringTransactionItemId = null, $postalCode = null)
+    public function billingInfoUpdateWithHttpInfo($billingInfoId, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $recurringTransactionItemId = null, $postalCode = null, $address = null, $address2 = null, $city = null, $country = null, $state = null)
     {
         // verify the required parameter 'billingInfoId' is set
         if ($billingInfoId === null) {
@@ -187,6 +197,26 @@ class BillingsApi
         // form params
         if ($postalCode !== null) {
             $formParams['postalCode'] = $this->apiClient->getSerializer()->toFormValue($postalCode);
+        }
+        // form params
+        if ($address !== null) {
+            $formParams['address'] = $this->apiClient->getSerializer()->toFormValue($address);
+        }
+        // form params
+        if ($address2 !== null) {
+            $formParams['address2'] = $this->apiClient->getSerializer()->toFormValue($address2);
+        }
+        // form params
+        if ($city !== null) {
+            $formParams['city'] = $this->apiClient->getSerializer()->toFormValue($city);
+        }
+        // form params
+        if ($country !== null) {
+            $formParams['country'] = $this->apiClient->getSerializer()->toFormValue($country);
+        }
+        // form params
+        if ($state !== null) {
+            $formParams['state'] = $this->apiClient->getSerializer()->toFormValue($state);
         }
         
         // for model (json/xml)
