@@ -152,6 +152,7 @@ Class | Method | HTTP request | Description
 *TrackingsApi* | [**trackingsDelete**](docs/Api/TrackingsApi.md#trackingsdelete) | **DELETE** /trackings/{id} | 
 *TrackingsApi* | [**trackingsGet**](docs/Api/TrackingsApi.md#trackingsget) | **GET** /trackings | 
 *TrackingsApi* | [**trackingsUpdate**](docs/Api/TrackingsApi.md#trackingsupdate) | **PUT** /trackings/{id} | 
+*TransactionsApi* | [**getTransaction**](docs/Api/TransactionsApi.md#gettransaction) | **GET** /transactions/{transactionId} | Get Transaction
 *UsersApi* | [**customerLogin**](docs/Api/UsersApi.md#customerlogin) | **POST** /users/login | 
 *UsersApi* | [**customerOrderLogin**](docs/Api/UsersApi.md#customerorderlogin) | **POST** /users/order-login | 
 *UsersApi* | [**customerSignup**](docs/Api/UsersApi.md#customersignup) | **POST** /users/sign-up | 
@@ -187,6 +188,7 @@ Class | Method | HTTP request | Description
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
  - [CustomerAddressObj](docs/Model/CustomerAddressObj.md)
+ - [CustomerDetailedObj](docs/Model/CustomerDetailedObj.md)
  - [CustomerObj](docs/Model/CustomerObj.md)
  - [CustomerOffers](docs/Model/CustomerOffers.md)
  - [CustomerOffersObj](docs/Model/CustomerOffersObj.md)
@@ -228,6 +230,7 @@ Class | Method | HTTP request | Description
  - [NewTemplates](docs/Model/NewTemplates.md)
  - [NodeDeleteObj](docs/Model/NodeDeleteObj.md)
  - [NodeInfo](docs/Model/NodeInfo.md)
+ - [OrderDetailedObj](docs/Model/OrderDetailedObj.md)
  - [OrderDetails](docs/Model/OrderDetails.md)
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
  - [OrderLookUpRes](docs/Model/OrderLookUpRes.md)
@@ -255,7 +258,9 @@ Class | Method | HTTP request | Description
  - [TokenData](docs/Model/TokenData.md)
  - [Tracking](docs/Model/Tracking.md)
  - [Transaction](docs/Model/Transaction.md)
+ - [TransactionDetails](docs/Model/TransactionDetails.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
+ - [TransactionResponseObj](docs/Model/TransactionResponseObj.md)
  - [UpdateEmailResponse](docs/Model/UpdateEmailResponse.md)
  - [UpdateEmailResponseData](docs/Model/UpdateEmailResponseData.md)
  - [User](docs/Model/User.md)
