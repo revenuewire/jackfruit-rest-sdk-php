@@ -135,6 +135,7 @@ Class | Method | HTTP request | Description
 *PathsApi* | [**getPathInfo**](docs/Api/PathsApi.md#getpathinfo) | **GET** /paths/{pathId}/ | Get Path
 *PathsApi* | [**updateNode**](docs/Api/PathsApi.md#updatenode) | **PUT** /paths/{pathId}/nodes/{nodeId} | Update a node
 *PathsApi* | [**updatePath**](docs/Api/PathsApi.md#updatepath) | **PUT** /paths/{pathId}/ | Update path
+*ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{productId} | Get Product
 *ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
 *ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
 *ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
@@ -242,6 +243,10 @@ Class | Method | HTTP request | Description
  - [PaypalUrl](docs/Model/PaypalUrl.md)
  - [PaypalUrlData](docs/Model/PaypalUrlData.md)
  - [PostbackTest](docs/Model/PostbackTest.md)
+ - [ProductCategory](docs/Model/ProductCategory.md)
+ - [ProductDetails](docs/Model/ProductDetails.md)
+ - [ProductResponseObj](docs/Model/ProductResponseObj.md)
+ - [ProductType](docs/Model/ProductType.md)
  - [Profile](docs/Model/Profile.md)
  - [Response](docs/Model/Response.md)
  - [Setting](docs/Model/Setting.md)
