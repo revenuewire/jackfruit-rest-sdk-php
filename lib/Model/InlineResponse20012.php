@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2008
+ * InlineResponse20012
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2008 Class Doc Comment
+ * InlineResponse20012 Class Doc Comment
  *
  * @category    Class
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2008 implements ArrayAccess
+class InlineResponse20012 implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,7 +47,7 @@ class InlineResponse2008 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_8';
+    protected static $swaggerModelName = 'inline_response_200_12';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -55,7 +55,7 @@ class InlineResponse2008 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\Destination'
+        'data' => '\Swagger\Client\Model\PostbackTest'
     ];
 
     public static function swaggerTypes()
@@ -187,7 +187,7 @@ class InlineResponse2008 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\Destination
+     * @return \Swagger\Client\Model\PostbackTest
      */
     public function getData()
     {
@@ -196,7 +196,7 @@ class InlineResponse2008 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\Destination $data Newly updated destination link
+     * @param \Swagger\Client\Model\PostbackTest $data Test results
      * @return $this
      */
     public function setData($data)

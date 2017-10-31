@@ -100,6 +100,7 @@ Class | Method | HTTP request | Description
 *CatalogApi* | [**newOffersPut**](docs/Api/CatalogApi.md#newoffersput) | **PUT** /catalog/new-offers | 
 *CatalogApi* | [**topOffersGet**](docs/Api/CatalogApi.md#topoffersget) | **GET** /catalog/top-offers | 
 *CatalogApi* | [**topOffersPut**](docs/Api/CatalogApi.md#topoffersput) | **PUT** /catalog/top-offers | 
+*CouponsApi* | [**couponsGet**](docs/Api/CouponsApi.md#couponsget) | **GET** /coupons | 
 *CustomersApi* | [**getCustomer**](docs/Api/CustomersApi.md#getcustomer) | **GET** /customers/{customerId} | 
 *CustomersApi* | [**getCustomersForMerchant**](docs/Api/CustomersApi.md#getcustomersformerchant) | **GET** /customers | 
 *CustomersApi* | [**getOffers**](docs/Api/CustomersApi.md#getoffers) | **GET** /customers/{customerUserId}/offers | 
@@ -185,6 +186,7 @@ Class | Method | HTTP request | Description
  - [Context](docs/Model/Context.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)
+ - [Coupon](docs/Model/Coupon.md)
  - [CpaPayoutPolicy](docs/Model/CpaPayoutPolicy.md)
  - [Customer](docs/Model/Customer.md)
  - [CustomerAddress](docs/Model/CustomerAddress.md)
@@ -212,6 +214,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse20010](docs/Model/InlineResponse20010.md)
  - [InlineResponse20011](docs/Model/InlineResponse20011.md)
+ - [InlineResponse20012](docs/Model/InlineResponse20012.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InlineResponse2004](docs/Model/InlineResponse2004.md)

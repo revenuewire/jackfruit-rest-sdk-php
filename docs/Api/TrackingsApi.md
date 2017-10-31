@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **postbackTest**
-> \Swagger\Client\Model\InlineResponse20011 postbackTest($id, $destinationId, $catalogId, $clickId, $subId, $subId2, $subId3)
+> \Swagger\Client\Model\InlineResponse20012 postbackTest($id, $destinationId, $catalogId, $clickId, $subId, $subId2, $subId3)
 
 
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackingsAdd**
-> \Swagger\Client\Model\InlineResponse2009 trackingsAdd($catalogId, $type, $data)
+> \Swagger\Client\Model\InlineResponse20010 trackingsAdd($catalogId, $type, $data)
 
 
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackingsGet**
-> \Swagger\Client\Model\InlineResponse2008 trackingsGet($catalogId)
+> \Swagger\Client\Model\InlineResponse2009 trackingsGet($catalogId)
 
 
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Swagger\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackingsUpdate**
-> \Swagger\Client\Model\InlineResponse20010 trackingsUpdate($id, $data)
+> \Swagger\Client\Model\InlineResponse20011 trackingsUpdate($id, $data)
 
 
 
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 

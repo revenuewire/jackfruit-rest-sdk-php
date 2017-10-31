@@ -196,7 +196,7 @@ class InlineResponse20010 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\Tracking $data Newly updated tracking
+     * @param \Swagger\Client\Model\Tracking $data Newly created tracking
      * @return $this
      */
     public function setData($data)

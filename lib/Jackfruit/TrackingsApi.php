@@ -100,7 +100,7 @@ class TrackingsApi
      * @param string $subId2 sub ID 2 (optional)
      * @param string $subId3 sub ID 3 (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse20011
+     * @return \Swagger\Client\Model\InlineResponse20012
      */
     public function postbackTest($id, $destinationId, $catalogId, $clickId = null, $subId = null, $subId2 = null, $subId3 = null)
     {
@@ -121,7 +121,7 @@ class TrackingsApi
      * @param string $subId2 sub ID 2 (optional)
      * @param string $subId3 sub ID 3 (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function postbackTestWithHttpInfo($id, $destinationId, $catalogId, $clickId = null, $subId = null, $subId2 = null, $subId3 = null)
     {
@@ -209,15 +209,15 @@ class TrackingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse20011',
+                '\Swagger\Client\Model\InlineResponse20012',
                 '/trackings/{id}/test'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20011', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20012', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20011', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20012', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -239,7 +239,7 @@ class TrackingsApi
      * @param string $type Tracking type (required)
      * @param string $data Tracking specific data (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2009
+     * @return \Swagger\Client\Model\InlineResponse20010
      */
     public function trackingsAdd($catalogId, $type, $data)
     {
@@ -256,7 +256,7 @@ class TrackingsApi
      * @param string $type Tracking type (required)
      * @param string $data Tracking specific data (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingsAddWithHttpInfo($catalogId, $type, $data)
     {
@@ -324,15 +324,15 @@ class TrackingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2009',
+                '\Swagger\Client\Model\InlineResponse20010',
                 '/trackings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2009', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20010', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2009', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20010', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -451,7 +451,7 @@ class TrackingsApi
      *
      * @param string $catalogId Offer&#39;s catalog ID (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2008
+     * @return \Swagger\Client\Model\InlineResponse2009
      */
     public function trackingsGet($catalogId)
     {
@@ -466,7 +466,7 @@ class TrackingsApi
      *
      * @param string $catalogId Offer&#39;s catalog ID (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingsGetWithHttpInfo($catalogId)
     {
@@ -518,15 +518,15 @@ class TrackingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2008',
+                '\Swagger\Client\Model\InlineResponse2009',
                 '/trackings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2008', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2009', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2008', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2009', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -547,7 +547,7 @@ class TrackingsApi
      * @param string $id Tracking ID (required)
      * @param string $data Tracking specific data (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \Swagger\Client\Model\InlineResponse20011
      */
     public function trackingsUpdate($id, $data)
     {
@@ -563,7 +563,7 @@ class TrackingsApi
      * @param string $id Tracking ID (required)
      * @param string $data Tracking specific data (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingsUpdateWithHttpInfo($id, $data)
     {
@@ -627,15 +627,15 @@ class TrackingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse20010',
+                '\Swagger\Client\Model\InlineResponse20011',
                 '/trackings/{id}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20010', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20011', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20010', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20011', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

@@ -1,6 +1,6 @@
 <?php
 /**
- * Destination
+ * Coupon
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * Destination Class Doc Comment
+ * Coupon Class Doc Comment
  *
  * @category    Class
- * @description Destinations object
+ * @description Coupon object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Destination implements ArrayAccess
+class Coupon implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class Destination implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Destination';
+    protected static $swaggerModelName = 'Coupon';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,13 @@ class Destination implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'int',
-        'fid' => 'string',
         'name' => 'string',
-        'url' => 'string',
-        'isCustom' => 'bool',
-        'geos' => 'string',
-        'couponId' => 'string'
+        'description' => 'string',
+        'discountAmount' => 'string',
+        'discountType' => 'string',
+        'startDate' => 'string',
+        'endDate' => 'string',
+        'code' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -75,12 +76,13 @@ class Destination implements ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'fid' => 'fid',
         'name' => 'name',
-        'url' => 'url',
-        'isCustom' => 'isCustom',
-        'geos' => 'geos',
-        'couponId' => 'couponId'
+        'description' => 'description',
+        'discountAmount' => 'discountAmount',
+        'discountType' => 'discountType',
+        'startDate' => 'startDate',
+        'endDate' => 'endDate',
+        'code' => 'code'
     ];
 
 
@@ -90,12 +92,13 @@ class Destination implements ArrayAccess
      */
     protected static $setters = [
         'id' => 'setId',
-        'fid' => 'setFid',
         'name' => 'setName',
-        'url' => 'setUrl',
-        'isCustom' => 'setIsCustom',
-        'geos' => 'setGeos',
-        'couponId' => 'setCouponId'
+        'description' => 'setDescription',
+        'discountAmount' => 'setDiscountAmount',
+        'discountType' => 'setDiscountType',
+        'startDate' => 'setStartDate',
+        'endDate' => 'setEndDate',
+        'code' => 'setCode'
     ];
 
 
@@ -105,12 +108,13 @@ class Destination implements ArrayAccess
      */
     protected static $getters = [
         'id' => 'getId',
-        'fid' => 'getFid',
         'name' => 'getName',
-        'url' => 'getUrl',
-        'isCustom' => 'getIsCustom',
-        'geos' => 'getGeos',
-        'couponId' => 'getCouponId'
+        'description' => 'getDescription',
+        'discountAmount' => 'getDiscountAmount',
+        'discountType' => 'getDiscountType',
+        'startDate' => 'getStartDate',
+        'endDate' => 'getEndDate',
+        'code' => 'getCode'
     ];
 
     public static function attributeMap()
@@ -145,12 +149,13 @@ class Destination implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['fid'] = isset($data['fid']) ? $data['fid'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
-        $this->container['isCustom'] = isset($data['isCustom']) ? $data['isCustom'] : null;
-        $this->container['geos'] = isset($data['geos']) ? $data['geos'] : null;
-        $this->container['couponId'] = isset($data['couponId']) ? $data['couponId'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['discountAmount'] = isset($data['discountAmount']) ? $data['discountAmount'] : null;
+        $this->container['discountType'] = isset($data['discountType']) ? $data['discountType'] : null;
+        $this->container['startDate'] = isset($data['startDate']) ? $data['startDate'] : null;
+        $this->container['endDate'] = isset($data['endDate']) ? $data['endDate'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
     }
 
     /**
@@ -165,14 +170,26 @@ class Destination implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        if ($this->container['fid'] === null) {
-            $invalid_properties[] = "'fid' can't be null";
-        }
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
-        if ($this->container['url'] === null) {
-            $invalid_properties[] = "'url' can't be null";
+        if ($this->container['description'] === null) {
+            $invalid_properties[] = "'description' can't be null";
+        }
+        if ($this->container['discountAmount'] === null) {
+            $invalid_properties[] = "'discountAmount' can't be null";
+        }
+        if ($this->container['discountType'] === null) {
+            $invalid_properties[] = "'discountType' can't be null";
+        }
+        if ($this->container['startDate'] === null) {
+            $invalid_properties[] = "'startDate' can't be null";
+        }
+        if ($this->container['endDate'] === null) {
+            $invalid_properties[] = "'endDate' can't be null";
+        }
+        if ($this->container['code'] === null) {
+            $invalid_properties[] = "'code' can't be null";
         }
         return $invalid_properties;
     }
@@ -189,13 +206,25 @@ class Destination implements ArrayAccess
         if ($this->container['id'] === null) {
             return false;
         }
-        if ($this->container['fid'] === null) {
-            return false;
-        }
         if ($this->container['name'] === null) {
             return false;
         }
-        if ($this->container['url'] === null) {
+        if ($this->container['description'] === null) {
+            return false;
+        }
+        if ($this->container['discountAmount'] === null) {
+            return false;
+        }
+        if ($this->container['discountType'] === null) {
+            return false;
+        }
+        if ($this->container['startDate'] === null) {
+            return false;
+        }
+        if ($this->container['endDate'] === null) {
+            return false;
+        }
+        if ($this->container['code'] === null) {
             return false;
         }
         return true;
@@ -224,27 +253,6 @@ class Destination implements ArrayAccess
     }
 
     /**
-     * Gets fid
-     * @return string
-     */
-    public function getFid()
-    {
-        return $this->container['fid'];
-    }
-
-    /**
-     * Sets fid
-     * @param string $fid
-     * @return $this
-     */
-    public function setFid($fid)
-    {
-        $this->container['fid'] = $fid;
-
-        return $this;
-    }
-
-    /**
      * Gets name
      * @return string
      */
@@ -266,85 +274,127 @@ class Destination implements ArrayAccess
     }
 
     /**
-     * Gets url
+     * Gets description
      * @return string
      */
-    public function getUrl()
+    public function getDescription()
     {
-        return $this->container['url'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets url
-     * @param string $url
+     * Sets description
+     * @param string $description
      * @return $this
      */
-    public function setUrl($url)
+    public function setDescription($description)
     {
-        $this->container['url'] = $url;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets isCustom
-     * @return bool
+     * Gets discountAmount
+     * @return string
      */
-    public function getIsCustom()
+    public function getDiscountAmount()
     {
-        return $this->container['isCustom'];
+        return $this->container['discountAmount'];
     }
 
     /**
-     * Sets isCustom
-     * @param bool $isCustom
+     * Sets discountAmount
+     * @param string $discountAmount
      * @return $this
      */
-    public function setIsCustom($isCustom)
+    public function setDiscountAmount($discountAmount)
     {
-        $this->container['isCustom'] = $isCustom;
+        $this->container['discountAmount'] = $discountAmount;
 
         return $this;
     }
 
     /**
-     * Gets geos
+     * Gets discountType
      * @return string
      */
-    public function getGeos()
+    public function getDiscountType()
     {
-        return $this->container['geos'];
+        return $this->container['discountType'];
     }
 
     /**
-     * Sets geos
-     * @param string $geos
+     * Sets discountType
+     * @param string $discountType
      * @return $this
      */
-    public function setGeos($geos)
+    public function setDiscountType($discountType)
     {
-        $this->container['geos'] = $geos;
+        $this->container['discountType'] = $discountType;
 
         return $this;
     }
 
     /**
-     * Gets couponId
+     * Gets startDate
      * @return string
      */
-    public function getCouponId()
+    public function getStartDate()
     {
-        return $this->container['couponId'];
+        return $this->container['startDate'];
     }
 
     /**
-     * Sets couponId
-     * @param string $couponId
+     * Sets startDate
+     * @param string $startDate
      * @return $this
      */
-    public function setCouponId($couponId)
+    public function setStartDate($startDate)
     {
-        $this->container['couponId'] = $couponId;
+        $this->container['startDate'] = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets endDate
+     * @return string
+     */
+    public function getEndDate()
+    {
+        return $this->container['endDate'];
+    }
+
+    /**
+     * Sets endDate
+     * @param string $endDate
+     * @return $this
+     */
+    public function setEndDate($endDate)
+    {
+        $this->container['endDate'] = $endDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
 
         return $this;
     }

@@ -55,7 +55,7 @@ class InlineResponse20011 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\PostbackTest'
+        'data' => '\Swagger\Client\Model\Tracking'
     ];
 
     public static function swaggerTypes()
@@ -187,7 +187,7 @@ class InlineResponse20011 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\PostbackTest
+     * @return \Swagger\Client\Model\Tracking
      */
     public function getData()
     {
@@ -196,7 +196,7 @@ class InlineResponse20011 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\PostbackTest $data Test results
+     * @param \Swagger\Client\Model\Tracking $data Newly updated tracking
      * @return $this
      */
     public function setData($data)

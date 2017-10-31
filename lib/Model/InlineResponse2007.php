@@ -196,7 +196,7 @@ class InlineResponse2007 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\Destination $data Newly updated destination link
+     * @param \Swagger\Client\Model\Destination $data Newly created destination link
      * @return $this
      */
     public function setData($data)

@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **url** | **string** |  | 
 **isCustom** | **bool** |  | [optional] 
 **geos** | **string** |  | [optional] 
+**couponId** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
