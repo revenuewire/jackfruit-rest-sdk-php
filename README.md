@@ -123,6 +123,7 @@ Class | Method | HTTP request | Description
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
 *MerchantsApi* | [**createAffiliateBlock**](docs/Api/MerchantsApi.md#createaffiliateblock) | **POST** /merchants/{merchantId}/block-affiliate/ | Create merchant affiliate block
 *MerchantsApi* | [**deleteAffiliateBlock**](docs/Api/MerchantsApi.md#deleteaffiliateblock) | **DELETE** /merchants/{merchantId}/block-affiliate/{blockId}/ | Delete Merchant Affiliate Block
+*MerchantsApi* | [**getMerchant**](docs/Api/MerchantsApi.md#getmerchant) | **GET** /merchants/{merchantId} | Get merchant info
 *OrdersApi* | [**getOrderDetail**](docs/Api/OrdersApi.md#getorderdetail) | **GET** /orders/{orderId} | 
 *OrdersApi* | [**getOrderList**](docs/Api/OrdersApi.md#getorderlist) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**orderLookUp**](docs/Api/OrdersApi.md#orderlookup) | **POST** /orders/purchase-lookup | 
@@ -228,6 +229,8 @@ Class | Method | HTTP request | Description
  - [MarketingMaterial](docs/Model/MarketingMaterial.md)
  - [Merchant](docs/Model/Merchant.md)
  - [MerchantData](docs/Model/MerchantData.md)
+ - [MerchantDetailsResponse](docs/Model/MerchantDetailsResponse.md)
+ - [MerchantDetailsResponseData](docs/Model/MerchantDetailsResponseData.md)
  - [MerchantTerms](docs/Model/MerchantTerms.md)
  - [NewDomain](docs/Model/NewDomain.md)
  - [NewTemplate](docs/Model/NewTemplate.md)

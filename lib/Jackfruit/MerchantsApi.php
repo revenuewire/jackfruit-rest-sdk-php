@@ -308,4 +308,103 @@ class MerchantsApi
             throw $e;
         }
     }
+
+    /**
+     * Operation getMerchant
+     *
+     * Get merchant info
+     *
+     * @param int $merchantId Merchant group account id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\MerchantDetailsResponse
+     */
+    public function getMerchant($merchantId)
+    {
+        list($response) = $this->getMerchantWithHttpInfo($merchantId);
+        return $response;
+    }
+
+    /**
+     * Operation getMerchantWithHttpInfo
+     *
+     * Get merchant info
+     *
+     * @param int $merchantId Merchant group account id (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\MerchantDetailsResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getMerchantWithHttpInfo($merchantId)
+    {
+        // verify the required parameter 'merchantId' is set
+        if ($merchantId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $merchantId when calling getMerchant');
+        }
+        // parse inputs
+        $resourcePath = "/merchants/{merchantId}";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // path params
+        if ($merchantId !== null) {
+            $resourcePath = str_replace(
+                "{" . "merchantId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($merchantId),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'GET',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\MerchantDetailsResponse',
+                '/merchants/{merchantId}'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\MerchantDetailsResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\MerchantDetailsResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
 }
