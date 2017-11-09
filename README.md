@@ -124,6 +124,7 @@ Class | Method | HTTP request | Description
 *MerchantsApi* | [**createAffiliateBlock**](docs/Api/MerchantsApi.md#createaffiliateblock) | **POST** /merchants/{merchantId}/block-affiliate/ | Create merchant affiliate block
 *MerchantsApi* | [**deleteAffiliateBlock**](docs/Api/MerchantsApi.md#deleteaffiliateblock) | **DELETE** /merchants/{merchantId}/block-affiliate/{blockId}/ | Delete Merchant Affiliate Block
 *MerchantsApi* | [**getMerchant**](docs/Api/MerchantsApi.md#getmerchant) | **GET** /merchants/{merchantId} | Get merchant info
+*OffersApi* | [**getOffer**](docs/Api/OffersApi.md#getoffer) | **GET** /offers/{offerId}/ | Get Offer
 *OrdersApi* | [**getOrderDetail**](docs/Api/OrdersApi.md#getorderdetail) | **GET** /orders/{orderId} | 
 *OrdersApi* | [**getOrderList**](docs/Api/OrdersApi.md#getorderlist) | **GET** /orders/customer-email/{email} | 
 *OrdersApi* | [**orderLookUp**](docs/Api/OrdersApi.md#orderlookup) | **POST** /orders/purchase-lookup | 
@@ -175,6 +176,7 @@ Class | Method | HTTP request | Description
  - [AffiliateAccount](docs/Model/AffiliateAccount.md)
  - [AffiliateBlockObj](docs/Model/AffiliateBlockObj.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
+ - [AffiliatePayoutItem](docs/Model/AffiliatePayoutItem.md)
  - [Alias](docs/Model/Alias.md)
  - [Aliases](docs/Model/Aliases.md)
  - [AllPathInfos](docs/Model/AllPathInfos.md)
@@ -187,6 +189,7 @@ Class | Method | HTTP request | Description
  - [Context](docs/Model/Context.md)
  - [Country](docs/Model/Country.md)
  - [CountryList](docs/Model/CountryList.md)
+ - [CountryOfferPriceItem](docs/Model/CountryOfferPriceItem.md)
  - [Coupon](docs/Model/Coupon.md)
  - [CpaPayoutPolicy](docs/Model/CpaPayoutPolicy.md)
  - [Customer](docs/Model/Customer.md)
@@ -237,6 +240,10 @@ Class | Method | HTTP request | Description
  - [NewTemplates](docs/Model/NewTemplates.md)
  - [NodeDeleteObj](docs/Model/NodeDeleteObj.md)
  - [NodeInfo](docs/Model/NodeInfo.md)
+ - [OfferDetails](docs/Model/OfferDetails.md)
+ - [OfferPriceItem](docs/Model/OfferPriceItem.md)
+ - [OfferPrices](docs/Model/OfferPrices.md)
+ - [OfferResponseObj](docs/Model/OfferResponseObj.md)
  - [OrderDetailedObj](docs/Model/OrderDetailedObj.md)
  - [OrderDetails](docs/Model/OrderDetails.md)
  - [OrderDetailsData](docs/Model/OrderDetailsData.md)
@@ -254,6 +261,8 @@ Class | Method | HTTP request | Description
  - [ProductResponseObj](docs/Model/ProductResponseObj.md)
  - [ProductType](docs/Model/ProductType.md)
  - [Profile](docs/Model/Profile.md)
+ - [RecurringOffer](docs/Model/RecurringOffer.md)
+ - [RecurringOfferInterval](docs/Model/RecurringOfferInterval.md)
  - [Response](docs/Model/Response.md)
  - [Setting](docs/Model/Setting.md)
  - [State](docs/Model/State.md)
@@ -272,6 +281,7 @@ Class | Method | HTTP request | Description
  - [TransactionDetails](docs/Model/TransactionDetails.md)
  - [TransactionItem](docs/Model/TransactionItem.md)
  - [TransactionResponseObj](docs/Model/TransactionResponseObj.md)
+ - [TrialOffer](docs/Model/TrialOffer.md)
  - [UpdateEmailResponse](docs/Model/UpdateEmailResponse.md)
  - [UpdateEmailResponseData](docs/Model/UpdateEmailResponseData.md)
  - [User](docs/Model/User.md)
