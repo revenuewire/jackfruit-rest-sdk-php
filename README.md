@@ -139,9 +139,7 @@ Class | Method | HTTP request | Description
 *PathsApi* | [**updateNode**](docs/Api/PathsApi.md#updatenode) | **PUT** /paths/{pathId}/nodes/{nodeId} | Update a node
 *PathsApi* | [**updatePath**](docs/Api/PathsApi.md#updatepath) | **PUT** /paths/{pathId}/ | Update path
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{productId} | Get Product
-*ProfilesApi* | [**profilesChangePasswordPut**](docs/Api/ProfilesApi.md#profileschangepasswordput) | **PUT** /profiles/change-password | 
-*ProfilesApi* | [**profilesGet**](docs/Api/ProfilesApi.md#profilesget) | **GET** /profiles | 
-*ProfilesApi* | [**profilesPut**](docs/Api/ProfilesApi.md#profilesput) | **PUT** /profiles | 
+*ProfilesApi* | [**profilesSaveAppConfigPut**](docs/Api/ProfilesApi.md#profilessaveappconfigput) | **PUT** /profiles/save-app-config | 
 *SubscriptionsApi* | [**getLegacySubscriptionInfo**](docs/Api/SubscriptionsApi.md#getlegacysubscriptioninfo) | **GET** /subscriptions/legacy/{id} | 
 *SubscriptionsApi* | [**getSubscriptionInfo**](docs/Api/SubscriptionsApi.md#getsubscriptioninfo) | **GET** /subscriptions/{id} | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
