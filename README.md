@@ -139,7 +139,6 @@ Class | Method | HTTP request | Description
 *PathsApi* | [**updateNode**](docs/Api/PathsApi.md#updatenode) | **PUT** /paths/{pathId}/nodes/{nodeId} | Update a node
 *PathsApi* | [**updatePath**](docs/Api/PathsApi.md#updatepath) | **PUT** /paths/{pathId}/ | Update path
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{productId} | Get Product
-*ProfilesApi* | [**profilesSaveAppConfigPut**](docs/Api/ProfilesApi.md#profilessaveappconfigput) | **PUT** /profiles/save-app-config | 
 *SubscriptionsApi* | [**getLegacySubscriptionInfo**](docs/Api/SubscriptionsApi.md#getlegacysubscriptioninfo) | **GET** /subscriptions/legacy/{id} | 
 *SubscriptionsApi* | [**getSubscriptionInfo**](docs/Api/SubscriptionsApi.md#getsubscriptioninfo) | **GET** /subscriptions/{id} | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
@@ -161,6 +160,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**userForgotPassword**](docs/Api/UsersApi.md#userforgotpassword) | **POST** /users/forget-password | 
 *UsersApi* | [**userGet**](docs/Api/UsersApi.md#userget) | **GET** /users/{id} | 
 *UsersApi* | [**userResetPassword**](docs/Api/UsersApi.md#userresetpassword) | **POST** /users/reset-password | 
+*UsersApi* | [**userSaveAppConfig**](docs/Api/UsersApi.md#usersaveappconfig) | **PUT** /users/{id}/save-app-config | 
 *UsersApi* | [**userUpdate**](docs/Api/UsersApi.md#userupdate) | **PUT** /users/{id} | 
 *UsersApi* | [**userUpdateEmail**](docs/Api/UsersApi.md#userupdateemail) | **POST** /users/{id}/update-email | 
 *UsersApi* | [**userUpdateEmailConfirm**](docs/Api/UsersApi.md#userupdateemailconfirm) | **PUT** /users/{id}/update-email/{token} | 
@@ -258,7 +258,6 @@ Class | Method | HTTP request | Description
  - [ProductDetails](docs/Model/ProductDetails.md)
  - [ProductResponseObj](docs/Model/ProductResponseObj.md)
  - [ProductType](docs/Model/ProductType.md)
- - [Profile](docs/Model/Profile.md)
  - [RecurringOffer](docs/Model/RecurringOffer.md)
  - [RecurringOfferInterval](docs/Model/RecurringOfferInterval.md)
  - [Response](docs/Model/Response.md)

@@ -730,6 +730,125 @@ class UsersApi
     }
 
     /**
+     * Operation userSaveAppConfig
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $app The application name (required)
+     * @param string $config An encoded array in the format config[&lt;appname&gt;][&lt;key&gt;]&#x3D;&lt;value&gt; (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\User
+     */
+    public function userSaveAppConfig($id, $app, $config)
+    {
+        list($response) = $this->userSaveAppConfigWithHttpInfo($id, $app, $config);
+        return $response;
+    }
+
+    /**
+     * Operation userSaveAppConfigWithHttpInfo
+     *
+     * 
+     *
+     * @param int $id User id (required)
+     * @param string $app The application name (required)
+     * @param string $config An encoded array in the format config[&lt;appname&gt;][&lt;key&gt;]&#x3D;&lt;value&gt; (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\User, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function userSaveAppConfigWithHttpInfo($id, $app, $config)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling userSaveAppConfig');
+        }
+        // verify the required parameter 'app' is set
+        if ($app === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $app when calling userSaveAppConfig');
+        }
+        // verify the required parameter 'config' is set
+        if ($config === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $config when calling userSaveAppConfig');
+        }
+        // parse inputs
+        $resourcePath = "/users/{id}/save-app-config";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if ($app !== null) {
+            $queryParams['app'] = $this->apiClient->getSerializer()->toQueryValue($app);
+        }
+        // query params
+        if ($config !== null) {
+            $queryParams['config'] = $this->apiClient->getSerializer()->toQueryValue($config);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\User',
+                '/users/{id}/save-app-config'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\User', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\User', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation userUpdate
      *
      * 
