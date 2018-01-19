@@ -1,79 +1,21 @@
-# Swagger\Client\DestinationsApi
+# Swagger\Client\BannersApi
 
 All URIs are relative to *https://localhost/rest/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**destinationsAdd**](DestinationsApi.md#destinationsAdd) | **POST** /destinations | 
-[**destinationsDelete**](DestinationsApi.md#destinationsDelete) | **DELETE** /destinations/{id} | 
-[**destinationsGet**](DestinationsApi.md#destinationsGet) | **GET** /destinations | 
-[**destinationsUpdate**](DestinationsApi.md#destinationsUpdate) | **PUT** /destinations/{id} | 
+[**bannerDismiss**](BannersApi.md#bannerDismiss) | **PUT** /banners/{id}/dismiss | 
+[**bannerDismissTypeDelete**](BannersApi.md#bannerDismissTypeDelete) | **DELETE** /banners/dismissedTypes | 
+[**bannerDismissTypePut**](BannersApi.md#bannerDismissTypePut) | **PUT** /banners/dismissedTypes | 
+[**bannersGet**](BannersApi.md#bannersGet) | **GET** /banners | 
 
 
-# **destinationsAdd**
-> \Swagger\Client\Model\InlineResponse2009 destinationsAdd($catalogFid, $name, $url)
-
-
-
-Add a new destination link
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: JWT
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
-// Configure API key authorization: API-KEY
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\DestinationsApi();
-$catalogFid = "catalogFid_example"; // string | Offer's catalog fid
-$name = "name_example"; // string | Destination link name
-$url = "url_example"; // string | Destination link URL
-
-try {
-    $result = $api_instance->destinationsAdd($catalogFid, $name, $url);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DestinationsApi->destinationsAdd: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **catalogFid** | **string**| Offer&#39;s catalog fid |
- **name** | **string**| Destination link name |
- **url** | **string**| Destination link URL |
-
-### Return type
-
-[**\Swagger\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
-
-### Authorization
-
-[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
-
-### HTTP request headers
-
- - **Content-Type**: application/x-www-form-urlencoded
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **destinationsDelete**
-> \Swagger\Client\Model\InlineResponse2001 destinationsDelete($id)
+# **bannerDismiss**
+> \Swagger\Client\Model\InlineResponse2004 bannerDismiss($id, $type)
 
 
 
-Delete a destination link
+Dismiss a specific banner
 
 ### Example
 ```php
@@ -89,14 +31,15 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\DestinationsApi();
-$id = 56; // int | Destination id
+$api_instance = new Swagger\Client\Api\BannersApi();
+$id = 56; // int | Banner id
+$type = "type_example"; // string | type of banner
 
 try {
-    $result = $api_instance->destinationsDelete($id);
+    $result = $api_instance->bannerDismiss($id, $type);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DestinationsApi->destinationsDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BannersApi->bannerDismiss: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -105,11 +48,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Destination id |
+ **id** | **int**| Banner id |
+ **type** | **string**| type of banner |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -122,12 +66,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destinationsGet**
-> \Swagger\Client\Model\InlineResponse2008 destinationsGet($catalogFid)
+# **bannerDismissTypeDelete**
+> \Swagger\Client\Model\BannerType bannerDismissTypeDelete($type)
 
 
 
-Get list of `Destination` objects.
+Restore a specific banner type so that it will display again
 
 ### Example
 ```php
@@ -143,14 +87,14 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\DestinationsApi();
-$catalogFid = "catalogFid_example"; // string | Offer's catalog fid
+$api_instance = new Swagger\Client\Api\BannersApi();
+$type = "type_example"; // string | Banner type being restored
 
 try {
-    $result = $api_instance->destinationsGet($catalogFid);
+    $result = $api_instance->bannerDismissTypeDelete($type);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DestinationsApi->destinationsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BannersApi->bannerDismissTypeDelete: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -159,11 +103,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **catalogFid** | **string**| Offer&#39;s catalog fid |
+ **type** | **string**| Banner type being restored |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Swagger\Client\Model\BannerType**](../Model/BannerType.md)
 
 ### Authorization
 
@@ -176,12 +120,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **destinationsUpdate**
-> \Swagger\Client\Model\InlineResponse20010 destinationsUpdate($id, $name, $url)
+# **bannerDismissTypePut**
+> \Swagger\Client\Model\BannerType bannerDismissTypePut($type)
 
 
 
-Update a destination link
+Dismiss a specific banner type
 
 ### Example
 ```php
@@ -197,16 +141,14 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\DestinationsApi();
-$id = 56; // int | Destination id
-$name = "name_example"; // string | Destination link name
-$url = "url_example"; // string | Destination link URL. Must begin with http:// or https://
+$api_instance = new Swagger\Client\Api\BannersApi();
+$type = "type_example"; // string | Banner type being dismissed
 
 try {
-    $result = $api_instance->destinationsUpdate($id, $name, $url);
+    $result = $api_instance->bannerDismissTypePut($type);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DestinationsApi->destinationsUpdate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling BannersApi->bannerDismissTypePut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -215,13 +157,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Destination id |
- **name** | **string**| Destination link name |
- **url** | **string**| Destination link URL. Must begin with http:// or https:// |
+ **type** | **string**| Banner type being dismissed |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Swagger\Client\Model\BannerType**](../Model/BannerType.md)
 
 ### Authorization
 
@@ -229,7 +169,61 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **bannersGet**
+> \Swagger\Client\Model\InlineResponse2003 bannersGet($type)
+
+
+
+Get list of `Banner` objects.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: JWT
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-Authorization-JWT', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Authorization-JWT', 'Bearer');
+// Configure API key authorization: API-KEY
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('X-API-KEY', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-KEY', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\BannersApi();
+$type = "type_example"; // string | type of banner
+
+try {
+    $result = $api_instance->bannersGet($type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BannersApi->bannersGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **string**| type of banner |
+
+### Return type
+
+[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+
+### Authorization
+
+[JWT](../../README.md#JWT), [API-KEY](../../README.md#API-KEY)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

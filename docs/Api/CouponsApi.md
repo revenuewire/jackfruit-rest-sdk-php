@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **couponsGet**
-> \Swagger\Client\Model\InlineResponse2005 couponsGet($catalogId)
+> \Swagger\Client\Model\InlineResponse2007 couponsGet($catalogId)
 
 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Swagger\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 

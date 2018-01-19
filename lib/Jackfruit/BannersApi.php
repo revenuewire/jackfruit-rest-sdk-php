@@ -1,6 +1,6 @@
 <?php
 /**
- * DestinationsApi
+ * BannersApi
  * PHP version 5
  *
  * @category Class
@@ -34,14 +34,14 @@ use \Swagger\Client\Configuration;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * DestinationsApi Class Doc Comment
+ * BannersApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class DestinationsApi
+class BannersApi
 {
     /**
      * API Client
@@ -79,7 +79,7 @@ class DestinationsApi
      *
      * @param \Swagger\Client\ApiClient $apiClient set the API client
      *
-     * @return DestinationsApi
+     * @return BannersApi
      */
     public function setApiClient(\Swagger\Client\ApiClient $apiClient)
     {
@@ -88,49 +88,43 @@ class DestinationsApi
     }
 
     /**
-     * Operation destinationsAdd
+     * Operation bannerDismiss
      *
      * 
      *
-     * @param string $catalogFid Offer&#39;s catalog fid (required)
-     * @param string $name Destination link name (required)
-     * @param string $url Destination link URL (required)
+     * @param int $id Banner id (required)
+     * @param string $type type of banner (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2009
+     * @return \Swagger\Client\Model\InlineResponse2004
      */
-    public function destinationsAdd($catalogFid, $name, $url)
+    public function bannerDismiss($id, $type)
     {
-        list($response) = $this->destinationsAddWithHttpInfo($catalogFid, $name, $url);
+        list($response) = $this->bannerDismissWithHttpInfo($id, $type);
         return $response;
     }
 
     /**
-     * Operation destinationsAddWithHttpInfo
+     * Operation bannerDismissWithHttpInfo
      *
      * 
      *
-     * @param string $catalogFid Offer&#39;s catalog fid (required)
-     * @param string $name Destination link name (required)
-     * @param string $url Destination link URL (required)
+     * @param int $id Banner id (required)
+     * @param string $type type of banner (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destinationsAddWithHttpInfo($catalogFid, $name, $url)
+    public function bannerDismissWithHttpInfo($id, $type)
     {
-        // verify the required parameter 'catalogFid' is set
-        if ($catalogFid === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $catalogFid when calling destinationsAdd');
+        // verify the required parameter 'id' is set
+        if ($id === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $id when calling bannerDismiss');
         }
-        // verify the required parameter 'name' is set
-        if ($name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling destinationsAdd');
-        }
-        // verify the required parameter 'url' is set
-        if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling destinationsAdd');
+        // verify the required parameter 'type' is set
+        if ($type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $type when calling bannerDismiss');
         }
         // parse inputs
-        $resourcePath = "/destinations";
+        $resourcePath = "/banners/{id}/dismiss";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -139,23 +133,23 @@ class DestinationsApi
         if (!is_null($_header_accept)) {
             $headerParams['Accept'] = $_header_accept;
         }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
+        // query params
+        if ($type !== null) {
+            $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                "{" . "id" . "}",
+                $this->apiClient->getSerializer()->toPathValue($id),
+                $resourcePath
+            );
+        }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        // form params
-        if ($catalogFid !== null) {
-            $formParams['catalogFid'] = $this->apiClient->getSerializer()->toFormValue($catalogFid);
-        }
-        // form params
-        if ($name !== null) {
-            $formParams['name'] = $this->apiClient->getSerializer()->toFormValue($name);
-        }
-        // form params
-        if ($url !== null) {
-            $formParams['url'] = $this->apiClient->getSerializer()->toFormValue($url);
-        }
         
         // for model (json/xml)
         if (isset($_tempBody)) {
@@ -177,19 +171,19 @@ class DestinationsApi
         try {
             list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
                 $resourcePath,
-                'POST',
+                'PUT',
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2009',
-                '/destinations'
+                '\Swagger\Client\Model\InlineResponse2004',
+                '/banners/{id}/dismiss'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2009', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2004', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2009', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2004', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -203,37 +197,37 @@ class DestinationsApi
     }
 
     /**
-     * Operation destinationsDelete
+     * Operation bannerDismissTypeDelete
      *
      * 
      *
-     * @param int $id Destination id (required)
+     * @param string $type Banner type being restored (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Swagger\Client\Model\BannerType
      */
-    public function destinationsDelete($id)
+    public function bannerDismissTypeDelete($type)
     {
-        list($response) = $this->destinationsDeleteWithHttpInfo($id);
+        list($response) = $this->bannerDismissTypeDeleteWithHttpInfo($type);
         return $response;
     }
 
     /**
-     * Operation destinationsDeleteWithHttpInfo
+     * Operation bannerDismissTypeDeleteWithHttpInfo
      *
      * 
      *
-     * @param int $id Destination id (required)
+     * @param string $type Banner type being restored (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\BannerType, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destinationsDeleteWithHttpInfo($id)
+    public function bannerDismissTypeDeleteWithHttpInfo($type)
     {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling destinationsDelete');
+        // verify the required parameter 'type' is set
+        if ($type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $type when calling bannerDismissTypeDelete');
         }
         // parse inputs
-        $resourcePath = "/destinations/{id}";
+        $resourcePath = "/banners/dismissedTypes";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -244,13 +238,9 @@ class DestinationsApi
         }
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
+        // query params
+        if ($type !== null) {
+            $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -280,15 +270,15 @@ class DestinationsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2001',
-                '/destinations/{id}'
+                '\Swagger\Client\Model\BannerType',
+                '/banners/dismissedTypes'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2001', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BannerType', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2001', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BannerType', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
@@ -302,37 +292,37 @@ class DestinationsApi
     }
 
     /**
-     * Operation destinationsGet
+     * Operation bannerDismissTypePut
      *
      * 
      *
-     * @param string $catalogFid Offer&#39;s catalog fid (required)
+     * @param string $type Banner type being dismissed (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse2008
+     * @return \Swagger\Client\Model\BannerType
      */
-    public function destinationsGet($catalogFid)
+    public function bannerDismissTypePut($type)
     {
-        list($response) = $this->destinationsGetWithHttpInfo($catalogFid);
+        list($response) = $this->bannerDismissTypePutWithHttpInfo($type);
         return $response;
     }
 
     /**
-     * Operation destinationsGetWithHttpInfo
+     * Operation bannerDismissTypePutWithHttpInfo
      *
      * 
      *
-     * @param string $catalogFid Offer&#39;s catalog fid (required)
+     * @param string $type Banner type being dismissed (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\BannerType, HTTP status code, HTTP response headers (array of strings)
      */
-    public function destinationsGetWithHttpInfo($catalogFid)
+    public function bannerDismissTypePutWithHttpInfo($type)
     {
-        // verify the required parameter 'catalogFid' is set
-        if ($catalogFid === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $catalogFid when calling destinationsGet');
+        // verify the required parameter 'type' is set
+        if ($type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $type when calling bannerDismissTypePut');
         }
         // parse inputs
-        $resourcePath = "/destinations";
+        $resourcePath = "/banners/dismissedTypes";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -344,8 +334,103 @@ class DestinationsApi
         $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
 
         // query params
-        if ($catalogFid !== null) {
-            $queryParams['catalogFid'] = $this->apiClient->getSerializer()->toQueryValue($catalogFid);
+        if ($type !== null) {
+            $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
+        }
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\BannerType',
+                '/banners/dismissedTypes'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\BannerType', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\BannerType', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bannersGet
+     *
+     * 
+     *
+     * @param string $type type of banner (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\InlineResponse2003
+     */
+    public function bannersGet($type)
+    {
+        list($response) = $this->bannersGetWithHttpInfo($type);
+        return $response;
+    }
+
+    /**
+     * Operation bannersGetWithHttpInfo
+     *
+     * 
+     *
+     * @param string $type type of banner (required)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bannersGetWithHttpInfo($type)
+    {
+        // verify the required parameter 'type' is set
+        if ($type === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $type when calling bannersGet');
+        }
+        // parse inputs
+        $resourcePath = "/banners";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/json']);
+
+        // query params
+        if ($type !== null) {
+            $queryParams['type'] = $this->apiClient->getSerializer()->toQueryValue($type);
         }
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
@@ -375,134 +460,15 @@ class DestinationsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Swagger\Client\Model\InlineResponse2008',
-                '/destinations'
+                '\Swagger\Client\Model\InlineResponse2003',
+                '/banners'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2008', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse2003', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2008', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation destinationsUpdate
-     *
-     * 
-     *
-     * @param int $id Destination id (required)
-     * @param string $name Destination link name (required)
-     * @param string $url Destination link URL. Must begin with http:// or https:// (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return \Swagger\Client\Model\InlineResponse20010
-     */
-    public function destinationsUpdate($id, $name, $url)
-    {
-        list($response) = $this->destinationsUpdateWithHttpInfo($id, $name, $url);
-        return $response;
-    }
-
-    /**
-     * Operation destinationsUpdateWithHttpInfo
-     *
-     * 
-     *
-     * @param int $id Destination id (required)
-     * @param string $name Destination link name (required)
-     * @param string $url Destination link URL. Must begin with http:// or https:// (required)
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function destinationsUpdateWithHttpInfo($id, $name, $url)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $id when calling destinationsUpdate');
-        }
-        // verify the required parameter 'name' is set
-        if ($name === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $name when calling destinationsUpdate');
-        }
-        // verify the required parameter 'url' is set
-        if ($url === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $url when calling destinationsUpdate');
-        }
-        // parse inputs
-        $resourcePath = "/destinations/{id}";
-        $httpBody = '';
-        $queryParams = [];
-        $headerParams = [];
-        $formParams = [];
-        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                "{" . "id" . "}",
-                $this->apiClient->getSerializer()->toPathValue($id),
-                $resourcePath
-            );
-        }
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // form params
-        if ($name !== null) {
-            $formParams['name'] = $this->apiClient->getSerializer()->toFormValue($name);
-        }
-        // form params
-        if ($url !== null) {
-            $formParams['url'] = $this->apiClient->getSerializer()->toFormValue($url);
-        }
-        
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-Authorization-JWT'] = $apiKey;
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['X-API-KEY'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'PUT',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\Swagger\Client\Model\InlineResponse20010',
-                '/destinations/{id}'
-            );
-
-            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\InlineResponse20010', $httpHeader), $statusCode, $httpHeader];
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse20010', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\InlineResponse2003', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:

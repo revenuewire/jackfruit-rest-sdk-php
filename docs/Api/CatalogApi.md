@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **catalogOfferGet**
-> \Swagger\Client\Model\InlineResponse2004 catalogOfferGet($id, $affiliateAccountId)
+> \Swagger\Client\Model\InlineResponse2006 catalogOfferGet($id, $affiliateAccountId)
 
 
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Swagger\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **catalogOffersGet**
-> \Swagger\Client\Model\InlineResponse2003 catalogOffersGet($keyword, $offerTypes, $productCategories, $languages, $geos, $promoMethods, $payoutMin, $payoutMax, $percentMin, $percentMax, $couponsOnly, $privateOnly)
+> \Swagger\Client\Model\InlineResponse2005 catalogOffersGet($keyword, $offerTypes, $productCategories, $languages, $geos, $promoMethods, $payoutMin, $payoutMax, $percentMin, $percentMax, $couponsOnly, $privateOnly)
 
 
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **newOffersGet**
-> \Swagger\Client\Model\InlineResponse2003 newOffersGet()
+> \Swagger\Client\Model\InlineResponse2005 newOffersGet()
 
 
 
@@ -181,7 +181,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **topOffersGet**
-> \Swagger\Client\Model\InlineResponse2003 topOffersGet()
+> \Swagger\Client\Model\InlineResponse2005 topOffersGet()
 
 
 
@@ -285,7 +285,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

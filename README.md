@@ -89,6 +89,10 @@ Class | Method | HTTP request | Description
 *AffiliatesApi* | [**getAffiliateById**](docs/Api/AffiliatesApi.md#getaffiliatebyid) | **GET** /affiliates/{id} | 
 *AffiliatesApi* | [**saveAffiliateById**](docs/Api/AffiliatesApi.md#saveaffiliatebyid) | **PUT** /affiliates/{id} | 
 *AliasesApi* | [**aliasesGet**](docs/Api/AliasesApi.md#aliasesget) | **GET** /aliases | 
+*BannersApi* | [**bannerDismiss**](docs/Api/BannersApi.md#bannerdismiss) | **PUT** /banners/{id}/dismiss | 
+*BannersApi* | [**bannerDismissTypeDelete**](docs/Api/BannersApi.md#bannerdismisstypedelete) | **DELETE** /banners/dismissedTypes | 
+*BannersApi* | [**bannerDismissTypePut**](docs/Api/BannersApi.md#bannerdismisstypeput) | **PUT** /banners/dismissedTypes | 
+*BannersApi* | [**bannersGet**](docs/Api/BannersApi.md#bannersget) | **GET** /banners | 
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
@@ -179,6 +183,8 @@ Class | Method | HTTP request | Description
  - [Aliases](docs/Model/Aliases.md)
  - [AllPathInfos](docs/Model/AllPathInfos.md)
  - [AllPathNodes](docs/Model/AllPathNodes.md)
+ - [Banner](docs/Model/Banner.md)
+ - [BannerType](docs/Model/BannerType.md)
  - [BillInfo](docs/Model/BillInfo.md)
  - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [CancelProfileResponse](docs/Model/CancelProfileResponse.md)
@@ -217,6 +223,8 @@ Class | Method | HTTP request | Description
  - [InlineResponse20010](docs/Model/InlineResponse20010.md)
  - [InlineResponse20011](docs/Model/InlineResponse20011.md)
  - [InlineResponse20012](docs/Model/InlineResponse20012.md)
+ - [InlineResponse20013](docs/Model/InlineResponse20013.md)
+ - [InlineResponse20014](docs/Model/InlineResponse20014.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
  - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InlineResponse2004](docs/Model/InlineResponse2004.md)

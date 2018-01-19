@@ -55,7 +55,7 @@ class InlineResponse2003 implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\CatalogOffer[]'
+        'data' => '\Swagger\Client\Model\Banner[]'
     ];
 
     public static function swaggerTypes()
@@ -139,6 +139,9 @@ class InlineResponse2003 implements ArrayAccess
         if ($this->container['response'] === null) {
             $invalid_properties[] = "'response' can't be null";
         }
+        if ($this->container['data'] === null) {
+            $invalid_properties[] = "'data' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -152,6 +155,9 @@ class InlineResponse2003 implements ArrayAccess
     {
 
         if ($this->container['response'] === null) {
+            return false;
+        }
+        if ($this->container['data'] === null) {
             return false;
         }
         return true;
@@ -181,7 +187,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Gets data
-     * @return \Swagger\Client\Model\CatalogOffer[]
+     * @return \Swagger\Client\Model\Banner[]
      */
     public function getData()
     {
@@ -190,7 +196,7 @@ class InlineResponse2003 implements ArrayAccess
 
     /**
      * Sets data
-     * @param \Swagger\Client\Model\CatalogOffer[] $data
+     * @param \Swagger\Client\Model\Banner[] $data Array containing banners
      * @return $this
      */
     public function setData($data)

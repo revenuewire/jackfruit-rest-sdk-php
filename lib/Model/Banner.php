@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse2007
+ * Banner
  *
  * PHP version 5
  *
@@ -32,14 +32,15 @@ namespace Swagger\Client\Model;
 use \ArrayAccess;
 
 /**
- * InlineResponse2007 Class Doc Comment
+ * Banner Class Doc Comment
  *
  * @category    Class
+ * @description Banner object
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse2007 implements ArrayAccess
+class Banner implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -47,15 +48,16 @@ class InlineResponse2007 implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200_7';
+    protected static $swaggerModelName = 'Banner';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'response' => '\Swagger\Client\Model\Response',
-        'data' => '\Swagger\Client\Model\Coupon[]'
+        'id' => 'string',
+        'img' => 'string',
+        'url' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -68,8 +70,9 @@ class InlineResponse2007 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'response' => 'response',
-        'data' => 'data'
+        'id' => 'id',
+        'img' => 'img',
+        'url' => 'url'
     ];
 
 
@@ -78,8 +81,9 @@ class InlineResponse2007 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'response' => 'setResponse',
-        'data' => 'setData'
+        'id' => 'setId',
+        'img' => 'setImg',
+        'url' => 'setUrl'
     ];
 
 
@@ -88,8 +92,9 @@ class InlineResponse2007 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'response' => 'getResponse',
-        'data' => 'getData'
+        'id' => 'getId',
+        'img' => 'getImg',
+        'url' => 'getUrl'
     ];
 
     public static function attributeMap()
@@ -123,8 +128,9 @@ class InlineResponse2007 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['response'] = isset($data['response']) ? $data['response'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['img'] = isset($data['img']) ? $data['img'] : null;
+        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
     }
 
     /**
@@ -136,11 +142,11 @@ class InlineResponse2007 implements ArrayAccess
     {
         $invalid_properties = [];
 
-        if ($this->container['response'] === null) {
-            $invalid_properties[] = "'response' can't be null";
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalid_properties[] = "'data' can't be null";
+        if ($this->container['img'] === null) {
+            $invalid_properties[] = "'img' can't be null";
         }
         return $invalid_properties;
     }
@@ -154,10 +160,10 @@ class InlineResponse2007 implements ArrayAccess
     public function valid()
     {
 
-        if ($this->container['response'] === null) {
+        if ($this->container['id'] === null) {
             return false;
         }
-        if ($this->container['data'] === null) {
+        if ($this->container['img'] === null) {
             return false;
         }
         return true;
@@ -165,43 +171,64 @@ class InlineResponse2007 implements ArrayAccess
 
 
     /**
-     * Gets response
-     * @return \Swagger\Client\Model\Response
+     * Gets id
+     * @return string
      */
-    public function getResponse()
+    public function getId()
     {
-        return $this->container['response'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets response
-     * @param \Swagger\Client\Model\Response $response
+     * Sets id
+     * @param string $id filename of banner in S3
      * @return $this
      */
-    public function setResponse($response)
+    public function setId($id)
     {
-        $this->container['response'] = $response;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets data
-     * @return \Swagger\Client\Model\Coupon[]
+     * Gets img
+     * @return string
      */
-    public function getData()
+    public function getImg()
     {
-        return $this->container['data'];
+        return $this->container['img'];
     }
 
     /**
-     * Sets data
-     * @param \Swagger\Client\Model\Coupon[] $data Array containing coupons
+     * Sets img
+     * @param string $img S3 url of banner
      * @return $this
      */
-    public function setData($data)
+    public function setImg($img)
     {
-        $this->container['data'] = $data;
+        $this->container['img'] = $img;
+
+        return $this;
+    }
+
+    /**
+     * Gets url
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->container['url'];
+    }
+
+    /**
+     * Sets url
+     * @param string $url click through link of banner
+     * @return $this
+     */
+    public function setUrl($url)
+    {
+        $this->container['url'] = $url;
 
         return $this;
     }
