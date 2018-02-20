@@ -18,7 +18,7 @@ if [ "$git_repo_id" = "" ]; then
 fi
 
 if [ "$release_note" = "" ]; then
-    release_note="954"
+    release_note="955"
     echo "[INFO] No command line input provided. Set \$release_note to $release_note"
 fi
 
