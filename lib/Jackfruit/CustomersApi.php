@@ -481,12 +481,13 @@ class CustomersApi
      * @param string $countryCode Country code (required)
      * @param string $city City (required)
      * @param string $postalCode Postal code (required)
+     * @param string $regionCode State code (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\CustomerAddress
      */
-    public function updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode)
+    public function updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode, $regionCode = null)
     {
-        list($response) = $this->updateShippingAddressWithHttpInfo($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode);
+        list($response) = $this->updateShippingAddressWithHttpInfo($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode, $regionCode);
         return $response;
     }
 
@@ -502,10 +503,11 @@ class CustomersApi
      * @param string $countryCode Country code (required)
      * @param string $city City (required)
      * @param string $postalCode Postal code (required)
+     * @param string $regionCode State code (optional)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\CustomerAddress, HTTP status code, HTTP response headers (array of strings)
      */
-    public function updateShippingAddressWithHttpInfo($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode)
+    public function updateShippingAddressWithHttpInfo($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode, $regionCode = null)
     {
         // verify the required parameter 'customerId' is set
         if ($customerId === null) {
@@ -577,6 +579,10 @@ class CustomersApi
         // form params
         if ($countryCode !== null) {
             $formParams['countryCode'] = $this->apiClient->getSerializer()->toFormValue($countryCode);
+        }
+        // form params
+        if ($regionCode !== null) {
+            $formParams['regionCode'] = $this->apiClient->getSerializer()->toFormValue($regionCode);
         }
         // form params
         if ($city !== null) {

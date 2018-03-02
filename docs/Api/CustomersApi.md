@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **updateShippingAddress**
-> \Swagger\Client\Model\CustomerAddress updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode)
+> \Swagger\Client\Model\CustomerAddress updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode, $regionCode)
 
 
 
@@ -252,9 +252,10 @@ $address = "address_example"; // string | Customer's address
 $countryCode = "countryCode_example"; // string | Country code
 $city = "city_example"; // string | City
 $postalCode = "postalCode_example"; // string | Postal code
+$regionCode = "regionCode_example"; // string | State code
 
 try {
-    $result = $api_instance->updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode);
+    $result = $api_instance->updateShippingAddress($customerId, $transactionId, $name, $address, $countryCode, $city, $postalCode, $regionCode);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomersApi->updateShippingAddress: ', $e->getMessage(), PHP_EOL;
@@ -273,6 +274,7 @@ Name | Type | Description  | Notes
  **countryCode** | **string**| Country code |
  **city** | **string**| City |
  **postalCode** | **string**| Postal code |
+ **regionCode** | **string**| State code | [optional]
 
 ### Return type
 
