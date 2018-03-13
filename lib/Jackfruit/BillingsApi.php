@@ -88,6 +88,203 @@ class BillingsApi
     }
 
     /**
+     * Operation billingInfoAllUpdate
+     *
+     * 
+     *
+     * @param string $customerEmail Customer email (required)
+     * @param string $oldFirstSix The first six digits for the old card (required)
+     * @param string $oldLastFour The last four digits for the old card (required)
+     * @param string $oldCardExpiry Credit Card expiry for the old card (required)
+     * @param string $cardHolderFullName Card holder full name (required)
+     * @param string $cardNumber Credit Card number (required)
+     * @param string $cardExpiry Credit Card expiry (required)
+     * @param string $cardCCV Credit CCV (optional)
+     * @param string $postalCode Postal code (optional)
+     * @param string $address Billing address one (optional)
+     * @param string $address2 Billing address two (optional)
+     * @param string $city Billing city (optional)
+     * @param string $country Billing country (optional)
+     * @param string $state Billing state or province (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return \Swagger\Client\Model\CardUpdateResponse
+     */
+    public function billingInfoAllUpdate($customerEmail, $oldFirstSix, $oldLastFour, $oldCardExpiry, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $postalCode = null, $address = null, $address2 = null, $city = null, $country = null, $state = null)
+    {
+        list($response) = $this->billingInfoAllUpdateWithHttpInfo($customerEmail, $oldFirstSix, $oldLastFour, $oldCardExpiry, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV, $postalCode, $address, $address2, $city, $country, $state);
+        return $response;
+    }
+
+    /**
+     * Operation billingInfoAllUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param string $customerEmail Customer email (required)
+     * @param string $oldFirstSix The first six digits for the old card (required)
+     * @param string $oldLastFour The last four digits for the old card (required)
+     * @param string $oldCardExpiry Credit Card expiry for the old card (required)
+     * @param string $cardHolderFullName Card holder full name (required)
+     * @param string $cardNumber Credit Card number (required)
+     * @param string $cardExpiry Credit Card expiry (required)
+     * @param string $cardCCV Credit CCV (optional)
+     * @param string $postalCode Postal code (optional)
+     * @param string $address Billing address one (optional)
+     * @param string $address2 Billing address two (optional)
+     * @param string $city Billing city (optional)
+     * @param string $country Billing country (optional)
+     * @param string $state Billing state or province (optional)
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @return array of \Swagger\Client\Model\CardUpdateResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function billingInfoAllUpdateWithHttpInfo($customerEmail, $oldFirstSix, $oldLastFour, $oldCardExpiry, $cardHolderFullName, $cardNumber, $cardExpiry, $cardCCV = null, $postalCode = null, $address = null, $address2 = null, $city = null, $country = null, $state = null)
+    {
+        // verify the required parameter 'customerEmail' is set
+        if ($customerEmail === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $customerEmail when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'oldFirstSix' is set
+        if ($oldFirstSix === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $oldFirstSix when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'oldLastFour' is set
+        if ($oldLastFour === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $oldLastFour when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'oldCardExpiry' is set
+        if ($oldCardExpiry === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $oldCardExpiry when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'cardHolderFullName' is set
+        if ($cardHolderFullName === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardHolderFullName when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'cardNumber' is set
+        if ($cardNumber === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardNumber when calling billingInfoAllUpdate');
+        }
+        // verify the required parameter 'cardExpiry' is set
+        if ($cardExpiry === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $cardExpiry when calling billingInfoAllUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/billings/update-card";
+        $httpBody = '';
+        $queryParams = [];
+        $headerParams = [];
+        $formParams = [];
+        $_header_accept = $this->apiClient->selectHeaderAccept(['application/json']);
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(['application/x-www-form-urlencoded']);
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // form params
+        if ($customerEmail !== null) {
+            $formParams['customerEmail'] = $this->apiClient->getSerializer()->toFormValue($customerEmail);
+        }
+        // form params
+        if ($oldFirstSix !== null) {
+            $formParams['oldFirstSix'] = $this->apiClient->getSerializer()->toFormValue($oldFirstSix);
+        }
+        // form params
+        if ($oldLastFour !== null) {
+            $formParams['oldLastFour'] = $this->apiClient->getSerializer()->toFormValue($oldLastFour);
+        }
+        // form params
+        if ($oldCardExpiry !== null) {
+            $formParams['oldCardExpiry'] = $this->apiClient->getSerializer()->toFormValue($oldCardExpiry);
+        }
+        // form params
+        if ($cardHolderFullName !== null) {
+            $formParams['cardHolderFullName'] = $this->apiClient->getSerializer()->toFormValue($cardHolderFullName);
+        }
+        // form params
+        if ($cardNumber !== null) {
+            $formParams['cardNumber'] = $this->apiClient->getSerializer()->toFormValue($cardNumber);
+        }
+        // form params
+        if ($cardExpiry !== null) {
+            $formParams['cardExpiry'] = $this->apiClient->getSerializer()->toFormValue($cardExpiry);
+        }
+        // form params
+        if ($cardCCV !== null) {
+            $formParams['cardCCV'] = $this->apiClient->getSerializer()->toFormValue($cardCCV);
+        }
+        // form params
+        if ($postalCode !== null) {
+            $formParams['postalCode'] = $this->apiClient->getSerializer()->toFormValue($postalCode);
+        }
+        // form params
+        if ($address !== null) {
+            $formParams['address'] = $this->apiClient->getSerializer()->toFormValue($address);
+        }
+        // form params
+        if ($address2 !== null) {
+            $formParams['address2'] = $this->apiClient->getSerializer()->toFormValue($address2);
+        }
+        // form params
+        if ($city !== null) {
+            $formParams['city'] = $this->apiClient->getSerializer()->toFormValue($city);
+        }
+        // form params
+        if ($country !== null) {
+            $formParams['country'] = $this->apiClient->getSerializer()->toFormValue($country);
+        }
+        // form params
+        if ($state !== null) {
+            $formParams['state'] = $this->apiClient->getSerializer()->toFormValue($state);
+        }
+        
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-Authorization-JWT');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-Authorization-JWT'] = $apiKey;
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('X-API-KEY');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['X-API-KEY'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'PUT',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\Swagger\Client\Model\CardUpdateResponse',
+                '/billings/update-card'
+            );
+
+            return [$this->apiClient->getSerializer()->deserialize($response, '\Swagger\Client\Model\CardUpdateResponse', $httpHeader), $statusCode, $httpHeader];
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\CardUpdateResponse', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Swagger\Client\Model\Error', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation billingInfoUpdate
      *
      * 
@@ -369,11 +566,11 @@ class BillingsApi
      * @param int $billingInfoId billing info id (required)
      * @param string $returnUrl return url if everything goes well in paypal website (required)
      * @param string $cancelUrl cancel url if customer click cancel button in paypal website (required)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return \Swagger\Client\Model\PaypalUrl
      */
-    public function setUpPaypalUrl($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId = null)
+    public function setUpPaypalUrl($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId)
     {
         list($response) = $this->setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId);
         return $response;
@@ -387,11 +584,11 @@ class BillingsApi
      * @param int $billingInfoId billing info id (required)
      * @param string $returnUrl return url if everything goes well in paypal website (required)
      * @param string $cancelUrl cancel url if customer click cancel button in paypal website (required)
-     * @param string $recurringTransactionItemId recurring transaction item to be updated (optional)
+     * @param string $recurringTransactionItemId recurring transaction item to be updated (required)
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @return array of \Swagger\Client\Model\PaypalUrl, HTTP status code, HTTP response headers (array of strings)
      */
-    public function setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId = null)
+    public function setUpPaypalUrlWithHttpInfo($billingInfoId, $returnUrl, $cancelUrl, $recurringTransactionItemId)
     {
         // verify the required parameter 'billingInfoId' is set
         if ($billingInfoId === null) {
@@ -404,6 +601,10 @@ class BillingsApi
         // verify the required parameter 'cancelUrl' is set
         if ($cancelUrl === null) {
             throw new \InvalidArgumentException('Missing the required parameter $cancelUrl when calling setUpPaypalUrl');
+        }
+        // verify the required parameter 'recurringTransactionItemId' is set
+        if ($recurringTransactionItemId === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $recurringTransactionItemId when calling setUpPaypalUrl');
         }
         // parse inputs
         $resourcePath = "/billings/{billingInfoId}/setup-paypal-url";

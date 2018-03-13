@@ -93,6 +93,7 @@ Class | Method | HTTP request | Description
 *BannersApi* | [**bannerDismissTypeDelete**](docs/Api/BannersApi.md#bannerdismisstypedelete) | **DELETE** /banners/dismissedTypes | 
 *BannersApi* | [**bannerDismissTypePut**](docs/Api/BannersApi.md#bannerdismisstypeput) | **PUT** /banners/dismissedTypes | 
 *BannersApi* | [**bannersGet**](docs/Api/BannersApi.md#bannersget) | **GET** /banners | 
+*BillingsApi* | [**billingInfoAllUpdate**](docs/Api/BillingsApi.md#billinginfoallupdate) | **PUT** /billings/update-card | 
 *BillingsApi* | [**billingInfoUpdate**](docs/Api/BillingsApi.md#billinginfoupdate) | **PUT** /billings/{billingInfoId} | 
 *BillingsApi* | [**billingInfoUpdatePaypal**](docs/Api/BillingsApi.md#billinginfoupdatepaypal) | **PUT** /billings/update-paypal | 
 *BillingsApi* | [**setUpPaypalUrl**](docs/Api/BillingsApi.md#setuppaypalurl) | **POST** /billings/{billingInfoId}/setup-paypal-url | 
@@ -188,6 +189,8 @@ Class | Method | HTTP request | Description
  - [BillInfo](docs/Model/BillInfo.md)
  - [BillInfoResponse](docs/Model/BillInfoResponse.md)
  - [CancelProfileResponse](docs/Model/CancelProfileResponse.md)
+ - [CardInfo](docs/Model/CardInfo.md)
+ - [CardUpdateResponse](docs/Model/CardUpdateResponse.md)
  - [CatalogOffer](docs/Model/CatalogOffer.md)
  - [CatalogOfferDetail](docs/Model/CatalogOfferDetail.md)
  - [Context](docs/Model/Context.md)
