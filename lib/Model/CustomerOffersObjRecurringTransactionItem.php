@@ -59,6 +59,7 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
         'offerId' => 'int',
         'initialSaleDate' => '\DateTime',
         'nextBillingDate' => '\DateTime',
+        'nextBillingAmount' => 'float',
         'finalBillingDate' => '\DateTime',
         'interval' => 'int',
         'rebillFrequencyType' => 'string',
@@ -83,6 +84,7 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
         'offerId' => 'offerId',
         'initialSaleDate' => 'initialSaleDate',
         'nextBillingDate' => 'nextBillingDate',
+        'nextBillingAmount' => 'nextBillingAmount',
         'finalBillingDate' => 'finalBillingDate',
         'interval' => 'interval',
         'rebillFrequencyType' => 'rebillFrequencyType',
@@ -103,6 +105,7 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
         'offerId' => 'setOfferId',
         'initialSaleDate' => 'setInitialSaleDate',
         'nextBillingDate' => 'setNextBillingDate',
+        'nextBillingAmount' => 'setNextBillingAmount',
         'finalBillingDate' => 'setFinalBillingDate',
         'interval' => 'setInterval',
         'rebillFrequencyType' => 'setRebillFrequencyType',
@@ -123,6 +126,7 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
         'offerId' => 'getOfferId',
         'initialSaleDate' => 'getInitialSaleDate',
         'nextBillingDate' => 'getNextBillingDate',
+        'nextBillingAmount' => 'getNextBillingAmount',
         'finalBillingDate' => 'getFinalBillingDate',
         'interval' => 'getInterval',
         'rebillFrequencyType' => 'getRebillFrequencyType',
@@ -168,6 +172,7 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
         $this->container['offerId'] = isset($data['offerId']) ? $data['offerId'] : null;
         $this->container['initialSaleDate'] = isset($data['initialSaleDate']) ? $data['initialSaleDate'] : null;
         $this->container['nextBillingDate'] = isset($data['nextBillingDate']) ? $data['nextBillingDate'] : null;
+        $this->container['nextBillingAmount'] = isset($data['nextBillingAmount']) ? $data['nextBillingAmount'] : null;
         $this->container['finalBillingDate'] = isset($data['finalBillingDate']) ? $data['finalBillingDate'] : null;
         $this->container['interval'] = isset($data['interval']) ? $data['interval'] : null;
         $this->container['rebillFrequencyType'] = isset($data['rebillFrequencyType']) ? $data['rebillFrequencyType'] : null;
@@ -283,6 +288,27 @@ class CustomerOffersObjRecurringTransactionItem implements ArrayAccess
     public function setNextBillingDate($nextBillingDate)
     {
         $this->container['nextBillingDate'] = $nextBillingDate;
+
+        return $this;
+    }
+
+    /**
+     * Gets nextBillingAmount
+     * @return float
+     */
+    public function getNextBillingAmount()
+    {
+        return $this->container['nextBillingAmount'];
+    }
+
+    /**
+     * Sets nextBillingAmount
+     * @param float $nextBillingAmount
+     * @return $this
+     */
+    public function setNextBillingAmount($nextBillingAmount)
+    {
+        $this->container['nextBillingAmount'] = $nextBillingAmount;
 
         return $this;
     }

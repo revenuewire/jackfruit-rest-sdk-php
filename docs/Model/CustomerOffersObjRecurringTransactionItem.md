@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **offerId** | **int** |  | [optional] 
 **initialSaleDate** | [**\DateTime**](Date.md) |  | [optional] 
 **nextBillingDate** | [**\DateTime**](Date.md) |  | [optional] 
+**nextBillingAmount** | **float** |  | [optional] 
 **finalBillingDate** | [**\DateTime**](Date.md) |  | [optional] 
 **interval** | **int** |  | [optional] 
 **rebillFrequencyType** | **string** |  | [optional] 
