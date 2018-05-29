@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *PathsApi* | [**updatePath**](docs/Api/PathsApi.md#updatepath) | **PUT** /paths/{pathId}/ | Update path
 *ProductsApi* | [**getProduct**](docs/Api/ProductsApi.md#getproduct) | **GET** /products/{productId} | Get Product
 *RebillMigrationssApi* | [**rebill**](docs/Api/RebillMigrationssApi.md#rebill) | **POST** /rebillmigrations/{recurringTransactionItemId}/rebill/ | Use card info from vault to enable a paused rebill task
+*RefundMigrationssApi* | [**refund**](docs/Api/RefundMigrationssApi.md#refund) | **POST** /refundmigrations/{transactionId}/refund/ | Use card info from vault to give customer credit by pavision
 *SubscriptionsApi* | [**getLegacySubscriptionInfo**](docs/Api/SubscriptionsApi.md#getlegacysubscriptioninfo) | **GET** /subscriptions/legacy/{id} | 
 *SubscriptionsApi* | [**getSubscriptionInfo**](docs/Api/SubscriptionsApi.md#getsubscriptioninfo) | **GET** /subscriptions/{id} | 
 *SubscriptionsApi* | [**legacySubscriptionCancel**](docs/Api/SubscriptionsApi.md#legacysubscriptioncancel) | **PUT** /subscriptions/legacy/{transactionItemId}/cancel | 
@@ -273,6 +274,7 @@ Class | Method | HTTP request | Description
  - [RebillMigrationResponse](docs/Model/RebillMigrationResponse.md)
  - [RecurringOffer](docs/Model/RecurringOffer.md)
  - [RecurringOfferInterval](docs/Model/RecurringOfferInterval.md)
+ - [RefundMigrationResponse](docs/Model/RefundMigrationResponse.md)
  - [Response](docs/Model/Response.md)
  - [Setting](docs/Model/Setting.md)
  - [State](docs/Model/State.md)
