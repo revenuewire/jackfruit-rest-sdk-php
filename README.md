@@ -126,6 +126,7 @@ Class | Method | HTTP request | Description
 *DomainsApi* | [**domainsUpdate**](docs/Api/DomainsApi.md#domainsupdate) | **PUT** /domains/{id} | 
 *GEOApi* | [**geoGetCountryList**](docs/Api/GEOApi.md#geogetcountrylist) | **GET** /geo-info/countries | 
 *GEOApi* | [**geoGetSupportedLanguages**](docs/Api/GEOApi.md#geogetsupportedlanguages) | **GET** /geo-info/supported-languages | 
+*MerchantGatewayConfigsApi* | [**activate**](docs/Api/MerchantGatewayConfigsApi.md#activate) | **POST** /merchantgatewayconfigs/{clientId}/versions/{versionId}/activate/ | Activate the gateway policy for a merchant
 *MerchantsApi* | [**createAffiliateBlock**](docs/Api/MerchantsApi.md#createaffiliateblock) | **POST** /merchants/{merchantId}/block-affiliate/ | Create merchant affiliate block
 *MerchantsApi* | [**deleteAffiliateBlock**](docs/Api/MerchantsApi.md#deleteaffiliateblock) | **DELETE** /merchants/{merchantId}/block-affiliate/{blockId}/ | Delete Merchant Affiliate Block
 *MerchantsApi* | [**getMerchant**](docs/Api/MerchantsApi.md#getmerchant) | **GET** /merchants/{merchantId} | Get merchant info
@@ -178,6 +179,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AccountTemplate](docs/Model/AccountTemplate.md)
+ - [ActivateGatewayResponse](docs/Model/ActivateGatewayResponse.md)
  - [AffiliateAccount](docs/Model/AffiliateAccount.md)
  - [AffiliateBlockObj](docs/Model/AffiliateBlockObj.md)
  - [AffiliateLink](docs/Model/AffiliateLink.md)
